@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  3 SEP 2026 18:44
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  3 SEP 2026 19:02
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1869,7 +1869,15 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
 (Font)              scaled to size 10.89996pt on input line 36.
 LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
 (Font)              scaled to size 7.62997pt on input line 36.
-(./figures/fig_research_map.tex (./figures/qaf_style.tex))
+(./figures/fig_research_map.tex (./figures/qaf_style.tex)
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+Missing character: There is no ) ("29) in font nullfont!
+)
 
 [8
 
@@ -2166,7 +2174,7 @@ owski, A. McClain Gomez,[]
 [55]))
 
 [56]
-runsystem(latexminted cleantemp  --timestamp 20260903184403 2A3295FF97FD2A69D89
+runsystem(latexminted cleantemp  --timestamp 20260903190210 2A3295FF97FD2A69D89
 865AE1BE6A276)...executed.
 
  (./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
@@ -2174,18 +2182,14 @@ runsystem(latexminted cleantemp  --timestamp 20260903184403 2A3295FF97FD2A69D89
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `QS&QA_Fundation_Main.out' has not changed.
 (rerunfilecheck)             Checksum: 33BC44625A78081FF991C14567A95DA8;17197.
  ) 
 Here is how much of TeX's memory you used:
- 50065 strings out of 473831
- 1141045 string characters out of 5733136
- 1698356 words of memory out of 5000000
- 72266 multiletter control sequences out of 15000+600000
+ 50052 strings out of 473831
+ 1140854 string characters out of 5733136
+ 1698529 words of memory out of 5000000
+ 72253 multiletter control sequences out of 15000+600000
  565909 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  146i,16n,137p,1640b,1961s stack positions out of 10000i,1000n,20000p,200000b,200000s
