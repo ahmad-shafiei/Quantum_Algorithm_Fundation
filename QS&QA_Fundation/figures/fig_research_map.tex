@@ -1,56 +1,109 @@
-% نقشهٔ پژوهشی: مسئله → پرسش → رهیافت → ابزار → اجرا
+% نقشهٔ پژوهشی: لایه‌های مسئله / پرسش / رهیافت / ابزار / اجرا
+% اتصالات مطابق فصل نقشه: QPE از تحول تغذیه می‌شود و پرسش طیفی را جواب می‌دهد؛
+% آنالوگ از ابزار گیتی عبور نمی‌کند؛ آدیاباتیک رهیافت است نه ورودی QPE.
 \input{figures/qaf_style.tex}
 \begin{tikzpicture}[
-	font=\footnotesize\linespread{1}\selectfont,
-	node distance=0.42cm and 0.42cm
+	font=\scriptsize\linespread{1}\selectfont,
+	x=1cm,
+	y=1cm
 	]
-	\node[qafwide, fill=blue!10] (phys) {Physical\\problem};
-	\node[qafwide, fill=blue!10, below=of phys] (model) {Mathematical\\model};
-	\node[qafwide, fill=blue!12, below=of model] (H) {Hamiltonian $H$};
+	\tikzset{
+		lab/.style={
+			font=\tiny\bfseries\linespread{1}\selectfont,
+			anchor=east,
+			inner sep=1pt,
+			text=black!55,
+			align=right
+		},
+		note/.style={
+			font=\tiny\linespread{1}\selectfont,
+			inner sep=1pt,
+			text=black!60
+		}
+	}
 
-	\node[qafnarr, fill=green!12, below left=0.7cm and 0.15cm of H] (dyn) {Dynamic\\$U(t)=e^{-iHt}$};
-	\node[qafnarr, fill=orange!12, below right=0.7cm and 0.15cm of H] (stat) {Static /\\spectral};
+	% ----- لایه مسئله -----
+	\node[qafwide, fill=blue!12] (phys) at (0,0) {Physical problem};
+	\node[qafwide, fill=blue!10] (model) at (0,-1.25) {Mathematical model};
+	\node[qafwide, fill=blue!14] (H) at (0,-2.5) {Hamiltonian $H$};
 
-	\node[qafnarr, fill=green!8, below=of dyn] (evo) {Time evolution\\$f(H)$};
-	\node[qafnarr, fill=cyan!10, left=0.55cm of evo] (ana) {Analog\\engineering};
-	\node[qafnarr, fill=orange!8, below=of stat] (adi) {Adiabatic\\path $H(s)$};
-	\node[qafnarr, fill=yellow!16, right=0.55cm of adi] (var) {Variational\\hybrid};
+	% ----- لایه پرسش -----
+	\node[qafnarr, fill=green!14] (dyn) at (-3.05,-4.05) {Dynamic\\question};
+	\node[qafnarr, fill=orange!14] (stat) at (3.05,-4.05) {Static / spectral\\question};
 
-	\node[qafbox, text width=1.55cm, fill=green!6, below left=0.55cm and -0.15cm of evo] (trot) {Trotter};
-	\node[qafbox, text width=1.55cm, fill=green!6, below=0.55cm of evo] (lcu) {LCU};
-	\node[qafbox, text width=1.55cm, fill=green!6, below right=0.55cm and -0.15cm of evo] (qsp) {QSP / QSVT};
-	\node[qafbox, text width=1.55cm, fill=orange!6, below=0.55cm of adi] (adip) {Adiabatic\\schedule};
-	\node[qafbox, text width=1.55cm, fill=yellow!10, below=0.55cm of var] (vqe) {VQE};
-	\node[qafbox, text width=1.7cm, fill=orange!10] (qpe) at ($(trot)!0.5!(vqe)+(0,-1.15)$) {QPE};
+	% ----- لایه رهیافت -----
+	\node[qafnarr, fill=cyan!14] (ana) at (-5.15,-5.7) {Analog\\engineering};
+	\node[qafnarr, fill=green!10] (evo) at (-2.15,-5.7) {Time evolution\\$f(H)$};
+	\node[qafnarr, fill=orange!10] (adi) at (2.15,-5.7) {Adiabatic path\\$H(s)$};
+	\node[qafnarr, fill=yellow!18] (var) at (5.15,-5.7) {Variational\\hybrid};
 
-	\node[qafwide, fill=gray!12, below=1.55cm of qpe] (circ) {Circuit / analog\\schedule};
-	\node[qafwide, fill=gray!8, below=of circ] (meas) {Measurement /\\observable};
-	\node[qafwide, fill=gray!8, below=of meas] (val) {Classical\\validation};
-	\node[qafwide, fill=gray!8, below=of val] (res) {Resource\\estimation};
+	% ----- لایه ابزار -----
+	\node[qafbox, text width=1.45cm, fill=green!6] (trot) at (-3.35,-7.35) {Trotter};
+	\node[qafbox, text width=1.45cm, fill=green!6] (lcu) at (-2.15,-7.35) {LCU};
+	\node[qafbox, text width=1.45cm, fill=green!6] (qsp) at (-0.95,-7.35) {QSP / QSVT};
+	\node[qafbox, text width=1.7cm, fill=orange!12] (qpe) at (1.15,-7.35) {QPE};
+	\node[qafbox, text width=1.55cm, fill=yellow!12] (vqe) at (5.15,-7.35) {VQE};
 
+	% ----- لایه اجرا و خروجی -----
+	\node[qafwide, fill=gray!14] (exec) at (0,-9.15) {Execution:\\circuit or analog schedule};
+	\node[qafwide, fill=gray!8] (meas) at (0,-10.4) {Measurement / observable};
+	\node[qafwide, fill=gray!8] (val) at (0,-11.55) {Classical validation};
+	\node[qafwide, fill=gray!8] (res) at (0,-12.7) {Resource estimation};
+
+	% برچسب لایه
+	\node[lab] at (-6.55,-4.05) {QUESTION};
+	\node[lab] at (-6.55,-5.7) {APPROACH};
+	\node[lab] at (-6.55,-7.35) {TOOL};
+	\node[lab] at (-6.55,-9.15) {RUN};
+
+	% پس‌زمینه دو ستون پرسش
+	\begin{scope}[on background layer]
+		\node[qafpanel, fill=green!5, draw=green!40!black, fit=(dyn)(evo)(trot)(lcu)(qsp),
+			inner xsep=5pt, inner ysep=6pt] {};
+		\node[qafpanel, fill=orange!5, draw=orange!45!black, fit=(stat)(adi)(var)(vqe),
+			inner xsep=5pt, inner ysep=6pt] {};
+	\end{scope}
+
+	% ----- اتصالات مسئله -----
 	\draw[qafarr] (phys) -- (model);
 	\draw[qafarr] (model) -- (H);
-	\draw[qafarr] (H.south) -- ++(0,-0.18) -| (dyn.north);
-	\draw[qafarr] (H.south) -- ++(0,-0.18) -| (stat.north);
+	\coordinate (hsplit) at (0,-3.15);
+	\draw[qafarr] (H.south) -- (hsplit) -| (dyn.north);
+	\draw[qafarr] (hsplit) -| (stat.north);
+
+	% پرسش → رهیافت
 	\draw[qafarr] (dyn) -- (evo);
-	\draw[qafarr] (dyn.west) -- ++(-0.45,0) |- (ana.north);
+	\draw[qafarr] (dyn.west) -- ++(-0.35,0) |- (ana.north);
 	\draw[qafarr] (stat) -- (adi);
-	\draw[qafarr] (stat.east) -- ++(0.45,0) |- (var.north);
-	\draw[qafarr] (stat.south west) -- ++(-0.2,-0.25) -| (evo.east);
-	\draw[qafarr] (evo) -- (trot);
+	\draw[qafarr] (stat.east) -- ++(0.35,0) |- (var.north);
+	% پرسش طیفی می‌تواند از رهیافت تحول هم استفاده کند (QPE یا $f(H)$)
+	\draw[qafarr, dashed] (stat.west) -- (evo.east)
+		node[note, midway, above] {via $U(t)$};
+
+	% رهیافت تحول → سه ابزار دیجیتال
+	\draw[qafarr] (evo.south) -- ++(0,-0.18) -| (trot.north);
 	\draw[qafarr] (evo) -- (lcu);
-	\draw[qafarr] (evo) -- (qsp);
-	\draw[qafarr] (adi) -- (adip);
+	\draw[qafarr] (evo.south) -- ++(0,-0.18) -| (qsp.north);
+
+	% وردشی → VQE
 	\draw[qafarr] (var) -- (vqe);
-	\draw[qafarr] (lcu) -- (qpe);
-	\draw[qafarr] (adip) -- (qpe);
-	\draw[qafarr] (trot.south) |- (circ.west);
-	\draw[qafarr] (qsp.south) |- (circ.east);
-	\draw[qafarr] (qpe) -- (circ);
-	\draw[qafarr] (vqe.south) |- (circ.east);
-	\draw[qafarr] (ana.south) |- (circ.west);
-	\draw[qafarr] (adip.south) |- (circ.west);
-	\draw[qafarr] (circ) -- (meas);
+
+	% QPE از هر پیاده‌سازی U تغذیه می‌شود، نه فقط از یک ابزار
+	\node[draw=green!45!black, densely dashed, rounded corners=2pt, inner sep=3pt,
+		fit=(trot)(lcu)(qsp)] (utools) {};
+	\draw[qafarr] (utools.east) -- (qpe.west)
+		node[note, above, pos=0.55] {controlled $U$};
+
+	% شینهٔ اجرا: همهٔ مسیرها جداگانه به اجرا می‌رسند؛ آنالوگ از گیت‌ها عبور نمی‌کند
+	\coordinate (busL) at (-5.15,-8.35);
+	\coordinate (busR) at (5.15,-8.35);
+	\draw[thick, draw=black!55] (busL) -- (busR);
+	\foreach \n in {ana,trot,lcu,qsp,qpe,adi,vqe} {
+		\draw[qafarr] (\n.south) -- (\n.south |- busL);
+	}
+	\draw[qafarr] (0,-8.35) -- (exec.north);
+
+	\draw[qafarr] (exec) -- (meas);
 	\draw[qafarr] (meas) -- (val);
 	\draw[qafarr] (val) -- (res);
 \end{tikzpicture}

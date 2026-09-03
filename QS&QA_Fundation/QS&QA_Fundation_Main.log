@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  3 SEP 2026 18:15
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  3 SEP 2026 18:44
 entering extended mode
- restricted \write18 enabled.
+ \write18 enabled.
  %&-line parsing enabled.
 **QS&QA_Fundation_Main.tex
 (./QS&QA_Fundation_Main.tex
@@ -547,7 +547,7 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 )
 (c:/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Restricted shell escape enabled on input line 77.
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
 )
 (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -1874,11 +1874,11 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
 [8
 
 ]
-
-[9]
 LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/it' will be
 (Font)              scaled to size 13.07996pt on input line 65.
 
+
+[9]
 Underfull \hbox (badness 10000) in alignment at lines 131--131
 [][][][] 
  []
@@ -2118,9 +2118,9 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
-(Font)              scaled to size 6.53998pt on input line 802.
+(Font)              scaled to size 6.53998pt on input line 804.
 
-Overfull \hbox (2.36945pt too wide) in paragraph at lines 823--824
+Overfull \hbox (2.36945pt too wide) in paragraph at lines 825--826
 [][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۲.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
 ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 جدول شاهدهای راستی‌
 آزمایی برای هابارد و نظریهٔ پیمانه‌ای؛ فرمول‌های asymp-[]
@@ -2166,23 +2166,27 @@ owski, A. McClain Gomez,[]
 [55]))
 
 [56]
-runsystem(latexminted cleantemp  --timestamp 20260903181511 2A3295FF97FD2A69D89
-865AE1BE6A276)...executed safely (allowed).
+runsystem(latexminted cleantemp  --timestamp 20260903184403 2A3295FF97FD2A69D89
+865AE1BE6A276)...executed.
 
  (./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `QS&QA_Fundation_Main.out' has not changed.
 (rerunfilecheck)             Checksum: 33BC44625A78081FF991C14567A95DA8;17197.
  ) 
 Here is how much of TeX's memory you used:
- 50000 strings out of 473831
- 1139728 string characters out of 5733136
+ 50065 strings out of 473831
+ 1141045 string characters out of 5733136
  1698356 words of memory out of 5000000
- 72204 multiletter control sequences out of 15000+600000
- 565885 words of font info for 106 fonts, out of 8000000 for 9000
+ 72266 multiletter control sequences out of 15000+600000
+ 565909 words of font info for 109 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  146i,16n,137p,1640b,1961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
