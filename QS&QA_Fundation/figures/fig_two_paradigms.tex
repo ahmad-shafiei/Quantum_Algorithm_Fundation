@@ -1,0 +1,23 @@
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	font=\footnotesize\linespread{1}\selectfont,
+	node distance=0.48cm and 1.2cm
+	]
+	\node[qafbox, text width=3.6cm, fill=green!12] (evo) {%
+		\textbf{Time evolution}\\[2pt]
+		implement $U(t)$ or $f(H)$};
+	\node[qafbox, text width=3.6cm, fill=orange!12, right=of evo] (adi) {%
+		\textbf{Adiabatic computing}\\[2pt]
+		the path $H(s)$ \emph{is} the algorithm};
+	\node[qafnarr, fill=green!7, below left=0.55cm and 0.05cm of evo] (dig) {Digital:\\product formulas,\\LCU, QSP};
+	\node[qafnarr, fill=cyan!10, below right=0.55cm and 0.05cm of evo] (ana) {Analog:\\engineer $H$};
+	\node[qafnarr, fill=orange!7, below=0.55cm of adi] (path) {$H(s)=(1-s)H_i+s H_p$};
+	\coordinate (mid) at ($(evo)!0.5!(adi)$);
+	\node[qafbox, text width=4.4cm, fill=gray!10, below=2.35cm of mid] (join) {%
+		Digital adiabatic: Trotterize $H(s_k)$};
+	\draw[qafarr] (evo) -- (dig);
+	\draw[qafarr] (evo) -- (ana);
+	\draw[qafarr] (adi) -- (path);
+	\draw[qafarr] (path) -- (join);
+	\draw[qafarr] (dig.south) |- (join.west);
+\end{tikzpicture}

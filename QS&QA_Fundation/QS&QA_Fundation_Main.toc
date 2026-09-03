@@ -1,0 +1,123 @@
+\contentsline {chapter}{این سند چگونه خوانده شود}{6}{chapter*.2}%
+\contentsline {part}{بخش 1\hskip 1em\relax نقشهٔ مفهومی}{7}{part.1}%
+\contentsline {chapter}{\numberline {1}نقشهٔ زنده}{8}{chapter.1.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{8}{section.1.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{8}{section.1.1.2}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{9}{section.1.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{10}{section.1.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{10}{section.1.1.5}%
+\contentsline {part}{بخش 2\hskip 1em\relax پایه‌های محاسباتی}{11}{part.2}%
+\contentsline {chapter}{\numberline {1}الگوریتم چیست؟}{12}{chapter.2.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{12}{section.2.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{12}{section.2.1.2}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{12}{section.2.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{13}{section.2.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{13}{section.2.1.5}%
+\contentsline {chapter}{\numberline {2}خانواده‌های کلاسیکِ مرتبط}{14}{chapter.2.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{14}{section.2.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{14}{section.2.2.2}%
+\contentsline {paragraph}{جستجو و بهینه‌سازی.}{14}{section*.5}%
+\contentsline {paragraph}{تبدیل فوریه.}{14}{section*.6}%
+\contentsline {paragraph}{دستگاه خطی و زیرفضای \lr {Krylov}.}{15}{section*.7}%
+\contentsline {paragraph}{نمونه‌برداری و مونت‌کارلو.}{15}{section*.8}%
+\contentsline {paragraph}{شبیه‌سازی کلاسیک سامانه‌های کوانتومی.}{15}{section*.9}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{15}{section.2.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{15}{section.2.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{16}{section.2.2.5}%
+\contentsline {chapter}{\numberline {3}مدل محاسباتی کوانتومی}{17}{chapter.2.3}%
+\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{17}{section.2.3.1}%
+\contentsline {section}{\numberline {3.2}ایدهٔ شهودی}{17}{section.2.3.2}%
+\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{18}{section.2.3.3}%
+\contentsline {section}{\numberline {3.4}ارتباط}{18}{section.2.3.4}%
+\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{18}{section.2.3.5}%
+\contentsline {chapter}{\numberline {4}سه لایه: الگوریتم، شبیه‌سازی، ابزار}{19}{chapter.2.4}%
+\contentsline {section}{\numberline {4.1}جایگاه در نقشه}{19}{section.2.4.1}%
+\contentsline {section}{\numberline {4.2}ایدهٔ شهودی}{19}{section.2.4.2}%
+\contentsline {paragraph}{لایهٔ ۱ --- الگوریتم کوانتومی.}{19}{section*.11}%
+\contentsline {paragraph}{لایهٔ ۲ --- شبیه‌سازی کوانتومی.}{20}{section*.12}%
+\contentsline {paragraph}{لایهٔ ۳ --- روش‌های پیاده‌سازی.}{20}{section*.13}%
+\contentsline {section}{\numberline {4.3}حداقل فرمالیسم}{20}{section.2.4.3}%
+\contentsline {section}{\numberline {4.4}ارتباط}{20}{section.2.4.4}%
+\contentsline {section}{\numberline {4.5}چه وقت استفاده می‌شود}{21}{section.2.4.5}%
+\contentsline {part}{بخش 3\hskip 1em\relax از مسئلهٔ فیزیکی تا جریان کاری}{22}{part.3}%
+\contentsline {chapter}{\numberline {1}از مسئلهٔ فیزیکی تا هامیلتونی}{23}{chapter.3.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{23}{section.3.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{23}{section.3.1.2}%
+\contentsline {paragraph}{اسپین: \lr {Ising} و \lr {Heisenberg}.}{23}{section*.15}%
+\contentsline {paragraph}{هابارد (فرمی و بوز).}{24}{section*.16}%
+\contentsline {paragraph}{ساختار الکترونی مولکولی.}{24}{section*.17}%
+\contentsline {paragraph}{میدان روی شبکه و نظریهٔ پیمانه‌ای شبکه‌ای.}{24}{section*.18}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{24}{section.3.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{24}{section.3.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{25}{section.3.1.5}%
+\contentsline {chapter}{\numberline {2}جریان کاری کامل}{26}{chapter.3.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{26}{section.3.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{26}{section.3.2.2}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{26}{section.3.2.3}%
+\contentsline {paragraph}{مثال پیمایش: مدل هابارد.}{26}{section*.20}%
+\contentsline {section}{\numberline {2.4}ارتباط}{28}{section.3.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{28}{section.3.2.5}%
+\contentsline {part}{بخش 4\hskip 1em\relax دو پرسش و دو رهیافت}{29}{part.4}%
+\contentsline {chapter}{\numberline {1}دو پرسش از یک هامیلتونی: دینامیک و طیف}{30}{chapter.4.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{30}{section.4.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{30}{section.4.1.2}%
+\contentsline {paragraph}{پرسش دینامیکی --- تحول زمانی.}{31}{section*.22}%
+\contentsline {paragraph}{پرسش ایستا / طیفی.}{31}{section*.23}%
+\contentsline {paragraph}{پل: پاسخ خطی.}{31}{section*.24}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{31}{section.4.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{31}{section.4.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{32}{section.4.1.5}%
+\contentsline {chapter}{\numberline {2}دو رهیافت: تحول زمانی و محاسبهٔ آدیاباتیک}{33}{chapter.4.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{33}{section.4.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{33}{section.4.2.2}%
+\contentsline {paragraph}{الف) رهیافت تحول زمانی / شرودینگر.}{33}{section*.26}%
+\contentsline {paragraph}{ب) رهیافت محاسبهٔ آدیاباتیک.}{34}{section*.27}%
+\contentsline {paragraph}{اتصال دو رهیافت.}{34}{section*.28}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{34}{section.4.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{35}{section.4.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{35}{section.4.2.5}%
+\contentsline {part}{بخش 5\hskip 1em\relax جعبه ابزار}{36}{part.5}%
+\contentsline {chapter}{\numberline {1}جعبه ابزار دیجیتال: \lr {Trotter}، \lr {LCU}، \lr {QSP}}{37}{chapter.5.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{37}{section.5.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{37}{section.5.1.2}%
+\contentsline {paragraph}{\lr {Trotter} --- فرمول حاصل‌ضربی.}{37}{section*.29}%
+\contentsline {paragraph}{\lr {LCU} --- ترکیب خطی یکانی‌ها.}{38}{section*.30}%
+\contentsline {paragraph}{\lr {QSP} --- پردازش سیگنال کوانتومی.}{38}{section*.31}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{38}{section.5.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{38}{section.5.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{38}{section.5.1.5}%
+\contentsline {chapter}{\numberline {2}ابزارهای طیفی و ترکیبی: \lr {QPE} و \lr {VQE}}{40}{chapter.5.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{40}{section.5.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{40}{section.5.2.2}%
+\contentsline {paragraph}{\lr {QPE} --- برآورد فاز.}{40}{section*.33}%
+\contentsline {paragraph}{\lr {VQE} --- الگوریتم وردشی.}{40}{section*.34}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{41}{section.5.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{41}{section.5.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{41}{section.5.2.5}%
+\contentsline {part}{بخش 6\hskip 1em\relax اجرا، راستی‌آزمایی و قطب‌نما}{42}{part.6}%
+\contentsline {chapter}{\numberline {1}دیجیتال، آنالوگ، ترکیبی}{43}{chapter.6.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{43}{section.6.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{43}{section.6.1.2}%
+\contentsline {paragraph}{دیجیتال --- مدار گیتی.}{43}{section*.36}%
+\contentsline {paragraph}{آنالوگ --- مهندسی هامیلتونی.}{43}{section*.37}%
+\contentsline {paragraph}{ترکیبی --- حلقه با کلاسیک.}{43}{section*.38}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{44}{section.6.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{44}{section.6.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{44}{section.6.1.5}%
+\contentsline {chapter}{\numberline {2}بستن حلقه: اندازه‌گیری، راستی‌آزمایی، برآورد منابع}{45}{chapter.6.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{45}{section.6.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{45}{section.6.2.2}%
+\contentsline {paragraph}{از مدار تا مشاهده‌پذیر.}{45}{section*.39}%
+\contentsline {paragraph}{راستی‌آزمایی کلاسیک.}{45}{section*.40}%
+\contentsline {paragraph}{برآورد منابع.}{46}{section*.41}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{46}{section.6.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{46}{section.6.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{46}{section.6.2.5}%
+\contentsline {chapter}{\numberline {3}قطب‌نمای پژوهش}{47}{chapter.6.3}%
+\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{47}{section.6.3.1}%
+\contentsline {section}{\numberline {3.2}ایدهٔ شهودی}{47}{section.6.3.2}%
+\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{48}{section.6.3.3}%
+\contentsline {section}{\numberline {3.4}ارتباط}{48}{section.6.3.4}%
+\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{48}{section.6.3.5}%
+\contentsline {chapter}{\numberline {4}واژه‌نامهٔ مصوب}{50}{chapter.6.4}%
+\contentsline {chapter}{مراجع}{52}{section*.43}%

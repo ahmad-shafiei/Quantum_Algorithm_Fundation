@@ -1,0 +1,25 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Minimal 2\PYGZhy{}qubit example: independent per\PYGZhy{}qubit readout noise via Qiskit Aer}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{QuantumCircuit}\PYG{p}{,} \PYG{n}{transpile}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit\PYGZus{}aer}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{AerSimulator}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit\PYGZus{}aer}\PYG{n+nn}{.}\PYG{n+nn}{noise}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{NoiseModel}\PYG{p}{,} \PYG{n}{ReadoutError}
+\PYG{c+c1}{\PYGZsh{} Row\PYGZhy{}stochastic assignment matrix: A[i,j] = P(measured=j | prepared=i)}
+\PYG{n}{A\PYGZus{}q0} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.92}\PYG{p}{,} \PYG{l+m+mf}{0.08}\PYG{p}{]}\PYG{p}{,}   \PYG{c+c1}{\PYGZsh{} prepared |0\PYGZgt{}}
+                 \PYG{p}{[}\PYG{l+m+mf}{0.11}\PYG{p}{,} \PYG{l+m+mf}{0.89}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} prepared |1\PYGZgt{}}
+\PYG{n}{A\PYGZus{}q1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{p}{[}\PYG{l+m+mf}{0.90}\PYG{p}{,} \PYG{l+m+mf}{0.10}\PYG{p}{]}\PYG{p}{,}
+                 \PYG{p}{[}\PYG{l+m+mf}{0.12}\PYG{p}{,} \PYG{l+m+mf}{0.88}\PYG{p}{]}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{noise\PYGZus{}model} \PYG{o}{=} \PYG{n}{NoiseModel}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{noise\PYGZus{}model}\PYG{o}{.}\PYG{n}{add\PYGZus{}readout\PYGZus{}error}\PYG{p}{(}\PYG{n}{ReadoutError}\PYG{p}{(}\PYG{n}{A\PYGZus{}q0}\PYG{p}{)}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{]}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} attach to qubit 0}
+\PYG{n}{noise\PYGZus{}model}\PYG{o}{.}\PYG{n}{add\PYGZus{}readout\PYGZus{}error}\PYG{p}{(}\PYG{n}{ReadoutError}\PYG{p}{(}\PYG{n}{A\PYGZus{}q1}\PYG{p}{)}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} attach to qubit 1}
+\PYG{c+c1}{\PYGZsh{} Simple entangled circuit}
+\PYG{n}{qc} \PYG{o}{=} \PYG{n}{QuantumCircuit}\PYG{p}{(}\PYG{l+m+mi}{2}\PYG{p}{,} \PYG{l+m+mi}{2}\PYG{p}{)}
+\PYG{n}{qc}\PYG{o}{.}\PYG{n}{h}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{)}
+\PYG{n}{qc}\PYG{o}{.}\PYG{n}{cx}\PYG{p}{(}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{)}
+\PYG{n}{qc}\PYG{o}{.}\PYG{n}{measure}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{,} \PYG{p}{[}\PYG{l+m+mi}{0}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{]}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} Noisy simulation: readout errors applied at measurement time}
+\PYG{n}{sim} \PYG{o}{=} \PYG{n}{AerSimulator}\PYG{p}{(}\PYG{n}{noise\PYGZus{}model}\PYG{o}{=}\PYG{n}{noise\PYGZus{}model}\PYG{p}{)}
+\PYG{n}{tqc} \PYG{o}{=} \PYG{n}{transpile}\PYG{p}{(}\PYG{n}{qc}\PYG{p}{,} \PYG{n}{sim}\PYG{p}{)}
+\PYG{n}{result} \PYG{o}{=} \PYG{n}{sim}\PYG{o}{.}\PYG{n}{run}\PYG{p}{(}\PYG{n}{tqc}\PYG{p}{,} \PYG{n}{shots}\PYG{o}{=}\PYG{l+m+mi}{4096}\PYG{p}{)}\PYG{o}{.}\PYG{n}{result}\PYG{p}{(}\PYG{p}{)}
+\PYG{n}{counts} \PYG{o}{=} \PYG{n}{result}\PYG{o}{.}\PYG{n}{get\PYGZus{}counts}\PYG{p}{(}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} bitstring \PYGZhy{}\PYGZgt{} shot count}
+\end{MintedVerbatim}

@@ -1,0 +1,1 @@
+find . -type f \( -name "*.bbl" -o -name "*.blg" -o -name "*.out" -o -name "*.aux" -o -name "*.log" -o -name "*.lof" -o -name "*.gz" -o -name "*.toc" -o -name "*.bak~" -o -name "*.lot" -o -name "*.synctex(busy)" \) -exec rm -f {} +

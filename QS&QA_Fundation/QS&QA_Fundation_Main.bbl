@@ -1,0 +1,262 @@
+\begin{thebibliography}{10}
+
+\bibitem{Verstraete2008}
+F.~Verstraete, V.~Murg, and J.~I. Cirac.
+\newblock Matrix product states, projected entangled pair states, and
+  variational renormalization group methods for quantum spin systems.
+\newblock {\em Advances in Physics}, 57(2):143--224, 2008.
+
+\bibitem{Cirac2021}
+J.~I. Cirac, D.~P{\'e}rez-Garc{\'i}a, N.~Schuch, and F.~Verstraete.
+\newblock Matrix product states and projected entangled pair states: Concepts,
+  symmetries, theorems.
+\newblock {\em Reviews of Modern Physics}, 93(4):045003, 2021.
+
+\bibitem{NielsenChuang2010}
+M.~A. Nielsen and I.~L. Chuang.
+\newblock {\em Quantum Computation and Quantum Information}.
+\newblock Cambridge University Press, Cambridge, 10th anniversary edition,
+  2010.
+
+\bibitem{Feynman1982}
+R.~P. Feynman.
+\newblock Simulating physics with computers.
+\newblock {\em International Journal of Theoretical Physics}, 21(6/7):467--488,
+  1982.
+
+\bibitem{Lloyd1996}
+S.~Lloyd.
+\newblock Universal quantum simulators.
+\newblock {\em Science}, 273(5278):1073--1078, 1996.
+
+\bibitem{Georgescu2014}
+I.~M. Georgescu, S.~Ashhab, and F.~Nori.
+\newblock Quantum simulation.
+\newblock {\em Reviews of Modern Physics}, 86(1):153--185, 2014.
+
+\bibitem{CiracZoller2012}
+J.~I. Cirac and P.~Zoller.
+\newblock Goals and opportunities in quantum simulation.
+\newblock {\em Nature Physics}, 8(4):264--266, 2012.
+
+\bibitem{McArdle2020}
+S.~McArdle, S.~Endo, A.~Aspuru-Guzik, S.~C. Benjamin, and X.~Yuan.
+\newblock Quantum computational chemistry.
+\newblock {\em Reviews of Modern Physics}, 92(1):015003, 2020.
+
+\bibitem{Bauer2020}
+B.~Bauer, S.~Bravyi, M.~Motta, and G.~K.-L. Chan.
+\newblock Quantum algorithms for quantum chemistry and quantum materials
+  science.
+\newblock {\em Chemical Reviews}, 120(22):12685--12717, 2020.
+
+\bibitem{Childs2018}
+A.~M. Childs, D.~Maslov, Y.~Nam, N.~J. Ross, and Y.~Su.
+\newblock Toward the first quantum simulation with quantum speedup.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  115(38):9456--9461, 2018.
+
+\bibitem{Berry2015}
+D.~W. Berry, A.~M. Childs, R.~Cleve, R.~Kothari, and R.~D. Somma.
+\newblock Simulating {Hamiltonian} dynamics with a truncated {Taylor} series.
+\newblock {\em Physical Review Letters}, 114(9):090502, 2015.
+
+\bibitem{Low2017}
+G.~H. Low and I.~L. Chuang.
+\newblock Optimal {Hamiltonian} simulation by quantum signal processing.
+\newblock {\em Physical Review Letters}, 118(1):010501, 2017.
+
+\bibitem{Peruzzo2014}
+A.~Peruzzo, J.~McClean, P.~Shadbolt, M.-H. Yung, X.-Q. Zhou, P.~J. Love,
+  A.~Aspuru-Guzik, and J.~L. O'Brien.
+\newblock A variational eigenvalue solver on a photonic quantum processor.
+\newblock {\em Nature Communications}, 5:4213, 2014.
+
+\bibitem{Tilly2022}
+J.~Tilly, H.~Chen, S.~Cao, D.~Picozzi, K.~Setia, Y.~Li, E.~Grant, L.~Wossnig,
+  I.~Rungger, G.~H. Booth, and J.~Tennyson.
+\newblock The variational quantum eigensolver: A review of methods and best
+  practices.
+\newblock {\em Physics Reports}, 986:1--128, 2022.
+
+\bibitem{Preskill2018}
+J.~Preskill.
+\newblock Quantum computing in the {NISQ} era and beyond.
+\newblock {\em Quantum}, 2:79, 2018.
+
+\bibitem{Endo2021}
+S.~Endo, Z.~Cai, S.~C. Benjamin, and X.~Yuan.
+\newblock Hybrid quantum-classical algorithms and quantum error mitigation.
+\newblock {\em Journal of the Physical Society of Japan}, 90(3):032001, 2021.
+
+\bibitem{Daley2022}
+A.~J. Daley, I.~Bloch, C.~Kokail, S.~Flannigan, N.~Pearson, M.~Troyer, and
+  P.~Zoller.
+\newblock Practical quantum advantage in quantum simulation.
+\newblock {\em Nature}, 607(7920):667--676, 2022.
+
+\bibitem{Clinton2024}
+L.~Clinton, T.~Cubitt, B.~Flynn, F.~M. Gambetta, J.~Klassen, A.~Montanaro,
+  S.~Piddock, R.~A. Santos, and E.~Sheridan.
+\newblock Towards near-term quantum simulation of materials.
+\newblock {\em Nature Communications}, 15:211, 2024.
+
+\bibitem{Cai2023}
+Z.~Cai, R.~Babbush, S.~C. Benjamin, S.~Endo, W.~J. Huggins, Y.~Li, J.~R.
+  McClean, and T.~E. O'Brien.
+\newblock Quantum error mitigation.
+\newblock {\em Reviews of Modern Physics}, 95(4):045005, 2023.
+
+\bibitem{BreuerPetruccione2002}
+H.-P. Breuer and F.~Petruccione.
+\newblock {\em The Theory of Open Quantum Systems}.
+\newblock Oxford University Press, Oxford, 2002.
+
+\bibitem{Zhang2025}
+Y.~Zhang, X.~Zhang, J.~Sun, H.~Lin, Y.~Huang, D.~Lv, and X.~Yuan.
+\newblock Fault-tolerant quantum algorithms for quantum molecular systems: A
+  survey.
+\newblock {\em Wiley Interdisciplinary Reviews: Computational Molecular
+  Science}, 15:e70020, 2025.
+
+\bibitem{Cerezo2021}
+M.~Cerezo, A.~Arrasmith, R.~Babbush, S.~C. Benjamin, S.~Endo, K.~Fujii, J.~R.
+  McClean, K.~Mitarai, X.~Yuan, L.~Cincio, and P.~J. Coles.
+\newblock Variational quantum algorithms.
+\newblock {\em Nature Reviews Physics}, 3(9):625--644, 2021.
+
+\bibitem{Fauseweh2024}
+B.~Fauseweh.
+\newblock Quantum many-body simulations on digital quantum computers:
+  State-of-the-art and future challenges.
+\newblock {\em Nature Communications}, 15:2123, 2024.
+
+\bibitem{Miessen2024}
+A.~Miessen, D.~J. Egger, I.~Tavernelli, and G.~Mazzola.
+\newblock Benchmarking digital quantum simulations above hundreds of qubits
+  using quantum critical dynamics.
+\newblock {\em arXiv preprint arXiv:2404.08053}, 2024.
+\newblock IBM Quantum / University of Zurich; hardware benchmarking up to 133
+  qubits.
+
+\bibitem{Dutta2024}
+R.~Dutta, D.~G.~A. Cabral, N.~Lyu, N.~P. Vu, Y.~Wang, B.~Allen, X.~Dan, R.~G.
+  Corti{\~n}as, P.~Khazaei, M.~Sch{\"a}fer, et~al.
+\newblock Simulating chemistry on bosonic quantum devices.
+\newblock {\em Journal of Chemical Theory and Computation}, 20(15):6426--6441,
+  2024.
+
+\bibitem{Maskara2025}
+N.~Maskara, S.~Ostermann, J.~Shee, M.~Kalinowski, A.~McClain~Gomez,
+  R.~Araiza~Bravo, D.~S. Wang, A.~I. Krylov, N.~Y. Yao, M.~Head-Gordon, M.~D.
+  Lukin, and S.~F. Yelin.
+\newblock Programmable simulations of molecules and materials with
+  reconfigurable quantum processors.
+\newblock {\em Nature Physics}, 21(2):289--297, 2025.
+
+\bibitem{Andersen2025}
+T.~I. Andersen, N.~Astrakhantsev, A.~H. Karamlou, J.~Berndtsson, J.~Motruk,
+  A.~Szasz, J.~A. Gross, et~al.
+\newblock Thermalization and criticality on an analogue--digital quantum
+  simulator.
+\newblock {\em Nature}, 638:79--85, 2025.
+
+\bibitem{Motlagh2025}
+D.~Motlagh, R.~A. Lang, P.~Jain, J.~A. Campos-Gonzalez-Angulo, W.~Maxwell,
+  T.~Zeng, A.~Aspuru-Guzik, and J.~M. Arrazola.
+\newblock Quantum algorithm for vibronic dynamics: Case study on singlet
+  fission solar cell design.
+\newblock {\em Quantum Science and Technology}, 10(4):045048, 2025.
+
+\bibitem{Evered2025}
+S.~J. Evered, M.~Kalinowski, A.~A. Geim, T.~Manovitz, D.~Bluvstein, S.~H. Li,
+  N.~Maskara, H.~Zhou, S.~Ebadi, M.~Xu, J.~Campo, M.~Cain, S.~Ostermann, S.~F.
+  Yelin, S.~Sachdev, M.~Greiner, V.~Vuleti{\'c}, and M.~D. Lukin.
+\newblock Probing the {Kitaev} honeycomb model on a neutral-atom quantum
+  computer.
+\newblock {\em Nature}, 645:341--347, 2025.
+
+\bibitem{Katz2025}
+O.~Katz, A.~Schuckert, T.~Wang, E.~Crane, A.~V. Gorshkov, and M.~Cetina.
+\newblock Hybrid digital-analog protocols for simulating quantum multi-body
+  interactions.
+\newblock {\em arXiv preprint arXiv:2512.21385}, 2025.
+
+\bibitem{Kanasugi2026}
+S.~Kanasugi, R.~Toshio, K.~Maruyama, and H.~Oshima.
+\newblock Enabling chemically accurate quantum phase estimation in the early
+  fault-tolerant regime.
+\newblock {\em arXiv preprint arXiv:2603.22778}, 2026.
+
+\bibitem{Miessen2023}
+A.~Miessen, P.~J. Ollitrault, F.~Tacchino, and I.~Tavernelli.
+\newblock Quantum algorithms for quantum dynamics.
+\newblock {\em Nature Computational Science}, 3(1):25--37, 2023.
+
+\bibitem{Fisher2023}
+M.~P.~A. Fisher, V.~Khemani, A.~Nahum, and S.~Vijay.
+\newblock Random quantum circuits.
+\newblock {\em Annual Review of Condensed Matter Physics}, 14:335--379, 2023.
+
+\bibitem{Arute2019}
+F.~Arute, K.~Arya, R.~Babbush, D.~Bacon, J.~C. Bardin, R.~Barends, et~al.
+\newblock Quantum supremacy using a programmable superconducting processor.
+\newblock {\em Nature}, 574(7779):505--510, 2019.
+
+\bibitem{Zhong2020}
+H.-S. Zhong, H.~Wang, Y.-H. Deng, M.-C. Chen, L.-C. Peng, Y.-H. Luo, et~al.
+\newblock Quantum computational advantage using photons.
+\newblock {\em Science}, 370(6523):1460--1463, 2020.
+
+\bibitem{Hangleiter2023}
+D.~Hangleiter and J.~Eisert.
+\newblock Computational advantage of quantum random sampling.
+\newblock {\em Reviews of Modern Physics}, 95(3):035001, 2023.
+
+\bibitem{Mi2021}
+X.~Mi, P.~Roushan, C.~Quintana, S.~Mandr{\`a}, J.~Marshall, C.~Neill, et~al.
+\newblock Information scrambling in quantum circuits.
+\newblock {\em Science}, 374(6574):1479--1483, 2021.
+
+\bibitem{Mi2022}
+X.~Mi, M.~Ippoliti, C.~Quintana, A.~Greene, Z.~Chen, J.~Gross, et~al.
+\newblock Time-crystalline eigenstate order on a quantum processor.
+\newblock {\em Nature}, 601(7894):531--536, 2022.
+
+\bibitem{Farrell2024}
+R.~C. Farrell, M.~Illa, A.~N. Ciavarella, and M.~J. Savage.
+\newblock Quantum simulations of hadron dynamics in the {Schwinger} model using
+  112 qubits.
+\newblock {\em Physical Review D}, 109(11):114510, 2024.
+
+\bibitem{RobledoMoreno2025}
+J.~Robledo-Moreno, M.~Motta, H.~Haas, A.~Javadi-Abhari, P.~Jurcevic, W.~Kirby,
+  et~al.
+\newblock Chemistry beyond exact solutions on a quantum-centric supercomputer.
+\newblock {\em Nature}, 2025.
+
+\bibitem{Bertini2019}
+B.~Bertini, P.~Kos, and T.~Prosen.
+\newblock Exact correlation functions for dual-unitary lattice models in $1+1$
+  dimensions.
+\newblock {\em Physical Review Letters}, 123(21):210601, 2019.
+
+\bibitem{Skinner2019}
+B.~Skinner, J.~Ruhman, and A.~Nahum.
+\newblock Measurement-induced phase transitions in the dynamics of
+  entanglement.
+\newblock {\em Physical Review X}, 9(3):031009, 2019.
+
+\bibitem{vandenBerg2023}
+E.~van~den Berg, Z.~K. Minev, A.~Kandala, and K.~Temme.
+\newblock Probabilistic error cancellation with sparse {Pauli--Lindblad} models
+  on noisy quantum processors.
+\newblock {\em Nature Physics}, 19(8):1116--1121, 2023.
+
+\bibitem{Filippov2023}
+S.~Filippov, M.~Leahy, M.~A.~C. Rossi, and G.~Garc{\'i}a-P{\'e}rez.
+\newblock Scalable tensor-network error mitigation for near-term quantum
+  computing.
+\newblock {\em arXiv preprint arXiv:2307.11740}, 2023.
+
+\end{thebibliography}

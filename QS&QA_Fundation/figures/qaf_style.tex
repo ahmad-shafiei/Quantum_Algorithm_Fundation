@@ -1,0 +1,37 @@
+% سبک مشترک نمودارهای سند پایه‌ها (فقط داخل محیط latin فراخوانی شود)
+\tikzset{
+	qafbox/.style={
+		draw=black!55,
+		rounded corners=2pt,
+		align=center,
+		inner sep=3pt,
+		thick,
+		fill=white,
+		font=\footnotesize\linespread{1}\selectfont,
+		minimum height=0.95cm
+	},
+	qafwide/.style={
+		qafbox,
+		text width=2.55cm
+	},
+	qafnarr/.style={
+		qafbox,
+		text width=2.05cm
+	},
+	qaftitle/.style={
+		font=\small\bfseries\linespread{1}\selectfont,
+		align=center
+	},
+	qafarr/.style={
+		-{Latex[length=2.2mm]},
+		thick,
+		draw=black!65
+	},
+	qafpanel/.style={
+		draw,
+		thick,
+		rounded corners=4pt,
+		inner xsep=8pt,
+		inner ysep=8pt
+	}
+}

@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} 4\PYGZhy{}qubit ZZFeatureMap circuit (same pattern as project dataset generation)}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{QuantumCircuit}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{n+nn}{.}\PYG{n+nn}{circuit}\PYG{n+nn}{.}\PYG{n+nn}{library}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{zz\PYGZus{}feature\PYGZus{}map}
+\PYG{n}{num\PYGZus{}qubits} \PYG{o}{=} \PYG{l+m+mi}{4}
+\PYG{n}{thetas} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{array}\PYG{p}{(}\PYG{p}{[}\PYG{l+m+mf}{0.3}\PYG{p}{,} \PYG{l+m+mf}{0.7}\PYG{p}{,} \PYG{l+m+mf}{1.1}\PYG{p}{,} \PYG{l+m+mf}{0.5}\PYG{p}{]}\PYG{p}{)}  \PYG{c+c1}{\PYGZsh{} one angle per qubit / feature}
+\PYG{c+c1}{\PYGZsh{} feature\PYGZus{}dimension: number of qubits (feature variables)}
+\PYG{c+c1}{\PYGZsh{} reps: how many times the feature\PYGZhy{}map block is repeated (circuit depth)}
+\PYG{c+c1}{\PYGZsh{} entanglement: \PYGZsq{}full\PYGZsq{} | \PYGZsq{}linear\PYGZsq{} | \PYGZsq{}circular\PYGZsq{} | explicit pair list}
+\PYG{n}{feature\PYGZus{}map} \PYG{o}{=} \PYG{n}{zz\PYGZus{}feature\PYGZus{}map}\PYG{p}{(}
+    \PYG{n}{feature\PYGZus{}dimension}\PYG{o}{=}\PYG{n}{num\PYGZus{}qubits}\PYG{p}{,}
+    \PYG{n}{reps}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{,}
+    \PYG{n}{entanglement}\PYG{o}{=}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{full}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,}\PYG{p}{)}
+\PYG{n}{qc} \PYG{o}{=} \PYG{n}{QuantumCircuit}\PYG{p}{(}\PYG{n}{num\PYGZus{}qubits}\PYG{p}{,} \PYG{n}{num\PYGZus{}qubits}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} bind angles and insert the feature\PYGZhy{}map sub\PYGZhy{}circuit}
+\PYG{n}{qc}\PYG{o}{.}\PYG{n}{compose}\PYG{p}{(}\PYG{n}{feature\PYGZus{}map}\PYG{o}{.}\PYG{n}{assign\PYGZus{}parameters}\PYG{p}{(}\PYG{n}{thetas}\PYG{p}{)}\PYG{p}{,} \PYG{n}{inplace}\PYG{o}{=}\PYG{k+kc}{True}\PYG{p}{)}
+\PYG{n}{qc}\PYG{o}{.}\PYG{n}{measure}\PYG{p}{(}\PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}qubits}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{range}\PYG{p}{(}\PYG{n}{num\PYGZus{}qubits}\PYG{p}{)}\PYG{p}{)}
+\PYG{c+c1}{\PYGZsh{} qc is ready for ideal or noisy simulation (NoiseModel on AerSimulator)}
+\end{MintedVerbatim}

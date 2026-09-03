@@ -1,0 +1,25 @@
+\input{figures/qaf_style.tex}
+\begin{forest} qsimtree,
+	for tree={
+		font=\scriptsize\linespread{1}\selectfont,
+		l sep=6mm,
+		s sep=1.2mm,
+		minimum height=5.2mm,
+		inner ysep=1pt,
+		align=center
+	}
+	[{Dynamics or spectrum?}, fill=blue!12
+		[{Dynamics / $f(H)$}, fill=green!14
+			[{Digital}, fill=green!9
+				[{Local $H$: Trotter}, fill=green!5]
+				[{General $f(H)$:\\LCU then QSP}, fill=green!5]
+			]
+			[{Analog:\\engineer $H$}, fill=cyan!10]
+		]
+		[{Ground state / spectrum}, fill=orange!14
+			[{NISQ: VQE}, fill=yellow!16]
+			[{Gap along path:\\adiabatic}, fill=orange!8]
+			[{High precision:\\simulate $U$, then QPE}, fill=orange!8]
+		]
+	]
+\end{forest}

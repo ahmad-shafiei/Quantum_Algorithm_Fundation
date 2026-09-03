@@ -1,0 +1,55 @@
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	font=\scriptsize\linespread{1}\selectfont,
+	node distance=0.38cm and 0.38cm
+	]
+	\node[qaftitle] (t0) {From physical problem to a checked observable};
+	\node[qafwide, fill=blue!10, below=0.45cm of t0] (phys) {Physical problem};
+	\node[qafwide, fill=blue!10, below=of phys] (model) {Mathematical model};
+	\node[qafwide, fill=blue!12, below=of model] (H) {Hamiltonian $H$};
+
+	\node[qafnarr, fill=green!12, below left=0.55cm and 0.2cm of H] (q1) {What evolves?};
+	\node[qafnarr, fill=orange!12, below right=0.55cm and 0.2cm of H] (q2) {What is wanted?};
+	\node[qafnarr, fill=green!8, below=of q1] (U) {$U(t)=e^{-iHt}$};
+	\node[qafnarr, fill=orange!8, below=of q2] (gs) {Ground state /\\spectrum};
+
+	\node[qafbox, text width=1.45cm, fill=green!6, below left=0.45cm and -0.2cm of U] (tr) {Trotter};
+	\node[qafbox, text width=1.45cm, fill=green!6, below=0.45cm of U] (lc) {LCU};
+	\node[qafbox, text width=1.45cm, fill=green!6, below right=0.45cm and -0.2cm of U] (qs) {QSP};
+	\node[qafbox, text width=1.55cm, fill=yellow!12, below left=0.45cm and -0.05cm of gs] (vq) {VQE};
+	\node[qafbox, text width=1.55cm, fill=orange!8, below right=0.45cm and -0.05cm of gs] (qp) {QPE};
+
+	\node[qafwide, fill=gray!12, below=1.35cm of lc] (alg) {Quantum algorithm};
+	\node[qafwide, fill=gray!10, below=of alg] (hw) {Circuit / adiabatic path};
+	\node[qafnarr, fill=cyan!10, below left=0.45cm and 0.05cm of hw] (dig) {Digital};
+	\node[qafnarr, fill=cyan!10, below right=0.45cm and 0.05cm of hw] (an) {Analog / hybrid};
+	\node[qafwide, fill=gray!8, below=1.25cm of hw] (me) {Measurement};
+	\node[qafwide, fill=gray!8, below=of me] (ob) {Observable};
+	\node[qafwide, fill=gray!8, below=of ob] (va) {Classical validation};
+	\node[qafwide, fill=gray!8, below=of va] (re) {Resource estimation};
+
+	\draw[qafarr] (phys) -- (model);
+	\draw[qafarr] (model) -- (H);
+	\draw[qafarr] (H.south) -- ++(0,-0.12) -| (q1.north);
+	\draw[qafarr] (H.south) -- ++(0,-0.12) -| (q2.north);
+	\draw[qafarr] (q1) -- (U);
+	\draw[qafarr] (q2) -- (gs);
+	\draw[qafarr] (U) -- (tr);
+	\draw[qafarr] (U) -- (lc);
+	\draw[qafarr] (U) -- (qs);
+	\draw[qafarr] (gs) -- (vq);
+	\draw[qafarr] (gs) -- (qp);
+	\draw[qafarr] (tr.south) |- (alg.west);
+	\draw[qafarr] (qs.south) |- (alg.east);
+	\draw[qafarr] (lc) -- (alg);
+	\draw[qafarr] (vq.south) |- (alg.east);
+	\draw[qafarr] (qp.south) |- (alg.east);
+	\draw[qafarr] (alg) -- (hw);
+	\draw[qafarr] (hw) -- (dig);
+	\draw[qafarr] (hw) -- (an);
+	\draw[qafarr] (dig.south) |- (me.west);
+	\draw[qafarr] (an.south) |- (me.east);
+	\draw[qafarr] (me) -- (ob);
+	\draw[qafarr] (ob) -- (va);
+	\draw[qafarr] (va) -- (re);
+\end{tikzpicture}

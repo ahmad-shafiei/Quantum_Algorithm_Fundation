@@ -1,0 +1,17 @@
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	font=\footnotesize\linespread{1}\selectfont,
+	node distance=0.55cm
+	]
+	\node[qafbox, text width=7.6cm, fill=blue!10] (l2) {%
+		\textbf{Layer 2 --- Quantum simulation}\\[2pt]
+		Which physical model is being represented?};
+	\node[qafbox, text width=7.6cm, fill=green!10, below=of l2] (l1) {%
+		\textbf{Layer 1 --- Quantum algorithm}\\[2pt]
+		Which procedure solves that question?};
+	\node[qafbox, text width=7.6cm, fill=orange!10, below=of l1] (l3) {%
+		\textbf{Layer 3 --- Implementation tools}\\[2pt]
+		Trotter, LCU, QSP, QPE, VQE, adiabatic path};
+	\draw[qafarr] (l2) -- (l1);
+	\draw[qafarr] (l1) -- (l3);
+\end{tikzpicture}

@@ -1,0 +1,23 @@
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	font=\footnotesize\linespread{1}\selectfont,
+	node distance=0.5cm and 1.1cm
+	]
+	\node[qafbox, text width=3.2cm, fill=blue!12] (H) {Hamiltonian $H$};
+	\node[qafbox, text width=3.4cm, fill=green!12, below left=of H] (dyn) {%
+		\textbf{Dynamic}\\[2pt]
+		$U(t)=e^{-iHt}$\\
+		$\langle O(t)\rangle$, quench};
+	\node[qafbox, text width=3.4cm, fill=orange!12, below right=of H] (stat) {%
+		\textbf{Static / spectral}\\[2pt]
+		ground state, gap,\\
+		eigenvalues};
+	\node[qafbox, text width=3.6cm, fill=yellow!14, below=1.35cm of H] (bridge) {%
+		Response / Green function:\\
+		spectral in appearance,\\
+		often needs $f(H)$ or $U(t)$};
+	\draw[qafarr] (H.south) -- ++(0,-0.12) -| (dyn.north);
+	\draw[qafarr] (H.south) -- ++(0,-0.12) -| (stat.north);
+	\draw[qafarr] (dyn.south) |- (bridge.west);
+	\draw[qafarr] (stat.south) |- (bridge.east);
+\end{tikzpicture}
