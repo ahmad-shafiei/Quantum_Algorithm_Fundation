@@ -1,23 +1,77 @@
+% دو رهیافت: تحول زمانی در برابر محاسبهٔ آدیاباتیک
+% اتصال مفهومی: ابزار دیجیتالِ تحول می‌تواند مسیر آدیاباتیک را گسسته کند (digital adiabatic).
+% آنالوگ زیرِ تحول است و به جعبهٔ digital adiabatic وصل نمی‌شود.
 \input{figures/qaf_style.tex}
 \begin{tikzpicture}[
-	font=\footnotesize\linespread{1}\selectfont,
-	node distance=0.48cm and 1.2cm
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	par/.style={qafbox, text width=5.35cm, minimum height=1.35cm},
+	leaf/.style={qafbox, text width=2.95cm, minimum height=1.25cm},
+	join/.style={qafbox, text width=4.6cm, minimum height=1.15cm},
+	lab/.style={
+		font=\scriptsize\bfseries\linespread{1}\selectfont,
+		text=black!45,
+		inner sep=0pt
+	},
+	trunk/.style={thick, draw=black!65}
 	]
-	\node[qafbox, text width=3.6cm, fill=green!12] (evo) {%
-		\textbf{Time evolution}\\[2pt]
+
+	% ----- دو ستون رهیافت -----
+	\node[par, fill=green!14] (evo) at (-3.35,0) {%
+		\textbf{Time evolution}\\[1pt]
 		implement $U(t)$ or $f(H)$};
-	\node[qafbox, text width=3.6cm, fill=orange!12, right=of evo] (adi) {%
-		\textbf{Adiabatic computing}\\[2pt]
+	\node[par, fill=orange!14] (adi) at (3.85,0) {%
+		\textbf{Adiabatic computing}\\[1pt]
 		the path $H(s)$ \emph{is} the algorithm};
-	\node[qafnarr, fill=green!7, below left=0.55cm and 0.05cm of evo] (dig) {Digital:\\product formulas,\\LCU, QSP};
-	\node[qafnarr, fill=cyan!10, below right=0.55cm and 0.05cm of evo] (ana) {Analog:\\engineer $H$};
-	\node[qafnarr, fill=orange!7, below=0.55cm of adi] (path) {$H(s)=(1-s)H_i+s H_p$};
-	\coordinate (mid) at ($(evo)!0.5!(adi)$);
-	\node[qafbox, text width=4.4cm, fill=gray!10, below=2.35cm of mid] (join) {%
+
+	% ----- فرزندان تحول -----
+	\node[leaf, fill=green!6] (dig) at (-5.0,-2.55) {%
+		Digital\\[1pt]
+		product formulas,\\LCU, QSP};
+	\node[leaf, fill=cyan!12] (ana) at (-1.7,-2.55) {%
+		Analog\\[1pt]
+		engineer $H_{\mathrm{hw}}$};
+
+	% ----- فرزند آدیاباتیک -----
+	\node[leaf, text width=3.45cm, fill=orange!7] (path) at (3.75,-2.55) {%
+		Schedule\\[1pt]
+		$H(s)=(1-s)H_i+s H_p$};
+
+	% ----- نقطهٔ اتصال دو رهیافت -----
+	\node[join, fill=gray!12] (join) at (0,-5.5) {%
 		Digital adiabatic: Trotterize $H(s_k)$};
-	\draw[qafarr] (evo) -- (dig);
-	\draw[qafarr] (evo) -- (ana);
+
+	% پس‌زمینهٔ دو ستون
+	\begin{scope}[on background layer]
+		\node[qafpanel, fill=green!4, draw=green!35!black,
+			fit=(evo)(dig)(ana), inner xsep=8pt, inner ysep=8pt] {};
+		\node[qafpanel, fill=orange!4, draw=orange!40!black,
+			fit=(adi)(path), inner xsep=8pt, inner ysep=8pt] {};
+	\end{scope}
+
+	% برچسب ستون
+	\node[lab, above=9pt of evo] {APPROACH A};
+	\node[lab, above=9pt of adi] {APPROACH B};
+
+	% ----- اتصالات -----
+	% تحول → دیجیتال / آنالوگ
+	\draw[trunk] (evo.south) -- (-3.35,-1.35);
+	\draw[trunk] (-5.0,-1.35) -- (-1.7,-1.35);
+	\draw[qafarr] (-5.0,-1.35) -- (dig.north);
+	\draw[qafarr] (-1.7,-1.35) -- (ana.north);
+
+	% آدیاباتیک → مسیر
 	\draw[qafarr] (adi) -- (path);
-	\draw[qafarr] (path) -- (join);
-	\draw[qafarr] (dig.south) |- (join.west);
+
+	% اتصال دو رهیافت فقط از دیجیتالِ گیتی و از مسیر $H(s)$
+	% آنالوگ عمداً به join وصل نیست
+	\draw[qafarr] (dig.south) -- ++(0,-0.92) -| (join.north)
+		node[pos=0.0, left, font=\scriptsize, text=black!75] {gates};
+	\draw[qafarr] (path.south) -- ++(0,-0.98) -| (join.north)
+		node[pos=0.0, right, font=\scriptsize, text=black!75] {discrete $s_k$};
+
+	% یادداشت زیر آنالوگ
+	\node[font=\scriptsize, text=black!75, align=center, text width=2.6cm]
+		at (-1.7,-4.05) {no gate decomposition\\(stays analog)};
 \end{tikzpicture}

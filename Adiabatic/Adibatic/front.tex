@@ -1,0 +1,45 @@
+\vspace*{-2cm}
+\pagenumbering{alph}
+\thispagestyle{empty}
+\begin{figure}[ht]
+\centering
+\includegraphics[width=2.5cm]{Qarm}
+\end{figure}
+\vspace{-0.8cm}
+\begin{center}
+{\nastaliqsmall مرکز تحقیقات کوانتوم شریف}\\
+{\nastaliqsmall گروه الگوریتم }\vspace{1.5cm}\\
+%{\LARGE پایان‌نامه‌ی کارشناسی ارشد}\\
+%{\normalsize رشته - گرایش}\vspace{1.5cm}\\
+{\Large عنوان:}\vspace{5mm}\\
+{\Huge\textbf{ HHL}}\vspace{1.5cm}\\
+{\Large پژوهشگر:}\vspace{5mm}\\
+{\LARGE\textbf{جمالپور}}\vspace{1.5cm}\\
+{\Large مدیرگروه :}\vspace{5mm}\\
+{\LARGE\textbf{دکتر رمضانی}}\vspace{1.5cm}\\
+%{\Large استاد مشاور:}\vspace{5mm}\\
+%{\LARGE\textbf{دکتر ...}}\vspace{1.5cm}\\
+{\Large آبان 1404}
+\end{center}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\pagestyle{fancy}
+\fancyhead[RO]{\nouppercase\rightmark}
+\fancyhead[LO]{\thepage}
+\fancyfoot[C]{}
+\renewcommand{\headrulewidth}{1pt}
+\renewcommand{\footrulewidth}{0pt}
+\makeatletter\renewcommand{\@starttoc}[1]{\hboxR to\textwidth{\large\textbf{عنوان}\hfill\textbf{صفحه}}\begingroup\@input{\jobname.#1}\if@filesw\expandafter\newwrite\csname tf@#1\endcsname\immediate\openout\csname tf@#1\endcsname\jobname.#1\relax\fi\@nobreakfalse\endgroup}\makeatother
+\makeatletter\renewcommand*\l@chapter[2]{\ifnum\c@tocdepth>-2\relax\addpenalty{-\@highpenalty} \addvspace{4mm\@plus\p@}\setlength\@tempdima{7mm}\begingroup\parindent\z@\if@RTL\leftskip\else\rightskip\fi \@pnumwidth\parfillskip-\@pnumwidth{\leavevmode\normalsize\bfseries\textcolor{red}{فصل} #1 \hfill\hb@xt@\@pnumwidth{\hss{#2}}}\par\nobreak\global\@nobreaktrue\everypar{\global\@nobreakfalse\everypar{}} \endgroup\fi}\makeatother
+\makeatletter\newcommand*\l@chapterstar[2]{\ifnum\c@tocdepth>-2\relax\addpenalty{-\@highpenalty} \addvspace{2mm\@plus\p@}\setlength\@tempdima{7mm}\begingroup\parindent\z@\if@RTL\leftskip\else\rightskip\fi \@pnumwidth\parfillskip-\@pnumwidth{\leavevmode\normalsize\bfseries\textcolor{red}{}#1 \hfill\hb@xt@ \@pnumwidth{\hss{#2}}\vspace{1.5mm}}\par\nobreak\global\@nobreaktrue\everypar{\global\@nobreakfalse\everypar{}} \endgroup\fi}\makeatother
+\makeatletter\renewcommand*\l@section{\@dottedtocline{1}{4.5mm}{1.25cm}}\makeatother
+\makeatletter\def\@chapter[#1]#2{\ifnum\c@secnumdepth>\m@ne\refstepcounter{chapter}\typeout{\@chapapp \space\thechapter.}\addcontentsline{toc}{chapter}{\protect\numberline{\arabic{chapter}}~~#1}\else\addcontentsline{toc}{chapter}{#1}\fi\chaptermark{#1}\addtocontents{lof}{\protect\addvspace{10\p@}}\addtocontents{lot}{\protect\addvspace{10\p@}}\if@twocolumn\@topnewpage[\@makechapterhead{#2}]\else\@makechapterhead{#2} \@afterheading\fi}\makeatother
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\pagenumbering{arabic}

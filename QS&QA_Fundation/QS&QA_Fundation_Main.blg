@@ -4,44 +4,44 @@ The top-level auxiliary file: QS&QA_Fundation_Main.aux
 A level-1 auxiliary file: QS&QA_Fundation.aux
 The style file: ./styles/packages/unsrtabbrv.bst
 Database file #1: bibs/quantum_sim.bib
-You've used 44 entries,
+You've used 46 entries,
             1791 wiz_defined-function locations,
-            749 strings with 12756 characters,
-and the built_in function-call counts, 11533 in all, are:
-= -- 895
-> -- 804
+            760 strings with 13024 characters,
+and the built_in function-call counts, 11924 in all, are:
+= -- 926
+> -- 826
 < -- 0
-+ -- 284
-- -- 240
-* -- 1016
-:= -- 1995
-add.period$ -- 133
-call.type$ -- 44
-change.case$ -- 43
++ -- 292
+- -- 246
+* -- 1043
+:= -- 2063
+add.period$ -- 139
+call.type$ -- 46
+change.case$ -- 45
 chr.to.int$ -- 0
-cite$ -- 44
-duplicate$ -- 393
-empty$ -- 971
-format.name$ -- 240
-if$ -- 2390
+cite$ -- 46
+duplicate$ -- 410
+empty$ -- 1008
+format.name$ -- 246
+if$ -- 2474
 int.to.chr$ -- 0
-int.to.str$ -- 44
-missing$ -- 46
-newline$ -- 224
-num.names$ -- 44
-pop$ -- 62
+int.to.str$ -- 46
+missing$ -- 48
+newline$ -- 234
+num.names$ -- 46
+pop$ -- 66
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 134
+skip$ -- 141
 stack$ -- 0
-substring$ -- 810
-swap$ -- 44
+substring$ -- 828
+swap$ -- 46
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 0
-while$ -- 102
-width$ -- 46
-write$ -- 484
+while$ -- 105
+width$ -- 48
+write$ -- 505

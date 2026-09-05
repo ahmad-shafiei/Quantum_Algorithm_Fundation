@@ -1,0 +1,39 @@
+% طیف لحظه‌ای مسیر آدیاباتیک: پایه، گاف، و پرهیز از تقاطع
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	font=\footnotesize\linespread{1}\selectfont,
+	x=1.15cm,
+	y=0.85cm
+	]
+	% محورها
+	\draw[->, thick] (0,0) -- (6.4,0) node[right] {$s$};
+	\draw[->, thick] (0,-2.2) -- (0,2.6) node[above] {$E(s)$};
+	\node[below] at (0,0) {$0$};
+	\node[below] at (6,0) {$1$};
+
+	% تراز پایه (پایین) و اولین برانگیخته
+	\draw[thick, blue!70!black, smooth]
+		plot coordinates {(0,-1.6) (1.5,-1.35) (3,-0.55) (4.5,-1.2) (6,-1.7)};
+	\draw[thick, orange!75!black, smooth]
+		plot coordinates {(0,1.6) (1.5,1.2) (3,0.35) (4.5,1.15) (6,1.55)};
+
+	% گاف کمینه
+	\draw[<->, densely dashed, thick] (3,-0.55) -- (3,0.35)
+		node[midway, right, font=\scriptsize, text=black!70] {$\Delta_{\min}$};
+
+	% برچسب‌ها
+	\node[blue!70!black, font=\scriptsize, align=left] at (0.85,-2.0) {$E_0(0)$};
+	\node[blue!70!black, font=\scriptsize, align=left] at (5.55,-2.05) {$E_0(1)$};
+	\node[orange!75!black, font=\scriptsize] at (0.9,2.05) {$E_1(0)$};
+	\node[orange!75!black, font=\scriptsize] at (5.5,2.0) {$E_1(1)$};
+
+	% فلش مسیر حالت
+	\draw[qafarr, blue!50!black] (0.4,-1.55) -- (5.5,-1.65);
+	\node[font=\scriptsize, text=black!55] at (3.2,-1.95) {follow ground state};
+
+	% یادداشت نقاط انتهایی
+	\node[font=\scriptsize, align=center, text=black!60] at (0.95, -2.85)
+		{$H_B$: easy\\ground state};
+	\node[font=\scriptsize, align=center, text=black!60] at (5.2, -2.85)
+		{$H_P$: Ising\\ground state};
+\end{tikzpicture}

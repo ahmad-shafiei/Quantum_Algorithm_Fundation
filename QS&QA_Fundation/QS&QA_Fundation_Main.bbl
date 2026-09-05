@@ -50,6 +50,16 @@ B.~Bauer, S.~Bravyi, M.~Motta, and G.~K.-L. Chan.
   science.
 \newblock {\em Chemical Reviews}, 120(22):12685--12717, 2020.
 
+\bibitem{AlbashLidar2018}
+T.~Albash and D.~A. Lidar.
+\newblock Adiabatic quantum computation.
+\newblock {\em Reviews of Modern Physics}, 90(1):015002, 2018.
+
+\bibitem{Farhi2000}
+E.~Farhi, J.~Goldstone, S.~Gutmann, and M.~Sipser.
+\newblock Quantum computation by adiabatic evolution.
+\newblock {\em arXiv preprint quant-ph/0001106}, 2000.
+
 \bibitem{Childs2018}
 A.~M. Childs, D.~Maslov, Y.~Nam, N.~J. Ross, and Y.~Su.
 \newblock Toward the first quantum simulation with quantum speedup.

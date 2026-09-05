@@ -71,53 +71,70 @@
 \contentsline {section}{\numberline {2.1}جایگاه در نقشه}{33}{section.4.2.1}%
 \contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{33}{section.4.2.2}%
 \contentsline {paragraph}{الف) رهیافت تحول زمانی / شرودینگر.}{33}{section*.26}%
-\contentsline {paragraph}{ب) رهیافت محاسبهٔ آدیاباتیک.}{34}{section*.27}%
+\contentsline {paragraph}{ب) رهیافت محاسبهٔ آدیاباتیک.}{33}{section*.27}%
 \contentsline {paragraph}{اتصال دو رهیافت.}{34}{section*.28}%
-\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{34}{section.4.2.3}%
-\contentsline {section}{\numberline {2.4}ارتباط}{35}{section.4.2.4}%
-\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{35}{section.4.2.5}%
-\contentsline {part}{بخش 5\hskip 1em\relax جعبه ابزار}{36}{part.5}%
-\contentsline {chapter}{\numberline {1}جعبه ابزار دیجیتال: \lr {Trotter}، \lr {LCU}، \lr {QSP}}{37}{chapter.5.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{37}{section.5.1.1}%
-\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{37}{section.5.1.2}%
-\contentsline {paragraph}{\lr {Trotter} --- فرمول حاصل‌ضربی.}{37}{section*.29}%
-\contentsline {paragraph}{\lr {LCU} --- ترکیب خطی یکانی‌ها.}{38}{section*.30}%
-\contentsline {paragraph}{\lr {QSP} --- پردازش سیگنال کوانتومی.}{38}{section*.31}%
-\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{38}{section.5.1.3}%
-\contentsline {section}{\numberline {1.4}ارتباط}{38}{section.5.1.4}%
-\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{38}{section.5.1.5}%
-\contentsline {chapter}{\numberline {2}ابزارهای طیفی و ترکیبی: \lr {QPE} و \lr {VQE}}{40}{chapter.5.2}%
-\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{40}{section.5.2.1}%
-\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{40}{section.5.2.2}%
-\contentsline {paragraph}{\lr {QPE} --- برآورد فاز.}{40}{section*.33}%
-\contentsline {paragraph}{\lr {VQE} --- الگوریتم وردشی.}{40}{section*.34}%
-\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{41}{section.5.2.3}%
-\contentsline {section}{\numberline {2.4}ارتباط}{41}{section.5.2.4}%
-\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{41}{section.5.2.5}%
-\contentsline {part}{بخش 6\hskip 1em\relax اجرا، راستی‌آزمایی و قطب‌نما}{42}{part.6}%
-\contentsline {chapter}{\numberline {1}دیجیتال، آنالوگ، ترکیبی}{43}{chapter.6.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{43}{section.6.1.1}%
-\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{43}{section.6.1.2}%
-\contentsline {paragraph}{دیجیتال --- مدار گیتی.}{43}{section*.36}%
-\contentsline {paragraph}{آنالوگ --- مهندسی هامیلتونی.}{43}{section*.37}%
-\contentsline {paragraph}{ترکیبی --- حلقه با کلاسیک.}{43}{section*.38}%
-\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{44}{section.6.1.3}%
-\contentsline {section}{\numberline {1.4}ارتباط}{44}{section.6.1.4}%
-\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{44}{section.6.1.5}%
-\contentsline {chapter}{\numberline {2}بستن حلقه: اندازه‌گیری، راستی‌آزمایی، برآورد منابع}{45}{chapter.6.2}%
-\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{45}{section.6.2.1}%
-\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{45}{section.6.2.2}%
-\contentsline {paragraph}{از مدار تا مشاهده‌پذیر.}{45}{section*.39}%
-\contentsline {paragraph}{راستی‌آزمایی کلاسیک.}{45}{section*.40}%
-\contentsline {paragraph}{برآورد منابع.}{46}{section*.41}%
-\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{46}{section.6.2.3}%
-\contentsline {section}{\numberline {2.4}ارتباط}{46}{section.6.2.4}%
-\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{46}{section.6.2.5}%
-\contentsline {chapter}{\numberline {3}قطب‌نمای پژوهش}{47}{chapter.6.3}%
-\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{47}{section.6.3.1}%
-\contentsline {section}{\numberline {3.2}ایدهٔ شهودی}{47}{section.6.3.2}%
-\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{48}{section.6.3.3}%
-\contentsline {section}{\numberline {3.4}ارتباط}{48}{section.6.3.4}%
-\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{48}{section.6.3.5}%
-\contentsline {chapter}{\numberline {4}واژه‌نامهٔ مصوب}{50}{chapter.6.4}%
-\contentsline {chapter}{مراجع}{52}{section*.43}%
+\contentsline {section}{\numberline {2.3}قضیهٔ آدیاباتیک: فرمول و پارامترها}{35}{section.4.2.3}%
+\contentsline {paragraph}{بیان کاری قضیه.}{35}{section*.30}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{36}{section*.31}%
+\contentsline {paragraph}{هزینه در رهیافت تحول (برای مقایسه).}{37}{section*.32}%
+\contentsline {section}{\numberline {2.4}ردهٔ مسائل مناسب آدیاباتیک}{37}{section.4.2.4}%
+\contentsline {section}{\numberline {2.5}مثال کاری: از میدان عرضی به \lr {Ising}}{38}{section.4.2.5}%
+\contentsline {paragraph}{گام ۱ --- هامیلتونی آغازین: یک میدان عرضی ساده.}{38}{section*.33}%
+\contentsline {paragraph}{گام ۲ --- هامیلتونی مسئله: مدل \lr {Ising}.}{40}{section*.34}%
+\contentsline {paragraph}{گام ۳ --- ساخت مسیر آدیاباتیک.}{42}{section*.35}%
+\contentsline {paragraph}{گام ۴ --- چرا گاف مهم است؟}{44}{section*.36}%
+\contentsline {paragraph}{گام ۵ --- ماتریس صریح $H(s)$ و منشأ نزدیک‌شدن ترازها.}{45}{section*.37}%
+\contentsline {paragraph}{گام ۶ --- استفاده از تقارن برای ساده‌تر کردن مسئله.}{46}{section*.38}%
+\contentsline {paragraph}{گام ۷ --- مشاهدهٔ کمینهٔ گاف.}{48}{section*.39}%
+\contentsline {paragraph}{گام ۸ --- ارتباط گاف با زمان اجرا.}{49}{section*.40}%
+\contentsline {paragraph}{گام ۹ --- نقش میدان طولی $h_z$.}{50}{section*.41}%
+\contentsline {paragraph}{گام ۱۰ --- اجرا و خوانش.}{51}{section*.42}%
+\contentsline {paragraph}{گام ۱۱ --- تفسیر الگوریتمی و تمایز میان مسئله، هامیلتونی و الگوریتم.}{52}{section*.43}%
+\contentsline {paragraph}{چگونه به سیستم پیچیده‌تر تعمیم می‌یابد.}{53}{section*.44}%
+\contentsline {section}{\numberline {2.6}ارتباط}{55}{section.4.2.6}%
+\contentsline {section}{\numberline {2.7}چه وقت استفاده می‌شود}{55}{section.4.2.7}%
+\contentsline {part}{بخش 5\hskip 1em\relax جعبه ابزار}{56}{part.5}%
+\contentsline {chapter}{\numberline {1}جعبه ابزار دیجیتال: \lr {Trotter}، \lr {LCU}، \lr {QSP}}{57}{chapter.5.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{57}{section.5.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{57}{section.5.1.2}%
+\contentsline {paragraph}{\lr {Trotter} --- فرمول حاصل‌ضربی.}{57}{section*.45}%
+\contentsline {paragraph}{\lr {LCU} --- ترکیب خطی یکانی‌ها.}{58}{section*.46}%
+\contentsline {paragraph}{\lr {QSP} --- پردازش سیگنال کوانتومی.}{58}{section*.47}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{58}{section.5.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{58}{section.5.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{58}{section.5.1.5}%
+\contentsline {chapter}{\numberline {2}ابزارهای طیفی و ترکیبی: \lr {QPE} و \lr {VQE}}{60}{chapter.5.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{60}{section.5.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{60}{section.5.2.2}%
+\contentsline {paragraph}{\lr {QPE} --- برآورد فاز.}{60}{section*.49}%
+\contentsline {paragraph}{\lr {VQE} --- الگوریتم وردشی.}{60}{section*.50}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{61}{section.5.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{61}{section.5.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{61}{section.5.2.5}%
+\contentsline {part}{بخش 6\hskip 1em\relax اجرا، راستی‌آزمایی و قطب‌نما}{62}{part.6}%
+\contentsline {chapter}{\numberline {1}دیجیتال، آنالوگ، ترکیبی}{63}{chapter.6.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{63}{section.6.1.1}%
+\contentsline {section}{\numberline {1.2}ایدهٔ شهودی}{63}{section.6.1.2}%
+\contentsline {paragraph}{دیجیتال --- مدار گیتی.}{63}{section*.52}%
+\contentsline {paragraph}{آنالوگ --- مهندسی هامیلتونی.}{63}{section*.53}%
+\contentsline {paragraph}{ترکیبی --- حلقه با کلاسیک.}{63}{section*.54}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{64}{section.6.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{64}{section.6.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{64}{section.6.1.5}%
+\contentsline {chapter}{\numberline {2}بستن حلقه: اندازه‌گیری، راستی‌آزمایی، برآورد منابع}{65}{chapter.6.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{65}{section.6.2.1}%
+\contentsline {section}{\numberline {2.2}ایدهٔ شهودی}{65}{section.6.2.2}%
+\contentsline {paragraph}{از مدار تا مشاهده‌پذیر.}{65}{section*.55}%
+\contentsline {paragraph}{راستی‌آزمایی کلاسیک.}{65}{section*.56}%
+\contentsline {paragraph}{برآورد منابع.}{66}{section*.57}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{66}{section.6.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{66}{section.6.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{66}{section.6.2.5}%
+\contentsline {chapter}{\numberline {3}قطب‌نمای پژوهش}{67}{chapter.6.3}%
+\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{67}{section.6.3.1}%
+\contentsline {section}{\numberline {3.2}ایدهٔ شهودی}{67}{section.6.3.2}%
+\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{68}{section.6.3.3}%
+\contentsline {section}{\numberline {3.4}ارتباط}{68}{section.6.3.4}%
+\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{68}{section.6.3.5}%
+\contentsline {chapter}{\numberline {4}واژه‌نامهٔ مصوب}{70}{chapter.6.4}%
+\contentsline {chapter}{مراجع}{73}{section*.59}%

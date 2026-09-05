@@ -69,6 +69,12 @@
 | NISQ | NISQ |
 | early-FTQC | early-FTQC |
 | quantum annealing | بازپخت کوانتومی |
+| adiabatic theorem | قضیهٔ آدیاباتیک |
+| instantaneous eigenstate | ویژه‌حالت لحظه‌ای |
+| instantaneous gap | گاف لحظه‌ای |
+| schedule | زمان‌بندی |
+| driver Hamiltonian | هامیلتونی راننده |
+| problem Hamiltonian | هامیلتونی مسئله |
 
 اصطلاحات `benchmark`، `NISQ` و `early-FTQC` هنوز در جامعهٔ فارسی تثبیت نشده‌اند؛ در متن، شکل انگلیسی در نخستین کاربرد آمده است.
 

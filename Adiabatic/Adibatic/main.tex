@@ -1,0 +1,83 @@
+\documentclass[12pt,a4paper]{report}
+\usepackage{graphicx}
+\graphicspath{{Pictures/}}
+\usepackage{wrapfig}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage[mathscr]{euscript}
+\usepackage{enumitem}
+\usepackage{url}
+\usepackage[T1]{fontenc}
+\usepackage{color}
+\definecolor{Green}{rgb}{0.00,0.40,0.00}
+\usepackage{array}
+\usepackage[sort,numbers]{natbib}
+\usepackage{multicol}
+\RequirePackage{multicol}
+\usepackage[left=2.5cm,right=3cm,top=3.5cm,bottom=3cm]{geometry}
+\usepackage{zref-perpage}
+\zmakeperpage{footnote}
+\usepackage{tocloft}
+\usepackage{float}
+\usepackage{caption}
+\captionsetup{labelsep=colon,font=small}
+\usepackage{subcaption}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,citecolor=blue,urlcolor=Green]{hyperref}
+\usepackage[extrafootnotefeatures]{xepersian}
+\settextfont[Scale=1.3]{Yas}
+\setdigitfont[Scale=1.3]{Yas}
+\defpersianfont\nastaliqbig[Scale=4]{IranNastaliq}
+\defpersianfont\nastaliqsmall[Scale=1]{IranNastaliq}
+\swapnumbers
+\theoremstyle{plain}
+\newtheorem{thm}{\normalsize قضیه}[section]
+\newtheorem{lem}[thm]{\normalsize لم}
+\newtheorem{prop}[thm]{\normalsize گزاره}
+\newtheorem{cor}[thm]{\normalsize نتیجه}
+\theoremstyle{definition}
+\newtheorem{defn}[thm]{\normalsize تعریف}
+\newtheorem{exm}[thm]{\normalsize مثال}
+\theoremstyle{remark}
+\newtheorem{rem}[thm]{\normalsize تبصره}
+\makeatletter\def\th@plain{\thm@notefont{}\itshape}\def\th@definition{\thm@notefont{}\normalfont}\makeatother
+\renewcommand{\proofname}{\indent برهان}
+\makeatletter\def\@alph#1{\ifcase#1\or صفر\or آ\or ب\or پ\or ت\or ث\or ج\or چ\or ح\or خ\or د\or ذ\or ر\or ز\or ژ\or س\or ش\or ص\or ض\or ط\or ظ\or ع\or غ\or ف\or ق\or ک\or گ\or ل\or م\or ن\or و\or هـ\or ی\else\@ctrerr\fi}\makeatother
+\makeatletter\def\vhrulefill#1{\leavevmode\leaders\hrule\@height#1\hfill\kern\z@}\makeatother
+\makeatletter\def\@makechapterhead#1{\vspace*{9\p@}{{\renewcommand{\baselinestretch}{1.2}\parindent\z@\flushright \normalfont\ifnum\c@secnumdepth>\m@ne\huge\bfseries\@chapapp\space\@arabic\c@chapter\par\nobreak\vskip5\p@\fi \interlinepenalty\@M\huge\bfseries#1\par\nobreak\vskip15\p@}}}\makeatother
+\makeatletter\def\@makeLTRfnmark{\hbox{\@textsuperscript{\latinfont\@thefnmark}}}\renewcommand\@makefntext[1]{\parindent 1mm\noindent\hb@xt@1.8em{\hss\if@RTL\@makefnmark\else\@makeLTRfnmark\fi}#1}\makeatother
+\makeatletter\def\my@makefnmark#1{\def\@tempa{#1}\ifx\@tempa\@empty\else\begingroup\unrestored@protected@xdef \@thefnmark{#1}\endgroup\fi}\let\@thefnmark\@empty
+\newcommand*{\Footnote}[1]{\Footnotemark{#1}\@footnotetext}
+\newcommand*{\Footnotemark}[1]{\my@makefnmark{#1}\@footnotemark}
+\newcommand*{\Footnotetext}[1]{\my@makefnmark{#1}\@footnotetext}
+\makeatother
+\makeatletter\g@addto@macro{\UrlBreaks}{\UrlOrds}\makeatother
+\renewcommand{\thesubfigure}{\alph{subfigure}}
+\def\bibname{مراجع}
+\def\listfigurename{\rl{فهرست شکل‌ها}}
+\def\listtablename{\rl{فهرست  جدول‌ها}}
+\newcommand\persianmsc[3]{#3\lr{#2}#1}
+\newcommand\shamsidate[3]{#1\,/\,#2\,/\,#3}
+\newcommand\talkdate[2]{#1\,--\,#2}
+\def\notation#1:#2#3{#1\>\qquad\quad\quad\parbox{.8\textwidth}{#2\,\dotfill\,#3}\\[-.1pt]}
+\newcommand\persiangloss[2]{#1\hfill\lr{#2}\\[-.2pt]}
+\newcommand\persiansubgloss[2]{\indent#1\hfill\lr{\indent#2}\\[-.2pt]}
+\newcommand\persiansubsubgloss[2]{\indent\indent#1\hfill\lr{\indent\indent#2}\\[-.2pt]}
+\newcommand\englishgloss[2]{#1\hfill\rl{#2}\\}
+\newcommand\englishsubgloss[2]{\indent#1\hfill\rl{\indent#2}\\}
+\newcommand\termindex[2]{#1، #2\\}
+\newcommand\termindexnocomma[1]{#1\\}
+\newcommand\termsubindex[2]{\indent#1، #2\\}
+\renewcommand\baselinestretch{1.55}
+\DeclareMathOperator{\idmap}{id}
+\DeclareMathOperator{\graph}{graph}
+\DeclareMathOperator{\fix}{Fix}
+\DeclareMathOperator{\card}{card}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{document}
+\include{front}
+\include{chapter1}
+%\include{chapter2}
+\include{back}
+\end{document}
