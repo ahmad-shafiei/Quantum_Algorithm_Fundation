@@ -2469,24 +2469,20 @@ $X$ و $Z$ خود یکانی‌اند ($X^2=Z^2=I$). پس
 	\item تفاوت با \lr{QPE}: به $U^{2^{k}}$ نیاز نیست؛ دقت را آنزات و بهینه‌سازی محدود می‌کنند.
 \end{itemize}
 
-\section{\lr{QAOA}: پل آدیاباتیک و وردشی}
+\section{\lr{QAOA}: فرمول، شهود، و جای آن در نقشه}
 \label{sec:qaoa}
 
-\lr{QAOA} الگوریتم بهینه‌سازی تقریبی کوانتومی است: یک آنزات لایه‌لایه که از گسسته‌سازی مسیر آدیاباتیک الهام می‌گیرد و مثل \lr{VQE} با بهینه‌ساز کلاسیک تنظیم می‌شود~\cite{Farhi2014}. جای آن در نقشه: پرسش غالباً بهینه‌سازی / حالت پایهٔ یک $H_C$ کلاسیک (\lr{Ising}) است؛ رهیافت هم‌زمان به آدیاباتیک و وردشی بند است.
+\lr{QAOA} (\lr{Quantum Approximate Optimization Algorithm}) یک الگوریتم بهینه‌سازی تقریبی کوانتومی است~\cite{Farhi2014}. هدف نوعی‌اش یافتن پیکربندی کم‌انرژی برای یک هامیلتونی کلاسیکِ قطری در پایهٔ محاسباتی است --- همان زبان \lr{Ising} بخش~\ref{sec:ising} --- نه خواندن طیف با دقت دلخواه مثل \lr{QPE}.
 
-\paragraph{فرمول.}
-با هامیلتونی مسئله $H_C$ و مخلوط‌کنندهٔ معمول $H_B=\sum_i X_i$، حالت $p$ لایه برابر است با
-\begin{equation}
-	\label{eq:qaoa}
-	\lvert\vec\gamma,\vec\beta\rangle
-	=
-	\Biggl(\prod_{j=1}^{p}
-		e^{-i\beta_j H_B}\,
-		e^{-i\gamma_j H_C}
-	\Biggr)
-	\lvert+\rangle^{\otimes n},
-\end{equation}
-و هدف کمینه کردن $E(\vec\gamma,\vec\beta)=\langle H_C\rangle$ است. شکل~\ref{fig:qaoa-layers} لایه‌های متناوب را نشان می‌دهد.
+\paragraph{جایگاه در سه لایه.}
+\begin{itemize}
+	\item \textbf{پرسش:} بهینه‌سازی ترکیبی / حالت پایهٔ $H_C$ (مثلاً برش بیشینه، پوشش، اسپین‌شیشه).
+	\item \textbf{رهیافت:} پل میان محاسبهٔ آدیاباتیک و وردشیِ ترکیبی.
+	\item \textbf{ابزار اجرا:} مدار کم‌عمقِ لایه‌لایه روی \lr{NISQ}، به‌علاوهٔ بهینه‌ساز کلاسیک برای زاویه‌ها.
+\end{itemize}
+
+\paragraph{ایدهٔ شهودی در یک بند.}
+از $\lvert+\rangle^{\otimes n}$ شروع می‌کنید (پایهٔ آسانِ مخلوط‌کننده). یک لایه «هزینه» فازهایی متناسب با انرژی کلاسیک روی هر رشتهٔ بیتی می‌نویسد؛ یک لایه «مخلوط‌کننده» رشته‌ها را با میدان عرضی جابه‌جا می‌کند. این جفت را $p$ بار تکرار می‌کنید و زاویه‌ها را کلاسیک طوری تنظیم می‌کنید که $\langle H_C\rangle$ کم شود. شکل~\ref{fig:qaoa-layers} همین تناوب را نشان می‌دهد.
 
 \begin{figure}[htbp]
 	\centering
@@ -2496,22 +2492,109 @@ $X$ و $Z$ خود یکانی‌اند ($X^2=Z^2=I$). پس
 			\input{figures/fig_qaoa_layers.tex}%
 		}
 	\end{latin}
-	\caption{\lr{QAOA} با $p$ لایه. در حد $p\to\infty$ و زمان‌بندی مناسب، به مسیر آدیاباتیک نزدیک می‌شود؛ برای $p$ کوچک یک آنزات وردشیِ کم‌عمق است.}
+	\caption{\lr{QAOA} با $p$ لایه: از $\lvert+\rangle^{\otimes n}$، تناوب هزینه / مخلوط‌کننده، سپس اندازه‌گیری $\langle H_C\rangle$ و بهینه‌سازی کلاسیک زاویه‌ها.}
 	\label{fig:qaoa-layers}
 \end{figure}
 
-\paragraph{پیوند با آدیاباتیک.}
-مسیر $H(s)=(1-s)H_B+s H_C$ اگر با تروتر در چند تکهٔ درشت گسسته شود، همین تناوب $e^{-i\Delta t_C H_C}e^{-i\Delta t_B H_B}$ ظاهر می‌شود. \lr{QAOA} آن زاویه‌ها را آزاد می‌گذارد تا کلاسیک بهینه کند --- نه لزوماً مطابق یک $s(t)$ آهسته.
+\subsection{فرمول و پارامترها}
 
-\paragraph{پارامترها.}
-$p$ (عمق آنزات)، $(\gamma_j,\beta_j)$، انتخاب $H_C$ و $H_B$، و تعداد شات برای برآورد $\langle H_C\rangle$.
+هامیلتونی \emph{مسئله} (هزینه) معمولاً قطری است:
+\begin{equation}
+	H_C = \sum_{i<j} J_{ij} Z_i Z_j + \sum_i h_i Z_i
+\end{equation}
+(همان~\eqref{eq:ising-classical} با قرارداد مناسب). مخلوط‌کنندهٔ استاندارد میدان عرضی یکنواخت است:
+\begin{equation}
+	H_B = \sum_{i=1}^{n} X_i.
+\end{equation}
+حالت $p$ لایه:
+\begin{equation}
+	\label{eq:qaoa}
+	\lvert\vec\gamma,\vec\beta\rangle
+	=
+	\Biggl(\prod_{j=1}^{p}
+		e^{-i\beta_j H_B}\,
+		e^{-i\gamma_j H_C}
+	\Biggr)
+	\lvert+\rangle^{\otimes n}.
+\end{equation}
+تابع هزینهٔ آزمایشی
+\begin{equation}
+	E(\vec\gamma,\vec\beta)
+	=
+	\langle\vec\gamma,\vec\beta\rvert H_C \lvert\vec\gamma,\vec\beta\rangle
+\end{equation}
+را با اندازه‌گیری جمله‌های پائولیِ $H_C$ برمی‌آورید و یک بهینه‌ساز کلاسیک $(\vec\gamma,\vec\beta)$ را عوض می‌کند --- دقیقاً حلقهٔ \lr{VQE}، با این تفاوت که آنزات اینجا ساختار ثابتِ مسئله/مخلوط‌کننده دارد.
+
+\paragraph{پارامترها، یک‌جا.}
+\begin{itemize}
+	\item $H_C$: تابع هزینه / \lr{Ising} کلاسیک؛ جواب در رشتهٔ بیتی پایهٔ آن رمز است.
+	\item $H_B$: مخلوط‌کننده؛ معمولاً $\sum X_i$ تا از $\lvert+\rangle^{\otimes n}$ همهٔ پایه را ببیند.
+	\item $p$: تعداد لایه‌ها؛ عمق مدار و تعداد پارامترها $2p$ است.
+	\item $\gamma_j$: زاویهٔ لایهٔ هزینه (چقدر فازِ $H_C$ اعمال شود).
+	\item $\beta_j$: زاویهٔ لایهٔ مخلوط‌کننده.
+	\item شات‌ها و بهینه‌ساز کلاسیک: همان هزینه‌های \lr{VQE}.
+\end{itemize}
+
+\subsection{پیوند با آدیاباتیک و با \lr{VQE}}
+
+مسیر آدیاباتیک $H(s)=(1-s)H_B+s H_C$ اگر با تروتر در چند تکهٔ درشت گسسته شود، همان تناوب
+$e^{-i\Delta t_C H_C}\,e^{-i\Delta t_B H_B}$
+ظاهر می‌شود. \lr{QAOA} این $\Delta t$ها را آزاد می‌گذارد تا کلاسیک بهینه کند؛ دیگر لازم نیست $s(t)$ حتماً آهسته و مطابق کران $\Delta_{\min}$ باشد، اما دیگر تضمین آدیاباتیک هم ندارید.
+
+جدول~\ref{tab:qaoa-compare} سه خویشاوند را کنار هم می‌گذارد.
+
+\begin{table}[htbp]
+	\centering
+	\footnotesize
+	\setstretch{1.15}
+	\caption{مقایسهٔ کوتاه آدیاباتیک، \lr{QAOA}، و \lr{VQE} عمومی.}
+	\label{tab:qaoa-compare}
+	\begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{2.6cm} >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X >{\raggedright\arraybackslash}X@{}}
+		\toprule
+		\rowcolor{gray!14}
+		& \textbf{آدیاباتیک} & \textbf{\lr{QAOA}} & \textbf{\lr{VQE} عمومی} \\
+		\midrule
+		ایده
+		& مسیر کند $H(s)$
+		& گسسته‌سازی وردشیِ همان ایده
+		& آنزات آزاد / مسئله‌محور
+		\\
+		\rowcolor{gray!8}
+		پارامتر
+		& زمان‌بندی $s(t)$، $T$
+		& $(\gamma_j,\beta_j)$، $p$
+		& $\theta$ مدار پارامتری
+		\\
+		تضمین نوعی
+		& قضیهٔ آدیاباتیک اگر گاف و $T$ خوب باشند
+		& تقریبی؛ با $p$ بهتر می‌شود (نه همیشه آسان)
+		& اصل وردشی؛ وابسته به آنزات
+		\\
+		\rowcolor{gray!8}
+		رژیم
+		& آنالوگ یا دیجیتالِ عمیق
+		& \lr{NISQ} / مدار کم‌عمق لایه‌ای
+		& \lr{NISQ}
+		\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+\subsection{ردهٔ مسائل مناسب}
+
+\begin{enumerate}
+	\item مسائل بهینه‌سازی نگاشته‌شده به \lr{Ising} / \lr{MaxCut}.
+	\item وقتی سخت‌افزار عمق کم دارد و می‌خواهید از ساختار $H_C$--$H_B$ استفاده کنید، نه از یک آنزات بی‌ساختار.
+	\item مطالعهٔ تقریبی بودن: نسبت تقریب و رفتار با افزایش $p$.
+\end{enumerate}
+اگر انرژی مولکولی با آنزات شیمی می‌خواهید، \lr{VQE}/\lr{UCC} طبیعی‌تر است. اگر طیف با دقت کنترل‌شده می‌خواهید، \lr{QPE}. اگر گاف مسیر را می‌شناسید و سخت‌افزار مسیر می‌دهد، آدیاباتیک را جدا ببینید.
 
 \section{مثال کاری \lr{QAOA}: دو کیوبیت و $H_C=-Z_1Z_2$}
 \label{sec:qaoa-example}
 
-همان خانوادهٔ \lr{Ising} دوکیوبیتیِ مثال آدیاباتیک، این‌بار با یک لایهٔ \lr{QAOA}.
+هدف: نمادهای بخش~\ref{sec:qaoa} را روی همان \lr{Ising} دوکیوبیتیِ آشنا پر کنیم و ببینیم یک لایه چگونه نزدیک پایه می‌شود.
 
-\paragraph{گام ۱ --- تعریف.}
+\paragraph{گام ۱ --- مسئله به‌زبان هزینه.}
 \begin{equation}
 	H_C=-Z_1 Z_2,
 	\qquad
@@ -2521,32 +2604,60 @@ $p$ (عمق آنزات)، $(\gamma_j,\beta_j)$، انتخاب $H_C$ و $H_B$، �
 	\qquad
 	p=1.
 \end{equation}
-پایهٔ $H_C$ تبهگن است با انرژی $-1$ روی $\{\lvert00\rangle,\lvert11\rangle\}$.
+روی پایهٔ محاسباتی:
+\begin{equation}
+	E_C(\lvert00\rangle)=E_C(\lvert11\rangle)=-1,
+	\qquad
+	E_C(\lvert01\rangle)=E_C(\lvert10\rangle)=+1.
+\end{equation}
+پس کمینهٔ کلاسیک $-1$ است (پیکربندی‌های هم‌جهت). میانگین روی $\lvert++\rangle$ صفر است --- نقطهٔ شروعِ «تصادفیِ یکنواخت» روی چهار رشته.
 
-\paragraph{گام ۲ --- بهینه‌سازی زاویه‌ها.}
-حالت
+\paragraph{گام ۲ --- یک لایهٔ صریح.}
 \begin{equation}
 	\lvert\gamma,\beta\rangle
 	=
 	e^{-i\beta H_B}\,
 	e^{-i\gamma H_C}\,
-	\lvert++\rangle
+	\lvert++\rangle.
 \end{equation}
-را روی شبکهٔ $(\gamma,\beta)\in[0,\pi]^2$ می‌توان روبش کرد. کمینهٔ عددی نزدیک
-\begin{equation}
-	E(\gamma^\star,\beta^\star)\approx -0.995
-	\quad\text{با}\quad
-	\gamma^\star\approx \pi/4,
-	\quad
-	\beta^\star\approx 2.78
-\end{equation}
-به دست می‌آید --- فاصله‌ای ناچیز از $E_0=-1$. با $p=1$ روی این مسئلهٔ دوکیوبیتی تقریباً به پایه می‌رسید؛ برای گراف‌های سخت‌تر، $p$ و کیفیت بهینه‌سازی تعیین‌کننده‌اند.
+$e^{-i\gamma H_C}$ چون $H_C$ قطری است، فقط فاز روی هر $\lvert zz'\rangle$ می‌نویسد. $e^{-i\beta H_B}$ همان دوران‌های $X$ روی دو کیوبیت است و دامنه را میان رشته‌ها جابه‌جا می‌کند.
 
-\paragraph{گام ۳ --- تفسیر.}
+\paragraph{گام ۳ --- روبش و مینیمم.}
+با روبش ظریف‌تر $(\gamma,\beta)$، می‌توان به خودِ پایه رسید:
+\begin{equation}
+	E(\gamma^\star,\beta^\star)=-1
+	\quad\text{با}\quad
+	\gamma^\star=\pi/4,
+	\quad
+	\beta^\star\approx 1.18
+\end{equation}
+(و نقاط معادل دوره‌ای). در این نقطه احتمال اندازه‌گیری روی $\{\lvert00\rangle,\lvert11\rangle\}$ هر کدام $1/2$ است و روی رشته‌های ناهم‌جهت تقریباً صفر --- یعنی هر شات یکی از جواب‌های بهینه را می‌دهد.
+
+\paragraph{گام ۴ --- نسبت تقریب (شهودی).}
+اگر خطِ پایه را انرژی شروع $E_{\mathrm{start}}=\langle++\rvert H_C\lvert++\rangle=0$ بگیریم،
+\begin{equation}
+	r
+	=
+	\frac{E_{\mathrm{start}}-E(\gamma^\star,\beta^\star)}{E_{\mathrm{start}}-E_0}
+	=
+	\frac{0-(-1)}{0-(-1)}
+	=1.
+\end{equation}
+روی این مسئلهٔ دوکیوبیتی با $p=1$ نسبت تقریب کامل است. روی گراف‌های بزرگ‌تر و سخت‌تر، $r$ با $p=1$ معمولاً کوچک‌تر است و افزایش $p$ موضوع پژوهش می‌شود.
+
+\paragraph{گام ۵ --- اجرا روی دستگاه.}
+\begin{enumerate}
+	\item دو هادامارد برای $\lvert++\rangle$.
+	\item فازهای $ZZ$ مطابق $\gamma$ (یک گیت دوکیوبیتیِ قطری یا معادلش).
+	\item دوران‌های $X$ مطابق $\beta$.
+	\item تکرار شات، برآورد $\langle Z_1Z_2\rangle$، و به‌روزرسانی $(\gamma,\beta)$ با بهینه‌ساز کلاسیک.
+\end{enumerate}
+
+\paragraph{گام ۶ --- تفسیر در نقشهٔ سند.}
 \begin{itemize}
-	\item نسبت به آدیاباتیک: نیازی به برآورد $\Delta_{\min}$ و $T$ بزرگ نیست؛ بهایش بهینه‌سازی کلاسیک و محدودیت آنزاتِ $p$ لایه است.
-	\item نسبت به \lr{VQE} عمومی: آنزات ساختارِ مسئله/مخلوط‌کننده دارد، نه یک $R_Y$ آزاد.
-	\item نسبت به \lr{QPE}: برای بهینه‌سازی ترکیبیاتی روی \lr{NISQ} طراحی شده، نه برای خواندن طیف با دقت دلخواه.
+	\item نسبت به آدیاباتیک (بخش~\ref{sec:adi-ising-example}): همان $H_C$ و همان $H_B$؛ آنجا مسیر پیوسته و شرط گاف، اینجا زاویه‌های گسسته و بهینه‌سازی.
+	\item نسبت به \lr{VQE} (بخش~\ref{sec:vqe-example}): حلقه یکی است؛ آنزات اینجا از فیزیکِ مسئله/مخلوط‌کننده می‌آید نه از یک $R_Y$ آزاد.
+	\item نسبت به \lr{QPE}: هدف تقریبِ ترکیبیاتی است، نه رقم‌های فاز با دقت $2^{-m}$.
 \end{itemize}
 
 \section{ارتباط}
