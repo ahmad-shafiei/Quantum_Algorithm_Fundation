@@ -1,0 +1,23 @@
+% شبیه‌سازی آنالوگ: نگاشت مدل به سخت‌افزار، زمان فیزیکی، اندازه‌گیری
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.35cm, minimum height=1.2cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (tgt) at (0,0) {Target\\$H_{\mathrm{target}}$};
+	\node[box, fill=cyan!14] (map) at (3.2,0) {Engineer\\$H_{\mathrm{hw}}\approx H$};
+	\node[box, fill=green!12] (evo) at (6.4,0) {Wait real\\time $t$};
+	\node[box, fill=gray!14] (meas) at (9.6,0) {Measure\\$\langle O\rangle$};
+
+	\draw[qafarr] (tgt) -- (map);
+	\draw[qafarr] (map) -- (evo);
+	\draw[qafarr] (evo) -- (meas);
+
+	\node[note, below=8pt of tgt] {e.g.\ TFIM / Ising};
+	\node[note, below=8pt of map] {tunable $J,h$};
+	\node[note, below=8pt of evo] {no Trotter\\gates};
+	\node[note, below=8pt of meas] {same observables};
+\end{tikzpicture}

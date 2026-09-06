@@ -1,0 +1,23 @@
+% فرمول حاصل‌ضربی: شکستن تحول به قطعات آسان
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.15cm, minimum height=1.05cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (H) at (0,0) {$H=H_1+H_2$};
+	\node[box, fill=green!10] (u1) at (-2.0,-2.0) {$e^{-iH_1\Delta t}$};
+	\node[box, fill=green!10] (u2) at (2.0,-2.0) {$e^{-iH_2\Delta t}$};
+	\node[box, text width=3.4cm, fill=gray!12] (prod) at (0,-3.85) {%
+		$\bigl(e^{-iH_1\Delta t}\,e^{-iH_2\Delta t}\bigr)^{r}$\\[1pt]
+		$\Delta t=t/r$};
+
+	\draw[qafarr] (H.south) -- ++(0,-0.35) -| (u1.north);
+	\draw[qafarr] (H.south) -- ++(0,-0.35) -| (u2.north);
+	\draw[qafarr] (u1.south) |- (prod.west);
+	\draw[qafarr] (u2.south) |- (prod.east);
+
+	\node[note] at (0,-5.05) {larger $r$ $\Rightarrow$ smaller Trotter error, deeper circuit};
+\end{tikzpicture}

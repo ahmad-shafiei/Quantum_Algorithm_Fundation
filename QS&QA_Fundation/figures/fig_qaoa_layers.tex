@@ -1,0 +1,28 @@
+% QAOA: لایه‌های متناوب مسئله و مخلوط‌کننده
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.0cm, minimum height=1.05cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (init) at (0,0) {$|+\rangle^{\otimes n}$};
+	\node[box, fill=orange!14] (c1) at (2.6,0) {$e^{-i\gamma_1 H_C}$};
+	\node[box, fill=green!12] (b1) at (5.2,0) {$e^{-i\beta_1 H_B}$};
+	\node[box, fill=orange!10] (cdots) at (7.5,0) {$\cdots$};
+	\node[box, fill=orange!14] (cp) at (9.7,0) {$e^{-i\gamma_p H_C}$};
+	\node[box, fill=green!12] (bp) at (12.3,0) {$e^{-i\beta_p H_B}$};
+	\node[box, fill=gray!14] (meas) at (14.7,0) {Measure\\$\langle H_C\rangle$};
+
+	\draw[qafarr] (init) -- (c1);
+	\draw[qafarr] (c1) -- (b1);
+	\draw[qafarr] (b1) -- (cdots);
+	\draw[qafarr] (cdots) -- (cp);
+	\draw[qafarr] (cp) -- (bp);
+	\draw[qafarr] (bp) -- (meas);
+
+	\node[note, below=6pt of c1] {problem};
+	\node[note, below=6pt of b1] {mixer};
+	\node[note, below=10pt of meas] {classical optimize $(\gamma,\beta)$};
+\end{tikzpicture}

@@ -50,6 +50,12 @@ B.~Bauer, S.~Bravyi, M.~Motta, and G.~K.-L. Chan.
   science.
 \newblock {\em Chemical Reviews}, 120(22):12685--12717, 2020.
 
+\bibitem{Childs2018}
+A.~M. Childs, D.~Maslov, Y.~Nam, N.~J. Ross, and Y.~Su.
+\newblock Toward the first quantum simulation with quantum speedup.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  115(38):9456--9461, 2018.
+
 \bibitem{AlbashLidar2018}
 T.~Albash and D.~A. Lidar.
 \newblock Adiabatic quantum computation.
@@ -59,12 +65,6 @@ T.~Albash and D.~A. Lidar.
 E.~Farhi, J.~Goldstone, S.~Gutmann, and M.~Sipser.
 \newblock Quantum computation by adiabatic evolution.
 \newblock {\em arXiv preprint quant-ph/0001106}, 2000.
-
-\bibitem{Childs2018}
-A.~M. Childs, D.~Maslov, Y.~Nam, N.~J. Ross, and Y.~Su.
-\newblock Toward the first quantum simulation with quantum speedup.
-\newblock {\em Proceedings of the National Academy of Sciences},
-  115(38):9456--9461, 2018.
 
 \bibitem{Berry2015}
 D.~W. Berry, A.~M. Childs, R.~Cleve, R.~Kothari, and R.~D. Somma.
@@ -98,6 +98,11 @@ J.~Preskill.
 S.~Endo, Z.~Cai, S.~C. Benjamin, and X.~Yuan.
 \newblock Hybrid quantum-classical algorithms and quantum error mitigation.
 \newblock {\em Journal of the Physical Society of Japan}, 90(3):032001, 2021.
+
+\bibitem{Farhi2014}
+E.~Farhi, J.~Goldstone, and S.~Gutmann.
+\newblock A quantum approximate optimization algorithm.
+\newblock {\em arXiv preprint arXiv:1411.4028}, 2014.
 
 \bibitem{Daley2022}
 A.~J. Daley, I.~Bloch, C.~Kokail, S.~Flannigan, N.~Pearson, M.~Troyer, and

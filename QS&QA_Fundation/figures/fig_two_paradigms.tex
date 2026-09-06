@@ -8,7 +8,7 @@
 	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
 	par/.style={qafbox, text width=5.35cm, minimum height=1.35cm},
 	leaf/.style={qafbox, text width=2.95cm, minimum height=1.25cm},
-	join/.style={qafbox, text width=4.6cm, minimum height=1.15cm},
+	joinbox/.style={qafbox, text width=4.6cm, minimum height=1.15cm},
 	lab/.style={
 		font=\scriptsize\bfseries\linespread{1}\selectfont,
 		text=black!45,
@@ -39,7 +39,7 @@
 		$H(s)=(1-s)H_i+s H_p$};
 
 	% ----- نقطهٔ اتصال دو رهیافت -----
-	\node[join, fill=gray!12] (join) at (0,-5.5) {%
+	\node[joinbox, fill=gray!12] (join) at (0,-5.5) {%
 		Digital adiabatic: Trotterize $H(s_k)$};
 
 	% پس‌زمینهٔ دو ستون

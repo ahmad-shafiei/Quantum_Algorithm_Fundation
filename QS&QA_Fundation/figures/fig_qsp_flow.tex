@@ -1,0 +1,20 @@
+% ایدهٔ QSP: بلوک‌کدگذاری → چندجمله‌ای f از روی بلوک
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.4cm, minimum height=1.2cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=green!12] (be) at (0,0) {Block-encoding\\of $H/\alpha$};
+	\node[box, fill=yellow!16] (qsp) at (3.5,0) {QSP phases\\$\phi_0,\ldots,\phi_d$};
+	\node[box, fill=gray!14] (out) at (7.0,0) {Polynomial\\$f(H/\alpha)$};
+
+	\draw[qafarr] (be) -- (qsp);
+	\draw[qafarr] (qsp) -- (out);
+
+	\node[note, below=8pt of be] {e.g.\ from LCU};
+	\node[note, below=8pt of qsp] {degree $d$};
+	\node[note, below=8pt of out] {$e^{-itx}$, filter,\ $x^{-1}$,\ldots};
+\end{tikzpicture}

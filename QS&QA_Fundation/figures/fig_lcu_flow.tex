@@ -1,0 +1,22 @@
+% اسکلت LCU: PREPARE، SELECT، پس‌گزینش → بلوک‌کدگذاری
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.15cm, minimum height=1.15cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (prep) at (0,0) {PREPARE\\ancilla};
+	\node[box, fill=green!12] (sel) at (3.15,0) {SELECT\\controlled $U_i$};
+	\node[box, fill=blue!10] (unprep) at (6.3,0) {PREPARE$^\dagger$};
+	\node[box, fill=orange!14] (post) at (9.4,0) {Postselect\\ancilla};
+
+	\draw[qafarr] (prep) -- (sel);
+	\draw[qafarr] (sel) -- (unprep);
+	\draw[qafarr] (unprep) -- (post);
+
+	\node[note, below=8pt of prep] {$|L\rangle\propto\sum\sqrt{\alpha_i}|i\rangle$};
+	\node[note, below=8pt of sel] {$|i\rangle|\psi\rangle\!\to\!|i\rangle U_i|\psi\rangle$};
+	\node[note, below=8pt of post] {block $\propto\sum\alpha_i U_i$};
+\end{tikzpicture}

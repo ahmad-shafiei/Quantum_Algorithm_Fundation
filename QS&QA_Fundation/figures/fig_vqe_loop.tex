@@ -1,0 +1,22 @@
+% حلقهٔ VQE: آنزات پارامتری، اندازه‌گیری، بهینه‌ساز کلاسیک
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.45cm, minimum height=1.2cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=yellow!18] (ans) at (0,0) {Ansatz\\$\lvert\psi(\theta)\rangle$};
+	\node[box, fill=gray!14] (meas) at (3.4,0) {Estimate\\$E(\theta)=\langle H\rangle$};
+	\node[box, fill=cyan!12] (opt) at (6.8,0) {Classical\\optimizer};
+	\node[box, fill=yellow!12] (upd) at (3.4,-2.4) {Update $\theta$};
+
+	\draw[qafarr] (ans) -- (meas);
+	\draw[qafarr] (meas) -- (opt);
+	\draw[qafarr] (opt.south) |- (upd.east);
+	\draw[qafarr] (upd.west) -| (ans.south);
+
+	\node[note, below=6pt of ans] {shallow circuit};
+	\node[note, above=4pt of upd] {hybrid loop};
+\end{tikzpicture}

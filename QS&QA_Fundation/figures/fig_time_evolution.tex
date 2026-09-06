@@ -1,0 +1,18 @@
+% رهیافت تحول زمانی: آماده‌سازی، اعمال U(t)، اندازه‌گیری
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.35cm, minimum height=1.15cm},
+	lab/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (prep) at (0,0) {Prepare\\$\lvert\psi(0)\rangle$};
+	\node[box, fill=green!12] (U) at (3.2,0) {Apply\\$U(t)=e^{-iHt}$};
+	\node[box, fill=gray!14] (meas) at (6.4,0) {Measure\\$\langle O\rangle$};
+	\draw[qafarr] (prep) -- (U);
+	\draw[qafarr] (U) -- (meas);
+	\node[lab, below=6pt of prep] {easy state};
+	\node[lab, below=6pt of U] {fixed $H$\\(or known $H(t)$)};
+	\node[lab, below=6pt of meas] {observable\\not full wavefunction};
+\end{tikzpicture}

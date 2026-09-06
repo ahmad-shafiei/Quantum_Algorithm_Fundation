@@ -1,0 +1,23 @@
+% اسکلت QPE: ثبات شمارش، U کنترل‌شده، IQFT، خوانش فاز
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.2cm, minimum height=1.15cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!12] (prep) at (0,0) {Prepare\\$\lvert\phi\rangle$};
+	\node[box, fill=green!12] (ctrl) at (3.1,0) {Controlled\\$U^{2^{k}}$};
+	\node[box, fill=orange!12] (iqft) at (6.2,0) {IQFT on\\counting};
+	\node[box, fill=gray!14] (read) at (9.3,0) {Read\\$\tilde\varphi\approx\varphi$};
+
+	\draw[qafarr] (prep) -- (ctrl);
+	\draw[qafarr] (ctrl) -- (iqft);
+	\draw[qafarr] (iqft) -- (read);
+
+	\node[note, below=8pt of prep] {eigenstate\\of $U$};
+	\node[note, below=8pt of ctrl] {needs\\simulation};
+	\node[note, below=8pt of iqft] {$m$ ancilla\\qubits};
+	\node[note, below=8pt of read] {then\\$E\sim\varphi/t$};
+\end{tikzpicture}

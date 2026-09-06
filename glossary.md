@@ -75,6 +75,15 @@
 | schedule | زمان‌بندی |
 | driver Hamiltonian | هامیلتونی راننده |
 | problem Hamiltonian | هامیلتونی مسئله |
+| observable | مشاهده‌پذیر |
+| ansatz | آنزات |
+| counting register | ثبات شمارش |
+| postselection | پس‌گزینش |
+| mixer | مخلوط‌کننده |
+| transverse-field Ising model (TFIM) | مدل آیزینگ در میدان عرضی |
+| ferromagnet | فرومغناطیس |
+| antiferromagnet | پادفرومغناطیس |
+| analog simulation | شبیه‌سازی آنالوگ |
 
 اصطلاحات `benchmark`، `NISQ` و `early-FTQC` هنوز در جامعهٔ فارسی تثبیت نشده‌اند؛ در متن، شکل انگلیسی در نخستین کاربرد آمده است.
 
