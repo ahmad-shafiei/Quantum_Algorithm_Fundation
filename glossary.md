@@ -84,6 +84,12 @@
 | ferromagnet | فرومغناطیس |
 | antiferromagnet | پادفرومغناطیس |
 | analog simulation | شبیه‌سازی آنالوگ |
+| digital adiabatic | آدیاباتیک دیجیتال |
+| creation operator | عملگر خلق |
+| annihilation operator | عملگر فنا |
+| harmonic oscillator | نوسانگر هماهنگ |
+| driven oscillator | نوسانگر واداشته |
+| canonical quantization | کوانتش کانونی |
 
 اصطلاحات `benchmark`، `NISQ` و `early-FTQC` هنوز در جامعهٔ فارسی تثبیت نشده‌اند؛ در متن، شکل انگلیسی در نخستین کاربرد آمده است.
 

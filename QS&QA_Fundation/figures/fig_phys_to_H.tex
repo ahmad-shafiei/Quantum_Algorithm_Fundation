@@ -1,0 +1,26 @@
+% زنجیره: مسئله فیزیکی → مدل → درجات آزادی → هامیلتونی → پرسش
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	execute at begin picture={\hyphenpenalty=10000 \exhyphenpenalty=10000},
+	box/.style={qafbox, text width=2.05cm, minimum height=1.15cm},
+	note/.style={font=\scriptsize, text=black!55, align=center}
+	]
+	\node[box, fill=blue!14] (phys) at (0,0) {Physical\\problem};
+	\node[box, fill=blue!10] (mod) at (2.9,0) {Idealized\\model};
+	\node[box, fill=cyan!12] (dof) at (5.8,0) {Keep\\degrees of freedom};
+	\node[box, fill=green!12] (H) at (8.7,0) {Hamiltonian\\$H(q,p)$ or $\hat H$};
+	\node[box, fill=orange!14] (q) at (11.6,0) {Choose\\question};
+
+	\draw[qafarr] (phys) -- (mod);
+	\draw[qafarr] (mod) -- (dof);
+	\draw[qafarr] (dof) -- (H);
+	\draw[qafarr] (H) -- (q);
+
+	\node[note, below=8pt of phys] {lab / material};
+	\node[note, below=8pt of mod] {drop irrelevant\\detail};
+	\node[note, below=8pt of dof] {spins, modes,\\orbitals,\ldots};
+	\node[note, below=8pt of H] {generator of\\dynamics \& spectrum};
+	\node[note, below=8pt of q] {dynamics vs\\ground state};
+\end{tikzpicture}

@@ -3,7 +3,7 @@
 % نکات مفهومی که هندسه باید حفظ کند:
 %   - Trotter/LCU/QSP فقط زیر رهیافت تحول‌اند و هر سه جداگانه به اجرا می‌رسند.
 %   - QPE از گروه همان سه ابزار U کنترل‌شده می‌گیرد (نه فقط از یکی، نه از آدیاباتیک).
-%   - مسیر آدیاباتیک رهیافت است؛ ابزار جداگانه ندارد.
+%   - مسیر آدیاباتیک دو بستر دارد: آنالوگ (زمان‌بندی) و digital adiabatic (خط‌چین به Trotter).
 %   - آنالوگ بدون عبور از گیت‌های دیجیتال به اجرا می‌رود.
 \input{figures/qaf_style.tex}
 \begin{tikzpicture}[
@@ -112,8 +112,10 @@
 	\draw[qafarr] (utools.east) -- (qpe.west)
 		node[note, midway, above=1pt] {controlled\\$U$};
 
-	% آدیاباتیک ابزار جداگانه ندارد
-	\node[note, text width=2.0cm] at (3.65,-8.1) {no tool box:\\the schedule\\is the algorithm};
+	% آدیاباتیک: دو بستر اجرا --- آنالوگ (زمان‌بندی مستقیم) و دیجیتال (تروتر روی H(s_k))
+	\node[note, text width=1.85cm] at (3.85,-7.85) {analog:\\schedule on\\hardware};
+	\draw[qafarr, densely dashed] (adi.south west) -- ++(-0.15,-0.55) -| (trot.north east)
+		node[note, pos=0.22, above, text width=1.7cm] {digital\\adiabatic};
 
 	% شینهٔ گردآوری: هر مسیر جداگانه به اجرا می‌رسد
 	\draw[trunk] (-8.65,-9.4) -- (5.6,-9.4);
