@@ -1,0 +1,15 @@
+
+\begin{tikzpicture}[node distance=7mm,>=Latex,
+ every node/.style={font=\small},
+ gapbox/.style={draw,rounded corners,align=center,text width=10.6cm,minimum height=10mm,fill=blue!5}]
+\node[gapbox] (a) {\RL{مدل، واحد انرژی، اندازه، تقارن و تعریف گاف}};
+\node[gapbox,below=of a] (b) {\RL{محاسبهٔ چند تراز یا طیف‌سنجی با مشاهده‌پذیر مناسب}};
+\node[gapbox,below=of b] (c) {\RL{کنترل خطا و جست‌وجوی تطبیقی کمینه در مسیر}};
+\node[gapbox,below=of c] (d) {\RL{طراحی زمان‌بندی با گاف و عناصر ماتریسی گذار}};
+\node[gapbox,below=of d] (e) {\RL{آزمون موفقیت و منابع؛ مقایسه در اندازه‌های مختلف}};
+\draw[->] (a)--(b);
+\draw[->] (b)--(c);
+\draw[->] (c)--(d);
+\draw[->] (d)--(e);
+\draw[->] (e.east)--++(.65,0)|-(c.east);
+\end{tikzpicture}

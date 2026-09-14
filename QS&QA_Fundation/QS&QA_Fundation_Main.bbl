@@ -66,6 +66,74 @@ E.~Farhi, J.~Goldstone, S.~Gutmann, and M.~Sipser.
 \newblock Quantum computation by adiabatic evolution.
 \newblock {\em arXiv preprint quant-ph/0001106}, 2000.
 
+\bibitem{GapJansen2007}
+S.~Jansen, M.-B. Ruskai, and R.~Seiler.
+\newblock Bounds for the adiabatic approximation with applications to quantum
+  computation.
+\newblock {\em Journal of Mathematical Physics}, 48:102111, 2007.
+
+\bibitem{GapRoland2002}
+J.~Roland and N.~J. Cerf.
+\newblock Quantum search by local adiabatic evolution.
+\newblock {\em Physical Review A}, 65:042308, 2002.
+
+\bibitem{GapSchollwock2011}
+U.~Schollw{\"o}ck.
+\newblock The density-matrix renormalization group in the age of matrix product
+  states.
+\newblock {\em Annals of Physics}, 326:96--192, 2011.
+
+\bibitem{GapHiggott2019}
+O.~Higgott, D.~Wang, and S.~Brierley.
+\newblock Variational quantum computation of excited states.
+\newblock {\em Quantum}, 3:156, 2019.
+
+\bibitem{GapPfeuty1970}
+P.~Pfeuty.
+\newblock The one-dimensional {Ising} model with a transverse field.
+\newblock {\em Annals of Physics}, 57(1):79--90, 1970.
+
+\bibitem{GapGharibian2015}
+S.~Gharibian, Y.~Huang, Z.~Landau, and S.~W. Shin.
+\newblock Quantum hamiltonian complexity.
+\newblock {\em Foundations and Trends in Theoretical Computer Science},
+  10:159--282, 2015.
+
+\bibitem{GapCubitt2015}
+T.~S. Cubitt, D.~Perez-Garcia, and M.~M. Wolf.
+\newblock Undecidability of the spectral gap.
+\newblock {\em Nature}, 528:207--211, 2015.
+
+\bibitem{GapSels2017}
+D.~Sels and A.~Polkovnikov.
+\newblock Minimizing irreversible losses in quantum systems by local
+  counterdiabatic driving.
+\newblock {\em Proceedings of the National Academy of Sciences},
+  114:E3909--E3916, 2017.
+
+\bibitem{GapLee2025}
+W.-R. Lee, N.~M. Myers, and V.~V. Scarola.
+\newblock Noise-resilient and resource-efficient hybrid algorithm for robust
+  quantum gap estimation.
+\newblock {\em Physical Review A}, 111:022421, 2025.
+
+\bibitem{GapCugini2025}
+D.~Cugini, F.~Ghisoni, A.~R. Morgillo, and F.~Scala.
+\newblock Spectral gap estimation via adiabatic preparation, 2025.
+\newblock Preprint.
+
+\bibitem{GapCarrera2026}
+A.~Carrera~Vazquez and A.~Sobczyk.
+\newblock Spectral gaps with quantum counting queries and oblivious state
+  preparation.
+\newblock {\em Quantum}, 10:2067, 2026.
+
+\bibitem{GapYu2025}
+J.~Yu, J.~Robledo~Moreno, J.~T. Iosue, L.~Bertels, D.~Claudino, et~al.
+\newblock Quantum-centric algorithm for sample-based krylov diagonalization,
+  2025.
+\newblock Preprint, version 3.
+
 \bibitem{Berry2015}
 D.~W. Berry, A.~M. Childs, R.~Cleve, R.~Kothari, and R.~D. Somma.
 \newblock Simulating {Hamiltonian} dynamics with a truncated {Taylor} series.
