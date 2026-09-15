@@ -1,6 +1,6 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  14 SEP 2026 17:10
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  15 SEP 2026 14:34
 entering extended mode
- \write18 enabled.
+ restricted \write18 enabled.
  %&-line parsing enabled.
 **QS&QA_Fundation_Main.tex
 (./QS&QA_Fundation_Main.tex
@@ -547,7 +547,7 @@ Package: pgfopts 2014/07/10 v2.1a LaTeX package options with pgfkeys
 )
 (c:/texlive/2025/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
-Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+Package shellesc Info: Restricted shell escape enabled on input line 77.
 )
 (c:/texlive/2025/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
@@ -2097,8 +2097,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 ]
 
+LaTeX Warning: Citation `Verstraete2008' on page 19 undefined on input line 244
+.
+
+
+LaTeX Warning: Citation `Cirac2021' on page 19 undefined on input line 244.
+
+
+
 [19]
 فصل 3.
+
+LaTeX Warning: Citation `NielsenChuang2010' on page 20 undefined on input line 
+270.
+
+
+LaTeX Warning: Citation `Feynman1982' on page 20 undefined on input line 270.
+
+
+LaTeX Warning: Citation `Lloyd1996' on page 20 undefined on input line 270.
+
+
+LaTeX Warning: Citation `Georgescu2014' on page 20 undefined on input line 270.
+
+
 
 
 [20
@@ -2108,6 +2130,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 [21]
 فصل 4.
 (./figures/fig_three_layers.tex (./figures/qaf_style.tex))
+
+LaTeX Warning: Citation `CiracZoller2012' on page 22 undefined on input line 32
+3.
+
+
+LaTeX Warning: Citation `Georgescu2014' on page 22 undefined on input line 323.
+
+
+
 
 [22
 
@@ -2179,6 +2210,13 @@ an10-regular(0)/m/n/12 Ising[]\TU/XBNiloofar(0)/m/n/12 ، «جواب» همان 
 
 [32]
 
+LaTeX Warning: Citation `McArdle2020' on page 33 undefined on input line 658.
+
+
+LaTeX Warning: Citation `Bauer2020' on page 33 undefined on input line 658.
+
+
+
 [33]
 Overfull \hbox (13.45695pt too wide) in paragraph at lines 675--677
 []\TU/XBNiloofar(0)/m/n/12 اسپین‌های همسایه می‌توانند بخواهند هم‌جهت بمانند (فر
@@ -2216,7 +2254,7 @@ Overfull \hbox (6.52931pt too wide) in paragraph at lines 816--817
 [40]
 Overfull \hbox (1.13657pt too wide) in paragraph at lines 851--852
 [][]\TU/XBNiloofar(0)/b/n/12 برآورد منابع: \TU/XBNiloofar(0)/m/n/12 تعداد کیوبی
-ت پس از کدگذاری فرمیونی، عمق مدار، گام‌های تروتر یا درجهٔ چندجمله‌ای[]
+ت پس از کدگذاری فرمیونی، عمق مدار، گام‌های تروتر یا درجه چندجمله‌ای[]
  []
 
 
@@ -2266,13 +2304,33 @@ Overfull \hbox (32.30624pt too wide) in paragraph at lines 972--973
 
 [48]
 
+LaTeX Warning: Citation `Lloyd1996' on page 49 undefined on input line 1033.
+
+
+LaTeX Warning: Citation `Childs2018' on page 49 undefined on input line 1033.
+
+
+
 [49]
 
 [50] (./figures/fig_adiabatic_gap.tex (./figures/qaf_style.tex))
 
 [51]
 
+LaTeX Warning: Citation `AlbashLidar2018' on page 52 undefined on input line 11
+44.
+
+
+
 [52]
+
+LaTeX Warning: Citation `Farhi2000' on page 53 undefined on input line 1167.
+
+
+LaTeX Warning: Citation `AlbashLidar2018' on page 53 undefined on input line 11
+67.
+
+
 
 [53]
 Overfull \hbox (12.40312pt too wide) in paragraph at lines 1177--1178
@@ -2294,6 +2352,10 @@ an10-regular(0)/m/n/12 LCU[]\TU/XBNiloofar(0)/m/n/12 /[]\TU/lmroman10-regular(0
 
 [57]
 
+LaTeX Warning: Citation `Farhi2000' on page 58 undefined on input line 1381.
+
+
+
 [58]
 
 [59]
@@ -2302,8 +2364,8 @@ an10-regular(0)/m/n/12 LCU[]\TU/XBNiloofar(0)/m/n/12 /[]\TU/lmroman10-regular(0
 Overfull \hbox (4.68156pt too wide) in paragraph at lines 1517--1518
 [] []\TU/XBNiloofar(0)/b/n/12 گام ۵ — ماتریس صریح $\OML/cmm/m/it/12 H\OT1/cmr/m
 /n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )$ \TU/XBNiloofar(0)/b/n/12 و منشأ نزد
-یک‌شدن ترازها.[] \TU/XBNiloofar(0)/m/n/12 برای مشاهدهٔ این موضوع، ابتدا هامیلتو
-نی‌های[]
+یک‌شدن ترازها.[] \TU/XBNiloofar(0)/m/n/12 برای مشاهده این موضوع، ابتدا هامیلتون
+ی‌های[]
  []
 
 
@@ -2337,7 +2399,21 @@ Overfull \hbox (1.06013pt too wide) detected at line 1875
 
 [72]
 
+LaTeX Warning: Citation `GapJansen2007' on page 73 undefined on input line 2122
+.
+
+
+
 [73]
+
+LaTeX Warning: Citation `GapRoland2002' on page 74 undefined on input line 2139
+.
+
+
+LaTeX Warning: Citation `AlbashLidar2018' on page 74 undefined on input line 21
+53.
+
+
 
 [74]
 LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
@@ -2350,15 +2426,78 @@ LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
 
 [77]
 
+LaTeX Warning: Citation `GapSchollwock2011' on page 78 undefined on input line 
+2272.
+
+
+
 [78]
+
+LaTeX Warning: Citation `GapHiggott2019' on page 79 undefined on input line 229
+9.
+
+
 
 [79]
 
+LaTeX Warning: Citation `GapPfeuty1970' on page 80 undefined on input line 2353
+.
+
+
+
 [80] (./figures/gap_scaling.tex)
+
+LaTeX Warning: Citation `GapGharibian2015' on page 81 undefined on input line 2
+372.
+
+
+LaTeX Warning: Citation `GapCubitt2015' on page 81 undefined on input line 2373
+.
+
+
 
 [81]
 
-[82] (./figures/gap_workflow.tex)
+LaTeX Warning: Citation `GapSels2017' on page 82 undefined on input line 2395.
+
+
+LaTeX Warning: Citation `GapJansen2007' on page 82 undefined on input line 2414
+.
+
+
+LaTeX Warning: Citation `GapRoland2002' on page 82 undefined on input line 2414
+.
+
+
+LaTeX Warning: Citation `GapSchollwock2011' on page 82 undefined on input line 
+2414.
+
+
+LaTeX Warning: Citation `AlbashLidar2018' on page 82 undefined on input line 24
+14.
+
+
+
+[82]
+
+LaTeX Warning: Citation `GapLee2025' on page 83 undefined on input line 2420.
+
+
+LaTeX Warning: Citation `GapCugini2025' on page 83 undefined on input line 2427
+.
+
+
+LaTeX Warning: Citation `GapCarrera2026' on page 83 undefined on input line 243
+5.
+
+
+LaTeX Warning: Citation `GapYu2025' on page 83 undefined on input line 2440.
+
+
+LaTeX Warning: Citation `GapHiggott2019' on page 83 undefined on input line 244
+1.
+
+(./figures/gap_workflow.tex)
 
 [83]
 
@@ -2377,10 +2516,23 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 فصل 1.
 
+LaTeX Warning: Citation `Childs2018' on page 87 undefined on input line 2497.
+
+
+LaTeX Warning: Citation `Berry2015' on page 87 undefined on input line 2497.
+
+
+LaTeX Warning: Citation `Low2017' on page 87 undefined on input line 2497.
+
+
 
 [87
 
-] (./figures/fig_trotter_product.tex (./figures/qaf_style.tex))
+]
+
+LaTeX Warning: Citation `Childs2018' on page 88 undefined on input line 2512.
+
+(./figures/fig_trotter_product.tex (./figures/qaf_style.tex))
 
 [88]
 
@@ -2397,7 +2549,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [90]
 
-[91] (./figures/fig_lcu_flow.tex (./figures/qaf_style.tex))
+[91]
+
+LaTeX Warning: Citation `Berry2015' on page 92 undefined on input line 2645.
+
+(./figures/fig_lcu_flow.tex (./figures/qaf_style.tex))
 
 [92]
 
@@ -2410,7 +2566,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[93] (./figures/fig_qsp_flow.tex (./figures/qaf_style.tex))
+[93]
+
+LaTeX Warning: Citation `Low2017' on page 94 undefined on input line 2751.
+
+(./figures/fig_qsp_flow.tex (./figures/qaf_style.tex))
 
 [94]
 
@@ -2448,6 +2608,19 @@ Overfull \hbox (2.66112pt too wide) in paragraph at lines 2861--2862
 [97]
 فصل 2.
 
+LaTeX Warning: Citation `NielsenChuang2010' on page 98 undefined on input line 
+2890.
+
+
+LaTeX Warning: Citation `McArdle2020' on page 98 undefined on input line 2890.
+
+
+LaTeX Warning: Citation `Peruzzo2014' on page 98 undefined on input line 2893.
+
+
+LaTeX Warning: Citation `Tilly2022' on page 98 undefined on input line 2893.
+
+
 Overfull \hbox (3.32303pt too wide) in paragraph at lines 2893--2894
 [] [][]\TU/lmroman10-regular(0)/b/n/12 VQE[] \TU/XBNiloofar(0)/b/n/12 — الگوریت
 م وردشی.[] \TU/XBNiloofar(0)/m/n/12 یک مدار پارامتری $\OMS/cmsy/m/n/12 j\OML/cm
@@ -2462,6 +2635,14 @@ m/m/it/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/
 [98
 
 ]
+
+LaTeX Warning: Citation `Preskill2018' on page 99 undefined on input line 2895.
+
+
+
+LaTeX Warning: Citation `Endo2021' on page 99 undefined on input line 2895.
+
+
 Underfull \hbox (badness 10000) in alignment at lines 2927--2927
 [][][] 
  []
@@ -2474,6 +2655,10 @@ Overfull \hbox (2.66112pt too wide) in paragraph at lines 2927--2928
 (./figures/fig_qpe_flow.tex (./figures/qaf_style.tex))
 
 [99]
+
+LaTeX Warning: Citation `McArdle2020' on page 100 undefined on input line 2980.
+
+
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2985.
@@ -2503,6 +2688,13 @@ n/12 /[]\TU/lmroman10-regular(0)/m/n/12 QSP[][]
 
 [102]
 
+LaTeX Warning: Citation `Peruzzo2014' on page 103 undefined on input line 3092.
+
+
+
+LaTeX Warning: Citation `Tilly2022' on page 103 undefined on input line 3092.
+
+
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 3098.
 
@@ -2518,7 +2710,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 [103]
 
-[104] (./figures/fig_qaoa_layers.tex (./figures/qaf_style.tex))
+[104]
+
+LaTeX Warning: Citation `Farhi2014' on page 105 undefined on input line 3177.
+
+(./figures/fig_qaoa_layers.tex (./figures/qaf_style.tex))
 
 [105]
 
@@ -2581,6 +2777,18 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 فصل 1.
 
+LaTeX Warning: Citation `Preskill2018' on page 112 undefined on input line 3391
+.
+
+
+LaTeX Warning: Citation `CiracZoller2012' on page 112 undefined on input line 3
+394.
+
+
+LaTeX Warning: Citation `Georgescu2014' on page 112 undefined on input line 339
+4.
+
+
 
 [112
 
@@ -2604,14 +2812,24 @@ Missing character: There is no р (U+0440) in font [styles/fonts/XB Niloofar.ttf
 [117]
 فصل 2.
 
+LaTeX Warning: Citation `Daley2022' on page 118 undefined on input line 3563.
+
+
+LaTeX Warning: Citation `Cirac2021' on page 118 undefined on input line 3563.
+
+
 
 [118
 
 ]
+
+LaTeX Warning: Citation `Endo2021' on page 119 undefined on input line 3584.
+
+
 Overfull \hbox (2.36945pt too wide) in paragraph at lines 3595--3596
 [][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۲.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
 ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 جدول شاهدهای راستی‌
-آزمایی برای هابارد و نظریهٔ پیمانه‌ای؛ فرمول‌های asymp-[]
+آزمایی برای هابارد و نظریه پیمانه‌ای؛ فرمول‌های asymp-[]
  []
 
 
@@ -2636,48 +2854,33 @@ Overfull \vbox (2.97342pt too high) has occurred while \output is active []
 
 [124])
 
-[125] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl
-
-[126
-
-
+[125] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl))
+runsystem(latexminted cleantemp  --timestamp 20260915143427 2A3295FF97FD2A69D89
+865AE1BE6A276)...executed safely (allowed).
 
 
-]
-
-[127]
-
-[128]
-Underfull \hbox (badness 1067) in paragraph at lines 233--239
-[][]\TU/lmroman10-regular(0)/m/n/12 N. Maskara, S. Ostermann, J. Shee, M. Kalin
-owski, A. McClain Gomez,[]
- []
-
-
-
-[129]
-
-[130]))
-
-[131]
-runsystem(latexminted cleantemp  --timestamp 20260914171036 2A3295FF97FD2A69D89
-865AE1BE6A276)...executed.
-
- (./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
+(./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package rerunfilecheck Info: File `QS&QA_Fundation_Main.out' has not changed.
-(rerunfilecheck)             Checksum: A4C05FDF56EF949F196C6BFDAF77522C;36626.
+(rerunfilecheck)             Checksum: 83B39B67907197A8583661F6084FB3DB;36244.
  ) 
 Here is how much of TeX's memory you used:
- 50962 strings out of 473831
- 1159033 string characters out of 5733136
- 1739548 words of memory out of 5000000
- 73071 multiletter control sequences out of 15000+600000
- 573330 words of font info for 137 fonts, out of 8000000 for 9000
+ 50893 strings out of 473831
+ 1157871 string characters out of 5733136
+ 1737079 words of memory out of 5000000
+ 73003 multiletter control sequences out of 15000+600000
+ 573322 words of font info for 136 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  146i,16n,137p,3902b,1961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on QS&QA_Fundation_Main.pdf (131 pages).
+Output written on QS&QA_Fundation_Main.pdf (125 pages).
