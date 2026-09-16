@@ -1,0 +1,12 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Build H\PYGZus{}B, H\PYGZus{}P and the linear path H(s) (pedagogical excerpt)}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{n+nn}{.}\PYG{n+nn}{quantum\PYGZus{}info}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{SparsePauliOp}
+
+\PYG{n}{hx}\PYG{p}{,} \PYG{n}{J}\PYG{p}{,} \PYG{n}{hz} \PYG{o}{=} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{0.25}
+\PYG{n}{HB} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IX}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{XI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{HP} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{J}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+
+
+\PYG{k}{def}\PYG{+w}{ }\PYG{n+nf}{H\PYGZus{}of\PYGZus{}s}\PYG{p}{(}\PYG{n}{s}\PYG{p}{:} \PYG{n+nb}{float}\PYG{p}{)} \PYG{o}{\PYGZhy{}}\PYG{o}{\PYGZgt{}} \PYG{n}{SparsePauliOp}\PYG{p}{:}
+    \PYG{k}{return} \PYG{p}{(}\PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{\PYGZhy{}} \PYG{n}{s}\PYG{p}{)} \PYG{o}{*} \PYG{n}{HB} \PYG{o}{+} \PYG{n}{s} \PYG{o}{*} \PYG{n}{HP}\PYG{p}{)}\PYG{o}{.}\PYG{n}{simplify}\PYG{p}{(}\PYG{p}{)}
+\end{MintedVerbatim}

@@ -90,6 +90,7 @@
 | harmonic oscillator | نوسانگر هماهنگ |
 | driven oscillator | نوسانگر واداشته |
 | canonical quantization | کوانتش کانونی |
+| product formula | فرمول حاصل‌ضربی |
 
 اصطلاحات `benchmark`، `NISQ` و `early-FTQC` هنوز در جامعهٔ فارسی تثبیت نشده‌اند؛ در متن، شکل انگلیسی در نخستین کاربرد آمده است.
 

@@ -1442,15 +1442,21 @@ $a,b\in\{+,-\}$ باشند، داریم
 \end{equation}
 بنابراین حالت پایه $H_B$ و حالت پایه $H_P$ یکسان نیستند و نمی‌توان سامانه را صرفاً با یک تغییر ساده پایه از ابتدا تا انتها توصیف کرد. حالت پایه در طول مسیر نیز تغییر می‌کند.
 
-برای هر مقدار $s$، ویژه‌مقدارهای لحظه‌ای را به‌صورت
+در هر مقدار مشخص از پارامتر $s$، حالت‌های لحظه‌ای از طریق قطری‌سازی هامیلتونی $H(s)$ به‌دست می‌آیند. به‌طور مشخص، با حل مسئله‌ی ویژه
 \begin{equation}
-	H(s)\lvert\psi_k(s)\rangle
-	=
-	E_k(s)\lvert\psi_k(s)\rangle,
-	\qquad
-	E_0(s)\leq E_1(s)\leq\cdots
+	H(s)\ket{\psi_k(s)}=E_k(s)\ket{\psi_k(s)},
 \end{equation}
-تعریف می‌کنیم. اگر سامانه از حالت پایه شروع کند و به‌اندازه کافی آهسته تکامل یابد، هدف این است که در طول مسیر در $\lvert\psi_0(s)\rangle$ باقی بماند و در انتها به $\lvert\psi_0(1)\rangle$ برسد.
+ویژه‌مقدارها به‌صورت صعودی مرتب می‌شوند،
+\begin{equation}
+	E_0(s)\leq E_1(s)\leq E_2(s)\leq\cdots,
+\end{equation}
+و ویژه‌بردارهای متناظر با دو کمترین ویژه‌مقدار، به‌ترتیب به‌عنوان حالت پایه و حالت برانگیخته‌ی اول لحظه‌ای تعریف می‌شوند:
+\begin{equation}
+	\ket{0(s)}\equiv\ket{\psi_0(s)},\qquad
+	\ket{1(s)}\equiv\ket{\psi_1(s)}.
+\end{equation}
+بنابراین، $\ket{0(s)}$ و $\ket{1(s)}$ در هر مقدار $s$ به‌طور مستقل از روی هامیلتونی همان نقطه محاسبه می‌شوند و لزوماً با حالت پایه‌ی اولیه‌ی $H_B$ یا حالت پایه‌ی نهایی $H_P$ یکسان نیستند.
+
 
 همچنین
 \begin{equation}
@@ -1466,6 +1472,30 @@ $a,b\in\{+,-\}$ باشند، داریم
 	=
 	e^{-iHt}\lvert\psi(0)\rangle
 \end{equation}
+از آنجا که مسیر آدیاباتیک به‌صورت خطی بین $H_B$ و $H_P$ تعریف شده است،
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P,
+\end{equation}
+داریم
+\begin{equation}
+	\frac{dH}{ds}=H_P-H_B.
+\end{equation}
+در نتیجه، جمله‌ی ماتریسی موجود در شرط آدیاباتیک در هر مقدار $s$ از رابطه‌ی
+\begin{equation}
+	M(s)
+	=
+	\left\langle 1(s)\left|
+	\frac{dH}{ds}
+	\right|0(s)\right\rangle
+	=
+	\left\langle 1(s)\left|
+	H_P-H_B
+	\right|0(s)\right\rangle
+\end{equation}
+محاسبه می‌شود. نکته‌ی مهم آن است که در این رابطه، $\ket{0(s)}$ و $\ket{1(s)}$ ویژه‌حالت‌های لحظه‌ای $H(s)$ در همان مقدار $s$ هستند؛ بنابراین برای محاسبه‌ی $M(s)$ ابتدا $H(s)$ در مقدار موردنظر قطری شده و سپس ویژه‌بردارهای متناظر با دو کمترین ویژه‌مقدار در رابطه قرار می‌گیرند.
+
+
+
 عملگر تکامل زمانی یک هامیلتونی ثابت را بیان می‌کند؛ خود این عبارت لزوماً «الگوریتم» نیست. در اجرای دیجیتال، الگوریتم‌هایی مانند \lr{Trotter--Suzuki} یا روش‌های مبتنی بر \lr{LCU} و \lr{QSP} برای تقریب یا پیاده‌سازی این تکامل به کار می‌روند. در محاسبه آدیاباتیک نیز ایده محاسباتی، تغییر آهسته هامیلتونی $H(s)$ و دنبال‌کردن حالت پایه لحظه‌ای است.
 
 \paragraph{گام ۴ --- چرا گاف مهم است؟}
@@ -1726,12 +1756,42 @@ $a,b\in\{+,-\}$ باشند، داریم
 \begin{equation}
 	\frac{\partial H}{\partial s}=H_P-H_B
 \end{equation}
-و هنجار طیفی آن برابر است با
+و نرم طیفی آن برابر است با
 \begin{equation}
 	\label{eq:norm-example}
 	\left\|H_P-H_B\right\|_2
 	\simeq2.369613.
 \end{equation}
+
+برای یک برآورد ساده از اندازه‌ی جمله‌ی ماتریسی، می‌توان به‌جای محاسبه‌ی مستقیم $M(s)$ از نرم طیفی عملگر
+\begin{equation}
+	A=H_P-H_B
+\end{equation}
+استفاده کرد. نرم طیفی به‌صورت
+\begin{equation}
+	|A|*2
+	=
+	\max*{|\ket{\psi}|=1}
+	|A\ket{\psi}|
+\end{equation}
+تعریف می‌شود. از آنجا که $A$ در این مسئله یک ماتریس هرمیتی است، این نرم برابر با بزرگ‌ترین قدرمطلق ویژه‌مقدارهای $A$ است:
+\begin{equation}
+	|H_P-H_B|_2
+	=
+	\max_k
+	\left|\lambda_k(H_P-H_B)\right|.
+\end{equation}
+بنابراین، مقدار
+\begin{equation}
+	|H_P-H_B|_2\simeq2.369613
+\end{equation}
+یک ویژگی خودِ عملگر $H_P-H_B$ است و به انتخاب یک حالت کوانتومی خاص وابسته نیست. این کمیت صرفاً به‌عنوان یک کران یا مقیاس محافظه‌کارانه برای اندازه‌ی جمله‌ی ماتریسی
+$\left|\langle1(s)|dH/ds|0(s)\rangle\right|$
+به‌کار می‌رود و با مقدار دقیق این جمله در یک $s$ مشخص یکسان نیست.
+
+
+
+
 اگر برای یک برآورد مرتبه‌ای، این مقدار را به‌عنوان مقیاس صورت کسر و
 \begin{equation}
 	\varepsilon\sim10^{-2}
@@ -1978,87 +2038,144 @@ $s\simeq0.62$
 \end{equation}
 
 بنابراین این مثال کوچک، یک نمونه فشرده از منطق کامل محاسبه آدیاباتیک است: یک حالت پایه آسان آماده می‌شود، هامیلتونی در طول یک مسیر کنترل‌شده تغییر می‌کند، گاف لحظه‌ای تعیین می‌کند که کدام ناحیه از مسیر گلوگاه است، و زمان اجرا باید به‌اندازه‌ای بزرگ انتخاب شود که سامانه بتواند این ناحیه حساس را به‌صورت آدیاباتیک پشت سر بگذارد.
-%==========================
-%==========================
 
-%\section{مثال کاری: از میدان عرضی به \lr{Ising}}
-%\label{sec:adi-ising-example}
-%
-%هدف این بخش یک محاسبه کاملِ کوچک است تا پارامترهای بخش قبل نام‌گذاری صرف نمانند. دو اسپین-$1/2$ (دو کیوبیت) می‌گیریم: آغاز آسان در میدان مغناطیسی عرضی، پایان یک \lr{Ising} که حالت پایه‌اش رمز پاسخ است.
-%
-%\paragraph{گام ۱ --- هامیلتونی آغازین (آسان).}
-%میدان عرضی یکنواخت:
-%\begin{equation}
-%	\label{eq:HB}
-%	H_B = -h_x\,(X_1+X_2),\qquad h_x>0.
-%\end{equation}
-%در پایه $\lvert\pm\rangle$ از $X$، ویژه‌حالت‌ها ضرب تانسوری‌اند. کمینه انرژی $-2h_x$ است و
-%\begin{equation}
-%	\lvert\psi_0(0)\rangle = \lvert+\rangle\otimes\lvert+\rangle
-%	= \tfrac12\bigl(\lvert00\rangle+\lvert01\rangle+\lvert10\rangle+\lvert11\rangle\bigr).
-%\end{equation}
-%آماده‌سازی: دو گیت هادامارد روی $\lvert00\rangle$. این همان «میدان مغناطیسی که پایه‌اش را بلدید» است.
-%
-%\paragraph{گام ۲ --- هامیلتونی مسئله (\lr{Ising}).}
-%\begin{equation}
-%	\label{eq:HP}
-%	H_P = -J\,Z_1 Z_2 - h_z\,(Z_1+Z_2),\qquad J>0,\ h_z>0.
-%\end{equation}
-%جمله $Z_1 Z_2$ جفت‌شدگی فرومغناطیسی است؛ $h_z$ میدان طولی کوچک برای شکستن تبهگنی $\lvert00\rangle$ و $\lvert11\rangle$. در پایه محاسباتی انرژی‌ها صریح‌اند:
-%\begin{equation}
-%	\begin{aligned}
-%		E(\lvert00\rangle) &= -J-2h_z,\\
-%		E(\lvert11\rangle) &= -J+2h_z,\\
-%		E(\lvert01\rangle) &= E(\lvert10\rangle) = +J.
-%	\end{aligned}
-%\end{equation}
-%پس برای $J,h_z>0$ حالت پایه یکتا $\lvert00\rangle$ با انرژی $-J-2h_z$ است. شهود نگاشت: اگر $J_{ij}$ و $h_i$ از یک مسئله بهینه‌سازی بیایند، یافتن این پایه معادل یافتن کمینه کلاسیک است؛ برای $n$ بزرگ، شمارش $2^n$ پیکربندی ناممکن می‌شود. اینجا $n=2$ است تا همه چیز دستی حل شود.
-%
-%\paragraph{گام ۳ --- مسیر و پارامترهای عددی.}
-%درون‌یابی خطی استاندارد محاسبه آدیاباتیک~\cite{Farhi2000}:
-%\begin{equation}
-%	H(s)=(1-s)\,H_B + s\,H_P.
-%\end{equation}
-%اعداد نمونه:
-%\begin{equation}
-%	h_x=1,\qquad J=1,\qquad h_z=\tfrac14.
-%\end{equation}
-%آن‌گاه
-%\begin{equation}
-%	\begin{aligned}
-%		H(0)&=H_B, & E_0(0)&=-2, & \lvert\psi_0(0)\rangle&=\lvert++\rangle,\\
-%		H(1)&=H_P, & E_0(1)&=-1-\tfrac12=-\tfrac32, & \lvert\psi_0(1)\rangle&=\lvert00\rangle.
-%	\end{aligned}
-%\end{equation}
-%و $\partial_s H=H_P-H_B$؛ مقدار عددی هنجارش در گام بعد برای برآورد $T$ می‌آید.
-%
-%\paragraph{گام ۴ --- گاف و انتخاب $T$.}
-%برای $n=2$ ماتریس $4\times4$ی $H(s)$ را می‌توان قطری کرد. با همین پارامترها، کمینه گاف حدود
-%\begin{equation}
-%	\Delta_{\min}\approx 0.66
-%\end{equation}
-%نزدیک $s\approx 0.62$ رخ می‌دهد (تقاطع تراز نیست؛ $h_z$ تبهگنی پایانی را برداشته). هنجار $\lVert H_P-H_B\rVert_2\approx 2.37$ است. از~\eqref{eq:adiabatic-bound} با $\varepsilon\sim 10^{-2}$،
-%\begin{equation}
-%	T \gtrsim \frac{2.37}{(0.66)^{2}\times 10^{-2}} \approx 5\times 10^{2}.
-%\end{equation}
-%زمان‌بندی خطی $s(t)=t/T$ را می‌گیریم. اگر $h_z\to 0$، در $s=1$ تبهگنی $\lvert00\rangle$/$\lvert11\rangle$ برمی‌گردد و نزدیک پایان $\Delta$ کوچک می‌شود؛ همان‌جا $T$ باید بزرگ شود --- نمونه کوچکِ «گاف، گلوگاه است».
-%
-%\paragraph{گام ۵ --- اجرا و خوانش.}
-%\begin{enumerate}
-%	\item حالت اولیه $\lvert++\rangle$ را آماده کنید.
-%	\item $H(s(t))$ را از $s=0$ تا $s=1$ در زمان $T$ اعمال کنید (آنالوگ: کنترل میدان‌ها؛ دیجیتال: تروتر روی $H(s_k)$ در گام‌های گسسته).
-%	\item در پایان، هر دو کیوبیت را در پایه $Z$ اندازه بگیرید. با احتمال نزدیک به یک، نتیجه $\lvert00\rangle$ است --- همان پایه $H_P$.
-%\end{enumerate}
-%این یعنی مسئله «پیدا کردن پایه \lr{Ising}» به یک مسیر کند در فضای هامیلتونی‌ها ترجمه شده است، نه به شمارش پیکربندی‌ها و نه به قطری‌سازی مستقیم $H_P$ برای $n$ بزرگ.
-%
-%\paragraph{چگونه به سیستم پیچیده تعمیم می‌یابد.}
-%برای $n$ اسپین، همان الگو باقی می‌ماند:
-%\begin{equation}
-%	H_B=-h_x\sum_{i=1}^{n} X_i,\qquad
-%	H_P=\sum_i h_i Z_i+\sum_{i<j} J_{ij} Z_i Z_j,
-%\end{equation}
-%با $H(s)=(1-s)H_B+s H_P$. پایه $H_B$ همیشه $\lvert+\rangle^{\otimes n}$ است و با هادامارد ساخته می‌شود. پایه $H_P$ --- اگر ضرایب از یک مسئله سخت بیایند --- می‌تواند به‌لحاظ کلاسیک دشوار باشد؛ آدیاباتیک می‌گوید: اگر $\Delta_{\min}$ مسیر بد نباشد و زمان و خطا با معیارهای بخش~\ref{sec:gap-runtime} کنترل شوند، سامانه خودش را به آن پایه می‌رساند. هزینه واقعی پژوهش، اغلب برآورد یا کنترل همین $\Delta_{\min}$ است، نه نوشتن $H_P$.
+\section{پیاده‌سازی با \lr{Qiskit}: همان مثال، گام‌به‌گام}
+\label{sec:adi-ising-qiskit}
 
+اکنون همان زنجیرهٔ بخش~\ref{sec:adi-ising-example} را روی رایانهٔ کلاسیک با
+\lr{Qiskit}
+پیاده می‌کنیم: نوشتن $H_B$ و $H_P$، ساخت $H(s)$، پیمایش گاف و یافتن $\Delta_{\min}$، برآورد $T$، و سرانجام مدار دیجیتالِ آدیاباتیک با گیت‌های $R_x$، $R_{zz}$، $R_z$.
+اسکریپت یکپارچه در
+\lr{snippets/adi\_ising\_qiskit.py}
+است (اجرا در محیط
+\lr{conda}:
+\lr{conda activate qcomputing}
+سپس
+\lr{python snippets/adi\_ising\_qiskit.py}).
+قطعه‌های زیر همان مسیر را مرحله‌به‌مرحله باز می‌کنند. پارامترها همان~\eqref{eq:ising-example-parameters}اند:
+$h_x=1$، $J=1$، $h_z=1/4$.
+
+\paragraph{گام الف --- هامیلتونی‌ها در زبان پائولی.}
+در \lr{Qiskit} برچسب رشتهٔ پائولی \emph{little-endian} است: حرف راست روی کیوبیت $0$ عمل می‌کند. با قرارداد «کیوبیت $0=$ اسپین اول» داریم
+\begin{equation}
+	H_B=-h_x(X_0+X_1),
+	\qquad
+	H_P=-J\,Z_0Z_1-h_z(Z_0+Z_1),
+\end{equation}
+و مسیر
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P.
+\end{equation}
+
+\code{python}{snippets/adi_ising_01_hamiltonians.py}{code:adi-ising-H}
+
+\paragraph{گام ب --- پیمایش $s$ و کمینهٔ گاف.}
+برای هر $s$ ماتریس $H(s)$ را قطری می‌کنیم و
+$\Delta(s)=E_1(s)-E_0(s)$
+را می‌سازیم. خروجی عددی با متن بخش قبل و اجرای واقعی \lr{Qiskit} یکی است:
+\begin{equation}
+	s_*\simeq0.6215,
+	\qquad
+	\Delta_{\min}\simeq0.65886.
+\end{equation}
+شکل~\ref{fig:adi-ising-qiskit-gap} منحنی ترازها و $\Delta(s)$ را از همان اجرا نشان می‌دهد.
+
+\code{python}{snippets/adi_ising_02_gap.py}{code:adi-ising-gap}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/adi_ising_qiskit_gap.pdf}
+	\caption{طیف لحظه‌ای و گاف مسیر همین مثال، بازتولیدشده با اسکریپت \lr{Qiskit}
+	(\lr{snippets/adi\_ising\_qiskit.py}). کمینهٔ گاف $\Delta_{\min}\simeq0.65886$ نزدیک $s_*\simeq0.62$ است.}
+	\label{fig:adi-ising-qiskit-gap}
+\end{figure}
+
+\paragraph{گام ج --- برآورد زمان مؤثر $T$.}
+با نرم طیفی
+$\lVert H_P-H_B\rVert_2\simeq2.3696$
+و خطای هدف $\varepsilon\sim10^{-2}$، تخمین مرتبه‌ای بخش قبل تکرار می‌شود:
+\begin{equation}
+	\label{eq:T-heur-qiskit}
+	T_{\mathrm{heur}}
+	\gtrsim
+	\frac{\lVert H_P-H_B\rVert_2}{\Delta_{\min}^{2}\,\varepsilon}
+	\simeq
+	5.5\times10^{2}.
+\end{equation}
+این یک کران اکتشافی محافظه‌کارانه است، نه زمانِ کمینهٔ عملی. حل عددی معادلهٔ شرودینگر روی همین مسیر خطی نشان می‌دهد برای این سامانهٔ دوکیوبیتی، احتمال موفقیت $P(\lvert00\rangle)$ از حدود $T\simeq20$ به نزدیک یک می‌رسد و در $T=40$ عملاً اشباع می‌شود (جدول~\ref{tab:adi-T-success}). در مدار دیجیتال زیر از $T=40$ به‌عنوان زمان نمایشی استفاده می‌کنیم؛ اگر بخواهید با~\eqref{eq:T-heur-qiskit} هم‌تراز باشید، همان $T\sim500$ را با گام‌های تروترِ متناسب بگیرید.
+
+\code{python}{snippets/adi_ising_03_runtime.py}{code:adi-ising-T}
+
+\begin{table}[htbp]
+	\centering
+	\caption{احتمال ایده‌آلِ خوانش $\lvert00\rangle$ پس از تحول دقیقِ قطعه‌ای روی $H(s_k)$ (مرجع کلاسیک برای سنجش تروتر).}
+	\label{tab:adi-T-success}
+	\begin{tabular}{cccccc}
+		\toprule
+		$T$ & $5$ & $20$ & $40$ & $100$ & $500$ \\
+		\midrule
+		$P(\lvert00\rangle)$ & $0.74$ & $0.99$ & $\approx1$ & $\approx1$ & $\approx1$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\paragraph{گام د --- از $H(s)$ تا گیت‌ها (یک لایهٔ تروتر).}
+در هر برش زمانیِ کوچک $\Delta t=T/N$ با $s$ ثابت،
+\begin{equation}
+	e^{-iH(s)\Delta t}
+	\approx
+	e^{i a X_0}\,
+	e^{i a X_1}\,
+	e^{i b Z_0Z_1}\,
+	e^{i c Z_0}\,
+	e^{i c Z_1},
+\end{equation}
+که
+$a=(1-s)h_x\Delta t$،
+$b=sJ\Delta t$،
+$c=sh_z\Delta t$.
+با قرارداد گیت‌های \lr{Qiskit}
+($R_x(\theta)=e^{-i\theta X/2}$ و مشابه برای $R_z$ و $R_{zz}$) این یعنی
+\begin{equation}
+	R_x(-2a),\;
+	R_{zz}(-2b),\;
+	R_z(-2c).
+\end{equation}
+شکل~\ref{fig:adi-ising-trotter} اسکلت مدار را نشان می‌دهد: هادامارد برای $\lvert++\rangle$، سپس $N$ لایه با $s_k=(k+\tfrac12)/N$، و اندازه‌گیری در پایهٔ $Z$.
+
+\code{python}{snippets/adi_ising_04_trotter_slice.py}{code:adi-ising-trotter}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+			\input{figures/fig_adi_ising_trotter.tex}%
+		}
+	\end{latin}
+	\caption{مدار آدیاباتیک دیجیتال برای مثال دوکیوبیتی: آماده‌سازی، لایه‌های تروترِ $H(s)$، خوانش $Z$.}
+	\label{fig:adi-ising-trotter}
+\end{figure}
+
+\paragraph{گام ه --- مدار کامل و خوانش.}
+با $T=40$ و $N=200$ لایه، شبیه‌ساز حالت‌بردار تقریباً تمام وزن احتمال را روی $\lvert00\rangle$ می‌گذارد
+($P(\lvert00\rangle)\simeq0.9999$ در اجرای
+\lr{qcomputing}؛
+در \lr{AerSimulator} با $4096$ شات همهٔ شمارش‌ها $\mathtt{00}$ بودند).
+همین اجرا شکل~\ref{fig:adi-ising-qiskit-gap} را نیز می‌نویسد.
+
+\code{python}{snippets/adi_ising_05_run.py}{code:adi-ising-run}
+
+\paragraph{جمع‌بندی عملی.}
+\begin{enumerate}
+	\item $H_B$ و $H_P$ را به‌صورت \lr{SparsePauliOp} بنویسید؛ $H(s)$ همان ترکیب خطی است.
+	\item با قطری‌سازی روی شبکهٔ $s$، $\Delta_{\min}$ و $s_*$ را استخراج کنید (اینجا $\simeq0.66$ در $s\simeq0.62$).
+	\item $T_{\mathrm{heur}}$ را از~\eqref{eq:T-heur-qiskit} برآورد کنید؛ برای این مثال کوچک $T\sim40$ هم در تحول دقیق و تروتر کافی است.
+	\item مسیر را با تروترِ مرتبهٔ اول به گیت‌های $R_x$/$R_{zz}$/$R_z$ بشکنید و در پایان در پایهٔ $Z$ بخوانید.
+\end{enumerate}
+برای بازتولید اعداد بدون نصب \lr{Qiskit} می‌توانید
+\lr{figures/adi\_ising\_qiskit\_verify.py}
+را اجرا کنید. بخش بعد گاف را از زاویهٔ پژوهشی باز می‌کند؛ ورودی عددی‌اش همین مسیر است.
 
 % BEGIN GAP RESEARCH EXPANSION
 \begingroup
@@ -2471,14 +2588,14 @@ $D^2/(\epsilon^2\Delta_k^2)$ و عوامل چندلگاریتمی است؛ $\eps
 
 \section{ارتباط}
 
-دو پرسش در فصل~\ref{chap:dyn-spec}، ابزار دیجیتال در فصل~\ref{chap:digital-tools}، \lr{QPE} از تحول تغذیه می‌کند و \lr{VQE} رهیافت سومی است (وردشی) در فصل~\ref{chap:spectral-tools}، و آنالوگ در فصل~\ref{chap:hardware} آمده است. مدل‌های اسپینی در فصل~\ref{chap:models} آمده‌اند.
+دو پرسش در فصل~\ref{chap:dyn-spec}، ابزار دیجیتال در فصل~\ref{chap:digital-tools}، \lr{QPE} از تحول تغذیه می‌کند و \lr{VQE} رهیافت سومی است (وردشی) در فصل~\ref{chap:spectral-tools}، و آنالوگ در فصل~\ref{chap:hardware} آمده است. مدل‌های اسپینی در فصل~\ref{chap:models} آمده‌اند. پیاده‌سازی \lr{Qiskit}یِ مثال دوکیوبیتی در بخش~\ref{sec:adi-ising-qiskit} است.
 
 \section{چه وقت استفاده می‌شود}
 
-تحول: دینامیک، پاسخ زمانی، quench، و هر الگوریتمی که $f(H)$ یا $U(t)$ می‌خواهد (بخش‌های~\ref{sec:time-evolution} و~\ref{sec:evo-example}). آدیاباتیک: آماده‌سازی حالت پایه وقتی گاف مسیر کنترل‌پذیر به نظر می‌رسد، وقتی مسئله به \lr{Ising}/بهینه‌سازی نگاشته می‌شود، یا وقتی سخت‌افزار به‌طور طبیعی یک $H(s)$ می‌دهد. اگر $\Delta_{\min}$ مسیر را نمی‌شناسید، اول همان را بسنجید؛ وگرنه $T$ حدسِ کور است.
+تحول: دینامیک، پاسخ زمانی، quench، و هر الگوریتمی که $f(H)$ یا $U(t)$ می‌خواهد (بخش‌های~\ref{sec:time-evolution} و~\ref{sec:evo-example}). آدیاباتیک: آماده‌سازی حالت پایه وقتی گاف مسیر کنترل‌پذیر به نظر می‌رسد، وقتی مسئله به \lr{Ising}/بهینه‌سازی نگاشته می‌شود، یا وقتی سخت‌افزار به‌طور طبیعی یک $H(s)$ می‌دهد. اگر $\Delta_{\min}$ مسیر را نمی‌شناسید، اول همان را بسنجید؛ وگرنه $T$ حدسِ کور است. برای تمرین عددی روی همین مثال دوکیوبیتی، بخش~\ref{sec:adi-ising-qiskit} را با محیط \lr{qcomputing} اجرا کنید.
 
 \begin{remark}[جای توسعه]
-برای تحول: $H(t)$ با انتگرال زمانی مرتب‌شده؛ توابع همبستگی چندزمانی. برای آدیاباتیک: زمان‌بندی تطبیقی با عدم‌قطعیت گاف؛ آزمون‌های نویزی و تعمیم به سامانه باز؛ عبور از نقطه بحرانی در حد ترمودینامیکی. برای گسسته‌سازی وردشیِ مسیر آدیاباتیک: بخش~\ref{sec:qaoa} (\lr{QAOA}).
+برای تحول: $H(t)$ با انتگرال زمانی مرتب‌شده؛ توابع همبستگی چندزمانی. برای آدیاباتیک: زمان‌بندی تطبیقی با عدم‌قطعیت گاف؛ آزمون‌های نویزی و تعمیم به سامانه باز؛ عبور از نقطه بحرانی در حد ترمودینامیکی؛ تروترِ مرتبهٔ بالاتر و مقایسهٔ خطای مدار با مرجع شرودینگر در بخش~\ref{sec:adi-ising-qiskit}. برای گسسته‌سازی وردشیِ مسیر آدیاباتیک: بخش~\ref{sec:qaoa} (\lr{QAOA}).
 \end{remark}
 
 % ============================================================

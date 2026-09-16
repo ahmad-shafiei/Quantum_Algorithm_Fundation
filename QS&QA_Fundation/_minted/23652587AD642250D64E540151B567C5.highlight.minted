@@ -1,0 +1,20 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Scan Delta(s)=E1(s)\PYGZhy{}E0(s) and locate the minimum (pedagogical excerpt)}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{n+nn}{.}\PYG{n+nn}{quantum\PYGZus{}info}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Operator}\PYG{p}{,} \PYG{n}{SparsePauliOp}
+
+\PYG{n}{hx}\PYG{p}{,} \PYG{n}{J}\PYG{p}{,} \PYG{n}{hz} \PYG{o}{=} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{0.25}
+\PYG{n}{HB} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IX}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{XI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{HP} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{J}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+
+\PYG{n}{ss} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linspace}\PYG{p}{(}\PYG{l+m+mf}{0.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mi}{2001}\PYG{p}{)}
+\PYG{n}{gaps} \PYG{o}{=} \PYG{p}{[}\PYG{p}{]}
+\PYG{k}{for} \PYG{n}{s} \PYG{o+ow}{in} \PYG{n}{ss}\PYG{p}{:}
+    \PYG{n}{H} \PYG{o}{=} \PYG{p}{(}\PYG{l+m+mf}{1.0} \PYG{o}{\PYGZhy{}} \PYG{n}{s}\PYG{p}{)} \PYG{o}{*} \PYG{n}{HB} \PYG{o}{+} \PYG{n}{s} \PYG{o}{*} \PYG{n}{HP}
+    \PYG{n}{e0}\PYG{p}{,} \PYG{n}{e1} \PYG{o}{=} \PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{eigvalsh}\PYG{p}{(}\PYG{n}{Operator}\PYG{p}{(}\PYG{n}{H}\PYG{p}{)}\PYG{o}{.}\PYG{n}{data}\PYG{p}{)}\PYG{p}{[}\PYG{p}{:}\PYG{l+m+mi}{2}\PYG{p}{]}
+    \PYG{n}{gaps}\PYG{o}{.}\PYG{n}{append}\PYG{p}{(}\PYG{n}{e1} \PYG{o}{\PYGZhy{}} \PYG{n}{e0}\PYG{p}{)}
+
+\PYG{n}{i} \PYG{o}{=} \PYG{n+nb}{int}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{argmin}\PYG{p}{(}\PYG{n}{gaps}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{s\PYGZus{}star}\PYG{p}{,} \PYG{n}{Delta\PYGZus{}min} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{ss}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{)}\PYG{p}{,} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{gaps}\PYG{p}{[}\PYG{n}{i}\PYG{p}{]}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{s\PYGZus{}star}\PYG{p}{,} \PYG{n}{Delta\PYGZus{}min}\PYG{p}{)}
+\end{MintedVerbatim}

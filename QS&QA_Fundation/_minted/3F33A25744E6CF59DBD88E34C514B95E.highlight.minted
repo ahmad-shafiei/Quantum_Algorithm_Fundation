@@ -1,0 +1,14 @@
+\begin{MintedVerbatim}[commandchars=\\\{\}]
+\PYG{c+c1}{\PYGZsh{} Heuristic T from spectral norm of dH/ds and Delta\PYGZus{}min (pedagogical excerpt)}
+\PYG{k+kn}{import}\PYG{+w}{ }\PYG{n+nn}{numpy}\PYG{+w}{ }\PYG{k}{as}\PYG{+w}{ }\PYG{n+nn}{np}
+\PYG{k+kn}{from}\PYG{+w}{ }\PYG{n+nn}{qiskit}\PYG{n+nn}{.}\PYG{n+nn}{quantum\PYGZus{}info}\PYG{+w}{ }\PYG{k+kn}{import} \PYG{n}{Operator}\PYG{p}{,} \PYG{n}{SparsePauliOp}
+
+\PYG{n}{hx}\PYG{p}{,} \PYG{n}{J}\PYG{p}{,} \PYG{n}{hz} \PYG{o}{=} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{1.0}\PYG{p}{,} \PYG{l+m+mf}{0.25}
+\PYG{n}{eps} \PYG{o}{=} \PYG{l+m+mf}{1e\PYGZhy{}2}
+\PYG{n}{Delta\PYGZus{}min} \PYG{o}{=} \PYG{l+m+mf}{0.65886072}  \PYG{c+c1}{\PYGZsh{} from the gap scan / analytic example}
+\PYG{n}{HB} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IX}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{XI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hx}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{HP} \PYG{o}{=} \PYG{n}{SparsePauliOp}\PYG{o}{.}\PYG{n}{from\PYGZus{}list}\PYG{p}{(}\PYG{p}{[}\PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{J}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{IZ}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{,} \PYG{p}{(}\PYG{l+s+s2}{\PYGZdq{}}\PYG{l+s+s2}{ZI}\PYG{l+s+s2}{\PYGZdq{}}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{n}{hz}\PYG{p}{)}\PYG{p}{]}\PYG{p}{)}
+\PYG{n}{norm} \PYG{o}{=} \PYG{n+nb}{float}\PYG{p}{(}\PYG{n}{np}\PYG{o}{.}\PYG{n}{linalg}\PYG{o}{.}\PYG{n}{norm}\PYG{p}{(}\PYG{p}{(}\PYG{n}{Operator}\PYG{p}{(}\PYG{n}{HP}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{Operator}\PYG{p}{(}\PYG{n}{HB}\PYG{p}{)}\PYG{p}{)}\PYG{o}{.}\PYG{n}{data}\PYG{p}{,} \PYG{n+nb}{ord}\PYG{o}{=}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{p}{)}
+\PYG{n}{T\PYGZus{}heur} \PYG{o}{=} \PYG{n}{norm} \PYG{o}{/} \PYG{p}{(}\PYG{n}{Delta\PYGZus{}min}\PYG{o}{*}\PYG{o}{*}\PYG{l+m+mi}{2} \PYG{o}{*} \PYG{n}{eps}\PYG{p}{)}
+\PYG{n+nb}{print}\PYG{p}{(}\PYG{n}{norm}\PYG{p}{,} \PYG{n}{T\PYGZus{}heur}\PYG{p}{)}
+\end{MintedVerbatim}
