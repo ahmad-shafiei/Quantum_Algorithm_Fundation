@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  29 SEP 2026 10:13
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  30 SEP 2026 16:07
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1833,234 +1833,324 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3]
 
 [4]
-
-[5]
-Overfull \hbox (0.80212pt too wide) detected at line 178
+Overfull \hbox (0.80212pt too wide) detected at line 157
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۰[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 181
+Overfull \hbox (0.80212pt too wide) detected at line 158
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۰[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 159
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 160
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 161
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۲[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 187
+Overfull \hbox (0.80212pt too wide) detected at line 162
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۲[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 163
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۳[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 164
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۳[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 165
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۳[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 166
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۳[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 167
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۴[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 189
+Overfull \hbox (0.80212pt too wide) detected at line 168
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۵[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 194
+Overfull \hbox (0.80212pt too wide) detected at line 169
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۶[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 197
+Overfull \hbox (0.80212pt too wide) detected at line 175
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۷[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 202
+Overfull \hbox (0.80212pt too wide) detected at line 176
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۸[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 203
+Overfull \hbox (0.80212pt too wide) detected at line 177
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۸[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 204
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۹[][][]
- []
 
-
-Overfull \hbox (0.80212pt too wide) detected at line 206
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۰[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 207
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۰[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 210
+[5]
+Overfull \hbox (0.80212pt too wide) detected at line 180
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 214
+Overfull \hbox (0.80212pt too wide) detected at line 181
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 182
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۲[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 215
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 220
+Overfull \hbox (0.80212pt too wide) detected at line 185
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۴[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 223
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 224
+Overfull \hbox (0.80212pt too wide) detected at line 191
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۶[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 230
+Overfull \hbox (0.80212pt too wide) detected at line 193
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۷[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 233
+Overfull \hbox (0.80212pt too wide) detected at line 198
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۸[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 235
+Overfull \hbox (0.80212pt too wide) detected at line 201
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۹[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 236
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 237
+Overfull \hbox (0.80212pt too wide) detected at line 206
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۰[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 244
+Overfull \hbox (0.80212pt too wide) detected at line 207
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۰[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 208
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 210
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۲[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 211
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۲[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 214
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۳[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 218
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 219
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۵[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 224
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 227
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۷[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 228
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۸[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 234
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 237
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
  []
 
 
 
 [6]
-Overfull \hbox (0.80212pt too wide) detected at line 245
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۲[][][]
+Overfull \hbox (0.80212pt too wide) detected at line 239
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 240
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 241
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 248
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 249
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۴[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 252
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 253
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 254
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 255
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 256
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 257
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 258
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۷[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 265
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۸[][][]
+Overfull \hbox (0.80212pt too wide) detected at line 259
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۷[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 266
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
+Overfull \hbox (0.80212pt too wide) detected at line 260
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۸[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 267
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
+Overfull \hbox (0.80212pt too wide) detected at line 261
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۸[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 262
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۸[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 269
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 270
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 271
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۱[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 273
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 274
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 275
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 276
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 278
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۳[][][]
  []
 
 
 
 [7]
 Overfull \hbox (0.80212pt too wide) detected at line 279
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 280
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 281
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 282
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۴[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 283
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۴[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 284
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۵[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 285
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۵[][][]
+ []
+
+
+Overfull \hbox (0.80212pt too wide) detected at line 286
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۵[][][]
  []
 
 )
@@ -2399,7 +2489,7 @@ Overfull \hbox (1.06013pt too wide) detected at line 1935
 \pydata@fh@_2A3295FF97FD2A69D89865AE1BE6A276.data.minted=\write9
 \openout9 = `_2A3295FF97FD2A69D89865AE1BE6A276.data.minted'.
 
-runsystem(latexminted config  --timestamp 20260929101327 2A3295FF97FD2A69D89865
+runsystem(latexminted config  --timestamp 20260930160708 2A3295FF97FD2A69D89865
 AE1BE6A276)...executed safely (allowed).
 
 
@@ -2462,117 +2552,210 @@ Underfull \hbox (badness 6876) in paragraph at lines 2089--2089
 [84]
 
 [85]
-LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
-(Font)              scaled to size 11.93546pt on input line 2649.
 
+[86]
 
-[86] (./figures/gap_spectrum.tex)
-
-[87] (./figures/gap_schedule.tex)
+[87]
 
 [88]
+
+LaTeX Warning: Reference `eq:gap-rigorous-structure' on page 89 undefined on in
+put line 2893.
+
+
 
 [89]
 
 [90]
 
-[91] (./figures/gap_scaling.tex)
+[91]
 
 [92]
 
 [93]
+! You can't use `macro parameter character #' in display math mode.
+l.3157 ^^I#
+            E_+(t)-E_-(t)
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
 
-[94] (./figures/gap_workflow.tex)
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3158 ^^I
+          
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.3158 ^^I
+          
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3159 ^^I\sqrt{
+                v^2(t-t_*)^2+g^2}.
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+! You can't use `\eqno' in math mode.
+\@@eqno ->\@kernel@eqno 
+                        \aftergroup \ignorespaces 
+l.3161 \end{equation}
+                     
+Sorry, but I'm not programmed to handle this case;
+I'll just pretend that you didn't ask for it.
+If you're in the wrong mode, you might be able to
+return to the right one by typing `I}' or `I$' or `I\par'.
+
+! Missing $ inserted.
+<inserted text> 
+                $
+l.3161 \end{equation}
+                     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+
+[94]
 
 [95]
 
 [96]
+! Undefined control sequence.
+l.3313 ^^I\longrightarro
+                        
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
 
 [97]
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 11.93546pt on input line 3349.
+ (./figures/gap_spectrum.tex)
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                \hskip 13.07996pt
-(hyperref)                replaced by space on input line 2956.
+[98]
 
-
-
-[98
-
-]
-فصل 1.
-
-
-[99
-
-] (./figures/fig_trotter_product.tex (./figures/qaf_style.tex))
+[99] (./figures/gap_schedule.tex)
 
 [100]
 
 [101]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3032.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3032.
-
-
-
 [102]
 
-[103] (./figures/fig_lcu_flow.tex (./figures/qaf_style.tex))
+[103] (./figures/gap_scaling.tex)
 
 [104]
 
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3154.
+[105]
 
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3154.
-
-
-
-[105] (./figures/fig_qsp_flow.tex (./figures/qaf_style.tex))
-
-[106]
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3255.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3255.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3255.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3255.
-
-
+[106] (./figures/gap_workflow.tex)
 
 [107]
-Underfull \hbox (badness 10000) in alignment at lines 3332--3332
+
+[108]
+
+[109]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 13.07996pt
+(hyperref)                replaced by space on input line 3656.
+
+
+
+[110
+
+]
+فصل 1.
+
+
+[111
+
+] (./figures/fig_trotter_product.tex (./figures/qaf_style.tex))
+
+[112]
+
+[113]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3732.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3732.
+
+
+
+[114]
+
+[115] (./figures/fig_lcu_flow.tex (./figures/qaf_style.tex))
+
+[116]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3854.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3854.
+
+
+
+[117] (./figures/fig_qsp_flow.tex (./figures/qaf_style.tex))
+
+[118]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3955.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3955.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3955.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 3955.
+
+
+
+[119]
+Underfull \hbox (badness 10000) in alignment at lines 4032--4032
 [][][][][] 
  []
 
 
-Overfull \hbox (2.66112pt too wide) in paragraph at lines 3332--3333
+Overfull \hbox (2.66112pt too wide) in paragraph at lines 4032--4033
  [][][][] 
  []
 
 
 
-[108]
+[120]
 
-[109]
+[121]
 فصل 2.
 
-Overfull \hbox (3.32303pt too wide) in paragraph at lines 3364--3365
+Overfull \hbox (3.32303pt too wide) in paragraph at lines 4064--4065
 [] [][]\TU/lmroman10-regular(0)/b/n/12 VQE[] \TU/XBNiloofar(0)/b/n/12 — الگوریت
 م وردشی.[] \TU/XBNiloofar(0)/m/n/12 یک مدار پارامتری $\OMS/cmsy/m/n/12 j\OML/cm
 m/m/it/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/
@@ -2583,39 +2766,39 @@ m/m/it/12  \OT1/cmr/m/n/12 (\OML/cmm/m/it/12 ^^R\OT1/cmr/m/n/12 )\OMS/cmsy/m/n/
 
 
 
-[110
+[122
 
 ]
-Underfull \hbox (badness 10000) in alignment at lines 3398--3398
+Underfull \hbox (badness 10000) in alignment at lines 4098--4098
 [][][] 
  []
 
 
-Overfull \hbox (2.66112pt too wide) in paragraph at lines 3398--3399
+Overfull \hbox (2.66112pt too wide) in paragraph at lines 4098--4099
  [][][][] 
  []
 
 (./figures/fig_qpe_flow.tex (./figures/qaf_style.tex))
 
-[111]
+[123]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3456.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\varphi' on input line 3456.
+(hyperref)                removing `math shift' on input line 4156.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3456.
+(hyperref)                removing `\varphi' on input line 4156.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4156.
 
 
 
-[112]
+[124]
 
-[113]
-Overfull \hbox (2.27449pt too wide) in paragraph at lines 3509--3510
+[125]
+Overfull \hbox (2.27449pt too wide) in paragraph at lines 4209--4210
 [][]\TU/XBNiloofar(0)/m/n/12 ابزار سنگین: در این مثال $\OML/cmm/m/it/12 U$ \TU/
 XBNiloofar(0)/m/n/12 یک قطریِ ساده است؛ در مدل واقعی همان $\OML/cmm/m/it/12 U[]
 $ \TU/XBNiloofar(0)/m/n/12 را []\TU/lmroman10-regular(0)/m/n/12 Trotter[]\TU/XB
@@ -2625,65 +2808,65 @@ n/12 /[]\TU/lmroman10-regular(0)/m/n/12 QSP[][]
 
 (./figures/fig_vqe_loop.tex (./figures/qaf_style.tex))
 
-[114]
+[126]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3569.
-
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3569.
+(hyperref)                removing `math shift' on input line 4269.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3569.
+(hyperref)                removing `subscript' on input line 4269.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 4269.
 
 
 
-[115]
+[127]
 
-[116] (./figures/fig_qaoa_layers.tex (./figures/qaf_style.tex))
+[128] (./figures/fig_qaoa_layers.tex (./figures/qaf_style.tex))
 
-[117]
+[129]
 
-[118]
-Underfull \hbox (badness 10000) in alignment at lines 3753--3753
+[130]
+Underfull \hbox (badness 10000) in alignment at lines 4453--4453
 [][][][] 
  []
 
 
-Overfull \hbox (2.66112pt too wide) in paragraph at lines 3753--3754
+Overfull \hbox (2.66112pt too wide) in paragraph at lines 4453--4454
  [][][][] 
  []
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3765.
+(hyperref)                removing `math shift' on input line 4465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3765.
+(hyperref)                removing `subscript' on input line 4465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3765.
+(hyperref)                removing `subscript' on input line 4465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 3765.
+(hyperref)                removing `subscript' on input line 4465.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 3765.
+(hyperref)                removing `math shift' on input line 4465.
 
 
 
-[119]
+[131]
 
-[120]
+[132]
 
-[121]
-Overfull \hbox (1.50578pt too wide) in paragraph at lines 3845--3846
+[133]
+Overfull \hbox (1.50578pt too wide) in paragraph at lines 4545--4546
 [][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۲.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
 ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 برآورد فاز تکیه‌گاه
 ‌شده و کیوبیتیزاسیون$\OT1/cmr/m/n/12 +$[]\TU/lmroman10-regular(0)/m/n/12 QPE[]\
@@ -2692,29 +2875,29 @@ TU/XBNiloofar(0)/m/n/12 ؛ اثر هم‌پوشانی ناقص با ویژه‌�
 
 
 
-[122]
+[134]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                \hskip 13.07996pt
-(hyperref)                replaced by space on input line 3849.
+(hyperref)                replaced by space on input line 4549.
 
 
 
-[123
+[135
 
 ]
 فصل 1.
 
 
-[124
+[136
 
 ] (./figures/fig_analog_sim.tex (./figures/qaf_style.tex))
 
-[125]
+[137]
 
-[126]
+[138]
 
-[127]
+[139]
 Missing character: There is no т (U+0442) in font [styles/fonts/XB Niloofar.ttf
 ]/OT:script=latn;language=dflt;script=arab;mapping=persian-tex-text;!
 Missing character: There is no е (U+0435) in font [styles/fonts/XB Niloofar.ttf
@@ -2723,16 +2906,16 @@ Missing character: There is no р (U+0440) in font [styles/fonts/XB Niloofar.ttf
 ]/OT:script=latn;language=dflt;script=arab;mapping=persian-tex-text;!
 
 
-[128]
+[140]
 
-[129]
+[141]
 فصل 2.
 
 
-[130
+[142
 
 ]
-Overfull \hbox (2.36945pt too wide) in paragraph at lines 4066--4067
+Overfull \hbox (2.36945pt too wide) in paragraph at lines 4766--4767
 [][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۲.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
 ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 جدول شاهدهای راستی‌
 آزمایی برای هابارد و نظریه پیمانه‌ای؛ فرمول‌های asymp-[]
@@ -2740,38 +2923,38 @@ Overfull \hbox (2.36945pt too wide) in paragraph at lines 4066--4067
 
 
 
-[131]
+[143]
 فصل 3.
 (./figures/fig_compass.tex (./figures/qaf_style.tex))
 
-[132
+[144
 
 ]
 
-[133]
+[145]
 
-[134]
+[146]
 فصل 4.
-[135
+[147
 
 ]
 Overfull \vbox (2.97342pt too high) has occurred while \output is active []
 
 
-[136])
+[148])
 
-[137] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl
+[149] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl
 
-[138
+[150
 
 
 
 
 ]
 
-[139]
+[151]
 
-[140]
+[152]
 Underfull \hbox (badness 1067) in paragraph at lines 233--239
 [][]\TU/lmroman10-regular(0)/m/n/12 N. Maskara, S. Ostermann, J. Shee, M. Kalin
 owski, A. McClain Gomez,[]
@@ -2779,25 +2962,29 @@ owski, A. McClain Gomez,[]
 
 
 
-[141]
+[153]
 
-[142]))
+[154]))
 
-[143] (./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
+[155] (./QS&QA_Fundation_Main.aux (./QS&QA_Fundation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
+
+
+LaTeX Warning: There were undefined references.
+
 Package rerunfilecheck Info: File `QS&QA_Fundation_Main.out' has not changed.
-(rerunfilecheck)             Checksum: 0FCDAAF1187FC354AAE30E7316B984D1;36726.
+(rerunfilecheck)             Checksum: 206410D358B1D4E51C62E9B9D2A16B7E;38010.
  ) 
 Here is how much of TeX's memory you used:
- 51262 strings out of 473831
- 1166191 string characters out of 5733136
- 1743318 words of memory out of 5000000
- 73331 multiletter control sequences out of 15000+600000
+ 51290 strings out of 473831
+ 1167016 string characters out of 5733136
+ 1746040 words of memory out of 5000000
+ 73359 multiletter control sequences out of 15000+600000
  574716 words of font info for 150 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
  146i,16n,137p,3902b,1961s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on QS&QA_Fundation_Main.pdf (143 pages).
+Output written on QS&QA_Fundation_Main.pdf (155 pages).
