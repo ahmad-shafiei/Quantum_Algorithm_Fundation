@@ -1,0 +1,703 @@
+% Outline slides. Compile: pdflatex quantum_sim_adiabatic_skeleton.tex
+\documentclass[
+	11pt,
+	aspectratio=169,
+	compress,
+]{beamer}
+
+\graphicspath{{Images/}{./}}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta,positioning,calc}
+
+%%% Theme from Presentation/template.tex %%%
+\usetheme{Madrid}
+\definecolor{myRed}{RGB}{120,4,4}
+\definecolor{myOrange}{RGB}{227,125,0}
+\setbeamercolor*{structure}{bg=myRed!20,fg=myRed!90}
+\setbeamercolor*{palette primary}{use=structure,fg=white,bg=structure.fg}
+\setbeamercolor*{palette secondary}{use=structure,fg=myRed,bg=white}
+\setbeamercolor*{palette tertiary}{use=structure,fg=white,bg=myRed}
+\setbeamercolor{frametitle}{bg=myRed!85,fg=white}
+\setbeamercolor*{titlelike}{parent=palette primary}
+\setbeamercolor{section in head/foot}{fg=myOrange, bg=white}
+\setbeamercolor{item projected}{bg=myOrange}
+\setbeamercolor{itemize item}{fg=myOrange}
+\setbeamercolor{itemize subitem}{fg=myOrange}
+\setbeamercolor{button}{bg=myOrange}
+\setbeamercolor{section in toc}{fg=black}
+\setbeamercolor{subsection in toc}{fg=black}
+\setbeamercolor{block title}{bg=myOrange, fg=white}
+\setbeamercolor{block body}{bg=myOrange!20}
+
+\usefonttheme{default}
+\useinnertheme{circles}
+\useoutertheme{infolines}
+\setbeamertemplate{navigation symbols}{}
+\setbeamertemplate{headline}{}
+
+\title[Quantum Simulation]{Quantum Simulation:\\ From Hamiltonians to Adiabatic Computation}
+\subtitle{Outline of Topics}
+\author[]{}
+\institute[]{}
+\date[]{}
+\logo{\includegraphics[width=1.55cm]{Slide Logo.png}}
+
+\newcommand{\outlinebox}[1]{%
+	\vspace{0.25em}%
+	\begin{block}{Content outline}
+		#1
+	\end{block}
+}
+
+\tikzset{
+	sbox/.style={
+		draw=myRed!65,
+		rounded corners=2pt,
+		align=center,
+		inner sep=3pt,
+		thick,
+		minimum height=0.95cm,
+		font=\scriptsize
+	},
+	sarr/.style={-{Latex[length=2mm]}, thick, myOrange}
+}
+
+\begin{document}
+
+%========================================================
+\begin{frame}[plain]
+	\vfill
+	\begin{center}
+		{\usebeamercolor[fg]{titlelike}
+		\color{myRed}\LARGE\bfseries Quantum Simulation}\\[0.45em]
+		{\Large From Hamiltonians to Adiabatic Computation}\\[0.9em]
+		{\large Outline of Topics}
+	\end{center}
+	\vfill
+\end{frame}
+
+%========================================================
+\section{Introduction}
+\begin{frame}{Table of Contents}
+	\tableofcontents
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Motivation}
+	\begin{itemize}
+		\item Quantum simulation connects a physical model to a computational task
+		\item Shared language: algorithms, Hamiltonians, and implementation methods
+		\item This talk focuses on adiabatic Hamiltonian computation and its bottlenecks
+	\end{itemize}
+	\outlinebox{Physical intuition first; then problem classes; then adiabatic methods, gap, runtime, and complexity.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Roadmap}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm]
+		\node[sbox, text width=2.15cm, fill=blue!12] (a) at (0,1.35) {Algorithms};
+		\node[sbox, text width=2.15cm, fill=blue!10] (b) at (3.1,1.35) {Physics to $H$};
+		\node[sbox, text width=2.15cm, fill=cyan!12] (c) at (6.2,1.35) {Static / dynamic};
+		\node[sbox, text width=2.15cm, fill=green!12] (d) at (9.3,1.35) {Adiabatic path};
+		\node[sbox, text width=2.15cm, fill=orange!14] (e) at (0,0) {Worked example};
+		\node[sbox, text width=2.15cm, fill=orange!10] (f) at (3.1,0) {Gap and $T$};
+		\node[sbox, text width=2.15cm, fill=red!12] (g) at (6.2,0) {Complexity};
+		\draw[sarr] (a) -- (b);
+		\draw[sarr] (b) -- (c);
+		\draw[sarr] (c) -- (d);
+		\draw[sarr] (d.south) -- ++(0,-0.28) -| (e.north);
+		\draw[sarr] (e) -- (f);
+		\draw[sarr] (f) -- (g);
+	\end{tikzpicture}
+	\outlinebox{Adiabatic paths are developed in detail. Digital primitives (Trotter, LCU, QSP) appear only as later tools.}
+\end{frame}
+
+%========================================================
+\section{Algorithms}
+\begin{frame}{What Is an Algorithm?}
+	\begin{itemize}
+		\item Finite procedure: input $\to$ instructions $\to$ output
+		\item Independent of a particular machine realization
+		\item ``Quantum'' changes the execution model, not this definition
+	\end{itemize}
+	\outlinebox{Operational definition; contrast with a device-specific program.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Quantum Algorithms at a Glance}
+	\begin{enumerate}
+		\item State preparation on qubits
+		\item Unitary evolution: gate circuits or Hamiltonian control
+		\item Measurement and extraction of observables
+	\end{enumerate}
+	\outlinebox{Three-part skeleton only; no gate-set or circuit-depth discussion yet.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Three Layers}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm]
+		\node[sbox, text width=3.4cm, fill=blue!12, minimum height=1.15cm] (L1) at (0,2.2)
+			{\textbf{Algorithm}\\research question};
+		\node[sbox, text width=3.4cm, fill=green!12, minimum height=1.15cm] (L2) at (0,1.0)
+			{\textbf{Simulation}\\model and Hamiltonian $H$};
+		\node[sbox, text width=3.4cm, fill=orange!14, minimum height=1.15cm] (L3) at (0,-0.2)
+			{\textbf{Tools}\\Trotter, adiabatic, VQE, \ldots};
+		\draw[sarr] (L1) -- (L2);
+		\draw[sarr] (L2) -- (L3);
+		\node[font=\scriptsize, text=black!55, align=left, text width=5.6cm] at (5.4,1.0) {%
+			Simulation is not a single gate.\\[2pt]
+			It is a model-centered path:\\
+			question $\to$ $H$ $\to$ method.};
+	\end{tikzpicture}
+	\outlinebox{Layer 1 asks; layer 2 represents the physics; layer 3 implements $U(t)$, $H(s)$, or $f(H)$.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{What Quantum Simulation Means}
+	\begin{itemize}
+		\item Use a quantum system to study another quantum model
+		\item Digital, analog, or hybrid realizations
+		\item Common starting point: fix $H$ and the retained degrees of freedom
+	\end{itemize}
+	\outlinebox{Typical models: Hubbard, molecules, spin lattices, circuit modes.}
+\end{frame}
+
+%========================================================
+\section{Hamiltonians}
+\begin{frame}{From Physical Problem to Mathematical Model}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm]
+		\node[sbox, text width=2.05cm, fill=blue!14, minimum height=1.2cm] (phys) at (0,0.7) {Physical\\problem};
+		\node[sbox, text width=2.05cm, fill=blue!10, minimum height=1.2cm] (mod) at (2.7,0.7) {Idealized\\model};
+		\node[sbox, text width=2.05cm, fill=cyan!12, minimum height=1.2cm] (dof) at (5.4,0.7) {Keep\\degrees of freedom};
+		\node[sbox, text width=2.05cm, fill=green!12, minimum height=1.2cm] (H) at (8.1,0.7) {Hamiltonian\\$H$};
+		\node[sbox, text width=2.05cm, fill=orange!14, minimum height=1.2cm] (q) at (10.8,0.7) {Choose\\question};
+		\draw[sarr] (phys) -- (mod);
+		\draw[sarr] (mod) -- (dof);
+		\draw[sarr] (dof) -- (H);
+		\draw[sarr] (H) -- (q);
+		\node[font=\tiny, text=black!55, below=3pt of phys] {lab / material};
+		\node[font=\tiny, text=black!55, below=3pt of mod] {drop extra detail};
+		\node[font=\tiny, text=black!55, below=3pt of dof] {spins, modes, \ldots};
+		\node[font=\tiny, text=black!55, below=3pt of H] {dynamics \& spectrum};
+		\node[font=\tiny, text=black!55, below=3pt of q] {static vs dynamic};
+	\end{tikzpicture}
+	\vspace{0.35em}
+	\outlinebox{A model is a deliberate compression: what is kept versus discarded.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Representative Physical Problems}
+	\renewcommand{\arraystretch}{1.25}
+	\begin{center}
+	\small
+	\begin{tabular}{@{}lll@{}}
+		\toprule
+		\textbf{Physical setting} & \textbf{Typical model} & \textbf{Degrees of freedom} \\
+		\midrule
+		Magnets / spin glasses & Ising / Heisenberg & spins on a lattice \\
+		Correlated electrons & Hubbard & electrons + spin \\
+		Molecules & electronic structure & active orbitals \\
+		Cavities / circuits & oscillator / LC & flux and charge \\
+		\bottomrule
+	\end{tabular}
+	\end{center}
+	\outlinebox{The same material can map to different models, depending on the question.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Classical Hamiltonians}
+	\begin{itemize}
+		\item Generalized coordinates and momenta $(q,p)$
+		\item Legendre transform from the Lagrangian to $H$
+		\item For usual conserved systems, $H$ is the total energy
+	\end{itemize}
+	\begin{equation*}
+		\dot q=\frac{\partial H}{\partial p},\qquad
+		\dot p=-\frac{\partial H}{\partial q}
+	\end{equation*}
+	\outlinebox{$H$ is both the energy function and the generator of classical motion.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Two Roles of the Classical $H$}
+	\begin{enumerate}
+		\item Energy on phase space
+		\item Generator of classical time evolution
+	\end{enumerate}
+	\begin{alertblock}{Important distinction}
+		Minimizing energy (equilibria / optimization) is not the same as following dynamics.
+	\end{alertblock}
+	\outlinebox{Minimization maps to combinatorial Ising costs; dynamics maps to trajectories.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Quantum Hamiltonians}
+	\begin{itemize}
+		\item Canonical quantization: $[q,p]=i\hbar$
+		\item Dynamics: $i\hbar\,\partial_t\lvert\psi\rangle=\hat H\lvert\psi\rangle$
+		\item Spectrum: $\hat H\lvert E_n\rangle=E_n\lvert E_n\rangle$
+	\end{itemize}
+	\outlinebox{$H$ both sets the allowed energies and generates the evolution of the state.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Why $H$ Is Central in Simulation}
+	\begin{itemize}
+		\item Almost every task is a function of one Hamiltonian:
+		\begin{itemize}
+			\item time evolution $e^{-iHt}$
+			\item ground state and spectrum
+			\item scheduled path $H(s)$
+			\item more general $f(H)$
+		\end{itemize}
+		\item Choosing Trotter or VQE before fixing $H$ is premature
+	\end{itemize}
+	\outlinebox{Fix the model and $H$ first; then choose the question and the method.}
+\end{frame}
+
+%========================================================
+\section{Examples}
+\begin{frame}{Harmonic Oscillator}
+	\begin{columns}[T]
+		\begin{column}{0.52\textwidth}
+			\begin{itemize}
+				\item $H=\omega\bigl(a^{\dagger}a+\tfrac12\bigr)$
+				\item Equally spaced levels
+				\item Creation / annihilation operators
+				\item Language of cavities, phonons, circuit modes
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.46\textwidth}
+			\centering
+			\begin{tikzpicture}[x=1.05cm, y=0.72cm]
+				\draw[->, thick] (-2.2,0) -- (2.45,0) node[right] {$x$};
+				\draw[->, thick] (0,-0.2) -- (0,3.55) node[above] {$V(x)$};
+				\draw[very thick, myRed, domain=-2.05:2.05, samples=70]
+					plot (\x, {0.62*\x*\x});
+				\draw[thick, black!50] (-1.36,1.15) -- (1.36,1.15);
+				\draw[thick, black!50] (-1.73,1.85) -- (1.73,1.85);
+				\draw[thick, black!50] (-2.02,2.55) -- (2.02,2.55);
+				\node[font=\scriptsize, right] at (1.42,1.15) {$E_0$};
+				\node[font=\scriptsize, right] at (1.80,1.85) {$E_1$};
+				\node[font=\scriptsize, right] at (2.08,2.55) {$E_2$};
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	\outlinebox{Physical intuition for bosonic modes; no full derivation here.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Spins and the Ising Model}
+	\begin{columns}[T]
+		\begin{column}{0.55\textwidth}
+			\begin{itemize}
+				\item Two-level degrees of freedom on a lattice
+				\item $ZZ$ couplings and local fields
+				\item Ferro- / antiferromagnetism
+				\item Natural map to qubits and optimization
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.43\textwidth}
+			\centering
+			\begin{tikzpicture}[x=1.05cm, y=1.05cm]
+				\foreach \x in {0,1,2} {
+					\foreach \y in {0,1} {
+						\fill[myRed!80] (\x,\y) circle (3.2pt);
+					}
+				}
+				\foreach \x in {0,1} {
+					\foreach \y in {0,1} {
+						\draw[thick, myOrange] (\x,\y) -- ++(1,0);
+					}
+				}
+				\foreach \x in {0,1,2} {
+					\draw[thick, myOrange] (\x,0) -- ++(0,1);
+				}
+				\node[font=\tiny] at (0,1.32) {$Z$};
+				\node[font=\tiny] at (0.5,1.32) {$J$};
+				\node[font=\tiny] at (1,1.32) {$Z$};
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	\outlinebox{Algorithmic details of Ising return in the adiabatic worked example.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{LC Circuits: Classical to Quantum}
+	\begin{columns}[T]
+		\begin{column}{0.56\textwidth}
+			\begin{itemize}
+				\item Energy: $H=Q^{2}/(2C)+\Phi^{2}/(2L)$
+				\item Quantize with $[\hat\Phi,\hat Q]=i\hbar$
+				\item Recovers a harmonic oscillator
+				\item Frequency $\omega=1/\sqrt{LC}$
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.42\textwidth}
+			\centering
+			\begin{tikzpicture}[x=0.9cm, y=0.9cm]
+				\draw[thick] (0,1.15) -- (0,1.7);
+				\draw[thick] (0,1.7) -- (0.15,1.85) -- (0.35,1.55) -- (0.55,1.85)
+					-- (0.75,1.55) -- (0.95,1.85) -- (1.15,1.55) -- (1.35,1.85)
+					-- (1.5,1.7) -- (1.5,1.15);
+				\node[font=\scriptsize] at (0.75,2.15) {$L$};
+				\draw[thick] (0,1.15) -- (0,0.45) -- (0.55,0.45);
+				\draw[thick] (0.55,0.28) -- (0.55,0.62);
+				\draw[thick] (0.75,0.28) -- (0.75,0.62);
+				\draw[thick] (0.75,0.45) -- (1.5,0.45) -- (1.5,1.15);
+				\node[font=\scriptsize] at (0.65,0.05) {$C$};
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	\outlinebox{Circuit energy $\to$ canonical pair $(\Phi,Q)$ $\to$ quantum spectrum.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Anharmonicity and Qubit Encoding}
+	\begin{itemize}
+		\item A harmonic spectrum is equally spaced, so the lowest two levels are not an isolated qubit
+		\item Josephson nonlinearity distorts the level spacings
+		\item Logical chain: circuit $\to$ classical $H$ $\to$ quantization $\to$ anharmonicity if a qubit is required
+	\end{itemize}
+	\outlinebox{Engineering details of superconducting qubits are left for a later, hardware-focused discussion.}
+\end{frame}
+
+%========================================================
+\section{Problem classes}
+\begin{frame}{Two Questions from One Hamiltonian}
+	\centering
+	\begin{tikzpicture}[x=1cm, y=1cm]
+		\node[sbox, text width=3.3cm, fill=blue!12, minimum height=1.05cm] (H) at (4.6,2.15) {Hamiltonian $H$};
+		\node[sbox, text width=3.6cm, fill=green!12, minimum height=1.45cm] (dyn) at (1.6,0.15) {%
+			\textbf{Dynamics}\\[2pt]
+			$U(t)=e^{-iHt}$\\
+			quench, transport};
+		\node[sbox, text width=3.6cm, fill=orange!14, minimum height=1.45cm] (stat) at (7.6,0.15) {%
+			\textbf{Static / spectral}\\[2pt]
+			ground state, gap\\
+			eigenvalues};
+		\draw[sarr] (H) -- (dyn);
+		\draw[sarr] (H) -- (stat);
+	\end{tikzpicture}
+	\vspace{0.2em}
+	\outlinebox{The same $H$ supports two research paths. Response functions often sit in between.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Problem Classes in Quantum Simulation}
+	\begin{itemize}
+		\item Dynamic: post-quench response, transport, observable evolution
+		\item Static: ground energies, optimal Ising configurations
+		\item Intermediate: low-lying spectrum, gaps, state preparation
+	\end{itemize}
+	\outlinebox{Classify the question before choosing a method.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Two Main Approaches}
+	\begin{enumerate}
+		\item \textbf{Time evolution:} build or approximate $e^{-iHt}$ or $f(H)$
+		\item \textbf{Adiabatic:} slow path $H_B\to H_P$, stay in the instantaneous ground state
+	\end{enumerate}
+	\begin{block}{Focus ahead}
+		Adiabatic computation, worked example, Qiskit outline, then gap, runtime, and complexity.
+	\end{block}
+	\outlinebox{Trotter, LCU, and QSP are named only as tools for the evolution approach.}
+\end{frame}
+
+%========================================================
+\section{Adiabatic computation}
+\begin{frame}{Adiabatic Idea in One Slide}
+	\begin{enumerate}
+		\item Start from an easy $H_B$ with a known ground state
+		\item Interpolate slowly to the problem Hamiltonian $H_P$
+		\item Sufficient gap and time $\Rightarrow$ ground state of $H_P$
+	\end{enumerate}
+	\outlinebox{Encode the problem in a Hamiltonian path rather than enumerating configurations.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Problem Scope for Adiabatic Methods}
+	\begin{enumerate}
+		\item Combinatorial optimization mapped to classical Ising
+		\item Ground-state preparation of physical models
+		\item Hardware that natively implements a schedule $H(s)$ (annealing / analog)
+	\end{enumerate}
+	\outlinebox{Short examples: MaxCut, transverse-field Ising, analog annealers.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Why Use Adiabatic Computation?}
+	\begin{itemize}
+		\item Transparent physical picture of the computation
+		\item Natural match to analog field schedules
+		\item Digitally expressible via Trotterized paths (digital adiabatic)
+	\end{itemize}
+	\outlinebox{Less natural when the target is a precise $e^{-iHt}$ or a general $f(H)$.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{The Path $H(s)$}
+	\begin{itemize}
+		\item Standard linear interpolation
+		\[
+			H(s)=(1-s)\,H_B + s\,H_P,\qquad 0\le s\le 1
+		\]
+		\item Example schedule: $s(t)=t/T$
+		\item $s$ is not physical time; it mixes the two Hamiltonians
+	\end{itemize}
+	\outlinebox{$H(s)$ is linear in $s$; the eigenvalues generally are not.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Instantaneous Gap and Runtime $T$}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			\begin{itemize}
+				\item $\Delta(s)=E_1(s)-E_0(s)$
+				\item $\Delta_{\min}=\min_s\Delta(s)$ is the bottleneck
+				\item Heuristic scale: $T\propto 1/\Delta_{\min}^{2}$
+			\end{itemize}
+		\end{column}
+		\begin{column}{0.50\textwidth}
+			\centering
+			\begin{tikzpicture}[x=0.82cm, y=0.58cm]
+				\draw[->, thick] (0,0) -- (6.6,0) node[right] {$s$};
+				\draw[->, thick] (0,-2.15) -- (0,2.65) node[above] {$E(s)$};
+				\node[below, font=\scriptsize] at (0,0) {$0$};
+				\node[below, font=\scriptsize] at (6,0) {$1$};
+				\draw[very thick, blue!70!black] plot[smooth] coordinates
+					{(0,-1.55) (1.5,-1.28) (3,-0.42) (4.5,-1.15) (6,-1.65)};
+				\draw[very thick, myOrange] plot[smooth] coordinates
+					{(0,1.55) (1.5,1.18) (3,0.38) (4.5,1.12) (6,1.48)};
+				\draw[<->, densely dashed, thick] (3,-0.42) -- (3,0.38);
+				\node[font=\scriptsize, right] at (3.2,-0.02) {$\Delta_{\min}$};
+				\node[font=\tiny, blue!70!black] at (1.15,-1.95) {$E_0$};
+				\node[font=\tiny, myOrange] at (1.15,1.95) {$E_1$};
+			\end{tikzpicture}
+		\end{column}
+	\end{columns}
+	\outlinebox{Avoided crossing: the two lowest levels approach, then separate, without crossing.}
+\end{frame}
+
+%========================================================
+\section{Worked example}
+\begin{frame}{Two-Qubit Setup}
+	\begin{itemize}
+		\item Make $H_B$, $H_P$, the gap, and $T$ concrete
+		\item System: two spin-$1/2$ particles (two qubits)
+		\item Parameters: $h_x=1$, $J=1$, $h_z=1/4$
+	\end{itemize}
+	\outlinebox{The example is small enough that the full spectrum can be seen numerically.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Driver Hamiltonian $H_B$}
+	\begin{itemize}
+		\item $H_B=-h_x(X_1+X_2)$
+		\item Easy ground state $\lvert++\rangle$, prepared by Hadamards on $\lvert00\rangle$
+		\item Role: a known, preparable starting point
+	\end{itemize}
+	\outlinebox{Transverse field; product eigenstates of $X$.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Problem Hamiltonian $H_P$}
+	\begin{itemize}
+		\item $H_P=-J Z_1Z_2 - h_z(Z_1+Z_2)$
+		\item Target ground state $\lvert00\rangle$ for $J,h_z>0$
+		\item Ferromagnetic coupling plus a longitudinal field that lifts the degeneracy
+	\end{itemize}
+	\outlinebox{Optimization reading: the ground configuration is the solution.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Numerical Path Result}
+	\begin{itemize}
+		\item Gap minimum near $s_*\simeq 0.62$
+		\item $\Delta_{\min}\simeq 0.66$
+		\item Endpoint gaps alone do not locate the bottleneck
+	\end{itemize}
+	\outlinebox{Scan the instantaneous spectrum along the whole path $H(s)$.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{From Gap to a Runtime Estimate}
+	\begin{itemize}
+		\item $\lVert H_P-H_B\rVert_2 \simeq 2.37$
+		\item Heuristic with $\varepsilon\sim 10^{-2}$: $T_{\mathrm{heur}}\sim 5\times 10^{2}$
+		\item For $n=2$, $T\sim 40$ already yields near-unit success probability
+	\end{itemize}
+	\outlinebox{Distinguish a heuristic bound from a practical runtime checked by dynamics.}
+\end{frame}
+
+%========================================================
+\section{Qiskit}
+\begin{frame}{Role of Qiskit}
+	\begin{itemize}
+		\item Shared implementation stack for digital circuits
+		\item Turns the adiabatic path into a reproducible workflow
+		\item Environment: \texttt{conda activate qcomputing}
+	\end{itemize}
+	\outlinebox{Close the loop from the Hamiltonian path to executable steps.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Code Steps (1): Hamiltonians and Gap}
+	\begin{enumerate}
+		\item Build $H_B$ and $H_P$ with \texttt{SparsePauliOp}
+		\item Form $H(s)=(1-s)H_B+sH_P$
+		\item Scan $s$ and extract $\Delta_{\min}$ and $s_*$
+	\end{enumerate}
+	\outlinebox{Skeleton only; scripts in \texttt{snippets/adi\_ising\_*.py}.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Code Steps (2): Circuit and Readout}
+	\centering
+	\begin{tikzpicture}[x=0.78cm, y=0.85cm]
+		\draw[thick] (0,1.6) -- (11.4,1.6);
+		\draw[thick] (0,0.4) -- (11.4,0.4);
+		\node[left, font=\scriptsize] at (0,1.6) {$q_0$};
+		\node[left, font=\scriptsize] at (0,0.4) {$q_1$};
+		\node[sbox, fill=blue!12, minimum width=0.7cm, minimum height=0.45cm] at (0.85,1.6) {$H$};
+		\node[sbox, fill=blue!12, minimum width=0.7cm, minimum height=0.45cm] at (0.85,0.4) {$H$};
+		\draw[thick, densely dashed] (1.55,-0.15) rectangle (8.7,2.15);
+		\node[font=\tiny, text=black!55] at (5.1,2.35) {repeat over $s_k$, $\Delta t=T/N$};
+		\node[sbox, fill=orange!14, minimum width=1.25cm, minimum height=0.45cm] at (2.7,1.6) {$R_x$};
+		\node[sbox, fill=orange!14, minimum width=1.25cm, minimum height=0.45cm] at (2.7,0.4) {$R_x$};
+		\fill (4.5,1.6) circle (2pt);
+		\fill (4.5,0.4) circle (2pt);
+		\draw[thick] (4.5,1.6) -- (4.5,0.4);
+		\node[sbox, fill=green!12, minimum width=1.35cm, minimum height=0.42cm] at (5.7,1.0) {$R_{zz}$};
+		\node[sbox, fill=cyan!12, minimum width=1.15cm, minimum height=0.45cm] at (7.5,1.6) {$R_z$};
+		\node[sbox, fill=cyan!12, minimum width=1.15cm, minimum height=0.45cm] at (7.5,0.4) {$R_z$};
+		\node[sbox, fill=gray!15, minimum width=0.75cm, minimum height=0.45cm] at (10.3,1.6) {$Z$};
+		\node[sbox, fill=gray!15, minimum width=0.75cm, minimum height=0.45cm] at (10.3,0.4) {$Z$};
+	\end{tikzpicture}
+	\vspace{0.15em}
+	\outlinebox{Hadamard preparation, first-order Trotter layers, then $Z$ readout.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Sample Execution Outcome}
+	\begin{itemize}
+		\item With $T=40$ and $N=200$: $P(\lvert00\rangle)\approx 0.9999$
+		\item Aer shots concentrate on the bitstring \texttt{00}
+		\item The same run produces the path-gap plot
+	\end{itemize}
+	\outlinebox{Success probability is a check of the digital adiabatic schedule.}
+\end{frame}
+
+%========================================================
+\section{Challenges}
+\begin{frame}{Gap Is Not a Single Number}
+	\begin{itemize}
+		\item Full gap versus the gap inside the reachable symmetry sector
+		\item Avoided crossing versus a true level crossing
+		\item Symmetry-breaking noise can remove protection
+	\end{itemize}
+	\outlinebox{The smallest spectral distance alone is not a sufficient criterion.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Three Meanings of Required Time}
+	\begin{enumerate}
+		\item Heuristic / order-of-magnitude estimate
+		\item Sufficient bound under explicit assumptions
+		\item Practical time from dynamics and a success threshold
+	\end{enumerate}
+	\outlinebox{These three numbers usually disagree. Local scheduling: slow down near the bottleneck.}
+\end{frame}
+
+%========================================================
+\section{Complexity}
+\begin{frame}{Scaling with System Size}
+	\begin{itemize}
+		\item Polynomial gap closing: $\Delta_{\min}(n)\sim n^{-\alpha}$
+		\item Exponential closing: $\Delta_{\min}(n)\sim e^{-cn}$
+		\item With $T\sim 1/\Delta_{\min}^{2}$, the runtime may become exponential
+	\end{itemize}
+	\outlinebox{Qubit count alone is not a measure of difficulty.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Milder vs.\ Hard Regimes}
+	\begin{columns}[T]
+		\begin{column}{0.48\textwidth}
+			\begin{block}{Milder}
+				\begin{itemize}
+					\item Gapped paths
+					\item Away from criticality
+					\item Some solvable models
+				\end{itemize}
+			\end{block}
+		\end{column}
+		\begin{column}{0.48\textwidth}
+			\begin{alertblock}{Hard}
+				\begin{itemize}
+					\item Near critical points
+					\item Tunneling / exponentially small gaps
+					\item Generic local ground-energy problems
+				\end{itemize}
+			\end{alertblock}
+		\end{column}
+	\end{columns}
+	\vspace{0.3em}
+	\outlinebox{In the worst case, estimating the ground energy of a local Hamiltonian is QMA-complete.}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Three Complexity Layers}
+	\begin{enumerate}
+		\item Hardness of the \textbf{ground-state problem}
+		\item Hardness of a \textbf{particular adiabatic path}
+		\item Cost of a \textbf{digital implementation} of that path
+	\end{enumerate}
+	\begin{alertblock}{Message}
+		Keep these three layers separate when assessing feasibility.
+	\end{alertblock}
+\end{frame}
+
+%========================================================
+\section{Summary}
+\begin{frame}{Key Takeaways}
+	\begin{enumerate}
+		\item Simulation starts by fixing $H$ and the degrees of freedom
+		\item Static and dynamic questions are distinct for the same $H$
+		\item Adiabatic computation is a path $H(s)$; the gap sets the time
+		\item Complexity follows $\Delta_{\min}(n)$ and the problem class, not $n$ alone
+	\end{enumerate}
+\end{frame}
+
+%--------------------------------------------------------
+\begin{frame}{Outlook}
+	\begin{itemize}
+		\item Adaptive schedules that slow down near a small gap
+		\item Noise and symmetry breaking along an analog or digital path
+		\item Comparison with variational routes such as QAOA and VQE
+	\end{itemize}
+	\outlinebox{Related notes: \texttt{QS\&QA\_Fundation/QS\&QA\_Fundation.tex}}
+\end{frame}
+
+%========================================================
+\appendix
+\setbeamertemplate{headline}{}
+\addtobeamertemplate{frametitle}{\vspace*{-\headheight}}{}
+
+\begin{frame}[plain,noframenumbering]
+	\begin{center}
+		{\LARGE Questions}
+	\end{center}
+\end{frame}
+
+\end{document}
