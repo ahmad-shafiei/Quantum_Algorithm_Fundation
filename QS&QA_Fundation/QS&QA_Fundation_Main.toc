@@ -153,145 +153,146 @@
 \contentsline {subsection}{\numberline {2.11.7}از کران نظری تا آزمون دینامیکی}{96}{subsection.4.2.11.7}%
 \contentsline {section}{\numberline {2.12}مقیاس‌پذیری با اندازهٔ سیستم}{97}{section.4.2.12}%
 \contentsline {subsection}{\numberline {2.12.1}چرا تعداد کیوبیت به‌تنهایی معیار دشواری نیست؟}{98}{subsection.4.2.12.1}%
+\contentsline {paragraph}{سه خانواده مرتبط با مثال‌های همین فصل.}{99}{section*.88}%
 \contentsline {subsection}{\numberline {2.12.2}بسته‌شدن چندجمله‌ای گاف}{99}{subsection.4.2.12.2}%
 \contentsline {subsection}{\numberline {2.12.3}بسته‌شدن نمایی گاف}{101}{subsection.4.2.12.3}%
 \contentsline {subsection}{\numberline {2.12.4}چگونه بسته‌شدن گاف به زمان اجرا منتقل می‌شود؟}{102}{subsection.4.2.12.4}%
 \contentsline {subsection}{\numberline {2.12.5}ضرایب و معنای آنها}{103}{subsection.4.2.12.5}%
 \contentsline {subsection}{\numberline {2.12.6}تعداد کیوبیت و دشواری مسئله}{104}{subsection.4.2.12.6}%
-\contentsline {subsection}{\numberline {2.12.7}یک نکتهٔ مهم دربارهٔ مقیاس انرژی}{105}{subsection.4.2.12.7}%
-\contentsline {subsection}{\numberline {2.12.8}مثال دوکیوبیتی و معنای واقعی مقیاس‌بندی}{105}{subsection.4.2.12.8}%
-\contentsline {section}{\numberline {2.13}محاسبه قابل‌بازتولید گاف در مثال دو اسپین}{107}{section.4.2.13}%
-\contentsline {subsection}{\numberline {2.13.1}کاهش ماتریس با تقارن}{107}{subsection.4.2.13.1}%
-\contentsline {subsection}{\numberline {2.13.2}کمینه‌سازی روی مسیر و خطای شبکه}{108}{subsection.4.2.13.2}%
-\contentsline {subsection}{\numberline {2.13.3}آزمون مستقیم زمان‌بندی}{109}{subsection.4.2.13.3}%
-\contentsline {subsection}{\numberline {2.13.4}گاف صفر، ولی گذار ممنوع}{109}{subsection.4.2.13.4}%
-\contentsline {section}{\numberline {2.14}روش‌های محاسبه گاف: انتخاب بر اساس ساختار}{110}{section.4.2.14}%
-\contentsline {subsection}{\numberline {2.14.1}قطری‌سازی، لانچوس و شبکه تانسوری}{110}{subsection.4.2.14.1}%
-\contentsline {subsection}{\numberline {2.14.2}گاف از همبستگی: کدام تراز دیده می‌شود؟}{111}{subsection.4.2.14.2}%
-\contentsline {subsection}{\numberline {2.14.3}\lr {QPE}، \lr {VQD} و قطری‌سازی زیرفضای کوانتومی}{111}{subsection.4.2.14.3}%
-\contentsline {subsection}{\numberline {2.14.4}برآورد مستقیم از نوسان دو حالت}{112}{subsection.4.2.14.4}%
-\contentsline {section}{\numberline {2.15}افزایش اندازه، بحرانی‌شدن و پیچیدگی}{112}{section.4.2.15}%
-\contentsline {subsection}{\numberline {2.15.1}تعداد کیوبیت و واحد انرژی}{112}{subsection.4.2.15.1}%
-\contentsline {subsection}{\numberline {2.15.2}سه رفتار و یک مثال حل‌پذیر}{112}{subsection.4.2.15.2}%
-\contentsline {subsection}{\numberline {2.15.3}هزینه یافتن گاف در برابر هزینه اجرا}{113}{subsection.4.2.15.3}%
-\contentsline {section}{\numberline {2.16}کاهش زمان و بهای آن}{114}{section.4.2.16}%
-\contentsline {section}{\numberline {2.17}مرور هدفمند منابع و روش‌های جاری}{115}{section.4.2.17}%
-\contentsline {paragraph}{پایه نظری و محاسبات کلاسیک.}{115}{section*.92}%
-\contentsline {paragraph}{برآورد ترکیبی گاف با پردازش سیگنال؛ مقاله ۲۰۲۵.}{115}{section*.93}%
-\contentsline {paragraph}{آماده‌سازی آدیاباتیک و برازش نوسان؛ پیش‌چاپ دسامبر ۲۰۲۵.}{115}{section*.94}%
-\contentsline {paragraph}{شمارش طیفی؛ مقاله منتشرشده ۲۰۲۶.}{116}{section*.95}%
-\contentsline {paragraph}{زیرفضای نمونه‌برداری‌شده؛ مسیر مرتبط، نه تضمین آماده گاف.}{116}{section*.96}%
-\contentsline {section}{\numberline {2.18}جریان کاری و مسیرهای پیشنهادی پژوهش}{116}{section.4.2.18}%
-\contentsline {section}{\numberline {2.19}ارتباط}{117}{section.4.2.19}%
-\contentsline {section}{\numberline {2.20}چه وقت استفاده می‌شود}{117}{section.4.2.20}%
-\contentsline {part}{بخش 5\hskip 1em\relax جعبه ابزار}{119}{part.5}%
-\contentsline {chapter}{\numberline {1}جعبه ابزار دیجیتال: \lr {Trotter}، \lr {LCU}، \lr {QSP}}{120}{chapter.5.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{120}{section.5.1.1}%
-\contentsline {section}{\numberline {1.2}ایده شهودی}{120}{section.5.1.2}%
-\contentsline {section}{\numberline {1.3}\lr {Trotter}: فرمول، خطا، پارامترها}{121}{section.5.1.3}%
-\contentsline {paragraph}{خطای تروتر (بیان کاری).}{121}{section*.99}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{123}{section*.100}%
-\contentsline {section}{\numberline {1.4}مثال کاری \lr {Trotter}: یک کیوبیت با $H=X+Z$}{123}{section.5.1.4}%
-\contentsline {paragraph}{گام ۱ --- تعریف مسئله.}{123}{section*.101}%
-\contentsline {paragraph}{گام ۲ --- تحول دقیق (مرجع).}{123}{section*.102}%
-\contentsline {paragraph}{گام ۳ --- تقریب حاصل‌ضربی مرتبه اول.}{124}{section*.103}%
-\contentsline {paragraph}{گام ۴ --- جدول خطا بر حسب $r$.}{124}{section*.104}%
-\contentsline {paragraph}{گام ۵ --- پیوند با بقیه سند.}{124}{section*.106}%
-\contentsline {section}{\numberline {1.5}\lr {LCU}: فرمول و پارامترها}{125}{section.5.1.5}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{125}{section*.108}%
-\contentsline {section}{\numberline {1.6}مثال کاری \lr {LCU}: نشاندن $H=X+Z$}{126}{section.5.1.6}%
-\contentsline {paragraph}{گام ۱ --- تجزیه.}{126}{section*.109}%
-\contentsline {paragraph}{گام ۲ --- مدار روی یک کمکی.}{126}{section*.110}%
-\contentsline {paragraph}{گام ۳ --- اثر روی $\lvert 0\rangle $.}{126}{section*.111}%
-\contentsline {paragraph}{گام ۴ --- جای این ابزار در نقشه.}{127}{section*.112}%
-\contentsline {section}{\numberline {1.7}\lr {QSP}/\lr {QSVT}: فرمول و پارامترها}{127}{section.5.1.7}%
-\contentsline {paragraph}{هزینه شهودی.}{128}{section*.114}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{128}{section*.115}%
-\contentsline {section}{\numberline {1.8}مثال کاری \lr {QSP}: از بلوک $H$ تا $f(H)$}{128}{section.5.1.8}%
-\contentsline {paragraph}{گام ۱ --- بلوک آماده.}{128}{section*.116}%
-\contentsline {paragraph}{گام ۲ --- انتخاب تابع.}{128}{section*.117}%
-\contentsline {paragraph}{گام ۳ --- درجه و دقت.}{129}{section*.118}%
-\contentsline {paragraph}{گام ۴ --- تفسیر.}{129}{section*.119}%
-\contentsline {section}{\numberline {1.9}جدول مقایسه ابزارها}{129}{section.5.1.9}%
-\contentsline {section}{\numberline {1.10}ارتباط}{129}{section.5.1.10}%
-\contentsline {section}{\numberline {1.11}چه وقت استفاده می‌شود}{130}{section.5.1.11}%
-\contentsline {chapter}{\numberline {2}ابزارهای طیفی و ترکیبی: \lr {QPE}، \lr {VQE}، \lr {QAOA}}{131}{chapter.5.2}%
-\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{131}{section.5.2.1}%
-\contentsline {section}{\numberline {2.2}ایده شهودی}{131}{section.5.2.2}%
-\contentsline {paragraph}{\lr {QPE} --- برآورد فاز.}{131}{section*.121}%
-\contentsline {paragraph}{\lr {VQE} --- الگوریتم وردشی.}{132}{section*.122}%
-\contentsline {section}{\numberline {2.3}\lr {QPE}: فرمول و پارامترها}{132}{section.5.2.3}%
-\contentsline {paragraph}{از فاز به انرژی.}{133}{section*.125}%
-\contentsline {paragraph}{دقت و منابع.}{133}{section*.126}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{133}{section*.127}%
-\contentsline {section}{\numberline {2.4}رده مسائل مناسب \lr {QPE}}{133}{section.5.2.4}%
-\contentsline {section}{\numberline {2.5}مثال کاری \lr {QPE}: یک کیوبیت با فاز $\varphi =1/4$}{134}{section.5.2.5}%
-\contentsline {paragraph}{گام ۱ --- یکانی و ویژه‌بردار.}{134}{section*.128}%
-\contentsline {paragraph}{گام ۲ --- پیوند با هامیلتونی.}{134}{section*.129}%
-\contentsline {paragraph}{گام ۳ --- ثبات شمارش با $m=2$.}{134}{section*.130}%
-\contentsline {paragraph}{گام ۴ --- تفسیر در نقشه سند.}{135}{section*.131}%
-\contentsline {section}{\numberline {2.6}\lr {VQE}: فرمول و پارامترها}{135}{section.5.2.6}%
-\contentsline {paragraph}{اندازه‌گیری $H$.}{136}{section*.133}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{136}{section*.134}%
-\contentsline {section}{\numberline {2.7}رده مسائل مناسب \lr {VQE}}{136}{section.5.2.7}%
-\contentsline {section}{\numberline {2.8}مثال کاری \lr {VQE}: یک کیوبیت با آنزات $R_Y$}{137}{section.5.2.8}%
-\contentsline {paragraph}{گام ۱ --- هامیلتونی.}{137}{section*.135}%
-\contentsline {paragraph}{گام ۲ --- آنزات.}{137}{section*.136}%
-\contentsline {paragraph}{گام ۳ --- جدول انرژی آزمایشی.}{137}{section*.137}%
-\contentsline {paragraph}{گام ۴ --- اندازه‌گیری عملی.}{138}{section*.139}%
-\contentsline {paragraph}{گام ۵ --- تفسیر در نقشه سند.}{138}{section*.140}%
-\contentsline {section}{\numberline {2.9}\lr {QAOA}: فرمول، شهود، و جای آن در نقشه}{138}{section.5.2.9}%
-\contentsline {paragraph}{جایگاه در سه لایه.}{138}{section*.141}%
-\contentsline {paragraph}{ایده شهودی در یک بند.}{138}{section*.142}%
-\contentsline {subsection}{\numberline {2.9.1}فرمول و پارامترها}{139}{subsection.5.2.9.1}%
-\contentsline {paragraph}{پارامترها، یک‌جا.}{139}{section*.144}%
-\contentsline {subsection}{\numberline {2.9.2}پیوند با آدیاباتیک و با \lr {VQE}}{140}{subsection.5.2.9.2}%
-\contentsline {subsection}{\numberline {2.9.3}رده مسائل مناسب}{140}{subsection.5.2.9.3}%
-\contentsline {section}{\numberline {2.10}مثال کاری \lr {QAOA}: دو کیوبیت و $H_C=-Z_1Z_2$}{141}{section.5.2.10}%
-\contentsline {paragraph}{گام ۱ --- مسئله به‌زبان هزینه.}{141}{section*.146}%
-\contentsline {paragraph}{گام ۲ --- یک لایه صریح.}{141}{section*.147}%
-\contentsline {paragraph}{گام ۳ --- روبش و مینیمم.}{141}{section*.148}%
-\contentsline {paragraph}{گام ۴ --- نسبت تقریب (شهودی).}{142}{section*.149}%
-\contentsline {paragraph}{گام ۵ --- اجرا روی دستگاه.}{142}{section*.150}%
-\contentsline {paragraph}{گام ۶ --- تفسیر در نقشه سند.}{142}{section*.151}%
-\contentsline {section}{\numberline {2.11}ارتباط}{142}{section.5.2.11}%
-\contentsline {section}{\numberline {2.12}چه وقت استفاده می‌شود}{143}{section.5.2.12}%
-\contentsline {part}{بخش 6\hskip 1em\relax اجرا، راستی‌آزمایی و قطب‌نما}{144}{part.6}%
-\contentsline {chapter}{\numberline {1}دیجیتال، آنالوگ، ترکیبی}{145}{chapter.6.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{145}{section.6.1.1}%
-\contentsline {section}{\numberline {1.2}ایده شهودی}{145}{section.6.1.2}%
-\contentsline {paragraph}{دیجیتال --- مدار گیتی.}{145}{section*.152}%
-\contentsline {paragraph}{آنالوگ --- مهندسی هامیلتونی.}{145}{section*.153}%
-\contentsline {paragraph}{ترکیبی --- حلقه با کلاسیک.}{145}{section*.154}%
-\contentsline {section}{\numberline {1.3}شبیه‌سازی آنالوگ: فرمول و تمایزها}{146}{section.6.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}تعریف کاری}{146}{subsection.6.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}سه چیزی که نباید قاطی شوند}{146}{subsection.6.1.3.2}%
-\contentsline {subsection}{\numberline {1.3.3}پارامترها و گلوگاه‌ها}{147}{subsection.6.1.3.3}%
-\contentsline {subsection}{\numberline {1.3.4}رده مسائل مناسب آنالوگ}{147}{subsection.6.1.3.4}%
-\contentsline {section}{\numberline {1.4}مثال کاری آنالوگ: دینامیک دو اسپینِ \lr {TFIM}}{147}{section.6.1.4}%
-\contentsline {paragraph}{گام ۱ --- مدل هدف.}{148}{section*.156}%
-\contentsline {paragraph}{گام ۲ --- نگاشت به سخت‌افزار.}{148}{section*.157}%
-\contentsline {paragraph}{گام ۳ --- اجرا.}{148}{section*.158}%
-\contentsline {paragraph}{گام ۴ --- مرجع کلاسیک روی همین دو کیوبیت.}{148}{section*.159}%
-\contentsline {paragraph}{گام ۵ --- مقایسه با مسیر دیجیتال روی همان $H$.}{149}{section*.160}%
-\contentsline {paragraph}{گام ۶ --- تفسیر در نقشه سند.}{149}{section*.161}%
-\contentsline {section}{\numberline {1.5}حداقل فرمالیسم --- چک‌لیست اجرا}{149}{section.6.1.5}%
-\contentsline {section}{\numberline {1.6}ارتباط}{150}{section.6.1.6}%
-\contentsline {section}{\numberline {1.7}چه وقت استفاده می‌شود}{150}{section.6.1.7}%
-\contentsline {chapter}{\numberline {2}بستن حلقه: اندازه‌گیری، راستی‌آزمایی، برآورد منابع}{151}{chapter.6.2}%
-\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{151}{section.6.2.1}%
-\contentsline {section}{\numberline {2.2}ایده شهودی}{151}{section.6.2.2}%
-\contentsline {paragraph}{از مدار تا مشاهده‌پذیر.}{151}{section*.162}%
-\contentsline {paragraph}{راستی‌آزمایی کلاسیک.}{151}{section*.163}%
-\contentsline {paragraph}{برآورد منابع.}{152}{section*.164}%
-\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{152}{section.6.2.3}%
-\contentsline {section}{\numberline {2.4}ارتباط}{152}{section.6.2.4}%
-\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{152}{section.6.2.5}%
-\contentsline {chapter}{\numberline {3}قطب‌نمای پژوهش}{153}{chapter.6.3}%
-\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{153}{section.6.3.1}%
-\contentsline {section}{\numberline {3.2}ایده شهودی}{153}{section.6.3.2}%
-\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{154}{section.6.3.3}%
-\contentsline {section}{\numberline {3.4}ارتباط}{154}{section.6.3.4}%
-\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{154}{section.6.3.5}%
-\contentsline {chapter}{\numberline {4}واژه‌نامه مصوب}{156}{chapter.6.4}%
-\contentsline {chapter}{مراجع}{159}{section*.166}%
+\contentsline {subsection}{\numberline {2.12.7}یک نکته مهم درباره مقیاس انرژی}{106}{subsection.4.2.12.7}%
+\contentsline {subsection}{\numberline {2.12.8}مثال دوکیوبیتی و معنای واقعی مقیاس‌بندی}{106}{subsection.4.2.12.8}%
+\contentsline {section}{\numberline {2.13}محاسبه قابل‌بازتولید گاف در مثال دو اسپین}{108}{section.4.2.13}%
+\contentsline {subsection}{\numberline {2.13.1}کاهش ماتریس با تقارن}{108}{subsection.4.2.13.1}%
+\contentsline {subsection}{\numberline {2.13.2}کمینه‌سازی روی مسیر و خطای شبکه}{109}{subsection.4.2.13.2}%
+\contentsline {subsection}{\numberline {2.13.3}آزمون مستقیم زمان‌بندی}{110}{subsection.4.2.13.3}%
+\contentsline {subsection}{\numberline {2.13.4}گاف صفر، ولی گذار ممنوع}{110}{subsection.4.2.13.4}%
+\contentsline {section}{\numberline {2.14}روش‌های محاسبه گاف: انتخاب بر اساس ساختار}{111}{section.4.2.14}%
+\contentsline {subsection}{\numberline {2.14.1}قطری‌سازی، لانچوس و شبکه تانسوری}{111}{subsection.4.2.14.1}%
+\contentsline {subsection}{\numberline {2.14.2}گاف از همبستگی: کدام تراز دیده می‌شود؟}{112}{subsection.4.2.14.2}%
+\contentsline {subsection}{\numberline {2.14.3}\lr {QPE}، \lr {VQD} و قطری‌سازی زیرفضای کوانتومی}{112}{subsection.4.2.14.3}%
+\contentsline {subsection}{\numberline {2.14.4}برآورد مستقیم از نوسان دو حالت}{113}{subsection.4.2.14.4}%
+\contentsline {section}{\numberline {2.15}افزایش اندازه، بحرانی‌شدن و پیچیدگی}{113}{section.4.2.15}%
+\contentsline {subsection}{\numberline {2.15.1}تعداد کیوبیت و واحد انرژی}{113}{subsection.4.2.15.1}%
+\contentsline {subsection}{\numberline {2.15.2}سه رفتار و یک مثال حل‌پذیر}{114}{subsection.4.2.15.2}%
+\contentsline {subsection}{\numberline {2.15.3}هزینه یافتن گاف در برابر هزینه اجرا}{115}{subsection.4.2.15.3}%
+\contentsline {section}{\numberline {2.16}کاهش زمان و بهای آن}{115}{section.4.2.16}%
+\contentsline {section}{\numberline {2.17}مرور هدفمند منابع و روش‌های جاری}{116}{section.4.2.17}%
+\contentsline {paragraph}{پایه نظری و محاسبات کلاسیک.}{116}{section*.96}%
+\contentsline {paragraph}{برآورد ترکیبی گاف با پردازش سیگنال؛ مقاله ۲۰۲۵.}{116}{section*.97}%
+\contentsline {paragraph}{آماده‌سازی آدیاباتیک و برازش نوسان؛ پیش‌چاپ دسامبر ۲۰۲۵.}{117}{section*.98}%
+\contentsline {paragraph}{شمارش طیفی؛ مقاله منتشرشده ۲۰۲۶.}{117}{section*.99}%
+\contentsline {paragraph}{زیرفضای نمونه‌برداری‌شده؛ مسیر مرتبط، نه تضمین آماده گاف.}{117}{section*.100}%
+\contentsline {section}{\numberline {2.18}جریان کاری و مسیرهای پیشنهادی پژوهش}{117}{section.4.2.18}%
+\contentsline {section}{\numberline {2.19}ارتباط}{119}{section.4.2.19}%
+\contentsline {section}{\numberline {2.20}چه وقت استفاده می‌شود}{119}{section.4.2.20}%
+\contentsline {part}{بخش 5\hskip 1em\relax جعبه ابزار}{120}{part.5}%
+\contentsline {chapter}{\numberline {1}جعبه ابزار دیجیتال: \lr {Trotter}، \lr {LCU}، \lr {QSP}}{121}{chapter.5.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{121}{section.5.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{121}{section.5.1.2}%
+\contentsline {section}{\numberline {1.3}\lr {Trotter}: فرمول، خطا، پارامترها}{122}{section.5.1.3}%
+\contentsline {paragraph}{خطای تروتر (بیان کاری).}{122}{section*.103}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{124}{section*.104}%
+\contentsline {section}{\numberline {1.4}مثال کاری \lr {Trotter}: یک کیوبیت با $H=X+Z$}{124}{section.5.1.4}%
+\contentsline {paragraph}{گام ۱ --- تعریف مسئله.}{124}{section*.105}%
+\contentsline {paragraph}{گام ۲ --- تحول دقیق (مرجع).}{124}{section*.106}%
+\contentsline {paragraph}{گام ۳ --- تقریب حاصل‌ضربی مرتبه اول.}{125}{section*.107}%
+\contentsline {paragraph}{گام ۴ --- جدول خطا بر حسب $r$.}{125}{section*.108}%
+\contentsline {paragraph}{گام ۵ --- پیوند با بقیه سند.}{125}{section*.110}%
+\contentsline {section}{\numberline {1.5}\lr {LCU}: فرمول و پارامترها}{126}{section.5.1.5}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{126}{section*.112}%
+\contentsline {section}{\numberline {1.6}مثال کاری \lr {LCU}: نشاندن $H=X+Z$}{127}{section.5.1.6}%
+\contentsline {paragraph}{گام ۱ --- تجزیه.}{127}{section*.113}%
+\contentsline {paragraph}{گام ۲ --- مدار روی یک کمکی.}{127}{section*.114}%
+\contentsline {paragraph}{گام ۳ --- اثر روی $\lvert 0\rangle $.}{127}{section*.115}%
+\contentsline {paragraph}{گام ۴ --- جای این ابزار در نقشه.}{128}{section*.116}%
+\contentsline {section}{\numberline {1.7}\lr {QSP}/\lr {QSVT}: فرمول و پارامترها}{128}{section.5.1.7}%
+\contentsline {paragraph}{هزینه شهودی.}{129}{section*.118}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{129}{section*.119}%
+\contentsline {section}{\numberline {1.8}مثال کاری \lr {QSP}: از بلوک $H$ تا $f(H)$}{129}{section.5.1.8}%
+\contentsline {paragraph}{گام ۱ --- بلوک آماده.}{129}{section*.120}%
+\contentsline {paragraph}{گام ۲ --- انتخاب تابع.}{129}{section*.121}%
+\contentsline {paragraph}{گام ۳ --- درجه و دقت.}{130}{section*.122}%
+\contentsline {paragraph}{گام ۴ --- تفسیر.}{130}{section*.123}%
+\contentsline {section}{\numberline {1.9}جدول مقایسه ابزارها}{130}{section.5.1.9}%
+\contentsline {section}{\numberline {1.10}ارتباط}{130}{section.5.1.10}%
+\contentsline {section}{\numberline {1.11}چه وقت استفاده می‌شود}{131}{section.5.1.11}%
+\contentsline {chapter}{\numberline {2}ابزارهای طیفی و ترکیبی: \lr {QPE}، \lr {VQE}، \lr {QAOA}}{132}{chapter.5.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{132}{section.5.2.1}%
+\contentsline {section}{\numberline {2.2}ایده شهودی}{132}{section.5.2.2}%
+\contentsline {paragraph}{\lr {QPE} --- برآورد فاز.}{132}{section*.125}%
+\contentsline {paragraph}{\lr {VQE} --- الگوریتم وردشی.}{133}{section*.126}%
+\contentsline {section}{\numberline {2.3}\lr {QPE}: فرمول و پارامترها}{133}{section.5.2.3}%
+\contentsline {paragraph}{از فاز به انرژی.}{134}{section*.129}%
+\contentsline {paragraph}{دقت و منابع.}{134}{section*.130}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{134}{section*.131}%
+\contentsline {section}{\numberline {2.4}رده مسائل مناسب \lr {QPE}}{134}{section.5.2.4}%
+\contentsline {section}{\numberline {2.5}مثال کاری \lr {QPE}: یک کیوبیت با فاز $\varphi =1/4$}{135}{section.5.2.5}%
+\contentsline {paragraph}{گام ۱ --- یکانی و ویژه‌بردار.}{135}{section*.132}%
+\contentsline {paragraph}{گام ۲ --- پیوند با هامیلتونی.}{135}{section*.133}%
+\contentsline {paragraph}{گام ۳ --- ثبات شمارش با $m=2$.}{135}{section*.134}%
+\contentsline {paragraph}{گام ۴ --- تفسیر در نقشه سند.}{136}{section*.135}%
+\contentsline {section}{\numberline {2.6}\lr {VQE}: فرمول و پارامترها}{136}{section.5.2.6}%
+\contentsline {paragraph}{اندازه‌گیری $H$.}{137}{section*.137}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{137}{section*.138}%
+\contentsline {section}{\numberline {2.7}رده مسائل مناسب \lr {VQE}}{137}{section.5.2.7}%
+\contentsline {section}{\numberline {2.8}مثال کاری \lr {VQE}: یک کیوبیت با آنزات $R_Y$}{138}{section.5.2.8}%
+\contentsline {paragraph}{گام ۱ --- هامیلتونی.}{138}{section*.139}%
+\contentsline {paragraph}{گام ۲ --- آنزات.}{138}{section*.140}%
+\contentsline {paragraph}{گام ۳ --- جدول انرژی آزمایشی.}{138}{section*.141}%
+\contentsline {paragraph}{گام ۴ --- اندازه‌گیری عملی.}{139}{section*.143}%
+\contentsline {paragraph}{گام ۵ --- تفسیر در نقشه سند.}{139}{section*.144}%
+\contentsline {section}{\numberline {2.9}\lr {QAOA}: فرمول، شهود، و جای آن در نقشه}{139}{section.5.2.9}%
+\contentsline {paragraph}{جایگاه در سه لایه.}{139}{section*.145}%
+\contentsline {paragraph}{ایده شهودی در یک بند.}{139}{section*.146}%
+\contentsline {subsection}{\numberline {2.9.1}فرمول و پارامترها}{140}{subsection.5.2.9.1}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{140}{section*.148}%
+\contentsline {subsection}{\numberline {2.9.2}پیوند با آدیاباتیک و با \lr {VQE}}{141}{subsection.5.2.9.2}%
+\contentsline {subsection}{\numberline {2.9.3}رده مسائل مناسب}{141}{subsection.5.2.9.3}%
+\contentsline {section}{\numberline {2.10}مثال کاری \lr {QAOA}: دو کیوبیت و $H_C=-Z_1Z_2$}{142}{section.5.2.10}%
+\contentsline {paragraph}{گام ۱ --- مسئله به‌زبان هزینه.}{142}{section*.150}%
+\contentsline {paragraph}{گام ۲ --- یک لایه صریح.}{142}{section*.151}%
+\contentsline {paragraph}{گام ۳ --- روبش و مینیمم.}{142}{section*.152}%
+\contentsline {paragraph}{گام ۴ --- نسبت تقریب (شهودی).}{143}{section*.153}%
+\contentsline {paragraph}{گام ۵ --- اجرا روی دستگاه.}{143}{section*.154}%
+\contentsline {paragraph}{گام ۶ --- تفسیر در نقشه سند.}{143}{section*.155}%
+\contentsline {section}{\numberline {2.11}ارتباط}{143}{section.5.2.11}%
+\contentsline {section}{\numberline {2.12}چه وقت استفاده می‌شود}{144}{section.5.2.12}%
+\contentsline {part}{بخش 6\hskip 1em\relax اجرا، راستی‌آزمایی و قطب‌نما}{145}{part.6}%
+\contentsline {chapter}{\numberline {1}دیجیتال، آنالوگ، ترکیبی}{146}{chapter.6.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{146}{section.6.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{146}{section.6.1.2}%
+\contentsline {paragraph}{دیجیتال --- مدار گیتی.}{146}{section*.156}%
+\contentsline {paragraph}{آنالوگ --- مهندسی هامیلتونی.}{146}{section*.157}%
+\contentsline {paragraph}{ترکیبی --- حلقه با کلاسیک.}{146}{section*.158}%
+\contentsline {section}{\numberline {1.3}شبیه‌سازی آنالوگ: فرمول و تمایزها}{147}{section.6.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}تعریف کاری}{147}{subsection.6.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}سه چیزی که نباید قاطی شوند}{147}{subsection.6.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}پارامترها و گلوگاه‌ها}{148}{subsection.6.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}رده مسائل مناسب آنالوگ}{148}{subsection.6.1.3.4}%
+\contentsline {section}{\numberline {1.4}مثال کاری آنالوگ: دینامیک دو اسپینِ \lr {TFIM}}{148}{section.6.1.4}%
+\contentsline {paragraph}{گام ۱ --- مدل هدف.}{149}{section*.160}%
+\contentsline {paragraph}{گام ۲ --- نگاشت به سخت‌افزار.}{149}{section*.161}%
+\contentsline {paragraph}{گام ۳ --- اجرا.}{149}{section*.162}%
+\contentsline {paragraph}{گام ۴ --- مرجع کلاسیک روی همین دو کیوبیت.}{149}{section*.163}%
+\contentsline {paragraph}{گام ۵ --- مقایسه با مسیر دیجیتال روی همان $H$.}{150}{section*.164}%
+\contentsline {paragraph}{گام ۶ --- تفسیر در نقشه سند.}{150}{section*.165}%
+\contentsline {section}{\numberline {1.5}حداقل فرمالیسم --- چک‌لیست اجرا}{150}{section.6.1.5}%
+\contentsline {section}{\numberline {1.6}ارتباط}{151}{section.6.1.6}%
+\contentsline {section}{\numberline {1.7}چه وقت استفاده می‌شود}{151}{section.6.1.7}%
+\contentsline {chapter}{\numberline {2}بستن حلقه: اندازه‌گیری، راستی‌آزمایی، برآورد منابع}{152}{chapter.6.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{152}{section.6.2.1}%
+\contentsline {section}{\numberline {2.2}ایده شهودی}{152}{section.6.2.2}%
+\contentsline {paragraph}{از مدار تا مشاهده‌پذیر.}{152}{section*.166}%
+\contentsline {paragraph}{راستی‌آزمایی کلاسیک.}{152}{section*.167}%
+\contentsline {paragraph}{برآورد منابع.}{153}{section*.168}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{153}{section.6.2.3}%
+\contentsline {section}{\numberline {2.4}ارتباط}{153}{section.6.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{153}{section.6.2.5}%
+\contentsline {chapter}{\numberline {3}قطب‌نمای پژوهش}{154}{chapter.6.3}%
+\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{154}{section.6.3.1}%
+\contentsline {section}{\numberline {3.2}ایده شهودی}{154}{section.6.3.2}%
+\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{155}{section.6.3.3}%
+\contentsline {section}{\numberline {3.4}ارتباط}{155}{section.6.3.4}%
+\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{155}{section.6.3.5}%
+\contentsline {chapter}{\numberline {4}واژه‌نامه مصوب}{157}{chapter.6.4}%
+\contentsline {chapter}{مراجع}{160}{section*.170}%

@@ -73,7 +73,8 @@
 | instantaneous eigenstate | ویژه‌حالت لحظه‌ای |
 | instantaneous gap | گاف لحظه‌ای |
 | schedule | زمان‌بندی |
-| driver Hamiltonian | هامیلتونی راننده |
+| driver Hamiltonian | هامیلتونی آغازین |
+| initial / beginning Hamiltonian | هامیلتونی آغازین |
 | problem Hamiltonian | هامیلتونی مسئله |
 | observable | مشاهده‌پذیر |
 | ansatz | آنزات |
