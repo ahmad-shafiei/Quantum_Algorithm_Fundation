@@ -1,0 +1,32 @@
+% دسته‌بندی روش‌های برآورد و مهندسی گاف
+\input{figures/qaf_style.tex}
+\begin{tikzpicture}[
+	x=1cm,
+	y=1cm,
+	font=\footnotesize,
+	gbox/.style={qafbox, text width=2.35cm, minimum height=1.05cm}
+	]
+	\node[gbox, fill=blue!12, text width=3.4cm] (why) at (0,3.4) {Why the gap?};
+	\node[gbox, fill=green!12] (cl) at (-5.2,1.6) {Classical spectrum};
+	\node[gbox, fill=orange!14] (dyn) at (-1.75,1.6) {Dynamics / spectroscopy};
+	\node[gbox, fill=cyan!14] (var) at (1.75,1.6) {Variational / subspace};
+	\node[gbox, fill=red!12] (ft) at (5.2,1.6) {FTQC / QPE};
+	\node[gbox, fill=green!10, text width=2.55cm] (cl2) at (-5.2,0) {Lanczos, DMRG, QMC};
+	\node[gbox, fill=orange!10, text width=2.55cm] (dyn2) at (-1.75,0) {Oscillation, quench, $C(\tau)$};
+	\node[gbox, fill=cyan!10, text width=2.55cm] (var2) at (1.75,0) {VQD, QSE, Krylov};
+	\node[gbox, fill=red!10, text width=2.55cm] (ft2) at (5.2,0) {Phase est., counting};
+	\node[gbox, fill=violet!12, text width=4.6cm] (eng) at (0,-1.7) {Gap engineering / shortcuts};
+	\node[font=\scriptsize, text=black!60] at (0,-2.45) {schedule, catalyst, CD, encoding};
+	\draw[qafarr] (why) -- (cl);
+	\draw[qafarr] (why) -- (dyn);
+	\draw[qafarr] (why) -- (var);
+	\draw[qafarr] (why) -- (ft);
+	\draw[qafarr] (cl) -- (cl2);
+	\draw[qafarr] (dyn) -- (dyn2);
+	\draw[qafarr] (var) -- (var2);
+	\draw[qafarr] (ft) -- (ft2);
+	\draw[qafarr] (cl2.south) -- ++(0,-0.35) -| (eng.north);
+	\draw[qafarr] (dyn2.south) -- ++(0,-0.35) -| (eng.north);
+	\draw[qafarr] (var2.south) -- ++(0,-0.35) -| (eng.north);
+	\draw[qafarr] (ft2.south) -- ++(0,-0.35) -| (eng.north);
+\end{tikzpicture}
