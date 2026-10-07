@@ -1,0 +1,47 @@
+This is BibTeX, Version 0.99d (TeX Live 2025)
+Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
+The top-level auxiliary file: QS&QA_Fundation_Main.aux
+A level-1 auxiliary file: QS&QA_Fundation.aux
+The style file: ./styles/packages/unsrtabbrv.bst
+Database file #1: bibs/quantum_sim.bib
+You've used 66 entries,
+            1791 wiz_defined-function locations,
+            877 strings with 16485 characters,
+and the built_in function-call counts, 16336 in all, are:
+= -- 1293
+> -- 1067
+< -- 0
++ -- 380
+- -- 314
+* -- 1361
+:= -- 2811
+add.period$ -- 199
+call.type$ -- 66
+change.case$ -- 65
+chr.to.int$ -- 0
+cite$ -- 66
+duplicate$ -- 581
+empty$ -- 1426
+format.name$ -- 314
+if$ -- 3420
+int.to.chr$ -- 0
+int.to.str$ -- 66
+missing$ -- 66
+newline$ -- 334
+num.names$ -- 66
+pop$ -- 100
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 204
+stack$ -- 0
+substring$ -- 1133
+swap$ -- 66
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 147
+width$ -- 68
+write$ -- 722
