@@ -1,0 +1,3114 @@
+% ============================================================
+\part{دو پرسش و دو رهیافت}
+% ============================================================
+
+\chapter{دو پرسش از یک هامیلتونی: دینامیک و طیف}
+\label{chap:dyn-spec}
+
+\section{جایگاه در نقشه}
+
+اولین انشعاب بعد از $H$: دینامیک در برابر ایستا / طیفی. همه ابزارهای بعدی زیر یکی از این دو پرسش می‌نشینند، یا در مرز میانشان.
+
+\section{ایده شهودی}
+
+هامیلتونی هم مولد حرکت است و هم تعیین‌کننده انرژی‌های مجاز. از یک $H$ می‌توان دو خانواده سؤال پرسید که الگوریتم‌هایشان فرق دارد. شکل~\ref{fig:two-questions} این انشعاب را نشان می‌دهد.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\input{figures/fig_two_questions.tex}
+	\end{latin}
+	\caption{دو پرسش از یک $H$. تابع پاسخ روی مرز است: ظاهراً طیفی است، اما اغلب به $f(H)$ یا تحول زمانی نیاز دارد.}
+	\label{fig:two-questions}
+\end{figure}
+
+\paragraph{پرسش دینامیکی - تحول زمانی.}
+حالت چطور با زمان عوض می‌شود؟ شکل نوعی: سامانه در $\lvert\psi_0\rangle$ است، $H$ ثابت می‌ماند یا ناگهان عوض می‌شود، و می‌خواهیم $\lvert\psi(t)\rangle$ یا $\langle O(t)\rangle$ را بدانیم. شهود: فیلم حرکت سامانه. تغییر ناگهانی هامیلتونی نمونه استاندارد است.
+
+\paragraph{پرسش ایستا / طیفی.}
+چه انرژی‌هایی مجازند؟ حالت پایه چیست؟ گاف چقدر است؟ شهود: طیف خطوط یک اتم، یا کمینه انرژی یک مولکول. اینجا «زمان» هدف نیست؛ ویژه‌مقدارها و ویژه‌بردارها هدف‌اند.
+
+\paragraph{پل: پاسخ خطی.}
+تابع گرین یا تابع طیفی ظاهراً در رده طیفی است، اما محاسبه عملی‌اش اغلب به $f(H)$ یا به تحول زمانی نیاز دارد.
+
+\section{حداقل فرمالیسم}
+
+دینامیک بسته (یکانی)، با $\hbar=1$:
+\begin{equation}
+	\lvert\psi(t)\rangle = U(t)\lvert\psi_0\rangle,\qquad U(t)=e^{-iHt},
+\end{equation}
+و مشاهده‌پذیر
+\begin{equation}
+	\langle O(t)\rangle = \langle\psi_0\rvert U^\dagger(t)\,O\,U(t)\lvert\psi_0\rangle.
+\end{equation}
+ایستا: $H\lvert E_n\rangle = E_n\lvert E_n\rangle$؛ حالت پایه $\lvert E_0\rangle$؛ گاف $\Delta = E_1-E_0$. اگر بتوان $U(t)$ را ساخت، برآورد فاز می‌تواند از ویژه‌فاز $U$ به $E_n$ برسد. پس ابزار دینامیک، ورودی بعضی الگوریتم‌های طیفی است.
+
+\section{ارتباط}
+
+جریان کاری در فصل~\ref{chap:pipeline}، رهیافت‌ها در فصل~\ref{chap:evo-adi}، ساخت $U(t)$ و $f(H)$ در فصل~\ref{chap:digital-tools}، و \lr{QPE} و \lr{VQE} در فصل~\ref{chap:spectral-tools} آمده است.
+
+\section{چه وقت استفاده می‌شود}
+
+اولین سؤال بعد از نوشتن $H$: فیلم می‌خواهم یا طیف؟ تا این را مشخص نکنید، انتخاب بین \lr{Trotter} و \lr{VQE} بی‌معناست.
+
+\begin{remark}[جای توسعه]
+	دینامیک گرمایی و رسیدن به تعادل گرمایی؛ سامانه کوانتومی باز و معادله مادر؛ فرمول‌بندی پاسخ خطی با یک مثال.
+\end{remark}
+
+\chapter{دو رهیافت: تحول زمانی و محاسبه آدیاباتیک}
+\label{chap:evo-adi}
+
+\section{جایگاه در نقشه}
+
+دومین انشعاب بزرگ: \emph{چگونه} از $H$ برای محاسبه استفاده می‌کنیم. ابزارهایی مثل \lr{Trotter} زیرِ رهیافت تحول‌اند؛ مسیر $H(s)$ خودِ رهیافت آدیاباتیک است.
+
+\section{ایده شهودی}
+
+شکل~\ref{fig:two-paradigms} دو رهیافت و نقطه اتصال‌شان را نشان می‌دهد.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+			\input{figures/fig_two_paradigms.tex}%
+		}
+	\end{latin}
+	\caption{رهیافت تحول زمانی در برابر محاسبه آدیاباتیک. آنالوگ زیرِ تحول می‌ماند و به گیت تجزیه نمی‌شود؛ مسیر آدیاباتیک را می‌توان با ابزار دیجیتالِ همان ستون چپ گسسته کرد (\lr{digital adiabatic})، پس این دو رقیبِ مطلق نیستند.}
+	\label{fig:two-paradigms}
+\end{figure}
+
+\paragraph{الف) رهیافت تحول زمانی / شرودینگر.}
+هدف: ساختن یا مهندسی $U(t)=e^{-iHt}$ یا به‌طور کلی‌تر یک تابع $f(H)$. دیجیتال: $U(t)$ را به گیت تجزیه می‌کنیم (فصل~\ref{chap:digital-tools}). آنالوگ: خودِ $H$ را روی سخت‌افزار می‌سازیم تا طبیعت انتگرال زمانی را بگیرد (فصل~\ref{chap:hardware}). مثلا سامانه را حرکت می‌دهیم و در زمان $t$ نگاه می‌کنیم. جزئیات فرمول، پارامترها، و یک مثال کامل در بخش‌های~\ref{sec:time-evolution} و~\ref{sec:evo-example} آمده است.
+
+\paragraph{ب) رهیافت محاسبه آدیاباتیک.}
+اینجا محاسبه برابر است با یک مسیر در فضای هامیلتونی‌ها، نه یک $U(t)$ ثابت. معمولاً
+\begin{equation}
+	H(s) = (1-s)\,H_{\mathrm{init}} + s\,H_{\mathrm{problem}},\qquad s\in[0,1].
+\end{equation}
+اگر $s(t)$ به‌قدر کافی آرام عوض شود و گاف لحظه‌ای صفر نشود، حالت در پایه لحظه‌ای می‌ماند. شهود: به‌جای شکستن $e^{-iHt}$ به گیت، مسئله را در خودِ هامیلتونی روشن می‌کنید. جزئیات قضیه، پارامترها، و یک مثال کامل \lr{Ising} در بخش‌های~\ref{sec:adiabatic-theorem} و~\ref{sec:adi-ising-example} آمده است.
+
+سه چیز که نباید قاطی شوند:
+\begin{itemize}
+	\item \textbf{شبیه‌سازی آنالوگ:} $H_{\mathrm{hw}}\approx H_{\mathrm{target}}$؛ لزوماً آدیاباتیک نیست و می‌تواند تحول واقعی زمان را بدهد.
+	\item \textbf{محاسبه آدیاباتیک (\lr{AQC}):} مسیر $H(s)$ خودِ الگوریتم است؛ هدف نوعاً حالت پایه است.
+	\item \textbf{بازپخت کوانتومی:} خویشاوند نوفه‌دار و بهینه‌سازی‌محور \lr{AQC}؛ با شبیه‌سازی دقیق دینامیک یکی نیست.
+\end{itemize}
+شکست رهیافت آدیاباتیک همان دینامیک غیرآدیاباتیک است: پرش به ترازهای بالاتر وقتی گاف کوچک یا سرعت زیاد است.
+
+\paragraph{اتصال دو رهیافت.}
+مسیر آدیاباتیک را می‌توان با فرمول حاصل‌ضربی دیجیتال کرد (\lr{digital adiabatic}): همان \lr{Trotter}، اما روی $H(s_k)$ در گام‌های گسسته.
+
+\section{رهیافت تحول زمانی: فرمول و پارامترها}
+\label{sec:time-evolution}
+
+در این رهیافت، هامیلتونی (ثابت یا با زمان معلوم) داده شده است و هدف، دنبال کردن حالت یا مشاهده‌پذیرهاست، نه لزوماً رسیدن به پایه یک $H_P$ تازه. معادله مرکزی شرودینگر است:
+\begin{equation}
+	\label{eq:schrodinger}
+	i\,\partial_t\lvert\psi(t)\rangle = H(t)\,\lvert\psi(t)\rangle,
+	\qquad
+	\lvert\psi(0)\rangle=\lvert\psi_0\rangle.
+\end{equation}
+اگر $H$ مستقل از زمان باشد، پاسخ یکانیِ دقیق
+\begin{equation}
+	\label{eq:U-of-t}
+	U(t)=e^{-iHt},
+	\qquad
+	\lvert\psi(t)\rangle=U(t)\lvert\psi_0\rangle
+\end{equation}
+است. اگر $H=H(t)$ باشد، $U$ با انتگرال زمانیِ مرتب‌شده (\lr{time-ordered}) تعریف می‌شود؛ در نسخه اول سند همان حالت $H$ ثابت کافی است.
+
+خروجی عملی پژوهش معمولاً خودِ تابع موج نیست، بلکه یک \emph{مشاهده‌پذیر}\footnote{\lr{observable}.}:
+\begin{equation}
+	\label{eq:obs}
+	\langle O\rangle(t)
+	=
+	\langle\psi(t)\rvert O\lvert\psi(t)\rangle
+	=
+	\langle\psi_0\rvert U^\dagger(t)\,O\,U(t)\lvert\psi_0\rangle.
+\end{equation}
+جریان کاری شهودی در شکل~\ref{fig:time-evolution} آمده است: آماده‌سازی آسان $\to$ اعمال $U(t)$ $\to$ اندازه‌گیری $\langle O\rangle$.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{0.95\textwidth}{!}{%
+			\input{figures/fig_time_evolution.tex}%
+		}
+	\end{latin}
+	\caption{اسکلت رهیافت تحول زمانی. سؤال پژوهشی اغلب روی $\langle O\rangle(t)$ است، نه روی کل $\lvert\psi(t)\rangle$.}
+	\label{fig:time-evolution}
+\end{figure}
+
+\paragraph{دو مسیر تحقق $U(t)$.}
+\begin{itemize}
+	\item \textbf{دیجیتال:} $U(t)$ را به گیت‌ها تجزیه کنید (\lr{Trotter}، \lr{LCU}، \lr{QSP}؛ فصل~\ref{chap:digital-tools}).
+	\item \textbf{آنالوگ:} $H_{\mathrm{hw}}\approx H$ را روی سخت‌افزار بسازید و زمان فیزیکی را جلو ببرید (بخش~\ref{sec:analog}).
+\end{itemize}
+تعمیم مهم: بسیاری از الگوریتم‌ها به خودِ $e^{-iHt}$ نیاز ندارند، بلکه به یک تابع $f(H)$ (فیلتر، وارون، \ldots). زبان مشترک همان پیاده‌سازی $f(H)$ است؛ تحول زمانی فقط انتخاب $f(x)=e^{-itx}$ است.
+
+\paragraph{پارامترها، یک‌جا.}
+\begin{itemize}
+	\item $H$ یا $H(t)$: هامیلتونی مدل؛ در دیجیتال معمولاً به جمع جمله‌های آسان $H=\sum_k H_k$ شکسته می‌شود.
+	\item $\lvert\psi_0\rangle$: حالت اولیه (اغلب حاصل یک quench یا یک آماده‌سازی ساده).
+	\item $t$: زمان فیزیکی هدف.
+	\item $O$: مشاهده‌پذیر اندازه‌گیری‌شده ($\langle Z\rangle$، انرژی، همبستگی، \ldots).
+	\item $\varepsilon$: خطای مجاز در $U(t)$ یا در $\langle O\rangle$؛ هزینه مدار/منابع را تعیین می‌کند.
+	\item در دیجیتال: پارامترهای ابزار (مثلاً تعداد گام تروتر $r$)؛ در آنالوگ: وفاداری نگاشت $H_{\mathrm{hw}}\leftrightarrow H$.
+\end{itemize}
+
+\paragraph{هزینه شهودی.}
+برخلاف آدیاباتیک که گلوگاهش $\Delta_{\min}$ مسیر است، اینجا هزینه نوعاً با $\|H\|$ (یا هنجار جمله‌ها)، زمان $t$، و دقت $\varepsilon$ رشد می‌کند. شکل دقیق برای فرمول حاصل‌ضربی در بخش~\ref{sec:trotter} آمده است.
+
+\section{رده مسائل مناسب تحول زمانی}
+
+رهیافت تحول وقتی طبیعی است که پرسش، \emph{دینامیک} یا یک $f(H)$ باشد~\cite{Lloyd1996,Childs2018}:
+\begin{enumerate}
+	\item \textbf{تغییر ناگهانی هامیلتونی (\lr{quench}).} سامانه در پایه $H_0$ است؛ ناگهان $H$ عوض می‌شود و می‌خواهید $\langle O\rangle(t)$ را ببینید.
+	\item \textbf{پاسخ زمانی و ترابرد.} انتشار، جریان، توابع همبستگی در زمان حقیقی.
+	\item \textbf{ورودی الگوریتم‌های طیفی.} برآورد فاز به توان‌های کنترل‌شده $U=e^{-iHt}$ نیاز دارد؛ پس شبیه‌سازی تحول، پیش‌نیاز \lr{QPE} است.
+	\item \textbf{توابع عمومی $f(H)$.} وارون، فیلتر طیفی، و مانند آن‌ها در چارچوب \lr{QSP}/\lr{QSVT}.
+\end{enumerate}
+اگر هدف فقط حالت پایه یک مسئله بهینه‌سازیِ نگاشته‌شده به \lr{Ising} است و سخت‌افزار مسیر $H(s)$ می‌دهد، آدیاباتیک (بخش~\ref{sec:adiabatic-theorem}) اغلب مستقیم‌تر است.
+
+\section{مثال کاری: یک اسپین در میدان عرضی}
+\label{sec:evo-example}
+
+هدف این مثال آن است که کمیت‌های بخش~\ref{sec:time-evolution} روی کوچک‌ترین سامانه ممکن نام‌گذاری صرف نمانند: یک اسپین-$1/2$ (یک کیوبیت)، تحول دقیق تحلیلی، و یک مشاهده‌پذیر نوسانی.
+
+\paragraph{گام ۱ --- هامیلتونی و حالت اولیه.}
+همان انرژی زیمانِ عرضی که در مثال آدیاباتیک نقطه شروع بود، اینجا خودِ هامیلتونیِ ثابتِ تحول است:
+\begin{equation}
+	\label{eq:H-rabi}
+	H = -h_x X,
+	\qquad h_x>0.
+\end{equation}
+حالت اولیه را در پایه محاسباتی می‌گیریم، نه در پایه $X$:
+\begin{equation}
+	\lvert\psi_0\rangle=\lvert0\rangle.
+\end{equation}
+این یک quench کوچک است: اگر قبلاً میدان در راستای $z$ بود و پایه $\lvert0\rangle$، ناگهان میدان به راستای $x$ می‌چرخد و دینامیک آغاز می‌شود.
+
+\paragraph{گام ۲ --- عملگر تحول دقیق.}
+چون $X^2=I$،
+\begin{equation}
+	U(t)=e^{-iHt}=e^{i h_x t\, X}
+	=
+	\cos(h_x t)\,I
+	+
+	i\sin(h_x t)\,X.
+\end{equation}
+بنابراین
+\begin{equation}
+	\lvert\psi(t)\rangle
+	=
+	\cos(h_x t)\,\lvert0\rangle
+	+
+	i\sin(h_x t)\,\lvert1\rangle.
+\end{equation}
+
+\paragraph{گام ۳ --- مشاهده‌پذیر.}
+اندازه‌گیری $Z$ می‌دهد
+\begin{equation}
+	\label{eq:rabi-Z}
+	\langle Z\rangle(t)
+	=
+	\cos^2(h_x t)-\sin^2(h_x t)
+	=
+	\cos(2 h_x t).
+\end{equation}
+با انتخاب عددی $h_x=1$، در زمان $t=1$ داریم $\langle Z\rangle=\cos 2\approx -0.416$. دوره کامل نوسان وقتی $2h_x T_{\mathrm{osc}}=2\pi$ است، یعنی $T_{\mathrm{osc}}=\pi/h_x$.
+
+\paragraph{گام ۴ --- تفسیر در نقشه سند.}
+\begin{itemize}
+	\item پرسش: دینامیکی است ($\langle Z\rangle(t)$)، نه یافتن پایه یک $H_P$ تازه.
+	\item رهیافت: تحول زمانی با $H$ ثابت.
+	\item تحقق: اینجا $U(t)$ تحلیلی است. برای هامیلتونیِ چند جمله‌ایِ جابه‌جانشونده، همین $U(t)$ را باید با ابزار فصل~\ref{chap:digital-tools} ساخت؛ ساده‌ترین‌شان \lr{Trotter} است (بخش~\ref{sec:trotter-example}).
+\end{itemize}
+
+\paragraph{گام ۵ --- یک پله به‌سوی مدل واقعی‌تر.}
+اگر به‌جای یک میدان خالص،
+\begin{equation}
+	H=X+Z
+\end{equation}
+باشد، دیگر $U(t)$ به همین سادگی با یک دوران حول یک محور پائولی نوشته نمی‌شود، چون $[X,Z]\neq 0$. جواب دقیق هنوز با قطری‌سازی $2\times2$ ممکن است، اما روی سخت‌افزار دیجیتال معمولاً از فرمول حاصل‌ضربی استفاده می‌شود. همان هامیلتونی، مثال کاری بخش~\ref{sec:trotter-example} است.
+
+\section{قضیه آدیاباتیک: فرمول و پارامترها}
+\label{sec:adiabatic-theorem}
+
+فرض کنید خانواده هامیلتونی‌های
+\begin{equation}
+	H(s),\qquad s\in[0,1],
+\end{equation}
+در هر $s$ قطری‌پذیر باشد و ویژه‌مقادیرش را به‌صورت صعودی $E_0(s)\le E_1(s)\le\cdots$ بنویسیم. ویژه‌بردار متناظر با پایه را $\lvert\psi_0(s)\rangle$ می‌نامیم (\emph{ویژه‌حالت لحظه‌ای}\footnote{\lr{instantaneous eigenstate}.}). \emph{گاف لحظه‌ای}\footnote{\lr{instantaneous gap}.} میان پایه و اولین تراز برانگیخته
+\begin{equation}
+	\label{eq:gap}
+	\Delta(s) := E_1(s)-E_0(s)
+\end{equation}
+است و کمینه آن روی مسیر،
+\begin{equation}
+	\Delta_{\min} := \min_{s\in[0,1]}\Delta(s),
+\end{equation}
+پارامتر تعیین‌کننده سختی مسیر است (شکل~\ref{fig:adiabatic-gap}).
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{0.92\textwidth}{!}{%
+			\input{figures/fig_adiabatic_gap.tex}%
+		}
+	\end{latin}
+	\caption{طیف لحظه‌ای در طول مسیر $s$. حالت سامانه باید روی تراز پایه بماند؛ تنگ‌ترین گاف $\Delta_{\min}$ تعیین می‌کند مسیر چقدر باید آرام باشد.}
+	\label{fig:adiabatic-gap}
+\end{figure}
+
+\emph{زمان‌بندی}\footnote{\lr{schedule}.} نگاشت زمان فیزیکی به پارامتر بی‌بعد است: $s=s(t)$ با $s(0)=0$ و $s(T)=1$. ساده‌ترین انتخاب خطی است،
+\begin{equation}
+	s(t)=\frac{t}{T},\qquad t\in[0,T],
+\end{equation}
+ولی هر $s(t)$ یکنواختِ هموار قابل‌قبول است. سامانه از معادله شرودینگرِ زمان‌وابسته پیروی می‌کند:
+\begin{equation}
+	i\,\partial_t\lvert\Psi(t)\rangle = H\bigl(s(t)\bigr)\,\lvert\Psi(t)\rangle.
+\end{equation}
+
+\paragraph{بیان کاری قضیه.}
+اگر سامانه در $t=0$ در $\lvert\psi_0(0)\rangle$ باشد، گاف در طول مسیر مثبت بماند ($\Delta_{\min}>0$)، و زمان کل $T$ به‌قدر کافی بزرگ باشد، آن‌گاه در $t=T$ حالت به $\lvert\psi_0(1)\rangle$ نزدیک می‌ماند. یک تخمین مقیاسیِ رایج برای زمان‌بندی خطی، با فرض کنترل مشتق‌های مسیر، چنین است؛ این رابطه به‌تنهایی کران کافیِ عمومی نیست (بخش~\ref{sec:gap-runtime})~\cite{AlbashLidar2018}:
+\begin{equation}
+	\label{eq:adiabatic-bound}
+	T \;\gtrsim\; \frac{\displaystyle\max_{s}\,\bigl\lVert\partial_s H(s)\bigr\rVert}{\Delta_{\min}^{2}}\,\frac{1}{\varepsilon},
+\end{equation}
+که $\varepsilon$ خطای مجاز در فاصله از پایه نهایی است و $\lVert\cdot\rVert$ هنجار عملگری مناسب. شهود: صورتِ کسر شدت تغییر هامیلتونی را می‌سنجد؛ مخرج می‌گوید گاف کوچک‌تر $\Rightarrow$ مسیر گران‌تر.
+
+\paragraph{پارامترها، یک‌جا.}
+\begin{itemize}
+	\item $H_{\mathrm{init}}$ یا $H_B$: هامیلتونی آغازین\ft{driver Hamiltonian; also: initial / beginning Hamiltonian} با پایه \emph{آسان} (آماده یا شناخته‌شده).
+	\item $H_{\mathrm{problem}}$ یا $H_P$: هامیلتونی مسئله؛ پایه آن همان پاسخی است که می‌خواهیم.
+	\item $s$ یا $s(t)$: پارامتر درون‌یابی / زمان‌بندی.
+	\item $\Delta(s)$ و $\Delta_{\min}$: گاف لحظه‌ای و کمینه‌اش؛ گلوگاه منابع.
+	\item $T$: زمان کل اجرا؛ باید با~\eqref{eq:adiabatic-bound} سازگار باشد.
+	\item $\varepsilon$: خطای مجاز نسبت به $\lvert\psi_0(1)\rangle$.
+\end{itemize}
+برای درون‌یابی خطی $H(s)=(1-s)H_B+s H_P$ داریم $\partial_s H = H_P-H_B$، پس صورتِ~\eqref{eq:adiabatic-bound} مستقل از $s$ و برابر $\lVert H_P-H_B\rVert$ است.
+
+\paragraph{هزینه در رهیافت تحول (برای مقایسه).}
+آنجا هزینه به هنجار جمله‌های $H$، زمان $t$، و دقت $\varepsilon$ بستگی دارد؛ جزئیات در بخش~\ref{sec:time-evolution} و برای فرمول حاصل‌ضربی در بخش~\ref{sec:trotter} آمده است. اینجا گلوگاه $\Delta_{\min}$ است، نه لزوماً ژرفای مدار گیتی.
+
+\section{رده مسائل مناسب آدیاباتیک}
+
+محاسبه آدیاباتیک (\lr{AQC}) وقتی طبیعی است که پرسشِ اصلی \emph{حالت پایه یک $H_P$ سخت} باشد، نه دینامیک در زمان ثابت~\cite{Farhi2000,AlbashLidar2018}:
+\begin{enumerate}
+	\item \textbf{بهینه‌سازی ترکیبی و اسپین کلاسیک.} بسیاری از مسائل \lr{NP}-سخت (برش بیشینه، پوشش رأس، تخصیص، \ldots) به یک هامیلتونی \lr{Ising} کلاسیک نگاشته می‌شوند:
+	\begin{equation}
+		H_P = \sum_{i} h_i Z_i + \sum_{i<j} J_{ij} Z_i Z_j.
+	\end{equation}
+	پیکربندی پایه‌ایِ $H_P$ همان حل مسئله است.
+	\item \textbf{آماده‌سازی حالت پایه مدل‌های فیزیکی.} وقتی $H_P$ خودِ مدل فیزیکی است (مثلاً \lr{Ising} کوانتومی، یا تقریبی از یک هامیلتونی مولکولی) و می‌خواهید $\lvert E_0\rangle$ را روی سخت‌افزار بنشانید.
+	\item \textbf{سخت‌افزاری که مسیر می‌دهد.} بازپخت کوانتومی و بعضی سکوهای آنالوگ ذاتاً یک $H(s)$ اجرا می‌کنند؛ حتی اگر نوفه‌دار باشند، زبان مسئله همان مسیر آدیاباتیک است.
+\end{enumerate}
+اگر پرسش شما تحول زمانیِ دقیق $e^{-iH t}$ یا یک $f(H)$ عمومی است، رهیافت تحول (با \lr{Trotter}/\lr{LCU}/\lr{QSP}) مناسب‌تر است. اگر گاف مسیر به‌سمت صفر می‌رود (گذار بحرانی، تبهگنی)، آدیاباتیک ساده شکست می‌خورد یا $T$ نجومی می‌شود.
+
+%==========================
+%=========================
+\section{مثال کاری: از میدان عرضی به \lr{Ising}}
+\label{sec:adi-ising-example}
+
+هدف این بخش آن است که ایده محاسبه آدیاباتیک را در یک مثال کوچک اما کامل دنبال کنیم؛ به‌گونه‌ای که کمیت‌هایی مانند هامیلتونی آغازین، هامیلتونی مسئله، مسیر در فضای هامیلتونی‌ها، گاف طیفی و زمان اجرا صرفاً نام‌گذاری باقی نمانند. برای این منظور، یک سامانه متشکل از دو اسپین-$1/2$، یا معادل آن دو کیوبیت، در نظر می‌گیریم.
+
+ایده اصلی بسیار ساده است. ابتدا سامانه را در یک حالت پایه شناخته‌شده و به‌آسانی قابل آماده‌سازی قرار می‌دهیم. سپس هامیلتونی را به‌آرامی از یک هامیلتونی ساده به هامیلتونی مسئله تغییر می‌دهیم. اگر تغییر به اندازه کافی آهسته باشد و گاف انرژی در طول مسیر بیش از حد کوچک نشود، سامانه در حالت پایه لحظه‌ای باقی می‌ماند و در انتهای مسیر، حالت پایه هامیلتونی مسئله را به دست می‌آوریم.
+
+در این مثال، هامیلتونی آغازین از یک میدان مغناطیسی عرضی به دست می‌آید و هامیلتونی نهایی یک مدل \lr{Ising} است. اگر خودِ مدل برای‌تان ناآشناست، نخست بخش~\ref{sec:ising} را بخوانید. سپس به‌صورت صریح نشان می‌دهیم که چرا گاف در میانه مسیر به یک کمینه می‌رسد و چگونه مقدار
+$\Delta_{\min}\simeq0.66$
+در
+$s_*\simeq0.62$
+به دست می‌آید.
+
+\paragraph{گام ۱ - هامیلتونی آغازین: یک میدان عرضی ساده.}
+
+برای یک اسپین-$1/2$ در یک میدان مغناطیسی، انرژی برهم‌کنش میدان و ممان مغناطیسی از نوع انرژی زیمان است:
+\begin{equation}
+	H_{\mathrm{Z}}=-\boldsymbol{\mu}\cdot\mathbf{B}.
+\end{equation}
+اگر میدان در راستای محور $x$ قرار داشته باشد، مؤلفه متناظر اسپین در هامیلتونی ظاهر می‌شود. با جذب ثابت‌های فیزیکی مانند اندازه ممان مغناطیسی در پارامتر میدان، می‌توان هامیلتونی یک اسپین را به‌صورت
+\begin{equation}
+	H_{\mathrm{Z}}=-h_x X
+\end{equation}
+نوشت که در آن $X$ همان ماتریس پائولی در راستای $x$ و $h_x>0$ شدت مؤثر میدان عرضی است.
+
+برای دو اسپین مستقل، انرژی کل برابر مجموع انرژی هر دو اسپین است. بنابراین
+\begin{equation}
+	\label{eq:HB}
+	H_B=-h_x(X_1+X_2),
+	\qquad h_x>0,
+\end{equation}
+که در آن
+\begin{equation}
+	X_1=X\otimes I,
+	\qquad
+	X_2=I\otimes X.
+\end{equation}
+به بیان فیزیکی، $X_1$ و $X_2$ نشان می‌دهند که میدان عرضی به‌ترتیب روی اسپین اول و دوم عمل می‌کند.
+
+در پایه محاسباتی،
+\begin{equation}
+	X=
+	\begin{pmatrix}
+		0&1\\
+		1&0
+	\end{pmatrix},
+\end{equation}
+و ویژه‌حالت‌های آن عبارت‌اند از
+\begin{equation}
+	\lvert+\rangle
+	=
+	\frac{\lvert0\rangle+\lvert1\rangle}{\sqrt{2}},
+	\qquad
+	\lvert-\rangle
+	=
+	\frac{\lvert0\rangle-\lvert1\rangle}{\sqrt{2}},
+\end{equation}
+به‌طوری‌که
+\begin{equation}
+	X\lvert+\rangle=+\lvert+\rangle,
+	\qquad
+	X\lvert-\rangle=-\lvert-\rangle.
+\end{equation}
+
+از آنجا که $X_1$ و $X_2$ روی دو کیوبیت متفاوت عمل می‌کنند،
+\begin{equation}
+	[X_1,X_2]=0,
+\end{equation}
+و بنابراین می‌توان ویژه‌حالت‌های $H_B$ را به‌صورت حاصل‌ضرب تانسوری ویژه‌حالت‌های $X$ ساخت. اگر
+$a,b\in\{+,-\}$ باشند، داریم
+\begin{equation}
+	H_B\bigl(\lvert a\rangle\otimes\lvert b\rangle\bigr)
+	=
+	-h_x(x_a+x_b)
+	\bigl(\lvert a\rangle\otimes\lvert b\rangle\bigr),
+\end{equation}
+که در آن $x_+=+1$ و $x_-=-1$ هستند.
+
+در نتیجه، چهار حالت ویژه و انرژی‌های متناظر عبارت‌اند از
+\begin{equation}
+	\begin{array}{c|c}
+		\text{حالت} & \text{انرژی}\\
+		\hline
+		\lvert++\rangle & -2h_x\\
+		\lvert+-\rangle & 0\\
+		\lvert-+\rangle & 0\\
+		\lvert--\rangle & +2h_x
+	\end{array}
+\end{equation}
+و بنابراین، برای $h_x>0$ حالت پایه یکتا است:
+\begin{equation}
+	\label{eq:initial-ground-state}
+	\lvert\psi_0(0)\rangle
+	=
+	\lvert+\rangle\otimes\lvert+\rangle,
+	\qquad
+	E_0(0)=-2h_x.
+\end{equation}
+
+اگر آن را در پایه محاسباتی بنویسیم،
+\begin{equation}
+	\label{eq:plus-plus}
+	\lvert++\rangle
+	=
+	\frac{1}{2}
+	\left(
+	\lvert00\rangle+
+	\lvert01\rangle+
+	\lvert10\rangle+
+	\lvert11\rangle
+	\right).
+\end{equation}
+این حالت به‌سادگی با اعمال دو گیت هادامارد روی $\lvert00\rangle$ آماده می‌شود:
+\begin{equation}
+	\lvert++\rangle
+	=
+	(H\otimes H)\lvert00\rangle.
+\end{equation}
+
+بنابراین هامیلتونی $H_B$ یک ویژگی بسیار مهم دارد: هم تعریف فیزیکی آن ساده است و هم حالت پایه آن را بدون حل یک مسئله پیچیده می‌دانیم. این همان نقش «نقطه شروع آسان» در محاسبه آدیاباتیک است.
+
+\paragraph{گام ۲ - هامیلتونی مسئله: مدل \lr{Ising}.}
+
+اکنون هامیلتونی‌ای را تعریف می‌کنیم که حالت پایه آن پاسخ مسئله مورد نظر را در خود رمزگذاری کند (پس‌زمینه فیزیکی و قرارداد علامت‌ها در بخش~\ref{sec:ising}):
+\begin{equation}
+	\label{eq:HP}
+	H_P
+	=
+	-JZ_1Z_2-h_z(Z_1+Z_2),
+	\qquad
+	J>0,\quad h_z>0.
+\end{equation}
+
+در اینجا دو نوع برهم‌کنش داریم. جمله
+\begin{equation}
+	-JZ_1Z_2
+\end{equation}
+یک جفت‌شدگی فرومغناطیسی است؛ بنابراین پیکربندی‌هایی که دو اسپین در یک جهت قرار دارند، یعنی $\lvert00\rangle$ و $\lvert11\rangle$، انرژی کمتری دارند. جمله
+\begin{equation}
+	-h_z(Z_1+Z_2)
+\end{equation}
+یک میدان طولی در راستای $z$ است که بین $\lvert00\rangle$ و $\lvert11\rangle$ تمایز ایجاد می‌کند.
+
+در پایه محاسباتی، چون
+\begin{equation}
+	Z\lvert0\rangle=+\lvert0\rangle,
+	\qquad
+	Z\lvert1\rangle=-\lvert1\rangle,
+\end{equation}
+می‌توان انرژی هر چهار پیکربندی را مستقیماً محاسبه کرد:
+\begin{equation}
+	\begin{aligned}
+		E(\lvert00\rangle)
+		&=-J-2h_z,\\
+		E(\lvert11\rangle)
+		&=-J+2h_z,\\
+		E(\lvert01\rangle)
+		&=+J,\\
+		E(\lvert10\rangle)
+		&=+J.
+	\end{aligned}
+\end{equation}
+
+برای ترتیب کامل ترازهای زیر فرض می‌کنیم $0<h_z<J$؛ یکتایی حالت پایه برای هر $J,h_z>0$ برقرار است:
+\begin{equation}
+	E(\lvert00\rangle)
+	<
+	E(\lvert11\rangle)
+	<
+	E(\lvert01\rangle)=E(\lvert10\rangle)
+\end{equation}
+و بنابراین حالت پایه هامیلتونی مسئله یکتا است:
+\begin{equation}
+	\label{eq:problem-ground-state}
+	\lvert\psi_0(1)\rangle=\lvert00\rangle,
+	\qquad
+	E_0(1)=-J-2h_z.
+\end{equation}
+
+این مثال کوچک، ایده نگاشت مسئله بهینه‌سازی به یک هامیلتونی را نیز نشان می‌دهد. در یک مسئله بزرگ‌تر، ضرایب $J_{ij}$ و $h_i$ می‌توانند از تابع هزینه یک مسئله بهینه‌سازی به دست آیند. در این صورت، هر رشته بیتی
+\begin{equation}
+	z=(z_1,\ldots,z_n),
+	\qquad z_i\in\{+1,-1\},
+\end{equation}
+یک پیکربندی ممکن است و انرژی متناظر آن نقش تابع هزینه را بازی می‌کند. یافتن حالت پایه $H_P$ در واقع به معنای یافتن پیکربندی با کمترین هزینه است.
+
+برای دو کیوبیت، این مسئله با بررسی چهار حالت به‌سادگی حل می‌شود؛ اما برای $n$ کیوبیت، فضای پیکربندی دارای
+\begin{equation}
+	2^n
+\end{equation}
+حالت است. هدف روش آدیاباتیک آن نیست که این $2^n$ حالت را یکی‌یکی جست‌وجو کند، بلکه تلاش می‌کند از تکامل کوانتومی سامانه برای رسیدن مستقیم به حالت پایه استفاده کند.
+
+\paragraph{گام ۳ --- ساخت مسیر آدیاباتیک.}
+
+اکنون دو انتهای مسئله را داریم:
+\begin{equation}
+	H_B
+	\longrightarrow
+	H_P.
+\end{equation}
+برای اتصال این دو، یک درون‌یابی خطی استاندارد در نظر می‌گیریم~\cite{Farhi2000}:
+\begin{equation}
+	\label{eq:adiabatic-interpolation-example}
+	H(s)
+	=
+	(1-s)H_B+sH_P,
+	\qquad
+	0\leq s\leq1.
+\end{equation}
+
+پارامتر $s$ زمان فیزیکی نیست؛ بلکه یک پارامتر بدون‌بُعد است که مشخص می‌کند در هر لحظه چه سهمی از هامیلتونی آغازین و چه سهمی از هامیلتونی مسئله در سامانه وجود دارد. در یک زمان‌بندی خطی،
+\begin{equation}
+	s(t)=\frac{t}{T},
+	\qquad
+	0\leq t\leq T,
+\end{equation}
+که در آن $T$ کل زمان اجرای فرآیند است.
+
+بنابراین
+\begin{equation}
+	H(t)
+	=
+	\left(1-\frac{t}{T}\right)H_B
+	+
+	\frac{t}{T}H_P.
+\end{equation}
+
+برای ادامه محاسبه، پارامترهای عددی زیر را انتخاب می‌کنیم:
+\begin{equation}
+	\label{eq:ising-example-parameters}
+	h_x=1,
+	\qquad
+	J=1,
+	\qquad
+	h_z=\frac14.
+\end{equation}
+
+در ابتدا،
+\begin{equation}
+	H(0)=H_B,
+\end{equation}
+و در انتها،
+\begin{equation}
+	H(1)=H_P.
+\end{equation}
+از نتایج دو گام قبل داریم:
+\begin{equation}
+	\begin{aligned}
+		E_0(0)&=-2,
+		&
+		\lvert\psi_0(0)\rangle&=\lvert++\rangle,
+		\\
+		E_0(1)&=-1-\frac12=-\frac32,
+		&
+		\lvert\psi_0(1)\rangle&=\lvert00\rangle.
+	\end{aligned}
+\end{equation}
+
+نکته مهم این است که در حالت کلی
+\begin{equation}
+	[H_B,H_P]\neq0.
+\end{equation}
+بنابراین حالت پایه $H_B$ و حالت پایه $H_P$ یکسان نیستند و نمی‌توان سامانه را صرفاً با یک تغییر ساده پایه از ابتدا تا انتها توصیف کرد. حالت پایه در طول مسیر نیز تغییر می‌کند.
+
+در هر مقدار مشخص از پارامتر $s$، حالت‌های لحظه‌ای از طریق قطری‌سازی هامیلتونی $H(s)$ به‌دست می‌آیند. به‌طور مشخص، با حل مسئله‌ی ویژه
+\begin{equation}
+	H(s)\ket{\psi_k(s)}=E_k(s)\ket{\psi_k(s)},
+\end{equation}
+ویژه‌مقدارها به‌صورت صعودی مرتب می‌شوند،
+\begin{equation}
+	E_0(s)\leq E_1(s)\leq E_2(s)\leq\cdots,
+\end{equation}
+و ویژه‌بردارهای متناظر با دو کمترین ویژه‌مقدار، به‌ترتیب به‌عنوان حالت پایه و حالت برانگیخته‌ی اول لحظه‌ای تعریف می‌شوند:
+\begin{equation}
+	\ket{0(s)}\equiv\ket{\psi_0(s)},\qquad
+	\ket{1(s)}\equiv\ket{\psi_1(s)}.
+\end{equation}
+بنابراین، $\ket{0(s)}$ و $\ket{1(s)}$ در هر مقدار $s$ به‌طور مستقل از روی هامیلتونی همان نقطه محاسبه می‌شوند و لزوماً با حالت پایه‌ی اولیه‌ی $H_B$ یا حالت پایه‌ی نهایی $H_P$ یکسان نیستند.
+
+
+همچنین
+\begin{equation}
+	\label{eq:dHds-example}
+	\frac{\partial H}{\partial s}
+	=
+	H_P-H_B.
+\end{equation}
+
+در اینجا باید یک تمایز مفهومی مهم را روشن کرد. رابطه
+\begin{equation}
+	\lvert\psi(t)\rangle
+	=
+	e^{-iHt}\lvert\psi(0)\rangle
+\end{equation}
+از آنجا که مسیر آدیاباتیک به‌صورت خطی بین $H_B$ و $H_P$ تعریف شده است،
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P,
+\end{equation}
+داریم
+\begin{equation}
+	\frac{dH}{ds}=H_P-H_B.
+\end{equation}
+در نتیجه، جمله‌ی ماتریسی موجود در شرط آدیاباتیک در هر مقدار $s$ از رابطه‌ی
+\begin{equation}
+	M(s)
+	=
+	\left\langle 1(s)\left|
+	\frac{dH}{ds}
+	\right|0(s)\right\rangle
+	=
+	\left\langle 1(s)\left|
+	H_P-H_B
+	\right|0(s)\right\rangle
+\end{equation}
+محاسبه می‌شود. نکته‌ی مهم آن است که در این رابطه، $\ket{0(s)}$ و $\ket{1(s)}$ ویژه‌حالت‌های لحظه‌ای $H(s)$ در همان مقدار $s$ هستند؛ بنابراین برای محاسبه‌ی $M(s)$ ابتدا $H(s)$ در مقدار موردنظر قطری شده و سپس ویژه‌بردارهای متناظر با دو کمترین ویژه‌مقدار در رابطه قرار می‌گیرند.
+
+
+
+عملگر تکامل زمانی یک هامیلتونی ثابت را بیان می‌کند؛ خود این عبارت لزوماً «الگوریتم» نیست. در اجرای دیجیتال، الگوریتم‌هایی مانند \lr{Trotter--Suzuki} یا روش‌های مبتنی بر \lr{LCU} و \lr{QSP} برای تقریب یا پیاده‌سازی این تکامل به کار می‌روند. در محاسبه آدیاباتیک نیز ایده محاسباتی، تغییر آهسته هامیلتونی $H(s)$ و دنبال‌کردن حالت پایه لحظه‌ای است.
+
+\paragraph{گام ۴ --- چرا گاف مهم است؟}
+
+کل استدلال آدیاباتیک حول یک کمیت طیفی مهم می‌چرخد: گاف بین دو تراز انرژی پایین‌تر. آن را به‌صورت
+\begin{equation}
+	\label{eq:instantaneous-gap-example}
+	\Delta(s)
+	=
+	E_1(s)-E_0(s)
+\end{equation}
+تعریف می‌کنیم.
+
+در طول مسیر، $\Delta(s)$ ممکن است تغییر کند. کمیتی که برای زمان اجرای آدیاباتیک اهمیت اساسی دارد، کوچک‌ترین مقدار این گاف است:
+\begin{equation}
+	\label{eq:min-gap-example}
+	\Delta_{\min}
+	=
+	\min_{0\leq s\leq1}\Delta(s).
+\end{equation}
+
+علت اهمیت آن را می‌توان به‌صورت شهودی چنین بیان کرد: هرچه دو تراز کم‌انرژی به یکدیگر نزدیک‌تر شوند، جدا نگه‌داشتن دینامیک سامانه در تراز حالت پایه دشوارتر می‌شود و سامانه به زمان بیشتری برای تکامل نیاز دارد. بنابراین گاف کوچک معمولاً به یک گلوگاه آدیاباتیک تبدیل می‌شود.
+
+برای مثال حاضر، در نقطه شروع داریم
+\begin{equation}
+	\operatorname{spec}(H_B)=\{-2,0,0,2\},
+\end{equation}
+پس
+\begin{equation}
+	\Delta(0)=2.
+\end{equation}
+در انتهای مسیر نیز
+\begin{equation}
+	\operatorname{spec}(H_P)
+	=
+	\left\{
+	-\frac32,-\frac12,1,1
+	\right\},
+\end{equation}
+و در نتیجه
+\begin{equation}
+	\Delta(1)=1.
+\end{equation}
+
+اما از این دو مقدار نمی‌توان نتیجه گرفت که کمینه گاف در ابتدا یا انتهای مسیر قرار دارد. ممکن است گاف در میانه مسیر کوچک‌تر شود. در واقع در این مثال دقیقاً همین اتفاق رخ می‌دهد.
+
+\paragraph{گام ۵ --- ماتریس صریح $H(s)$ و منشأ نزدیک‌شدن ترازها.}
+
+برای مشاهده این موضوع، ابتدا هامیلتونی‌های ابتدا و انتها را در پایه محاسباتی
+\begin{equation}
+	\{
+	\lvert00\rangle,
+	\lvert01\rangle,
+	\lvert10\rangle,
+	\lvert11\rangle
+	\}
+\end{equation}
+می‌نویسیم.
+
+برای $h_x=1$ داریم
+\begin{equation}
+	H_B=
+	\begin{pmatrix}
+		0&-1&-1&0\\
+		-1&0&0&-1\\
+		-1&0&0&-1\\
+		0&-1&-1&0
+	\end{pmatrix},
+\end{equation}
+در حالی که
+\begin{equation}
+	H_P=
+	\begin{pmatrix}
+		-\frac32&0&0&0\\
+		0&1&0&0\\
+		0&0&1&0\\
+		0&0&0&-\frac12
+	\end{pmatrix}.
+\end{equation}
+
+بنابراین
+\begin{equation}
+	\label{eq:Hs-explicit-example}
+	H(s)=
+	\begin{pmatrix}
+		-\frac32s&-(1-s)&-(1-s)&0\\
+		-(1-s)&s&0&-(1-s)\\
+		-(1-s)&0&s&-(1-s)\\
+		0&-(1-s)&-(1-s)&-\frac12s
+	\end{pmatrix}.
+\end{equation}
+
+این ماتریس نکته اصلی مثال را بسیار روشن می‌کند. در $s=0$، جمله‌های خارج از قطر ناشی از میدان عرضی $X$ غالب‌اند و حالت پایه تقریباً همان $\lvert++\rangle$ است. با افزایش $s$، جمله‌های قطری ناشی از هامیلتونی \lr{Ising} تقویت می‌شوند و ترجیح سامانه به سمت پیکربندی $\lvert00\rangle$ تغییر می‌کند.
+
+از آنجا که دو هامیلتونی با یکدیگر جابجایی‌پذیر نیستند، ویژه‌حالت‌ها نیز در طول مسیر تغییر می‌کنند. در نتیجه، ویژه‌مقدارها نیز توابع ساده و خطی از $s$ نیستند.
+
+این نکته اهمیت زیادی دارد:
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P
+\end{equation}
+در $s$ خطی است، اما به‌طور کلی
+\begin{equation}
+	E_k(s)\neq(1-s)E_k(0)+sE_k(1).
+\end{equation}
+ویژه‌مقدارها از قطری‌سازی خود ماتریس $H(s)$ به دست می‌آیند و در نتیجه می‌توانند رفتار غیرخطی داشته باشند. بنابراین محل کمینه گاف نیز لزوماً $s=1/2$ نیست.
+
+\paragraph{گام ۶ --- استفاده از تقارن برای ساده‌تر کردن مسئله.}
+
+برای اینکه منشأ این رفتار را دقیق‌تر ببینیم، می‌توان از تقارن تبادل دو کیوبیت استفاده کرد. دو حالت
+\begin{equation}
+	\lvert S\rangle
+	=
+	\frac{\lvert01\rangle+\lvert10\rangle}{\sqrt2},
+	\qquad
+	\lvert A\rangle
+	=
+	\frac{\lvert01\rangle-\lvert10\rangle}{\sqrt2}
+\end{equation}
+را تعریف می‌کنیم که به‌ترتیب حالت متقارن و پادمتقارن هستند.
+
+هامیلتونی $H(s)$ نسبت به تعویض دو کیوبیت متقارن است، بنابراین فضای حالت به زیر‌فضاهای متقارن و پادمتقارن تجزیه می‌شود. به‌طور خاص،
+\begin{equation}
+	H(s)\lvert A\rangle
+	=
+	s\lvert A\rangle.
+\end{equation}
+بنابراین حالت $\lvert A\rangle$ یک ویژه‌حالت با انرژی
+\begin{equation}
+	E_A(s)=s
+\end{equation}
+است.
+
+سه حالت
+\begin{equation}
+	\{
+	\lvert00\rangle,
+	\lvert S\rangle,
+	\lvert11\rangle
+	\}
+\end{equation}
+یک زیر‌فضای متقارن سه‌بعدی می‌سازند. محدودکردن $H(s)$ به این زیر‌فضا، مسئله $4\times4$ را به ماتریس $3\times3$ زیر کاهش می‌دهد:
+\begin{equation}
+	\label{eq:Hsym-example}
+	H_{\mathrm{sym}}(s)
+	=
+	\begin{pmatrix}
+		-\frac32s&-\sqrt2(1-s)&0\\
+		-\sqrt2(1-s)&s&-\sqrt2(1-s)\\
+		0&-\sqrt2(1-s)&-\frac12s
+	\end{pmatrix}.
+\end{equation}
+
+اکنون ویژه‌مقدارهای مربوط به حالت‌های متقارن از حل
+\begin{equation}
+	\det\!\left[
+	H_{\mathrm{sym}}(s)-E I
+	\right]=0
+\end{equation}
+به دست می‌آیند. این معادله یک چندجمله‌ای درجه سوم در $E$ است. برای هدف حاضر، نوشتن جواب بسته آن با رادیکال‌ها کمک چندانی به فهم فیزیک نمی‌کند؛ مهم این است که برای هر $s$، سه ریشه آن را به‌دست آوریم و سپس آنها را با انرژی حالت پادمتقارن $E_A(s)=s$ مقایسه کنیم.
+
+بنابراین روند محاسبه گاف کاملاً مشخص است:
+\begin{equation}
+	H(s)
+	\longrightarrow
+	\{E_0(s),E_1(s),E_2(s),E_3(s)\}
+	\longrightarrow
+	\Delta(s)=E_1(s)-E_0(s).
+\end{equation}
+
+\paragraph{گام ۷ --- مشاهده کمینه گاف.}
+
+اگر $H(s)$ را برای مقادیر مختلف $s$ قطری کنیم و $\Delta(s)$ را محاسبه کنیم، به یک منحنی غیرخطی برای گاف می‌رسیم. برای پارامترهای
+\begin{equation}
+	h_x=1,\qquad J=1,\qquad h_z=\frac14,
+\end{equation}
+کمینه گاف در حدود
+\begin{equation}
+	\label{eq:sstar-example}
+	s_*\simeq0.6213
+\end{equation}
+رخ می‌دهد. در این نقطه،
+\begin{equation}
+	E_0(s_*)\simeq-1.13550692,
+	\qquad
+	E_1(s_*)\simeq-0.47664619,
+\end{equation}
+و بنابراین
+\begin{equation}
+	\label{eq:gapmin-numerical-example}
+	\Delta_{\min}
+	=
+	E_1(s_*)-E_0(s_*)
+	\simeq0.65886072.
+\end{equation}
+در نتیجه می‌توان با تقریب مناسب نوشت
+\begin{equation}
+	\boxed{
+		s_*\simeq0.62,
+		\qquad
+		\Delta_{\min}\simeq0.66.
+	}
+\end{equation}
+
+این نتیجه را می‌توان به‌صورت فیزیکی نیز تفسیر کرد. در ابتدای مسیر، میدان عرضی تعیین‌کننده ساختار حالت‌های انرژی است. در انتهای مسیر، برهم‌کنش \lr{Ising} و میدان طولی تعیین‌کننده ساختار انرژی هستند. در ناحیه میانی، این دو اثر با یکدیگر رقابت می‌کنند و دو تراز کم‌انرژی به یکدیگر نزدیک می‌شوند. از آنجا که $h_z\neq0$ است، تبهگنی نهایی میان $\lvert00\rangle$ و $\lvert11\rangle$ شکسته شده و در این مثال با یک تقاطع واقعی در پایین‌ترین ترازها مواجه نیستیم؛ بلکه رفتار به شکل یک \emph{تقاطع اجتنابی} یا \lr{avoided crossing} ظاهر می‌شود.
+
+در نتیجه، مقدار $s_*$ را نمی‌توان صرفاً از روی فرم خطی $H(s)$ حدس زد. باید طیف لحظه‌ای را محاسبه کرد و سپس تابع
+\begin{equation}
+	\Delta(s)=E_1(s)-E_0(s)
+\end{equation}
+را روی بازه $0\leq s\leq1$ کمینه کرد.
+
+این مثال کوچک نشان می‌دهد که چرا در یک پروژه آدیاباتیک، صرف نوشتن $H_B$ و $H_P$ کافی نیست. ساختار طیفی مسیر
+\begin{equation}
+	H_B
+	\longrightarrow
+	H(s)
+	\longrightarrow
+	H_P
+\end{equation}
+خود یک مسئله محاسباتی مهم است.
+
+\paragraph{گام ۸ --- ارتباط گاف با زمان اجرا.}
+
+اکنون می‌توانیم نقش گاف را در زمان اجرای آدیاباتیک بررسی کنیم. یک بیان ساده‌شده از شرط آدیاباتیک را می‌توان به‌شکل
+\begin{equation}
+	\label{eq:adiabatic-condition-example}
+	T
+	\gg
+	\frac{
+		\displaystyle
+		\max_s
+		\left|
+		\left\langle
+		1(s)
+		\middle|
+		\frac{dH}{ds}
+		\middle|
+		0(s)
+		\right\rangle
+		\right|
+	}{
+		\Delta_{\min}^2
+	}
+\end{equation}
+نوشت، که در آن $\lvert0(s)\rangle$ و $\lvert1(s)\rangle$ به‌ترتیب حالت پایه و اولین حالت برانگیخته لحظه‌ای هستند.
+
+این رابطه تمام جزئیات قضایای دقیق آدیاباتیک را در خود نشان نمی‌دهد و شکل دقیق شرط به زمان‌بندی، مشتقات هامیلتونی و معیار خطا بستگی دارد؛ اما یک پیام بسیار مهم را آشکار می‌کند:
+\begin{equation}
+	\boxed{
+		T_{\mathrm{heuristic}}\propto\frac{1}{\Delta_{\min}^{\,2}}
+	}
+\end{equation}
+
+
+بنابراین گاف کوچک می‌تواند زمان اجرای بسیار بزرگی ایجاد کند.
+
+برای مثال حاضر،
+\begin{equation}
+	\frac{\partial H}{\partial s}=H_P-H_B
+\end{equation}
+و نرم طیفی آن برابر است با
+\begin{equation}
+	\label{eq:norm-example}
+	\left\|H_P-H_B\right\|_2
+	\simeq2.369613.
+\end{equation}
+
+برای یک برآورد ساده از اندازه‌ی جمله‌ی ماتریسی، می‌توان به‌جای محاسبه‌ی مستقیم $M(s)$ از نرم طیفی عملگر
+\begin{equation}
+	A=H_P-H_B
+\end{equation}
+استفاده کرد. نرم طیفی به‌صورت
+\begin{equation}
+	|A|*2
+	=
+	\max*{|\ket{\psi}|=1}
+	|A\ket{\psi}|
+\end{equation}
+تعریف می‌شود. از آنجا که $A$ در این مسئله یک ماتریس هرمیتی است، این نرم برابر با بزرگ‌ترین قدرمطلق ویژه‌مقدارهای $A$ است:
+\begin{equation}
+	|H_P-H_B|_2
+	=
+	\max_k
+	\left|\lambda_k(H_P-H_B)\right|.
+\end{equation}
+بنابراین، مقدار
+\begin{equation}
+	|H_P-H_B|_2\simeq2.369613
+\end{equation}
+یک ویژگی خودِ عملگر $H_P-H_B$ است و به انتخاب یک حالت کوانتومی خاص وابسته نیست. این کمیت صرفاً به‌عنوان یک کران یا مقیاس محافظه‌کارانه برای اندازه‌ی جمله‌ی ماتریسی
+$\left|\langle1(s)|dH/ds|0(s)\rangle\right|$
+به‌کار می‌رود و با مقدار دقیق این جمله در یک $s$ مشخص یکسان نیست.
+
+
+
+
+اگر برای یک برآورد مرتبه‌ای، این مقدار را به‌عنوان مقیاس صورت کسر و
+\begin{equation}
+	\varepsilon\sim10^{-2}
+\end{equation}
+را به‌عنوان خطای هدف در نظر بگیریم، خواهیم داشت
+\begin{equation}
+	T
+	\gtrsim
+	\frac{2.37}
+	{(0.659)^2(10^{-2})}
+	\approx
+	5.5\times10^2.
+\end{equation}
+از این رو مقدار
+\begin{equation}
+	T\sim500
+\end{equation}
+را می‌توان به‌عنوان یک تخمین مرتبه‌ای برای این مثال کوچک در نظر گرفت، نه به‌عنوان یک کران دقیق و جهان‌شمول.
+
+در اینجا معنای «گاف، گلوگاه است» کاملاً ملموس می‌شود: بیشتر مسیر ممکن است با گاف نسبتاً بزرگ طی شود، اما یک ناحیه باریک در اطراف $s_*\simeq0.62$ وجود دارد که در آن سامانه حساس‌تر است و سرعت تغییر هامیلتونی باید به‌اندازه کافی کم باشد.
+
+\paragraph{گام ۹ --- نقش میدان طولی $h_z$.}
+
+اکنون می‌توانیم اثر انتخاب $h_z=1/4$ را بهتر درک کنیم. اگر
+\begin{equation}
+	h_z\rightarrow0,
+\end{equation}
+در انتهای مسیر انرژی دو حالت
+$\lvert00\rangle$ و $\lvert11\rangle$
+برابر می‌شود:
+\begin{equation}
+	E(\lvert00\rangle)
+	=
+	E(\lvert11\rangle)
+	=
+	-J.
+\end{equation}
+در نتیجه حالت پایه نهایی دیگر یکتا نیست و تبهگنی در انتهای مسیر ظاهر می‌شود. در چنین شرایطی، گاف مرتبط با مسئله می‌تواند در نزدیکی انتهای مسیر بسیار کوچک شود یا در حد ایده‌آل به صفر برسد.
+
+این مشاهده یک نکته مهم را نشان می‌دهد: کوچک‌شدن گاف صرفاً یک ویژگی عددی تصادفی نیست، بلکه می‌تواند مستقیماً از ساختار طیفی هامیلتونی مسئله و نحوه شکسته‌شدن یا باقی‌ماندن تبهگنی‌ها ناشی شود.
+
+در مثال حاضر، $h_z>0$ باعث می‌شود
+\begin{equation}
+	E(\lvert00\rangle)
+	<
+	E(\lvert11\rangle),
+\end{equation}
+و در نتیجه حالت پایه نهایی یکتا باقی بماند. با این حال، در میانه مسیر همچنان یک کمینه گاف در
+$s\simeq0.62$
+وجود دارد.
+
+\paragraph{گام ۱۰ --- اجرا و خوانش.}
+
+اکنون کل فرآیند را می‌توان به‌صورت یک زنجیره مشخص خلاصه کرد:
+
+\begin{enumerate}
+	\item ابتدا دو کیوبیت را آماده می‌کنیم
+	\begin{equation}
+		\lvert00\rangle
+	\end{equation}
+	
+	
+	\item دو گیت هادامارد اعمال می‌کنیم:
+	\begin{equation}
+		\lvert00\rangle
+		\xrightarrow{H\otimes H}
+		\lvert++\rangle
+		=
+		\lvert\psi_0(0)\rangle.
+	\end{equation}
+	
+	\item هامیلتونی را از $H_B$ به $H_P$ تغییر می‌دهیم:
+	\begin{equation}
+		H(s)
+		=
+		(1-s)H_B+sH_P,
+		\qquad
+		s=\frac{t}{T}.
+	\end{equation}
+	
+	\item اگر $T$ به‌اندازه کافی بزرگ باشد، سامانه در تقریب آدیاباتیک در حالت پایه لحظه‌ای باقی می‌ماند:
+	\begin{equation}
+		\lvert\psi(t)\rangle
+		\approx
+		e^{i\phi(t)}
+		\lvert\psi_0(s(t))\rangle.
+	\end{equation}
+	عامل $e^{i\phi(t)}$ یک فاز کلی است و در اندازه‌گیری‌های معمولی مشاهده نمی‌شود.
+	
+	\item در انتهای مسیر،
+	\begin{equation}
+		s=1,
+		\qquad
+		H(1)=H_P,
+	\end{equation}
+	و حالت سامانه باید به حالت پایه $H_P$ نزدیک باشد:
+	\begin{equation}
+		\lvert\psi(T)\rangle
+		\approx
+		\lvert00\rangle.
+	\end{equation}
+	
+	\item در پایان هر دو کیوبیت را در پایه $Z$ اندازه‌گیری می‌کنیم. در اجرای ایده‌آل، نتیجه $\lvert00\rangle$ با احتمال نزدیک به یک به دست می‌آید.
+\end{enumerate}
+
+بنابراین، مسئله «یافتن حالت پایه \lr{Ising}» در این روش به یک مسئله دنبال‌کردن دینامیکی تبدیل می‌شود. ما $H_P$ را مستقیماً برای یافتن حالت پایه آن قطری نمی‌کنیم؛ بلکه سامانه را از یک حالت پایه ساده و شناخته‌شده به‌صورت کنترل‌شده به سمت حالت پایه هامیلتونی مسئله هدایت می‌کنیم.
+
+\paragraph{گام ۱۱ --- تفسیر الگوریتمی و تمایز میان مسئله، هامیلتونی و الگوریتم.}
+
+این مثال برای تفکیک چند مفهوم که گاهی با یکدیگر خلط می‌شوند نیز مفید است. مدل فیزیکی ما یک مدل \lr{Ising} است و هامیلتونی آن $H_P$ است. مسیر آدیاباتیک
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P
+\end{equation}
+یک روش محاسباتی برای تبدیل مسئله یافتن حالت پایه به یک تکامل کوانتومی است. خود
+\begin{equation}
+	e^{-iHt}
+\end{equation}
+عملگر تکامل زمانی است، نه نام یک الگوریتم مستقل.
+
+در یک پیاده‌سازی دیجیتال، برای مثال، می‌توان تکامل ناشی از $H(s_k)$ را در نقاط گسسته مسیر تقریب زد و از روش‌هایی مانند \lr{Trotter--Suzuki} استفاده کرد. در مقابل، در یک پیاده‌سازی آنالوگ یا آدیاباتیک، کنترل مستقیم پارامترهای هامیلتونی می‌تواند مسیر $H(s)$ را در سامانه فیزیکی ایجاد کند.
+
+از این رو زنجیره مفهومی کامل این مثال را می‌توان چنین نوشت:
+\begin{equation}
+	\boxed{
+		\text{مسئله فیزیکی/بهینه‌سازی}
+		\rightarrow
+		H_P
+		\rightarrow
+		H_B
+		\rightarrow
+		H(s)
+		\rightarrow
+		\Delta_{\min}
+		\rightarrow
+		T
+		\rightarrow
+		\text{تکامل کوانتومی}
+		\rightarrow
+		\text{اندازه‌گیری}
+	}
+\end{equation}
+
+این زنجیره یکی از الگوهای اصلی در طراحی یک پروژه شبیه‌سازی یا محاسبه کوانتومی است.
+
+\paragraph{چگونه به سیستم پیچیده‌تر تعمیم می‌یابد.}
+
+برای $n$ اسپین، ساختار کلی مثال بدون تغییر اساسی باقی می‌ماند. یک هامیلتونی آغازین ساده می‌تواند به‌صورت
+\begin{equation}
+	\label{eq:HB-n}
+	H_B=-h_x\sum_{i=1}^{n}X_i
+\end{equation}
+و هامیلتونی مسئله به‌صورت
+\begin{equation}
+	\label{eq:HP-n}
+	H_P
+	=
+	\sum_i h_i Z_i
+	+
+	\sum_{i<j}J_{ij}Z_iZ_j
+\end{equation}
+تعریف شود. سپس
+\begin{equation}
+	\label{eq:H-n-interpolation}
+	H(s)=(1-s)H_B+sH_P.
+\end{equation}
+
+حالت پایه هامیلتونی آغازین همچنان به‌سادگی قابل آماده‌سازی است:
+\begin{equation}
+	\lvert\psi_0(0)\rangle
+	=
+	\lvert+\rangle^{\otimes n},
+\end{equation}
+که با اعمال $n$ گیت هادامارد روی $\lvert0\rangle^{\otimes n}$ ساخته می‌شود.
+
+اما هامیلتونی مسئله در حالت کلی می‌تواند اطلاعات یک مسئله بهینه‌سازی بسیار دشوار را در خود رمزگذاری کند. در این حالت، تعداد پیکربندی‌های کلاسیکی برابر $2^n$ است و بررسی مستقیم همه آنها با افزایش $n$ به‌سرعت پرهزینه می‌شود.
+
+نکته مهم این است که افزایش $n$ به‌تنهایی مقدار مشخصی برای گاف تعیین نمی‌کند. گاف تابعی از کل ساختار هامیلتونی و مسیر انتخاب‌شده است. بنابراین باید زنجیره زیر را در نظر گرفت:
+\begin{equation}
+	n
+	\longrightarrow
+	H_n(s)
+	\longrightarrow
+	\Delta_{\min}(n)
+	\longrightarrow
+	T(n)
+	\longrightarrow
+	\text{پیچیدگی محاسباتی}.
+\end{equation}
+
+تفصیل این مقیاس‌بندی، معنای $n$ و $\alpha$ و $c$، و ارتباط با مثال همین بخش در~\ref{sec:complexity-scaling} آمده است.
+بسته به مسئله، ممکن است گاف به‌صورت چندجمله‌ای کوچک شود،
+\begin{equation}
+	\Delta_{\min}(n)\sim n^{-\alpha},
+\end{equation}
+یا در مسائل دشوارتر به‌صورت نمایی کاهش یابد،
+\begin{equation}
+	\Delta_{\min}(n)\sim e^{-cn}.
+\end{equation}
+در حالت دوم، با توجه به وابستگی تقریباً
+\begin{equation}
+	T_{\mathrm{heuristic}}\propto\frac{1}{\Delta_{\min}^2},
+\end{equation}
+زمان آدیاباتیک می‌تواند خود به‌صورت نمایی رشد کند. از این رو، صرفاً افزایش تعداد کیوبیت‌ها معیار کافی برای ارزیابی دشواری نیست؛ ساختار طیفی مسیر اهمیت تعیین‌کننده دارد.
+
+در نتیجه، برای یک پروژه واقعی شبیه‌سازی آدیاباتیک، نوشتن $H_P$ تنها نقطه آغاز است. باید مسیر $H(s)$، ساختار ویژه‌مقدارها، کمینه گاف، زمان‌بندی $s(t)$، منابع مورد نیاز برای اجرا و در نهایت احتمال موفقیت در اندازه‌گیری نیز بررسی شوند.
+
+مثال دوکیوبیتی حاضر دقیقاً به این دلیل ارزشمند است که تمام این مراحل را می‌توان به‌صورت کامل و عددی مشاهده کرد:
+\begin{equation}
+	\boxed{
+		\begin{array}{c}
+			\text{میدان عرضی ساده}
+			\\[2pt]
+			\downarrow
+			\\[2pt]
+			H_B,\quad \lvert++\rangle
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			H(s)=(1-s)H_B+sH_P
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			E_0(s),E_1(s)
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			\Delta(s)=E_1(s)-E_0(s)
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			\Delta_{\min}\simeq0.66
+			\quad\text{در}\quad
+			s_*\simeq0.62
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			T\sim\mathcal{O}(10^2\!-\!10^3)
+			\\[4pt]
+			\downarrow
+			\\[2pt]
+			\lvert00\rangle
+			\quad\text{در خوانش نهایی}
+		\end{array}
+	}
+\end{equation}
+
+بنابراین این مثال کوچک، یک نمونه فشرده از منطق کامل محاسبه آدیاباتیک است: یک حالت پایه آسان آماده می‌شود، هامیلتونی در طول یک مسیر کنترل‌شده تغییر می‌کند، گاف لحظه‌ای تعیین می‌کند که کدام ناحیه از مسیر گلوگاه است، و زمان اجرا باید به‌اندازه‌ای بزرگ انتخاب شود که سامانه بتواند این ناحیه حساس را به‌صورت آدیاباتیک پشت سر بگذارد.
+
+\section{پیاده‌سازی با \lr{Qiskit}: همان مثال، گام‌به‌گام}
+\label{sec:adi-ising-qiskit}
+
+اکنون همان زنجیرهٔ بخش~\ref{sec:adi-ising-example} را روی رایانهٔ کلاسیک با
+\lr{Qiskit}
+پیاده می‌کنیم: نوشتن $H_B$ و $H_P$، ساخت $H(s)$، پیمایش گاف و یافتن $\Delta_{\min}$، برآورد $T$، و سرانجام مدار دیجیتالِ آدیاباتیک با گیت‌های $R_x$، $R_{zz}$، $R_z$.
+اسکریپت یکپارچه در
+\lr{snippets/adi\_ising\_qiskit.py}
+است.
+قطعه‌های زیر همان مسیر را مرحله‌به‌مرحله باز می‌کنند. پارامترها همان~\eqref{eq:ising-example-parameters}اند:
+$h_x=1$، $J=1$، $h_z=1/4$.
+
+\paragraph{گام الف --- هامیلتونی‌ها در زبان پائولی.}
+در \lr{Qiskit} برچسب رشتهٔ پائولی \emph{little-endian} است: حرف راست روی کیوبیت $0$ عمل می‌کند. با قرارداد «کیوبیت $0=$ اسپین اول» داریم
+\begin{equation}
+	H_B=-h_x(X_0+X_1),
+	\qquad
+	H_P=-J\,Z_0Z_1-h_z(Z_0+Z_1),
+\end{equation}
+و مسیر
+\begin{equation}
+	H(s)=(1-s)H_B+sH_P.
+\end{equation}
+
+\code{python}{snippets/adi_ising_01_hamiltonians.py}{code:adi-ising-H}
+
+\paragraph{گام ب --- پیمایش $s$ و کمینهٔ گاف.}
+برای هر $s$ ماتریس $H(s)$ را قطری می‌کنیم و
+$\Delta(s)=E_1(s)-E_0(s)$
+را می‌سازیم. خروجی عددی با متن بخش قبل و اجرای واقعی \lr{Qiskit} یکی است:
+\begin{equation}
+	s_*\simeq0.6215,
+	\qquad
+	\Delta_{\min}\simeq0.65886.
+\end{equation}
+شکل~\ref{fig:adi-ising-qiskit-gap} منحنی ترازها و $\Delta(s)$ را از همان اجرا نشان می‌دهد.
+
+\code{python}{snippets/adi_ising_02_gap.py}{code:adi-ising-gap}
+
+\begin{figure}[htbp]
+	\centering
+	\includegraphics[width=0.95\textwidth]{figures/adi_ising_qiskit_gap.pdf}
+	\caption{طیف لحظه‌ای و گاف مسیر همین مثال، بازتولیدشده با اسکریپت \lr{Qiskit}
+		. کمینهٔ گاف $\Delta_{\min}\simeq0.65886$ نزدیک $s_*\simeq0.62$ است.}
+	\label{fig:adi-ising-qiskit-gap}
+\end{figure}
+
+\paragraph{گام ج - برآورد زمان مؤثر $T$.}
+با نرم طیفی
+$\lVert H_P-H_B\rVert_2\simeq2.3696$
+و خطای هدف $\varepsilon\sim10^{-2}$، تخمین مرتبه‌ای بخش قبل تکرار می‌شود:
+\begin{equation}
+	\label{eq:T-heur-qiskit}
+	T_{\mathrm{heur}}
+	\gtrsim
+	\frac{\lVert H_P-H_B\rVert_2}{\Delta_{\min}^{2}\,\varepsilon}
+	\simeq
+	5.5\times10^{2}.
+\end{equation}
+این یک کران اکتشافی محافظه‌کارانه است، نه زمانِ کمینهٔ عملی. حل عددی معادلهٔ شرودینگر روی همین مسیر خطی نشان می‌دهد برای این سامانهٔ دوکیوبیتی، احتمال موفقیت $P(\lvert00\rangle)$ از حدود $T\simeq20$ به نزدیک یک می‌رسد و در $T=40$ عملاً اشباع می‌شود (جدول~\ref{tab:adi-T-success}). در مدار دیجیتال زیر از $T=40$ به‌عنوان زمان نمایشی استفاده می‌کنیم؛ اگر بخواهید با~\eqref{eq:T-heur-qiskit} هم‌تراز باشید، همان $T\sim500$ را با گام‌های تروترِ متناسب بگیرید.
+
+\code{python}{snippets/adi_ising_03_runtime.py}{code:adi-ising-T}
+
+\begin{table}[htbp]
+	\centering
+	\caption{احتمال ایده‌آلِ خوانش $\lvert00\rangle$ پس از تحول دقیقِ قطعه‌ای روی $H(s_k)$ (مرجع کلاسیک برای سنجش تروتر).}
+	\label{tab:adi-T-success}
+	\begin{tabular}{cccccc}
+		\toprule
+		$T$ & $5$ & $20$ & $40$ & $100$ & $500$ \\
+		\midrule
+		$P(\lvert00\rangle)$ & $0.74$ & $0.99$ & $\approx1$ & $\approx1$ & $\approx1$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\paragraph{گام د --- از $H(s)$ تا گیت‌ها (یک لایهٔ تروتر).}
+در هر برش زمانیِ کوچک $\Delta t=T/N$ با $s$ ثابت،
+\begin{equation}
+	e^{-iH(s)\Delta t}
+	\approx
+	e^{i a X_0}\,
+	e^{i a X_1}\,
+	e^{i b Z_0Z_1}\,
+	e^{i c Z_0}\,
+	e^{i c Z_1},
+\end{equation}
+که
+$a=(1-s)h_x\Delta t$،
+$b=sJ\Delta t$،
+$c=sh_z\Delta t$.
+با قرارداد گیت‌های \lr{Qiskit}
+($R_x(\theta)=e^{-i\theta X/2}$ و مشابه برای $R_z$ و $R_{zz}$) این یعنی
+\begin{equation}
+	R_x(-2a),\;
+	R_{zz}(-2b),\;
+	R_z(-2c).
+\end{equation}
+شکل~\ref{fig:adi-ising-trotter} اسکلت مدار را نشان می‌دهد: هادامارد برای $\lvert++\rangle$، سپس $N$ لایه با $s_k=(k+\tfrac12)/N$، و اندازه‌گیری در پایهٔ $Z$.
+
+\code{python}{snippets/adi_ising_04_trotter_slice.py}{code:adi-ising-trotter}
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{\ifdim\width>\textwidth\textwidth\else\width\fi}{!}{%
+			\input{figures/fig_adi_ising_trotter.tex}%
+		}
+	\end{latin}
+	\caption{مدار آدیاباتیک دیجیتال برای مثال دوکیوبیتی: آماده‌سازی، لایه‌های تروترِ $H(s)$، خوانش $Z$.}
+	\label{fig:adi-ising-trotter}
+\end{figure}
+
+\paragraph{گام ه - مدار کامل و خوانش.}
+با $T=40$ و $N=200$ لایه، شبیه‌ساز حالت‌بردار تقریباً تمام وزن احتمال را روی $\lvert00\rangle$ می‌گذارد
+($P(\lvert00\rangle)\simeq0.9999$ در اجرای
+\lr{qcomputing}؛
+در \lr{AerSimulator} با $4096$ شات همهٔ شمارش‌ها $\mathtt{00}$ بودند).
+همین اجرا شکل~\ref{fig:adi-ising-qiskit-gap} را نیز می‌نویسد.
+
+\code{python}{snippets/adi_ising_05_run.py}{code:adi-ising-run}
+
+\paragraph{جمع‌بندی عملی.}
+\begin{enumerate}
+	\item $H_B$ و $H_P$ را به‌صورت \lr{SparsePauliOp} بنویسید؛ $H(s)$ همان ترکیب خطی است.
+	\item با قطری‌سازی روی شبکهٔ $s$، $\Delta_{\min}$ و $s_*$ را استخراج کنید (اینجا $\simeq0.66$ در $s\simeq0.62$).
+	\item $T_{\mathrm{heur}}$ را از~\eqref{eq:T-heur-qiskit} برآورد کنید؛ برای این مثال کوچک $T\sim40$ هم در تحول دقیق و تروتر کافی است.
+	\item مسیر را با تروترِ مرتبهٔ اول به گیت‌های $R_x$/$R_{zz}$/$R_z$ بشکنید و در پایان در پایهٔ $Z$ بخوانید.
+\end{enumerate}
+برای بازتولید اعداد بدون نصب \lr{Qiskit} می‌توانید
+\lr{figures/adi\_ising\_qiskit\_verify.py}
+را اجرا کنید. بخش بعد گاف را از زاویهٔ پژوهشی باز می‌کند؛ ورودی عددی‌اش همین مسیر است.
+
+% BEGIN GAP RESEARCH EXPANSION
+\begingroup
+\emergencystretch=2em
+
+
+%========================
+%========================
+\section{گاف انرژی: تعریف دقیق و نقش تقارن}
+\label{sec:gap-research}
+
+گاف انرژی یکی از کمیت‌های اصلی در تحلیل شبیه‌سازی ادیاباتیک است، اما
+تفسیر آن باید متناسب با ساختار طیف و فضای حالت موردنظر انجام شود.
+فرض کنید هامیلتونی وابسته به پارامتر بی‌بُعد $s\in[0,1]$ به صورت
+$H(s)$ تعریف شده باشد و مقادیر ویژه و بردارهای ویژه‌ی آن از رابطه‌ی
+\begin{equation}
+	H(s)|j(s)\rangle = E_j(s)|j(s)\rangle,
+	\qquad
+	E_0(s)\leq E_1(s)\leq E_2(s)\leq\cdots
+\end{equation}
+به دست آیند. در شبیه‌سازی ادیاباتیک، پارامتر $s$ معمولاً تابعی از زمان
+است، یعنی $s=s(t)$، و سامانه از هامیلتونی اولیه $H(0)$ به هامیلتونی
+نهایی $H(1)$ منتقل می‌شود.
+
+در ساده‌ترین حالت، که حالت پایه در تمام مسیر یکتا باشد، گاف انرژی
+به صورت فاصله‌ی میان حالت پایه و نخستین حالت برانگیخته تعریف می‌شود:
+\begin{equation}
+	\Delta(s)=E_1(s)-E_0(s).
+	\label{eq:ground-state-gap}
+\end{equation}
+با این حال، این تعریف در همه‌ی مسائل کافی نیست. ممکن است چند تراز
+پایین انرژی به صورت یک زیر‌فضای هدف در نظر گرفته شوند، یا تقارن
+هامیلتونی باعث شود برخی ترازها از نظر دینامیکی برای حالت اولیه
+قابل‌دسترسی نباشند. از این رو، تحلیل گاف در این بخش در سه مرحله انجام
+می‌شود: نخست، شناسایی ترازهای مرتبط در یک مقدار ثابت از $s$؛ دوم،
+یافتن کمینه‌ی گاف در سراسر مسیر $0\leq s\leq1$؛ و سوم، بررسی رفتار
+این کمینه با افزایش اندازه‌ی سامانه. در نهایت، گاف باید در کنار
+عناصر ماتریسی گذار و سرعت تغییر $s$ تفسیر شود، زیرا کوچک‌ترین فاصله‌ی
+انرژی به تنهایی تعیین‌کننده‌ی احتمال گذار غیرادیاباتیک نیست.
+
+برای فرمول‌های این بخش $\hbar$ به‌صورت صریح نوشته می‌شود. در
+محاسبات عددی، انرژی‌ها بر حسب واحد $J$ و زمان‌ها بر حسب
+$\hbar/J$ بیان شده‌اند.
+
+\subsection{گاف کل، گاف بخش تقارنی و گاف زیر‌فضای هدف}
+\label{subsec:gap-types}
+
+اگر حالت پایه یکتا باشد، کمیت طبیعی برای سنجش جدایی حالت پایه از
+نخستین حالت برانگیخته همان گاف رابطه‌ی
+\eqref{eq:ground-state-gap} است. در این حالت، کوچک شدن
+$\Delta(s)$ به معنای نزدیک شدن دو تراز پایین انرژی است و معمولاً
+شرایط ادیاباتیک را دشوارتر می‌کند. با این حال، در بسیاری از مسائل
+ممکن است چند حالت پایین انرژی به طور همزمان بخشی از فضای هدف را
+تشکیل دهند. در این حالت، مهم‌ترین کمیت الزاماً شکافت میان ترازهای
+داخل این زیر‌فضا نیست، بلکه فاصله‌ی این زیر‌فضا از نخستین تراز
+خارج از آن است.
+
+فرض کنید $q$ تراز پایین انرژی، یعنی
+\[
+|0(s)\rangle,\ldots,|q-1(s)\rangle,
+\]
+زیر‌فضای هدف را تشکیل دهند. پروژکتور روی این زیر‌فضا به صورت
+\begin{equation}
+	P(s)
+	=
+	\sum_{j=0}^{q-1}
+	|j(s)\rangle\langle j(s)|
+	\label{eq:target-projector}
+\end{equation}
+تعریف می‌شود. نخستین تراز خارج از این زیر‌فضا، تراز شماره‌ی $q$ است؛
+بنابراین گاف میان آخرین تراز داخل زیر‌فضا و نخستین تراز خارج از آن
+به صورت
+\begin{equation}
+	g_{\mathrm{out}}(s)
+	=
+	E_q(s)-E_{q-1}(s)
+	\label{eq:subspace-gap}
+\end{equation}
+تعریف می‌شود.
+
+این تعریف یک تفاوت مفهومی مهم با گاف معمول حالت پایه دارد. برای
+مثال، اگر $q=2$ باشد، فضای هدف توسط دو حالت
+$|0(s)\rangle$ و $|1(s)\rangle$ تشکیل می‌شود و
+\begin{equation}
+	P(s)
+	=
+	|0(s)\rangle\langle0(s)|
+	+
+	|1(s)\rangle\langle1(s)|.
+\end{equation}
+در این حالت ممکن است فاصله‌ی
+\[
+E_1(s)-E_0(s)
+\]
+بسیار کوچک باشد، اما اگر فاصله‌ی
+\[
+E_2(s)-E_1(s)
+\]
+بزرگ باقی بماند، سامانه همچنان می‌تواند در زیر‌فضای دوبعدی هدف
+باقی بماند. بنابراین کوچک بودن شکافت درون یک خوشه از ترازها، به
+خودی خود به معنای خروج سامانه از آن زیر‌فضا نیست.
+
+در چنین حالتی، معیار طبیعی موفقیت در پایان فرآیند، احتمال قرار گرفتن
+حالت نهایی در زیر‌فضای هدف است:
+\begin{equation}
+	P_{\mathrm{succ}}
+	=
+	\langle\Psi(T)|P(1)|\Psi(T)\rangle.
+	\label{eq:success-probability}
+\end{equation}
+اگر $q=1$ باشد، رابطه‌ی فوق به احتمال حضور در حالت پایه‌ی نهایی
+کاهش می‌یابد:
+\begin{equation}
+	P_{\mathrm{succ}}
+	=
+	|\langle0(1)|\Psi(T)\rangle|^2.
+\end{equation}
+اما برای $q>1$، حالت نهایی لازم نیست با یک بردار ویژه‌ی منفرد
+منطبق باشد و کافی است در زیر‌فضای هدف قرار داشته باشد.
+
+\subsubsection{نقش تقارن در تعریف گاف مرتبط}
+
+یکی دیگر از مواردی که می‌تواند تفسیر گاف را تغییر دهد، وجود یک
+تقارن پایسته در طول مسیر است. فرض کنید $S$ اپراتور تقارن هامیلتونی
+باشد و در تمام مسیر داشته باشیم
+\begin{equation}
+	[H(s),S]=0.
+	\label{eq:symmetry-commutation}
+\end{equation}
+اگر $S$ مستقل از $s$ باشد، با مشتق‌گیری از رابطه‌ی
+\eqref{eq:symmetry-commutation} نسبت به $s$ نیز نتیجه می‌شود که
+\begin{equation}
+	[\partial_s H(s),S]=0.
+	\label{eq:derivative-symmetry}
+\end{equation}
+
+در نتیجه، فضای هیلبرت را می‌توان به بخش‌های تقارنی مستقل
+(\lr{symmetry sectors}) تجزیه کرد. به طور نمادین می‌توان نوشت
+\begin{equation}
+	\mathcal{H}
+	=
+	\bigoplus_{\alpha}\mathcal{H}_{\alpha},
+\end{equation}
+که در آن هر $\mathcal{H}_{\alpha}$ با یک مقدار یا نمایش مشخص از
+تقارن $S$ متناظر است. اگر حالت اولیه در یکی از این بخش‌ها قرار
+داشته باشد و تقارن در تمام مسیر دقیقاً حفظ شود، دینامیک ایده‌آل
+سامانه در همان بخش باقی می‌ماند.
+
+%%==============
+%===============
+اگر دو حالت $|a\rangle$ و $|b\rangle$ به دو \lr{sector} متفاوت از تقارن
+متعلق باشند،
+\[S|a\rangle=s_{\alpha}|a\rangle,
+\qquad
+S|b\rangle=s_{\beta}|b\rangle,
+\qquad
+s_{\alpha}\neq s_{\beta},\]
+از شرط $[H(s),S]=0$ می‌توان یک قانون انتخاب برای عناصر ماتریسی
+هامیلتونی به دست آورد. از رابطه‌ی
+\[H(s)S=S H(s)\]
+و ضرب از چپ در $\langle b|$ و از راست در $|a\rangle$ داریم
+\[s_{\alpha}\langle b|H(s)|a\rangle
+=
+s_{\beta}\langle b|H(s)|a\rangle.\]
+بنابراین
+\begin{equation}
+	(s_{\alpha}-s_{\beta})
+	\langle b|H(s)|a\rangle=0,
+\end{equation}
+و در نتیجه، برای $s_{\alpha}\neq s_{\beta}$،
+\begin{equation}
+	\langle b|H(s)|a\rangle=0.
+	\label{eq:symmetry-selection-rule-H}
+\end{equation}
+
+
+%===============
+%===============
+
+این موضوع باعث می‌شود کوچک‌ترین گاف در کل طیف همیشه گاف مرتبط با
+دینامیک سامانه نباشد. برای مثال، ممکن است دو تراز متعلق به دو بخش
+تقارنی متفاوت باشند و در یک نقطه‌ی $s=s^\ast$ به یکدیگر برسند:
+\begin{equation}
+	E_a(s^\ast)=E_b(s^\ast),
+	\qquad
+	|a\rangle\in\mathcal{H}_{\alpha},
+	\quad
+	|b\rangle\in\mathcal{H}_{\beta},
+	\quad
+	\alpha\neq\beta.
+\end{equation}
+در این حالت، گاف کل طیف می‌تواند در $s^\ast$ صفر شود، در حالی که
+انتقال میان دو حالت به دلیل تقارن مجاز نیست. به بیان دیگر، صفر شدن
+گاف کل الزاماً به معنای وقوع یک گذار غیرادیاباتیک میان دو حالت
+نیست.
+
+از این رو، اگر حالت اولیه در یک sector مشخص قرار داشته باشد، علاوه
+بر گاف کل، باید گاف در بخش تقارنی قابل‌دسترسی نیز بررسی شود. اگر
+$E_{0,\alpha}(s)$ و $E_{1,\alpha}(s)$ به ترتیب پایین‌ترین و
+نزدیک‌ترین تراز بالاتر در sector $\alpha$ باشند، می‌توان نوشت
+\begin{equation}
+	\Delta_{\alpha}(s)
+	=
+	E_{1,\alpha}(s)-E_{0,\alpha}(s).
+	\label{eq:sector-gap}
+\end{equation}
+در نتیجه، در یک سیستم با تقارن دقیق، مقایسه‌ی
+$g_{\min}^{\mathrm{global}}$ با
+$g_{\min}^{\mathrm{sector}}$ می‌تواند نشان دهد که آیا کوچک‌ترین
+گاف مشاهده‌شده در کل طیف واقعاً برای دینامیک موردنظر قابل‌دسترسی
+است یا ناشی از برخورد ترازهای بخش‌های مختلف تقارنی است.
+
+برای دینامیک ادیاباتیک، عنصر ماتریسی مرتبط با تحریک ناشی از تغییر
+پارامتر $s$، یعنی
+$\langle b|\partial_s H|a\rangle$، اهمیت مستقیم‌تری دارد. از آنجا که
+$S$ مستقل از $s$ است و
+\[[H(s),S]=0,\]
+داریم
+\[[\partial_s H(s),S]=0.\]
+بنابراین همان قانون انتخاب برای مشتق هامیلتونی نیز برقرار است:
+\begin{equation}
+	\langle b|\partial_s H(s)|a\rangle=0,
+	\qquad
+	s_{\alpha}\neq s_{\beta}.
+	\label{eq:symmetry-selection-rule-dH}
+\end{equation}
+با استفاده از رابطه‌ی
+\[\langle b|\partial_s a\rangle
+=
+\frac{
+	\langle b|\partial_sH|a\rangle
+}{
+	E_a-E_b},\]
+نتیجه می‌شود که
+\begin{equation}
+	\langle b|\partial_s a\rangle=0.
+	\label{eq:symmetry-no-transition}
+\end{equation}
+از این رو، در صورت حفظ دقیق تقارن، تغییر ادیاباتیک هامیلتونی نمی‌تواند
+به طور مستقیم حالتی را از یک \lr{sector} به \lr{sector} دیگر منتقل کند.
+
+
+این حفاظت، البته، به حفظ تقارن وابسته است. اگر نویز یا یک اغتشاش
+اضافی $H_{\mathrm{noise}}$ تقارن را بشکند، به طوری که
+\begin{equation}
+	[H_{\mathrm{noise}},S]\neq0,
+\end{equation}
+آنگاه \lr{sector} های مختلف دیگر کاملاً مستقل نیستند و انتقال میان آنها می‌تواند مجاز شود. بنابراین در تحلیل‌های واقع‌گرایانه، گاف بخش
+تقارنی و گاف کل باید در کنار اثرات شکست تقارن ناشی از نویز تفسیر
+شوند.
+
+در نتیجه، ممکن است دو تراز متعلق به \lr{sector} های متفاوت در نقطه‌ای
+$s=s^\ast$ یکدیگر را قطع کنند:
+\begin{equation}
+	E_a(s^\ast)=E_b(s^\ast),
+	\qquad
+	a\in\mathcal H_{\alpha},
+	\quad
+	b\in\mathcal H_{\beta},
+	\quad
+	\alpha\neq\beta.
+\end{equation}
+در این حالت، گاف کل طیف می‌تواند صفر شود، اما به دلیل رابطه‌ی
+\eqref{eq:symmetry-selection-rule-dH} عنصر ماتریسی مسئول این گذار
+صفر است. بنابراین این \lr{crossing} لزوماً یک کانال گذار قابل‌دسترسی
+برای سامانه ایجاد نمی‌کند.
+
+\subsubsection{تفاوت گاف‌های فیزیکی مختلف}
+
+اصطلاح «گاف انرژی» در زمینه‌های مختلف فیزیک به کمیت‌های متفاوتی
+اشاره می‌کند و این کمیت‌ها الزاماً با یکدیگر برابر نیستند. برای
+مثال، در سامانه‌ای با تعداد ذرات $N$، گاف مرتبط با تغییر تعداد ذرات
+ممکن است به صورت
+\begin{equation}
+	\Delta_{\mathrm{charge}}
+	=
+	E_0(N+1)+E_0(N-1)-2E_0(N)
+	\label{eq:charge-gap}
+\end{equation}
+تعریف شود. این کمیت با گاف میان ترازهای یک هامیلتونی بس‌ذره‌ای در
+تعداد ذرات ثابت یکسان نیست. همچنین گاف تک‌ذره‌ای و گاف اپتیکی
+می‌توانند به دلیل تفاوت در فرآیندهای فیزیکی و قواعد انتخاب، مقادیر
+متفاوتی داشته باشند.
+
+در این فصل، منظور از گاف، مگر آنکه خلاف آن تصریح شود، گاف کم‌انرژی
+هامیلتونی بس‌ذره‌ای در مسیر مشخص $H(s)$ است. بنابراین نخستین
+قله یا گذار قابل‌اندازه‌گیری در یک مشاهده‌پذیر تجربی الزاماً با
+کوچک‌ترین گاف طیفی یکسان نیست؛ قواعد انتخاب و عناصر ماتریسی
+مشاهده‌پذیر می‌توانند برخی گذارها را سرکوب یا برخی دیگر را تقویت
+کنند.
+
+\subsection{چرا کوچک‌ترین فاصله به‌تنهایی کافی نیست؟}
+\label{subsec:gap-not-sufficient}
+
+اگرچه کوچک‌ترین گاف یکی از مهم‌ترین کمیت‌های مورد استفاده در
+تحلیل ادیاباتیک است، اما به تنهایی مشخص نمی‌کند که کدام حالت
+بر‌انگیخته بیشترین احتمال گذار را دارد. برای مشاهده‌ی این موضوع،
+معادله‌ی مقدار ویژه‌ی حالت پایه را در نظر می‌گیریم:
+\begin{equation}
+	H(s)|0(s)\rangle
+	=
+	E_0(s)|0(s)\rangle.
+	\label{eq:ground-state-eigenvalue}
+\end{equation}
+با مشتق‌گیری نسبت به $s$ داریم
+\begin{equation}
+	\partial_s H\,|0\rangle
+	+
+	H\,|\partial_s0\rangle
+	=
+	(\partial_sE_0)|0\rangle
+	+
+	E_0|\partial_s0\rangle.
+\end{equation}
+اکنون دو طرف را از چپ در $\langle m(s)|$ ضرب می‌کنیم. با استفاده
+از رابطه‌ی
+\[
+\langle m|H=E_m\langle m|
+\]
+و متعامد بودن حالت‌های ویژه برای $m\neq0$،
+\[
+\langle m|0\rangle=0,
+\]
+به دست می‌آوریم
+\begin{equation}
+	\langle m|\partial_sH|0\rangle
+	+
+	E_m\langle m|\partial_s0\rangle
+	=
+	E_0\langle m|\partial_s0\rangle.
+\end{equation}
+در نتیجه،
+\begin{equation}
+	\langle m|\partial_s0\rangle
+	=
+	-\frac{\langle m|\partial_sH|0\rangle}
+	{E_m-E_0}
+	=
+	\frac{\langle m|\partial_sH|0\rangle}
+	{E_0-E_m},
+	\qquad m>0.
+	\label{eq:gap-eigenvector-derivative}
+\end{equation}
+
+این رابطه نشان می‌دهد که حساسیت حالت پایه به تغییر پارامتر $s$
+صرفاً به فاصله‌ی انرژی وابسته نیست. صورت کسر،
+\[
+\langle m|\partial_sH|0\rangle,
+\]
+نشان‌دهنده‌ی شدت کوپل شدن حالت پایه با حالت $m$ در اثر تغییر
+هامیلتونی است، در حالی که مخرج با فاصله‌ی انرژی میان دو حالت تعیین
+می‌شود.
+
+برای جدا کردن این دو اثر، تعریف می‌کنیم
+\begin{equation}
+	\Delta_{m0}(s)
+	=
+	E_m(s)-E_0(s),
+	\qquad
+	M_{m0}(s)
+	=
+	\left|
+	\langle m(s)|\partial_sH(s)|0(s)\rangle
+	\right|.
+	\label{eq:gap-and-matrix-element}
+\end{equation}
+بنابراین رابطه‌ی \eqref{eq:gap-eigenvector-derivative} از نظر
+اندازه به صورت
+\begin{equation}
+	\left|
+	\langle m|\partial_s0\rangle
+	\right|
+	=
+	\frac{M_{m0}}{\Delta_{m0}}
+	\label{eq:eigenvector-sensitivity}
+\end{equation}
+درمی‌آید.
+
+اکنون باید توجه داشت که $s$ تابع زمان است. بنابراین
+\begin{equation}
+	\frac{d}{dt}|0(s(t))\rangle
+	=
+	\dot{s}(t)\,\partial_s|0(s(t))\rangle.
+	\label{eq:time-dependent-ground-state}
+\end{equation}
+در نتیجه، هرچه سرعت تغییر $s$ بیشتر باشد، تغییر لحظه‌ای بردار حالت
+نیز بیشتر خواهد بود. ترکیب سرعت تغییر پارامتر، عنصر ماتریسی گذار و
+فاصله‌ی انرژی، شاخص بی‌بُعد محلی زیر را به دست می‌دهد:
+\begin{equation}
+	a_m(t)
+	=
+	\frac{
+		\hbar|\dot{s}(t)|\,M_{m0}(s(t))
+	}{
+		\Delta_{m0}(s(t))^2
+	}.
+	\label{eq:gap-local-indicator}
+\end{equation}
+کوچک بودن $a_m(t)$ نشان‌دهنده‌ی قرار داشتن فرآیند در ناحیه‌ای است
+که در آن انتظار می‌رود کوپل دینامیکی میان حالت پایه و حالت $m$
+ضعیف باشد. با این حال، $a_m$ یک شاخص محلی است و کوچک بودن آن به
+تنهایی جایگزین یک قضیه‌ی دقیق ادیاباتیک یا حل مستقیم معادله‌ی
+شرودینگر نمی‌شود.
+
+رابطه‌ی \eqref{eq:gap-local-indicator} همچنین روشن می‌کند که چرا
+نزدیک‌ترین تراز انرژی الزاماً مهم‌ترین کانال گذار نیست. اگر برای
+یک حالت نزدیک داشته باشیم
+\begin{equation}
+	\Delta_{m0}\ll\Delta_{n0},
+	\qquad
+	M_{m0}=0,
+\end{equation}
+آن حالت از این کانال مستقیماً تحریک نمی‌شود و سهم متناظر در
+شاخص $a_m$ صفر است. در مقابل، یک حالت دورتر ممکن است دارای عنصر
+ماتریسی بزرگی باشد و در نتیجه شاخص بزرگ‌تری داشته باشد:
+\begin{equation}
+	\frac{M_{n0}}{\Delta_{n0}^2}
+	>
+	\frac{M_{m0}}{\Delta_{m0}^2}.
+\end{equation}
+بنابراین، تحلیل دقیق مسیر ادیاباتیک باید دست‌کم سه کمیت را در کنار
+یکدیگر بررسی کند: فاصله‌ی انرژی $\Delta_{m0}$، عنصر ماتریسی
+$M_{m0}$، و سرعت تغییر $|\dot{s}|$.
+
+در نتیجه، کمینه‌ی گاف انرژی همچنان یک شاخص بنیادی برای تشخیص نقاط
+حساس مسیر است، اما برای تفسیر دینامیک باید مشخص شود که این گاف
+میان کدام ترازهاست، آیا ترازهای موردنظر در یک بخش تقارنی یکسان
+قرار دارند، و عنصر ماتریسی اتصال آنها به حالت اولیه چقدر است.
+این تفکیک میان «نزدیکی طیفی» و «قابل‌دسترسی بودن دینامیکی» مبنای
+تحلیل زمان‌بندی ادیاباتیک در ادامه‌ی این فصل خواهد بود.
+
+
+
+%=========================
+%=========================
+%
+
+\section{از گاف تا زمان: شرط محلی، کران و آزمون دینامیکی}
+\label{sec:gap-runtime}
+
+گاف انرژی به‌تنهایی یک کمیت طیفی است، در حالی که در شبیه‌سازی
+ادیاباتیک پرسش اصلی این است که سامانه با چه سرعتی می‌تواند در طول
+مسیر $H(s)$ حرکت کند، بدون آنکه از فضای هدف خارج شود. بنابراین برای
+تبدیل اطلاعات گاف به یک زمان اجرا، باید علاوه بر فاصله انرژی، نرخ
+تغییر هامیلتونی و کوپلینگ میان حالت‌های لحظه‌ای را نیز در نظر گرفت.
+اگر
+
+$$
+H(s)|j(s)\rangle=E_j(s)|j(s)\rangle,
+\qquad
+s=s(t),
+\qquad
+s(0)=0,\quad s(T)=1,
+$$
+
+باشد، آنگاه $T$ زمان کل اجرای فرایند است. در حالت ایده‌آل ادیاباتیک،
+هرچه تغییر هامیلتونی آهسته‌تر باشد، احتمال باقی‌ماندن در فضای هدف
+بیشتر خواهد بود. با این حال، «زمان لازم» را می‌توان به چند معنای
+متفاوت تعریف کرد و این تعاریف الزاماً به یک مقدار یکسان منتهی
+نمی‌شوند.
+
+\subsection{سه معنای متفاوت برای زمان لازم}
+
+نخستین مفهوم، \textit{زمان مقیاسی} است. در بسیاری از بیان‌های ساده
+قضیه ادیاباتیک، زمان اجرا به‌صورت کیفی با معکوس توان دوم گاف کمینه
+مقیاس می‌شود:
+\begin{equation}
+	T_{\mathrm{scale}}
+	\sim
+	\frac{\hbar}{g_{\min}^{,2}},
+	\qquad
+	g_{\min}=\min_{0\leq s\leq1}g(s).
+	\label{eq:adiabatic-scale}
+\end{equation}
+این رابطه برای فهم وابستگی کیفی مفید است: اگر گاف کمینه کاهش یابد،
+معمولاً باید زمان بیشتری برای تکامل اختصاص داد. برای مثال، کاهش گاف
+به نصف، در این تخمین ساده می‌تواند مقیاس زمانی را تا حدود چهار برابر
+افزایش دهد. با این حال، رابطه~\eqref{eq:adiabatic-scale} یک قانون
+دقیق برای زمان اجرای هر مسئله نیست، زیرا نرخ تغییر هامیلتونی و
+عناصر ماتریسی میان حالت‌ها نیز در تحریک نقش دارند.
+
+مفهوم دوم، \textit{کران کافی} است. در این حالت هدف این نیست که زمان
+واقعی موردنیاز را پیش‌بینی کنیم، بلکه می‌خواهیم شرطی به دست آوریم
+که اگر برقرار باشد، خطای ادیاباتیک از مقدار مشخصی بزرگ‌تر نشود.
+قضایای دقیق ادیاباتیک، تحت فرض‌هایی مانند همواری مسیر و وجود گاف
+مثبت، چنین کران‌هایی را فراهم می‌کنند. این کران‌ها معمولاً
+محافظه‌کارانه‌اند و ممکن است زمانی بزرگ‌تر از زمان موردنیاز واقعی
+ارائه دهند.
+
+مفهوم سوم، \textit{زمان عملی} است. در اینجا تکامل واقعی سامانه برای
+زمان‌های مختلف $T$ محاسبه یا اندازه‌گیری می‌شود و سپس زمان موردنیاز
+بر اساس یک معیار موفقیت تعیین می‌گردد. برای مثال، اگر $P(1)$
+پروژکتور فضای هدف در انتهای مسیر باشد، می‌توان نوشت
+\begin{equation}
+	P_{\mathrm{succ}}(T)=
+	\langle\Psi(T)|P(1)|\Psi(T)\rangle.
+	\label{eq:success-vs-time}
+\end{equation}
+اگر آستانه موفقیت موردنظر $P_{\mathrm{target}}$ باشد، یک تعریف
+عملی از زمان لازم می‌تواند کوچک‌ترین $T$ای باشد که
+\begin{equation}
+	P_{\mathrm{succ}}(T)\geq P_{\mathrm{target}}.
+	\label{eq:practical-runtime}
+\end{equation}
+بنابراین باید میان سه کمیت تمایز گذاشت:
+\begin{equation}
+	T_{\mathrm{scale}},
+	\qquad
+	T_{\mathrm{bound}},
+	\qquad
+	T_{\mathrm{practical}}.
+\end{equation}
+این سه کمیت معمولاً یکسان نیستند؛ اولی یک مقیاس کیفی، دومی یک
+کران نظری و سومی نتیجه مستقیم دینامیک یا آزمایش است.
+
+\subsection{از شرط محلی تا کران ادیاباتیک}
+
+برای درک وابستگی زمان به گاف، ابتدا از معادله ویژه لحظه‌ای شروع
+می‌کنیم:
+\begin{equation}
+	H(s)|0(s)\rangle=E_0(s)|0(s)\rangle.
+\end{equation}
+با مشتق‌گیری نسبت به $s$ و در نظر گرفتن یک حالت ویژه
+$|m(s)\rangle$ با $m>0$، در حالت غیرتبهگن داریم
+\begin{equation}
+	\langle m|\partial_s0\rangle =
+	\frac{\langle m|\partial_sH|0\rangle}
+	{E_0-E_m}.
+	\label{eq:runtime-eigenstate-derivative}
+\end{equation}
+اگر
+\begin{equation}
+	\Delta_{m0}(s)=E_m(s)-E_0(s),
+	\qquad
+	M_{m0}(s)=
+	\left|
+	\langle m(s)|\partial_sH(s)|0(s)\rangle
+	\right|,
+\end{equation}
+تعریف کنیم، آنگاه
+\begin{equation}
+	\left|\langle m|\partial_s0\rangle\right|=
+	\frac{M_{m0}(s)}{\Delta_{m0}(s)}.
+	\label{eq:eigenstate-sensitivity}
+\end{equation}
+
+از طرف دیگر، چون $s=s(t)$ است،
+\begin{equation}
+	\frac{d}{dt}|0(s(t))\rangle=
+	\dot{s}(t) \partial_s|0(s)\rangle.
+\end{equation}
+در نتیجه، هرچه $|\dot{s}|$ بزرگ‌تر باشد، حالت لحظه‌ای با سرعت
+بیشتری در فضای هیلبرت حرکت می‌کند. از ترکیب این رابطه با ساختار
+دینامیک ادیاباتیک، یک شاخص محلی از نوع
+\begin{equation}
+	a_m(t)=
+	\frac{
+		\hbar |\dot{s}(t)|,M_{m0}(s)
+	}{
+		\Delta_{m0}(s)^2
+	}
+	\label{eq:runtime-local-indicator}
+\end{equation}
+به دست می‌آید. کوچک بودن این کمیت برای همه کانال‌های مهم، نشانه‌ای
+از حرکت آهسته در آن ناحیه است. با این حال، $a_m$ یک شاخص محلی است
+و به‌تنهایی یک قضیه کامل درباره احتمال خطای نهایی ارائه نمی‌کند.
+
+این رابطه سه عامل را به‌صورت همزمان نشان می‌دهد:
+\begin{equation}
+	\boxed{
+		\text{حساسیت ادیاباتیک}
+		\sim
+		\frac{
+			\text{سرعت تغییر مسیر}\times
+			\text{کوپلینگ}
+		}{
+			\text{گاف}^2
+		}
+	}.
+\end{equation}
+بنابراین کوچک بودن گاف به‌تنهایی تعیین‌کننده نیست. یک تراز نزدیک
+اگر
+
+$$
+M_{m0}\approx0
+$$
+
+باشد، ممکن است کانال مؤثری برای تحریک ایجاد نکند؛ در مقابل، یک تراز
+دورتر با عنصر ماتریسی بزرگ می‌تواند سهم مهم‌تری در خطا داشته باشد.
+
+\subsection{کران‌های سراسری برای خطای ادیاباتیک}
+
+یک قضیه دقیق‌تر باید رفتار کل مسیر را در نظر بگیرد، نه فقط مقدار
+گاف در یک نقطه. برای یک پایه یکتا، مسیر دوبار مشتق‌پذیر و وجود یک
+گاف مثبت در سراسر مسیر، ساختار یک کران از نوع
+\lr{Jansen--Ruskai--Seiler} برای دامنه نشت را می‌توان به‌صورت
+\begin{align}
+	\epsilon_{\mathrm{amp}}(T)
+	&\leq
+	\frac{C\hbar}{T}
+	\left[
+	\frac{|H'(0)|}{g(0)^2}
+	+
+	\frac{|H'(1)|}{g(1)^2}
+	%	\right.
+	%	&\left.
+	+\int_0^1
+	\left(
+	\frac{|H''(s)|}{g(s)^2}
+	+
+	\frac{|H'(s)|^2}{g(s)^3}
+	\right)ds
+	\right].
+	\label{eq:gap-rigorous-structure}
+\end{align}
+در این رابطه، $C$ یک ثابت عددی مستقل از $T$ است و نمایش فوق برای
+نشان‌دادن ساختار وابستگی‌ها نوشته شده است، نه به‌عنوان نقل دقیق
+ثابت‌های بهینه یک قضیه خاص. کمیت $g(s)$ فاصله فضای هدف از بخش
+قابل‌دسترسی خارج از آن را نشان می‌دهد؛ برای یک پایه یکتا معمولاً
+می‌توان آن را به‌صورت
+
+$$
+g(s)=E_1(s)-E_0(s)
+$$
+
+در نظر گرفت.
+
+ساختار رابطه~\eqref{eq:gap-rigorous-structure} چند نکته مهم را
+روشن می‌کند. نخست، گاف تنها کمیتی نیست که زمان را تعیین می‌کند:
+مشتق اول هامیلتونی، یعنی $H'(s)$، نرخ تغییر مسیر را مشخص می‌کند و
+مشتق دوم، یعنی $H''(s)$، اطلاعاتی درباره تغییر این نرخ در طول مسیر
+وارد می‌کند. دوم، وابستگی به گاف شدید است؛ جمله‌هایی با
+$1/g(s)^2$ و $1/g(s)^3$ نشان می‌دهند که نواحی با گاف کوچک می‌توانند
+سهم بزرگی در کران خطا داشته باشند. سوم، کران به کل مسیر وابسته است
+و نه فقط به نقطه‌ای که $g(s)$ کمینه می‌شود.
+
+در اینجا باید میان دامنه خطا و احتمال خطا نیز تمایز گذاشت. اگر
+حالت نهایی به‌صورت
+\begin{equation}
+	|\Psi(T)\rangle=
+	a_0|0(1)\rangle
+	+
+	\sum_{m>0}a_m|m(1)\rangle
+\end{equation}
+نوشته شود، آنگاه احتمال نشت از حالت هدف برابر است با
+\begin{equation}
+	P_{\mathrm{leak}}=	
+	\sum_{m>0}|a_m|^2.
+\end{equation}
+در مقابل، یک کران روی اندازه دامنه مؤلفه خارج از فضای هدف را می‌توان
+با کمیتی مانند $\epsilon_{\mathrm{amp}}$ بیان کرد. بنابراین در
+ساختار ساده
+\begin{equation}
+	P_{\mathrm{leak}}
+	\sim
+	\epsilon_{\mathrm{amp}}^2.
+	\label{eq:amplitude-probability}
+\end{equation}
+در نتیجه اگر یک قضیه کرانی از نوع
+$\epsilon_{\mathrm{amp}}\leq A/T$ ارائه دهد، نباید همان کمیت را
+مستقیماً «احتمال خطا» نامید. این تمایز به‌ویژه هنگام مقایسه کران
+نظری با نتایج عددی یا تجربی اهمیت دارد~\cite{GapJansen2007}.
+
+\subsection{زمان‌بندی محلی: کجا باید آهسته‌تر رفت؟}
+
+کران‌های سراسری برای تضمین رفتار ادیاباتیک مفیدند، اما برای طراحی
+یک زمان‌بندی مناسب می‌توان از اطلاعات محلی نیز استفاده کرد. با
+توجه به شاخص~\eqref{eq:runtime-local-indicator}، تعریف می‌کنیم
+\begin{equation}
+	K(s)=
+	\max_{m>0}
+	\frac{M_{m0}(s)}
+	{\Delta_{m0}(s)^2}.
+	\label{eq:local-sensitivity-K}
+\end{equation}
+این کمیت بزرگ‌ترین حساسیت محلی را در میان کانال‌های تحریک از حالت
+هدف به ترازهای دیگر نشان می‌دهد.
+
+اگر $K(s)$ در بخشی از مسیر بزرگ باشد، بهتر است سامانه در آن ناحیه
+آهسته‌تر حرکت کند. یک زمان‌بندی اکتشافی از این ایده به‌صورت
+\begin{equation}
+	\frac{dt}{ds}=	
+	\frac{\hbar}{\eta}
+	\max{K(s),K_{\mathrm{floor}}}
+	\label{eq:gap-local-schedule}
+\end{equation}
+تعریف می‌شود. در اینجا $\eta$ یک پارامتر کنترل‌کننده سرعت و
+$K_{\mathrm{floor}}>0$ یک کف عددی برای جلوگیری از سرعت‌های نامحدود
+است. با انتگرال‌گیری، زمان کل متناظر با این زمان‌بندی برابر است با
+\begin{equation}
+	T_{\mathrm{loc}}=
+	\frac{\hbar}{\eta}
+	\int_0^1
+	\max{K(s),K_{\mathrm{floor}}} ds.
+	\label{eq:local-runtime}
+\end{equation}
+
+رابطه~\eqref{eq:gap-local-schedule} را می‌توان به‌صورت فیزیکی چنین
+تفسیر کرد:
+\begin{equation}
+	K(s)\uparrow
+	\quad\Longrightarrow\quad
+	\frac{dt}{ds}\uparrow
+	\quad\Longrightarrow\quad
+	\text{حرکت آهسته‌تر},
+\end{equation}
+در حالی که
+\begin{equation}
+	K(s)\downarrow
+	\quad\Longrightarrow\quad
+	\frac{dt}{ds}\downarrow
+	\quad\Longrightarrow\quad
+	\text{حرکت سریع‌تر}.
+\end{equation}
+بنابراین زمان به‌صورت یکنواخت در کل مسیر توزیع نمی‌شود، بلکه در
+نواحی حساس‌تر زمان بیشتری صرف می‌شود.
+
+وجود $K_{\mathrm{floor}}$ نیز از این جهت ضروری است که اگر $K(s)$
+در ناحیه‌ای بسیار کوچک یا صفر شود، رابطه بدون کف می‌توانست مقدار
+$dt/ds$ بسیار کوچکی ایجاد کند و در نتیجه سرعت
+
+$$
+\dot{s}=\frac{ds}{dt}
+$$
+
+به مقادیر غیرواقعی بزرگی برسد. در یک پیاده‌سازی عملی، علاوه بر این
+کف، محدودیت‌های کنترل مانند
+\begin{equation}
+	|\dot{s}(t)|\leq v_{\max},
+	\qquad
+	|\ddot{s}(t)|\leq a_{\max}
+\end{equation}
+نیز باید در نظر گرفته شوند.
+
+نکته مهم دیگر آن است که $K(s)$ الزاماً در همان نقطه‌ای بیشینه
+نمی‌شود که گاف کمینه است. زیرا
+\begin{equation}
+	K(s)=
+	\max_m
+	\frac{M_{m0}(s)}{\Delta_{m0}(s)^2}
+\end{equation}
+هم‌زمان به گاف و عنصر ماتریسی وابسته است. بنابراین در حالت کلی
+\begin{equation}
+	\arg\min_s\Delta(s)
+	\neq
+	\arg\max_sK(s).
+\end{equation}
+این نتیجه نشان می‌دهد که طراحی زمان‌بندی فقط با یافتن کوچک‌ترین
+گاف انجام نمی‌شود و باید کوپلینگ میان حالت‌ها نیز بررسی شود.
+
+پارامتر $\eta$ در رابطه~\eqref{eq:gap-local-schedule} صرفاً یک
+پارامتر طراحی برای کنترل سرعت است. بنابراین به‌طور کلی نمی‌توان
+نوشت
+
+$$
+P_{\mathrm{error}}=\eta
+\qquad\text{یا}\qquad
+P_{\mathrm{error}}=\eta^2.
+$$
+
+برای تبدیل $\eta$ به یک تضمین کمی درباره احتمال خطای نهایی، به
+تحلیل مستقل و دقیق‌تری نیاز است. از این رو، زمان‌بندی محلی باید
+به‌عنوان یک روش طراحی و اکتشاف در نظر گرفته شود، نه یک تضمین
+خودکار برای احتمال موفقیت.
+
+برای مقایسه، اگر زمان‌بندی خطی انتخاب شود،
+\begin{equation}
+	s(t)=\frac{t}{T},
+	\qquad
+	\dot{s}=\frac{1}{T},
+\end{equation}
+سرعت در تمام مسیر ثابت است. در چنین حالتی، یک مقیاس محلی ساده
+برای زمان از مرتبه
+\begin{equation}
+	T_{\mathrm{lin}}
+	\sim
+	\frac{\hbar}{\eta}\max_s K(s)
+\end{equation}
+به دست می‌آید. زمان‌بندی غیرخطی با استفاده از~\eqref{eq:local-runtime}
+به‌جای یک سرعت ثابت، زمان بیشتری را به نواحی حساس اختصاص می‌دهد.
+
+نتایج \lr{Roland--Cerf} در مسئله ساختاریافته جست‌وجوی کوانتومی
+نمونه‌ای از این ایده هستند: انتخاب زمان‌بندی محلی مناسب می‌تواند
+در آن مسئله نسبت به زمان‌بندی یکنواخت بهبود مقیاسی ایجاد کند.
+با این حال، این نتیجه به ساختار ویژه آن مسئله وابسته است و نباید
+به‌عنوان تضمینی عمومی برای هر هامیلتونی از نوع آیزینگ یا هر مسیر
+ادیاباتیک دیگر تفسیر شود~\cite{GapRoland2002}.
+
+\subsection{تفاوت مسیر هامیلتونی و زمان‌بندی}
+
+دو مفهوم «مسیر» و «زمان‌بندی» باید از یکدیگر تفکیک شوند. اگر
+هامیلتونی به‌صورت
+
+$$
+H=H(s)
+$$
+
+ثابت باشد و تنها تابع $s(t)$ تغییر کند، نقاطی که در فضای هامیلتونی
+طی می‌شوند تغییر نمی‌کنند. در نتیجه طیف
+
+$$
+E_j(s)
+$$
+
+و منحنی گاف
+
+$$
+g(s)
+$$
+
+همان باقی می‌مانند؛ تنها سرعت عبور از این منحنی تغییر می‌کند.
+
+در مقابل، اگر خود مسیر تغییر کند،
+\begin{equation}
+	H_1(s)\neq H_2(s),
+\end{equation}
+آنگاه به‌طور کلی
+\begin{equation}
+	E_j^{(1)}(s)\neq E_j^{(2)}(s),
+	\qquad
+	g_1(s)\neq g_2(s).
+\end{equation}
+بنابراین می‌توان میان دو نوع طراحی تمایز گذاشت:
+\begin{equation}
+	\boxed{
+		\text{زمان‌بندی}
+		\longrightarrow
+		\text{نحوه عبور از یک مسیر ثابت}
+	}
+\end{equation}
+و
+\begin{equation}
+	\boxed{
+		\text{طراحی مسیر}
+		\longrightarrow
+		\text{تغییر خود طیف و گاف}.
+	}
+\end{equation}
+این تمایز در بهینه‌سازی ادیاباتیک اهمیت اساسی دارد، زیرا افزایش
+زمان همیشه تنها راه بهبود عملکرد نیست؛ در برخی مسائل می‌توان با
+تغییر مسیر $H(s)$، گاف را نیز تغییر داد.
+
+\subsection{تقاطع اجتنابی و تقریب دو‌ترازی}
+
+یکی از مهم‌ترین موقعیت‌هایی که رابطه میان گاف و زمان را به‌صورت
+شفاف نشان می‌دهد، ناحیه نزدیک یک تقاطع اجتنابی است. فرض کنید دو
+تراز بدون کوپل‌شدن، یعنی ترازهای دیاباتیک، در نزدیکی
+$t=t_*$ به هم نزدیک شوند. یک مدل مؤثر دو‌ترازی برای این ناحیه را
+می‌توان به‌صورت
+\begin{equation}
+	H_{\mathrm{eff}}(t)=
+	\frac{v(t-t_*)}{2}\sigma_z
+	+
+	\frac{g}{2}\sigma_x
+	\label{eq:landau-zener-hamiltonian}
+\end{equation}
+نوشت. در نمایش ماتریسی،
+\begin{equation}
+	H_{\mathrm{eff}}(t)=
+	\frac{1}{2}
+	\begin{pmatrix}
+		v(t-t_*)&g\
+		g&-v(t-t_*)
+	\end{pmatrix}.
+\end{equation}
+
+اگر $g=0$ باشد، دو تراز دیاباتیک
+
+$$
+E_a(t)=\frac{v(t-t_*)}{2},
+\qquad
+E_b(t)=-\frac{v(t-t_*)}{2}
+$$
+
+در $t=t_*$ یکدیگر را قطع می‌کنند. وجود جمله
+
+$$
+\frac{g}{2}\sigma_x
+$$
+
+بین دو حالت coupling ایجاد می‌کند و این crossing را به یک
+\lr{avoided crossing} تبدیل می‌کند. مقادیر ویژه هامیلتونی
+~\eqref{eq:landau-zener-hamiltonian} برابرند با
+\begin{equation}
+	E_\pm(t)=	
+	\pm\frac{1}{2}
+	\sqrt{v^2(t-t_*)^2+g^2},
+\end{equation}
+و بنابراین فاصله دو تراز برابر است با
+\begin{equation}
+	\Delta(t)
+	=
+	E_+(t)-E_-(t)
+	=
+	\sqrt{v^2(t-t_*)^2+g^2}.
+	\label{eq:landau-zener-gap}
+\end{equation}
+در نقطه $t=t_*$ داریم
+\begin{equation}
+	\Delta_{\min}=g.
+\end{equation}
+در این قرارداد، $g$ مستقیماً برابر با گاف کمینه است.
+
+پارامتر $v$ نیز سرعت تغییر اختلاف انرژی ترازهای دیاباتیک را
+مشخص می‌کند. زیرا در نبود coupling،
+\begin{equation}
+	E_a(t)-E_b(t)=v(t-t_*),
+\end{equation}
+و در نتیجه
+\begin{equation}
+	v=
+	\frac{d}{dt}
+	\left(E_a-E_b\right).
+\end{equation}
+بنابراین $g$ اندازه گاف کمینه و $|v|$ سرعت جاروب در ناحیه
+تقاطع را مشخص می‌کند.
+
+برای جاروب خطی ایده‌آل از $t=-\infty$ تا $t=+\infty$، فرمول
+\lr{Landau--Zener} احتمال گذار غیرادیااباتیک را به‌صورت
+\begin{equation}
+	P_{\mathrm{exc}}=	
+	\exp\left[
+	-\frac{\pi g^2}
+	{2\hbar|v|}
+	\right]
+	\label{eq:landau-zener-probability}
+\end{equation}
+می‌دهد. این رابطه به‌وضوح نشان می‌دهد که افزایش گاف کمینه،
+احتمال تحریک را کاهش می‌دهد:
+\begin{equation}
+	g\uparrow
+	\quad\Longrightarrow\quad
+	P_{\mathrm{exc}}\downarrow,
+\end{equation}
+در حالی که جاروب سریع‌تر احتمال تحریک را افزایش می‌دهد:
+\begin{equation}
+	|v|\uparrow
+	\quad\Longrightarrow\quad
+	P_{\mathrm{exc}}\uparrow.
+\end{equation}
+در حد جاروب بسیار آهسته،
+
+$$
+|v|\rightarrow0,
+$$
+
+داریم
+
+$$
+P_{\mathrm{exc}}\rightarrow0.
+$$
+
+رابطه~\eqref{eq:landau-zener-probability} همچنین نشان می‌دهد که
+فقط مقدار گاف کمینه مهم نیست، بلکه سرعت عبور از ناحیه حساس نیز
+اهمیت دارد. برای مثال، از رابطه~\eqref{eq:landau-zener-gap} می‌توان
+دید که مقیاس پهنای زمانی ناحیه‌ای که گاف در نزدیکی مقدار کمینه خود
+باقی می‌ماند، با
+\begin{equation}
+	\Delta t_{\mathrm{sens}}
+	\sim
+	\frac{g}{|v|}
+\end{equation}
+مقیاس می‌شود. بنابراین یک تقاطع با گاف کوچک، اما عبور بسیار آهسته،
+می‌تواند رفتاری متفاوت از تقاطعی با همان گاف و جاروب بسیار سریع
+داشته باشد.
+
+با این حال، رابطه لاندائو--زنر شرایط مشخصی دارد: تقریب دو‌ترازی،
+جاروب خطی، مسیر زمانی نامحدود از منفی بی‌نهایت تا مثبت بی‌نهایت و
+نبود اثرات محیطی. در یک مسیر محدود، در حضور چند تقاطع، یا در یک
+سامانه باز و اتلافی، رابطه~\eqref{eq:landau-zener-probability}
+لزوماً یک نتیجه دقیق نیست و باید به‌عنوان یک مدل یا تقریب محلی
+استفاده شود~\cite{AlbashLidar2018}.
+
+\subsection{از کران نظری تا آزمون دینامیکی}
+
+در نهایت، هیچ‌یک از مقیاس‌های ساده، کران‌های نظری یا زمان‌بندی‌های
+محلی جایگزین بررسی مستقیم دینامیک نمی‌شوند. برای یک زمان‌بندی
+مشخص $s(t)$، حالت واقعی سامانه از معادله شرودینگر به دست می‌آید:
+\begin{equation}
+	i\hbar\frac{d}{dt}|\Psi(t)\rangle=
+	H(s(t))|\Psi(t)\rangle,
+	\qquad
+	|\Psi(0)\rangle=|\Psi_0\rangle.
+	\label{eq:time-dependent-schrodinger}
+\end{equation}
+در انتهای فرایند،
+
+$$
+s(T)=1,
+$$
+
+و بنابراین حالت
+
+$$
+|\Psi(T)\rangle
+$$
+
+حالت واقعی تولیدشده توسط دینامیک است، نه لزوماً حالت ویژه نهایی.
+برای یک حالت پایه یکتا، اگر تکامل کاملاً ادیاباتیک باشد، انتظار
+می‌رود
+\begin{equation}
+	|\Psi(T)\rangle
+	\approx
+	e^{i\gamma}
+	|0(1)\rangle,
+\end{equation}
+که در آن $\gamma$ فاز کلی است. در حالت کلی‌تر، اگر هدف یک زیر‌فضای
+چندبعدی باشد، معیار مناسب همان احتمال قرارگیری در پروژکتور هدف است:
+\begin{equation}
+	P_{\mathrm{succ}}(T)=	
+	\langle\Psi(T)|P(1)|\Psi(T)\rangle.
+\end{equation}
+
+بنابراین یک روش عملی برای ارزیابی زمان اجرا آن است که برای چند
+مقدار $T$ تکامل زمانی حل شود و تابع
+
+$$
+P_{\mathrm{succ}}(T)
+$$
+
+به‌دست آید. سپس می‌توان زمان عملی را با یک آستانه مشخص مانند
+
+$$
+P_{\mathrm{succ}}\geq0.99
+$$
+
+تعریف کرد. این آزمون دینامیکی می‌تواند نشان دهد که آیا کران نظری
+بیش از حد محافظه‌کارانه بوده است، آیا زمان‌بندی محلی واقعاً مفید
+بوده است، و آیا کانال‌های تحریک پیش‌بینی‌شده از تحلیل گاف در عمل
+مهم هستند یا خیر.
+
+در نتیجه، ارتباط میان گاف و زمان را نباید به یک فرمول منفرد مانند
+$T\propto1/g_{\min}^2$ تقلیل داد. ساختار کامل‌تر را می‌توان به‌صورت
+زنجیره زیر خلاصه کرد:
+\begin{equation}
+	H(s)
+	\longrightarrow
+	{E_j(s)}
+	\longrightarrow
+	g(s)
+	\longrightarrow
+	M_{m0}(s)
+	\longrightarrow
+	K(s)
+	\longrightarrow
+	s(t)
+	\longrightarrow
+	|\Psi(T)\rangle
+	\longrightarrow
+	P_{\mathrm{succ}}(T).
+\end{equation}
+در این زنجیره، گاف اطلاعات طیفی را فراهم می‌کند، عناصر ماتریسی
+نشان می‌دهند کدام حالت‌ها واقعاً با تغییر هامیلتونی کوپل می‌شوند،
+زمان‌بندی سرعت عبور از مسیر را تعیین می‌کند و در نهایت حل مستقیم
+دینامیک مشخص می‌کند که زمان انتخاب‌شده واقعاً به موفقیت موردنظر
+منجر شده است.
+
+
+
+
+\section{مقیاس‌پذیری با اندازهٔ سیستم}
+\label{sec:complexity-scaling}
+
+بخش~\ref{sec:gap-runtime} زمان لازم را برای \emph{یک} مسیر $H(s)$ با $n$ ثابت می‌سنجد.
+اینجا همان پرسش را برای یک \emph{خانواده} از مسیرها مطرح می‌کنیم: وقتی سامانه بزرگ می‌شود، $\Delta_{\min}$ و $T$ چگونه رشد می‌کنند؟
+این همان تعمیمی است که در پایان مثال دوکیوبیتی (بخش~\ref{sec:adi-ising-example}، روابط~\eqref{eq:HB-n}--\eqref{eq:H-n-interpolation}) باز شد.
+جزئیات حل‌پذیر زنجیرهٔ \lr{TFIM}، شکل عددی گاف، و ارتباط با \lr{QMA} در بخش~\ref{sec:gap-scaling} می‌آید.
+
+در بررسی پیچیدگی یک الگوریتم آدیاباتیک معمولاً یک سامانهٔ منفرد را بررسی نمی‌کنیم، بلکه خانواده‌ای از سامانه‌ها را در نظر می‌گیریم که با افزایش یک پارامتر اندازه بزرگ‌تر می‌شوند. این پارامتر را با $n$ نشان می‌دهیم. برای بسیاری از مدل‌های اسپینی، $n$ همان تعداد اسپین یا کیوبیت است. در حالت کلی تعریف اندازه به ساختار مدل بستگی دارد: در یک زنجیره $n$ طول زنجیره است و در شبکهٔ $d$بعدی با طول خطی $L$
+\begin{equation}
+	n\sim L^d.
+\end{equation}
+
+بنابراین منظور از «اندازهٔ سیستم» صرفاً یک عدد مربوط به تعداد کیوبیت‌ها نیست؛ بلکه پارامتری است که با افزایش آن، خانواده‌ای از مسائل بزرگ‌تر تعریف می‌شود. برای مثال، می‌توان خانواده‌ای از هامیلتونی‌ها را به صورت
+\begin{equation}
+	H_n(s)
+\end{equation}
+تعریف کرد و سپس برای هر مقدار $n$، گاف کمینهٔ مسیر را محاسبه نمود:
+\begin{equation}
+	\Delta_{\min}(n)=
+	\min_{0\leq s\leq1}\Delta_n(s).
+	\label{eq:gap-min-system-size}
+\end{equation}
+
+\subsection{چرا تعداد کیوبیت به‌تنهایی معیار دشواری نیست؟}
+
+برای یک سامانهٔ $n$ کیوبیتی، بعد فضای هیلبرت برابر است با
+\begin{equation}
+	D=2^n.
+\end{equation}
+بنابراین با افزایش $n$، فضای حالت به‌صورت نمایی بزرگ می‌شود. با این حال، در یک مسئلهٔ ادیاباتیک، دشواری حل مسئله را نمی‌توان صرفاً از روی $2^n$ تعیین کرد. یکی از مهم‌ترین کمیت‌های تعیین‌کننده، گاف انرژی در طول مسیر است:
+\begin{equation}
+	\Delta_{\min}(n).
+\end{equation}
+
+به بیان دیگر، دو مسئله با تعداد یکسانی کیوبیت می‌توانند از نظر ادیاباتیک دشواری کاملاً متفاوتی داشته باشند. بنابراین زنجیره اصلی برای تحلیل مقیاس‌پذیری را می‌توان به‌صورت زیر نوشت:
+\begin{equation}
+	\boxed{
+		n
+		\longrightarrow
+		H_n(s)
+		\longrightarrow
+		\Delta_{\min}(n)
+		\longrightarrow
+		T(n)
+		\longrightarrow
+		\text{پیچیدگی}
+	}
+\end{equation}
+
+در این زنجیره $n$ اندازهٔ مسئله را مشخص می‌کند، $H_n(s)$ خانواده را تعریف می‌کند، $\Delta_{\min}(n)$ رفتار گاف را می‌دهد و همان رفتار زمان آدیاباتیک را می‌سازد.
+
+\paragraph{سه خانواده مرتبط با مثال‌های همین فصل.}
+برای اینکه $n$ مجرد نماند، همان زبان میدان عرضی / \lr{Ising} را نگه می‌داریم:
+\begin{enumerate}
+	\item \textbf{فقط هامیلتونی آغازین.}
+	$H_n=-h_x\sum_{i=1}^{n}X_i$ همان $H_B$ در~\eqref{eq:HB-n} است.
+	گاف برای هر $n$ برابر $2h_x$ می‌ماند؛ بزرگ کردن سامانه فضا را بزرگ می‌کند ولی گلوگاه آدیاباتیک را عوض نمی‌کند.
+	\item \textbf{زنجیرهٔ \lr{TFIM}.}
+	ادامهٔ طبیعی مثال دوکیوبیتی به $n$ سایت با جفت‌شدگی نزدیک‌ترین همسایه:
+	\begin{equation}
+		H_n(s)
+		=
+		-(1-s)h_x\sum_i X_i
+		-
+		s\Bigl(J\sum_{i=1}^{n-1}Z_iZ_{i+1}+h_z\sum_i Z_i\Bigr).
+	\end{equation}
+	عضو $n=2$ با $h_z=1/4$ همان بخش~\ref{sec:adi-ising-example} است.
+	اگر $h_z=0$ و مسیر به نقطهٔ بحرانی $h_x/J=1$ برسد، گاف کل مثل $1/n$ بسته می‌شود (بخش~\ref{sec:gap-scaling}).
+	\item \textbf{شکافت نمایی.}
+	در فاز مرتبِ همان زنجیره باز، یا در مسیرهایی با تونل‌زنی میان دو چاه، شکافت دو تراز کم‌انرژی می‌تواند مثل $e^{-cn}$ جمع شود؛ گاف حجمی تحریک‌ها ممکن است محدود بماند.
+\end{enumerate}
+
+\subsection{بسته‌شدن چندجمله‌ای گاف}
+
+یکی از حالت‌های متداول این است که گاف کمینه با افزایش اندازه سیستم به‌صورت توانی کاهش یابد:
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	n^{-\alpha},
+	\qquad
+	\alpha>0.
+	\label{eq:polynomial-gap-closing}
+\end{equation}
+
+در این رابطه، $\alpha$ یک \textit{نمای مقیاس} است. این عدد مشخص می‌کند گاف با چه توانی از اندازه سیستم کاهش پیدا می‌کند. برای مثال، اگر
+$\alpha=1$
+آنگاه
+\begin{equation}
+	\Delta_{\min}(n)\sim\frac{1}{n}.
+\end{equation}
+اگر
+$\alpha=2 $
+داشته باشیم،
+\begin{equation}
+	\Delta_{\min}(n)\sim\frac{1}{n^2}.
+\end{equation}
+بنابراین هرچه $\alpha$ بزرگ‌تر باشد، در این مقیاس‌بندی گاف سریع‌تر با افزایش $n$ کوچک می‌شود.
+
+نمونه‌ای از همین رفتار، زنجیره باز \lr{TFIM} در نقطه بحرانی $g=h/J=1$ است.
+گاف دقیق (همان~\eqref{eq:gap-open-chain} در بخش~\ref{sec:gap-scaling}) برای $n$ بزرگ
+\begin{equation}
+	\Delta_{\min}(n)
+	\simeq
+	\frac{\pi J}{n}
+	\label{eq:tfim-critical-gap}
+\end{equation}
+می‌شود؛ پس $\alpha=1$. پیش‌عامل $\pi J$ مقیاس انرژی محلی را حمل می‌کند.
+
+در اینجا $J$ یک مقیاس انرژی است و ضریب $\pi J$ پیش‌عامل مقیاس‌بندی را تعیین می‌کند. نکته مهم این است که $\alpha$ یک پارامتر جهانی و مستقل از مدل نیست؛ مقدار آن از فیزیک سامانه و
+نحوه بسته‌شدن گاف ناشی می‌شود.
+
+در نزدیکی یک گذار فاز کوانتومی پیوسته، این رفتار را گاهی به شکل عمومی‌تری می‌توان نوشت:
+\begin{equation}
+	\Delta_{\min}
+	\sim
+	L^{-z},
+\end{equation}
+که در آن $L$ طول خطی سیستم و $z$ \textit{نمای دینامیکی} است. اگر اندازه سیستم با تعداد درجات آزادی رابطه
+$n\sim L^d$ داشته باشد، آنگاه
+\begin{equation}
+	L\sim n^{1/d}
+\end{equation}
+و در نتیجه
+\begin{equation}
+	\Delta_{\min}
+	\sim
+	n^{-z/d}.
+\end{equation}
+بنابراین در چنین حالتی می‌توان
+$\alpha=\frac{z}{d}$
+را به‌عنوان نمای مقیاس نسبت به $n$ در نظر گرفت.
+
+\subsection{بسته‌شدن نمایی گاف}
+
+رفتار مهم دیگری که ممکن است رخ دهد، بسته‌شدن نمایی گاف است:
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	e^{-cn},
+	\qquad
+	c>0.
+	\label{eq:exponential-gap-closing}
+\end{equation}
+
+در اینجا $c$ یک \textit{نرخ بسته‌شدن نمایی} است. برخلاف $\alpha$ که یک توان بدون‌بُعد در مقیاس‌بندی توانی است، واحد $c$ به نحوه تعریف اندازه سیستم بستگی دارد. اگر $n$ یک عدد بدون‌بُعد مانند تعداد کیوبیت باشد، $c$ نیز بدون‌بُعد است.
+
+برای مثال، اگر
+$c=0.1$
+آنگاه گاف تقریباً مانند $e^{-0.1n}$ کاهش می‌یابد. اگر $c$ بزرگ‌تر باشد، گاف با افزایش $n$ سریع‌تر بسته می‌شود.
+
+بسته‌شدن نمایی گاف معمولاً نشانه وجود یک فرآیند فیزیکی بسیار ضعیف در مقیاس بزرگ است. برای مثال، در برخی مسائل ممکن است دو حالت کم‌انرژی با یک سد مؤثر از یکدیگر جدا باشند و جفت‌شدگی مؤثر میان آنها با افزایش اندازه سیستم به‌صورت نمایی کاهش یابد. در چنین شرایطی شکافت دو تراز می‌تواند رفتاری مانند
+\begin{equation}
+	\Delta_{\min}\sim e^{-cn}
+\end{equation}
+پیدا کند.
+
+در این حالت، مقدار $c$ به جزئیات مدل وابسته است و می‌تواند تحت تأثیر عواملی مانند قدرت برهم‌کنش‌ها، شکل سد مؤثر، شرایط مرزی، تقارن و نوع مسیر هامیلتونی قرار گیرد. بنابراین $c$ نیز مانند
+$\alpha$ یک ثابت جهانی نیست.
+
+\subsection{چگونه بسته‌شدن گاف به زمان اجرا منتقل می‌شود؟}
+
+اکنون ارتباط میان مقیاس گاف و زمان ادیاباتیک را می‌توان روشن‌تر دید. در یک تخمین ساده ادیاباتیک، زمان اجرا به‌صورت
+\begin{equation}
+	T
+	\sim
+	\frac{\hbar}{\Delta_{\min}^{2}}
+	\label{eq:runtime-gap-scaling}
+\end{equation}
+مقیاس می‌شود. این همان تخمین مقیاسی بخش‌های~\ref{sec:adiabatic-theorem} و~\ref{sec:gap-runtime} است، نه یک کران کافیِ عمومی.
+
+اگر گاف به‌صورت چندجمله‌ای بسته شود،
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	n^{-\alpha},
+\end{equation}
+با قرار دادن آن در~\eqref{eq:runtime-gap-scaling} داریم
+\begin{align}
+	T(n)
+	&\sim
+	\frac{\hbar}
+	{\bigl(n^{-\alpha}\bigr)^2}
+	\sim
+	\hbar\, n^{2\alpha}.
+\end{align}
+بنابراین، با صرف‌نظر از ثابت‌های انرژی و ضرایب مستقل از $n$،
+\begin{equation}
+	\boxed{
+		T(n)\sim n^{2\alpha}
+	}
+\end{equation}
+به دست می‌آید. در نتیجه اگر $\alpha$ ثابت باشد، زمان اجرا همچنان با اندازه سیستم به‌صورت چندجمله‌ای رشد می‌کند.
+
+برای مثال، اگر
+
+$$
+\Delta_{\min}\sim\frac{1}{n},
+$$
+
+آنگاه
+$
+T\sim n^2
+$
+.
+
+اما اگر گاف به‌صورت نمایی بسته شود،
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	e^{-cn},
+\end{equation}
+خواهیم داشت
+\begin{align}
+	T(n)
+	&\sim
+	\frac{\hbar}
+	{\bigl(e^{-cn}\bigr)^2}
+	\sim
+	\hbar\, e^{2cn}.
+\end{align}
+بنابراین
+\begin{equation}
+	\boxed{
+		T(n)\sim e^{2cn}
+	}
+\end{equation}
+خواهد بود که رشد نمایی دارد.
+
+این نتیجه اهمیت زیادی دارد: ممکن است یک الگوریتم ادیاباتیک برای اندازه‌های کوچک کاملاً قابل‌اجرا باشد، اما اگر گاف آن با اندازه سیستم به‌صورت نمایی بسته شود، زمان لازم برای حفظ رفتار ادیاباتیک می‌تواند با افزایش $n$ به‌سرعت غیرعملی شود.
+
+\subsection{ضرایب و معنای آنها}
+
+در روابط مقیاس‌بندی، باید میان \textit{نمای مقیاس} و
+\textit{پیش‌عامل} تفاوت گذاشت. برای مثال، رابطه
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	A n^{-\alpha}
+\end{equation}
+دارای دو نوع پارامتر است:
+
+\begin{itemize}
+	\item $\alpha$ نمای مقیاس است و مشخص می‌کند گاف با چه توانی از
+	$n$ کاهش می‌یابد؛
+	
+	\item $A$ پیش‌عامل است و مقیاس انرژی مسئله و جزئیات مدل را
+	تعیین می‌کند.
+	
+\end{itemize}
+
+به‌طور مشابه، برای بسته‌شدن نمایی می‌توان نوشت
+\begin{equation}
+	\Delta_{\min}(n)
+	\sim
+	A e^{-cn},
+\end{equation}
+که در آن $A$ پیش‌عامل انرژی و $c$ نرخ بسته‌شدن نمایی است.
+
+اگر $n$ تعداد کیوبیت باشد، $n$ بدون‌بُعد است و $c$ نیز بدون‌بُعد خواهد بود. اگر اندازهٔ سیستم با یک کمیت دارای واحد، مانند طول $L$، تعریف شود، آنگاه $c$ واحد معکوس همان کمیت را خواهد داشت.
+
+پیش‌عامل $A$ معمولاً برای تعیین رفتار مجانبی مهم نیست، زیرا در مقیاس‌بندی با $n$ ثابت است؛ اما برای محاسبهٔ زمان واقعی و مقایسه سامانه‌ها در اندازه‌های محدود می‌تواند اهمیت زیادی داشته باشد.
+
+\subsection{تعداد کیوبیت و دشواری مسئله}
+
+از این بحث روشن می‌شود که تعداد کیوبیت به‌تنهایی معیار مناسبی برای دشواری یک مسئله آدیاباتیک نیست. سه خانوادهٔ بالا را می‌توان در یک جدول جمع کرد:
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\setstretch{1.15}
+	\caption{سه رژیم نوعی برای خانوادهٔ $H_n(s)$. زمان‌ها تخمین مقیاسی $T\sim\hbar/\Delta_{\min}^{2}$اند، نه کران قضیه.}
+	\label{tab:scaling-regimes}
+	\begin{tabularx}{\textwidth}{@{}
+			>{\raggedright\arraybackslash}p{4.4cm}
+			>{\raggedright\arraybackslash}X
+			>{\raggedright\arraybackslash}p{3.6cm}
+			@{}}
+		\toprule
+		\rowcolor{gray!14}
+		\textbf{خانواده} & \textbf{گاف} & \textbf{زمان نوعی} \\
+		\midrule
+		فقط هامیلتونی آغازین: $H=-h_x\sum_i X_i$
+		& $\Delta_{\min}=2h_x$ (مستقل از $n$)
+		& $T$ مستقل از $n$
+		\\
+		\rowcolor{gray!8}
+		\lr{TFIM} بحرانی، زنجیره باز
+		& $\Delta_{\min}\simeq\pi J/n$ \quad($\alpha=1$)
+		& $T\sim n^{2}$
+		\\
+		تونل‌زنی / شکافت فاز مرتب
+		& $\Delta_{\min}\sim e^{-cn}$
+		& $T\sim e^{2cn}$
+		\\
+		\bottomrule
+	\end{tabularx}
+\end{table}
+
+برای شهود عددی، سه منحنی را از همان $n=2$ مثال کاری بهنجار می‌کنیم:
+$T(n)/T(2)$.
+خانوادهٔ فقط‌هامیلتونی‌آغازین نسبت $1$ می‌ماند؛ رژیم $\alpha=1$ مثل $(n/2)^{2}$ رشد می‌کند؛ رژیم نمایی با $c=0.12$ مثل $e^{0.24(n-2)}$ رشد می‌کند.
+شکل~\ref{fig:complexity-scaling} نشان می‌دهد که تا $n\simeq8$ دو رژیم متغیر هنوز نزدیک‌اند، ولی در $n=32$ شاخهٔ نمایی چند مرتبه بزرگ‌تر است.
+
+\begin{figure}[htbp]
+	\centering
+	\begin{latin}
+		\setstretch{1}
+		\resizebox{0.92\textwidth}{!}{%
+			\input{figures/fig_complexity_scaling.tex}%
+		}
+	\end{latin}
+	\caption{زمان نسبی $T(n)/T(2)$ روی مقیاس لگاریتمی.
+		سبز: گاف ثابت (فقط $H_B$).
+		آبی: بسته‌شدن $1/n$ و $T\sim n^{2}$.
+		نارنجی: $c=0.12$ و $T\sim e^{2cn}$.
+		این شکل طرحوارهٔ مقیاس است، نه دادهٔ یک شبیه‌سازی خاص.}
+	\label{fig:complexity-scaling}
+\end{figure}
+
+\begin{table}[htbp]
+	\centering
+	\small
+	\caption{مقادیر $T(n)/T(2)$ برای همان سه رژیم شکل~\ref{fig:complexity-scaling}.}
+	\label{tab:scaling-numbers}
+	\begin{tabular}{cccc}
+		\toprule
+		\rowcolor{gray!14}
+		$n$ & ثابت & $\alpha=1$ & $c=0.12$ \\
+		\midrule
+		$2$ & $1$ & $1$ & $1$ \\
+		\rowcolor{gray!8}
+		$8$ & $1$ & $16$ & $\simeq4.2$ \\
+		$16$ & $1$ & $64$ & $\simeq29$ \\
+		\rowcolor{gray!8}
+		$32$ & $1$ & $256$ & $\simeq1.3\times10^{3}$ \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+بنابراین دو سامانه با $n=32$ کیوبیت می‌توانند یکی زمانِ چندصد برابر $T(2)$ و دیگری هزار برابر داشته باشند.
+معیار مناسب، رفتار خانواده و گاف آن است نه خودِ $n$.
+
+پس معیار مناسب‌تر برای تحلیل پیچیدگی، بررسی رفتار خانواده هامیلتونی‌ها و گاف آن‌ها با افزایش اندازه سیستم است:
+\begin{equation}
+	H_n(s)
+	\quad\longrightarrow\quad
+	\Delta_{\min}(n)
+	\quad\longrightarrow\quad
+	T(n).
+\end{equation}
+
+\subsection{یک نکته مهم درباره مقیاس انرژی}
+
+در مقایسه گاف‌ها و زمان‌های اجرا، باید مقیاس انرژی مسئله را نیز ثابت نگه داشت. اگر کل هامیلتونی را در یک ضریب ثابت $\lambda$ ضرب کنیم،
+\begin{equation}
+	H(s)\rightarrow\lambda H(s),
+\end{equation}
+تمام انرژی‌ها و در نتیجه گاف‌ها نیز به همان نسبت تغییر می‌کنند:
+\begin{equation}
+	\Delta(s)\rightarrow\lambda\Delta(s).
+\end{equation}
+از آنجا که مقیاس زمانی طبیعی کوانتومی با $\hbar/\Delta$ مرتبط است، افزایش کل مقیاس انرژی می‌تواند زمان فیزیکی را کاهش دهد. با این حال، این تغییر به‌تنهایی به معنای کاهش پیچیدگی محاسباتی مسئله نیست؛ زیرا در واقع مقیاس انرژی یا واحد زمان فیزیکی را تغییر داده‌ایم.
+
+بنابراین هنگام مطالعه مقیاس‌پذیری با $n$، معمولاً باید قدرت برهم‌کنش‌های محلی، مانند $J$، مستقل از $n$ نگه داشته شود. برای مثال می‌توان واحد انرژی را با انتخاب
+\begin{equation}
+	J=1
+\end{equation}
+تعیین کرد و زمان را برحسب
+\begin{equation}
+	\frac{\hbar}{J}
+\end{equation}
+اندازه گرفت. در این صورت، تغییرات مشاهده‌شده در $\Delta_{\min}(n)$ و $T(n)$ ناشی از افزایش اندازه سیستم و ساختار
+فیزیکی مدل خواهند بود، نه صرفاً ناشی از تغییر واحد انرژی.
+
+\subsection{مثال دوکیوبیتی و معنای واقعی مقیاس‌بندی}
+
+اگر تنها سامانهٔ دوکیوبیتی بخش~\ref{sec:adi-ising-example} را داشته باشیم،
+$n=2$ و $\Delta_{\min}\simeq0.66$،
+این عدد به‌تنهایی قانون مقیاس‌بندی نیست؛ فقط گاف یک عضو خانواده است.
+شکل~\ref{fig:complexity-scaling} از همین نقطه شروع می‌کند و $n$ را بالا می‌برد.
+
+برای مطالعهٔ مقیاس‌بندی باید یک خانواده از مسائل بسازیم:
+\begin{equation}
+	H_2(s),\quad
+	H_3(s),\quad
+	H_4(s),\quad\ldots,\quad H_n(s),
+\end{equation}
+و برای هر اندازه، مقدار
+\begin{equation}
+	\Delta_{\min}(2),\quad
+	\Delta_{\min}(3),\quad
+	\Delta_{\min}(4),\quad\ldots
+\end{equation}
+را محاسبه کنیم. سپس می‌توان بررسی کرد که داده‌ها با چه شکلی
+سازگارند، برای مثال
+\begin{equation}
+	\Delta_{\min}(n)\sim n^{-\alpha}
+\end{equation}
+یا
+\begin{equation}
+	\Delta_{\min}(n)\sim e^{-cn}.
+\end{equation}
+
+بنابراین مفهوم مقیاس‌پذیری زمانی معنا پیدا می‌کند که به جای یک مسئله منفرد، رفتار یک خانواده از مسائل را در حد
+
+$$
+n\rightarrow\infty
+$$
+
+بررسی کنیم.
+
+%%%%====================
+% ======================
+
+\section{محاسبه قابل‌بازتولید گاف در مثال دو اسپین}
+\label{sec:gap-numerical}
+\subsection{کاهش ماتریس با تقارن}
+همان $h_x=J=1$ و $h_z=1/4$ را نگه می‌داریم. تقارن تعویض اسپین‌ها باعث می‌شود
+$|a\rangle=(|01\rangle-|10\rangle)/\sqrt2$ مستقل باشد، با $E_a=s$.
+در پایه متقارن $\{|00\rangle,(|01\rangle+|10\rangle)/\sqrt2,|11\rangle\}$:
+\begin{equation}
+	H_{\mathrm{sym}}(s)=
+	\begin{pmatrix}
+		-3s/2&-\sqrt2(1-s)&0\\
+		-\sqrt2(1-s)&s&-\sqrt2(1-s)\\
+		0&-\sqrt2(1-s)&-s/2
+	\end{pmatrix}.
+	\label{eq:gap-symmetric-matrix}
+\end{equation}
+با $a=-3s/2$, $b=s$, $c=-s/2$ و $w=-\sqrt2(1-s)$، سه ریشه از
+\begin{equation}
+	(a-E)(b-E)(c-E)-w^2[(a-E)+(c-E)]=0
+\end{equation}
+به دست می‌آیند. ریشه‌ها را با $E_a=s$ ادغام و مرتب می‌کنیم. حل تحلیلی درجه سه ممکن است، ولی حل عددی هرمیتی خواناتر و پایدارتر است. قطری‌سازی دقیق یعنی بدون آنزات یا قطع فضای این مدل؛ خطای ممیز شناور همچنان وجود دارد.
+
+\begin{table}[htbp]
+	\centering\small
+	\caption{قطری‌سازی دو اسپین در واحد $J=1$؛ اعداد گرد شده‌اند.}
+	\label{tab:gap-two-spin}
+	\begin{tabular}{@{}rrrr@{}}
+		\toprule $s$&$E_0$&$E_1$&$\Delta$\\ \midrule
+		0&$-2.000000$&$0.000000$&$2.000000$\\
+		0.25&$-1.527822$&$-0.246554$&$1.281267$\\
+		0.50&$-1.184807$&$-0.443966$&$0.740841$\\
+		0.6213&$-1.135507$&$-0.476646$&$0.658861$\\
+		0.75&$-1.194744$&$-0.464081$&$0.730663$\\
+		1&$-1.500000$&$-0.500000$&$1.000000$\\ \bottomrule
+	\end{tabular}
+\end{table}
+در نزدیکی کمینه، علاوه بر $\Delta_{\min}\simeq0.658861$:
+\begin{equation}
+	M_{10}\simeq1.17440,\qquad M_{10}/\Delta_{10}^2\simeq2.705.
+\end{equation}
+عنصر ماتریسی گذار به حالت پادمتقارن در دقت عددی صفر است.
+جایگزینی $M_{10}$ با $\|H'\|=2.36961$ برآورد محافظه‌کارانه‌تری می‌دهد.
+
+\begin{figure}[htbp]
+	\centering\input{figures/gap_spectrum.tex}
+	\caption{طیف و گاف محاسبه‌شده دو اسپین برای $h_z=1/4$؛ خط عمودی محل کمینه است. این شکل طرحواره نیست.}
+	\label{fig:gap-computed-spectrum}
+\end{figure}
+
+\subsection{کمینه‌سازی روی مسیر و خطای شبکه}
+تمام بازه و دو انتها را بررسی و اطراف همه کمینه‌های محتمل شبکه را ریز کنید.
+کمینه شبکه کران بالای کمینه پیوسته است و ممکن است گلوگاهی باریک را از دست بدهد.
+اگر $\|H'(s)\|\leq L_H$، نامساوی ویل می‌دهد:
+\begin{equation}
+	|\Delta(s)-\Delta(s')|\leq2L_H|s-s'|.
+\end{equation}
+برای شبکه شامل دو انتها با بیشینه فاصله $h$:
+\begin{equation}
+	\max(0,\Delta_{\mathrm{grid}}-L_Hh)\leq\Delta_{\min}\leq\Delta_{\mathrm{grid}}.
+	\label{eq:gap-grid-bound}
+\end{equation}
+با خطای حداکثر $\epsilon_g$ در هر گاف نمونه، از کران پایین $\epsilon_g$ کم و به بالا اضافه می‌شود.
+برای کمینه هموار داخلی، هلمان--فاینمن می‌دهد:
+\begin{equation}
+	\Delta'(s)=\langle1|H'|1\rangle-\langle0|H'|0\rangle.
+\end{equation}
+ریشه مشتق فقط نامزد کمینه است؛ نقاط مرزی هم باید مقایسه شوند. در تبهگنی، بخش‌های تقارنی را جدا دنبال کنید.
+
+\subsection{آزمون مستقیم زمان‌بندی}
+شرودینگر را برای چند $T$ حل می‌کنیم. انتشار هر ریزگام با نماییِ هامیلتونیِ نقطه میانی انجام و با نصف‌کردن گام، همگرایی بررسی می‌شود. قطعات پائولی در این محاسبه تروتر نشده‌اند.
+\begin{equation}
+	P_{\mathrm{succ}}(T)=|\langle00|\Psi(T)\rangle|^2.
+\end{equation}
+شکل~\ref{fig:gap-schedule-test} جاروب خطی و زمان‌بندی مبتنی بر
+$\max\{K,0.05\max K\}$ را در زمان کل برابر مقایسه می‌کند.
+زمان‌بندی محلی در هر $T$ الزاماً بهتر نیست؛ تداخل گذارها می‌تواند موفقیت را نوسانی کند.
+عدد مرتبه‌ای $T\sim500$ در مثال قبلی، کمترین زمان موفقیت نیست.
+\begin{figure}[htbp]
+	\centering\input{figures/gap_schedule.tex}
+	\caption{چپ: $s$ بر حسب زمان نرمال‌شده. راست: احتمال شکستِ دو زمان‌بندی در زمان کل برابر. مدل بسته و بی‌نویز است.}
+	\label{fig:gap-schedule-test}
+\end{figure}
+
+\subsection{گاف صفر، ولی گذار ممنوع}
+برای $h_z=0$ تقارن $\Pi=X_1X_2$ برقرار است و $|++\rangle$ در بخش زوج قرار دارد.
+با $a=1-s,b=s$، انرژی‌ها
+$\{-\sqrt{b^2+4a^2},-b,b,\sqrt{b^2+4a^2}\}$ هستند.
+گاف کل $\sqrt{b^2+4a^2}-b$ در انتها صفر، اما گاف بخش زوج
+$2\sqrt{b^2+4a^2}$ مثبت است.
+هدف زوج $(|00\rangle+|11\rangle)/\sqrt2$ است، نه حالت یکتای $|00\rangle$.
+اگر هدف مشخصاً $|00\rangle$ باشد باید تقارن شکسته شود؛ مسئله و گاف مرتبط تغییر می‌کند.
+
+\section{روش‌های محاسبه گاف: انتخاب بر اساس ساختار}
+\label{sec:gap-methods}
+\subsection{قطری‌سازی، لانچوس و شبکه تانسوری}
+برای $n$ کیوبیت، $D=2^n$ است. ماتریس متراکم حافظه $O(D^2)$ و قطری‌سازی کامل زمان نوعی $O(D^3)$ می‌خواهد.
+برای $H=\sum_{\ell=1}^m c_\ell P_\ell$، ضرب $Hv$ را می‌توان بدون ساخت ماتریس با هزینه نوعی $O(mD)$ انجام داد.
+در لانچوس، زیرفضای
+\begin{equation}
+	{\cal K}_k(H,v)=\mathrm{span}\{v,Hv,\ldots,H^{k-1}v\}
+\end{equation}
+از یک بردار شروع ساخته می‌شود. بازگشت
+$Hv_j=\beta_jv_{j-1}+\alpha_jv_j+\beta_{j+1}v_{j+1}$
+ماتریس سه‌قطری ایجاد می‌کند؛ کوچک‌ترین مقادیر ریتز تقریب ترازهای پایین‌اند.
+چند بردار شروع، بازمتعامدسازی و محاسبه چند تراز کمک می‌کند یک تراز نزدیک یا بخش تقارنی جا نیفتد.
+همگرایی به جدایی طیفی و هم‌پوشانی شروع وابسته است؛ تنکی، مشکل نماییِ بردار $D$بعدی را حذف نمی‌کند.
+
+برای زوج تقریبی $(\widetilde E,v)$ با $\|v\|=1$:
+\begin{equation}
+	r=Hv-\widetilde Ev,\qquad
+	\min_j|\widetilde E-E_j|\leq\|r\|.
+\end{equation}
+باقیمانده کوچک نزدیکی به یک ویژه‌مقدار را نشان می‌دهد، نه شناسایی قطعی $E_0$ یا $E_1$.
+برای گاف گواهی‌شده، ترتیب ترازها یا کران‌های مستقل نیز لازم است.
+
+در زنجیره‌های کم‌درهم‌تنیده، \lr{DMRG/MPS} مرجع کلاسیک مناسبی است: پایه و حالت برانگیخته در بخش تقارنی مشخص به‌صورت وردشی محاسبه می‌شوند.
+همگرایی نسبت به بُعد پیوند $\chi$، طول زنجیره، تعداد جاروب و واریانس انرژی را بررسی کنید.
+نزدیک بحرانی‌شدن یا برای درهم‌تنیدگی زیاد، $\chi$ لازم افزایش می‌یابد~\cite{GapSchollwock2011}.
+مونت‌کارلو کوانتومی در مدل‌های بدون مشکل علامت نیز می‌تواند از افت همبستگی زمان موهومی گاف استخراج کند؛ بازسازی طیف از داده نویزی محدودیت دارد.
+
+\subsection{گاف از همبستگی: کدام تراز دیده می‌شود؟}
+همبستگی متصل زمان موهومی در پایه واقعی، برای $O$ هرمیتی:
+\begin{equation}
+	C_O(\tau)=\sum_{m>0}|\langle m|O|0\rangle|^2e^{-\Delta_{m0}\tau/\hbar}.
+\end{equation}
+در زمان بلند، شیب $-\hbar\,d\log C_O/d\tau$ به کمترین گاف دارای وزن غیرصفر میل می‌کند.
+در زمان حقیقی همین فرکانس‌ها نوسانی‌اند. انتخاب $O$ مشخص می‌کند کدام بخش تقارنی دیده شود؛ نبود قله دلیل نبود تراز نیست.
+در دمای غیرصفر، گذار از حالت‌های گرمایی نیز وارد می‌شود.
+
+\subsection{\lr{QPE}، \lr{VQD} و قطری‌سازی زیرفضای کوانتومی}
+در \lr{QPE} با $U=\exp[-i(H-E_{\mathrm{ref}})\tau/\hbar]$، بازه انرژی و زمان پایه باید رفع ابهام فاز را ممکن کنند.
+برای دو تخمین با خطای مطلق $\epsilon_E$:
+\begin{equation}
+	|\widetilde\Delta-\Delta|\leq2\epsilon_E.
+\end{equation}
+دقت نسبی $r_\Delta$ نیازمند $\epsilon_E\lesssim r_\Delta\Delta/2$ است.
+زمان همدوس نوعی نسخه استاندارد $O(\hbar/\epsilon_E)$ است؛ هزینه ساخت تحول و آماده‌سازی دو حالت با هم‌پوشانی کافی نیز اضافه می‌شود.
+اگر هم‌پوشانی با تراز اول ناچیز باشد، تکرار QPE آن را به‌سادگی پیدا نمی‌کند.
+
+\lr{VQE} معمولی فقط یک انرژی پایین را هدف می‌گیرد. در \lr{VQD}، هزینه
+\begin{equation}
+	{\cal L}_k(\theta)=\langle H\rangle_\theta+
+	\sum_{j<k}\mu_j|\langle\psi_j|\psi(\theta)\rangle|^2
+\end{equation}
+حالت‌های پایین‌تر را جریمه می‌کند؛ انتخاب $\mu_j$ و خطای حالت‌های قبلی مهم است~\cite{GapHiggott2019}.
+تفاضل دو کران بالای وردشی، کران بالا یا پایین تضمین‌شده‌ای برای گاف نیست.
+
+در روش زیرفضایی، پایه آزمایشی از تحریک‌های حالت مرجع یا تحول‌های زمانی ساخته می‌شود:
+\begin{equation}
+	A_{ij}=\langle\phi_i|H|\phi_j\rangle,\quad
+	S_{ij}=\langle\phi_i|\phi_j\rangle,\quad Ac=ESc.
+\end{equation}
+مقادیر بسیار کوچک $S$ نویز را تقویت می‌کنند؛ آستانه‌گذاری و همگرایی نسبت به اندازه زیرفضا باید گزارش شود.
+زیرفضای خوب برای پایه الزاماً حالت برانگیخته لازم را در بر ندارد.
+
+\subsection{برآورد مستقیم از نوسان دو حالت}
+اگر $|\psi\rangle=c_0|0\rangle+c_1|1\rangle$ و $O_{01}\ne0$ باشد:
+\begin{equation}
+	\langle O(t)\rangle=A+
+	2\,\mathrm{Re}[c_0^*c_1O_{01}e^{-i\Delta t/\hbar}].
+	\label{eq:gap-oscillation}
+\end{equation}
+برای وزن‌های برابر، دامنه $|O_{01}|$ است. برازش فرکانس، گاف را بدون تفاضل دو انرژی مطلق می‌دهد.
+یک حالت ویژه تنها با $H$ ثابت برای این هدف نوسان ندارد؛ حالت‌های اضافی، سیگنال چندفرکانسی ایجاد می‌کنند.
+در فوریه ساده، طول پنجره $t_{\max}$ تفکیک نوعی
+$\delta E\sim2\pi\hbar/t_{\max}$ می‌دهد؛ گام نمونه‌برداری نیز باید مانع هم‌پوشانی فرکانسی شود.
+برازش پارامتری گاهی از یک خانه فوریه دقیق‌تر است، ولی به شات، دامنه، نویز و درستی مدل وابسته است.
+
+\section{افزایش اندازه، بحرانی‌شدن و پیچیدگی}
+\label{sec:gap-scaling}
+زبان مقیاس‌بندی $\Delta_{\min}(n)$ و $T(n)$ در بخش~\ref{sec:complexity-scaling} آمده است.
+اینجا همان ایده را برای زنجیرهٔ باز \lr{TFIM} دقیق می‌کنیم و هزینهٔ بدترین حالت را از پیچیدگی محاسباتی جدا می‌کنیم.
+
+\subsection{تعداد کیوبیت و واحد انرژی}
+برای اسپین-$1/2$ هر سایت یک کیوبیت است؛ برای اتم چندترازی یا مد بوزونیِ بریده‌شده چنین نیست.
+با بُعد محلی $d_{\mathrm{loc}}$، $D=d_{\mathrm{loc}}^N$ است.
+هنگام مقایسه $\Delta_{\min}(n)$، انرژی هر برهم‌کنش محلی را ثابت نگه دارید.
+جایگزینی $H$ با $cH$ گاف‌ها را $c$ برابر و مقیاس زمان فیزیکی را $1/c$ می‌کند؛ این افزایش توان کنترل است، نه بهبود رایگان پیچیدگی.
+تقسیم هامیلتونی گسترده بر $n$ هم ممکن است گاف ثابت را ظاهراً $1/n$ کند.
+
+\subsection{سه رفتار و یک مثال حل‌پذیر}
+اسپین‌های مستقل $H=-h\sum_iX_i$ برای هر $n$ گاف $2h$ دارند.
+نزدیک نقطه بحرانی پیوسته، رفتار نوعی با طول خطی $L$:
+\begin{equation}
+	\Delta(L,g)\simeq JL^{-z}{\cal F}((g-g_c)L^{1/\nu}),\qquad n=L^d.
+\end{equation}
+$z$ نمای دینامیکی و $\nu$ نمای طول همبستگی است؛ این فرض مقیاس‌بندی بحرانی با تصحیح اندازه محدود است، نه قانون همه مدل‌ها.
+در برخی تقاطع‌های تونلی و گذارهای مرتبه اول گاف نمایی کوچک می‌شود.
+
+برای زنجیره باز یکنواخت
+\begin{equation}
+	H=-J\sum_{i=1}^{n-1}Z_iZ_{i+1}-h\sum_{i=1}^nX_i,\qquad g=h/J,
+\end{equation}
+تبدیل به فرمیون آزاد، حل با ماتریسی از اندازه $n$ را ممکن می‌کند.
+اگر $B$ قطر $h$ و قطر پایین $-J$ داشته باشد، انرژی تحریک‌های مثبت $2\sigma_j(B)$ هستند؛ کوچک‌ترین آن‌ها گاف کل است.
+برای روشن‌شدن این کاهش، پس از تبدیل جردن--ویگنر و قطری‌سازی بوگولیوبوف، هامیلتونی شکل
+\begin{equation}
+	H=\sum_{j=1}^n\epsilon_j(f_j^\dagger f_j-\tfrac12),\qquad
+	\epsilon_j=2\sigma_j(B),\quad \{f_i,f_j^\dagger\}=\delta_{ij}
+\end{equation}
+دارد. در زنجیره باز و بدون قید زوجیت، پایه خلأ این شبه‌ذره‌هاست و ارزان‌ترین تحریک یک مد را اشغال می‌کند؛ پس $\Delta=\min_j\epsilon_j$.
+این ساده‌شدن حاصل ساختار فرمیون آزاد است؛ افزودن میدان طولی یا برهم‌کنش عمومی معمولاً آن را از بین می‌برد~\cite{GapPfeuty1970}.
+در $g=1$:
+\begin{equation}
+	\Delta_n=4J\sin\!\left(\frac{\pi}{4n+2}\right)\sim\frac{\pi J}{n}.
+	\label{eq:gap-open-chain}
+\end{equation}
+این نتیجه برای همین شرایط مرزی و قرارداد پائولی است.
+در فاز مرتبِ زنجیره باز، شکافت دو حالت کم‌انرژی می‌تواند نمایی کوچک شود، در حالی‌که گاف حجمی تحریک‌ها محدود بماند.
+\begin{figure}[htbp]
+	\centering\input{figures/gap_scaling.tex}
+	\caption{گاف زنجیره باز از محاسبه مقادیر تکین برای $g=1.5,1,0.5$. منحنی فاز مرتب شکافت کل کم‌انرژی را نشان می‌دهد، نه گاف حجمی. قدرت محلی $J=1$ ثابت است.}
+	\label{fig:gap-size-scaling}
+\end{figure}
+
+\subsection{هزینه یافتن گاف در برابر هزینه اجرا}
+اگر $\|H'\|$ با $n$ رشد کند، تخمین زمان باید این رشد را هم لحاظ کند.
+گاف چندجمله‌ای همراه مسیر هموارِ قابل‌ساخت و مشتقات کنترل‌شده با اجرای کارآمد سازگار است؛ اثبات کارایی به هزینه تمام اجزا نیاز دارد.
+
+در بدترین حالت، تعیین انرژی پایه هامیلتونی محلی با دقت وعده‌داده‌شده معکوس چندجمله‌ای، \lr{QMA}-کامل است؛ \lr{QMA} همتای کوانتومی بررسی گواه محاسباتی است.
+این نتیجه اثبات سختی هر نمونه فیزیکی یا طبقه‌بندی یکسان همه مسائل گاف نیست~\cite{GapGharibian2015}.
+حل‌ناپذیری تصمیم‌گیری گاف در حد ترمودینامیکی برای خانواده‌های خاص نتیجه دیگری است و مانع قطری‌سازی ماتریس متناهی معلوم نمی‌شود~\cite{GapCubitt2015}.
+
+برازش چند اندازه کوچک به نمایی یا توانی کافی نیست. داده بزرگ‌تر، تقارن، مرزها و مدل برازش جایگزین را بررسی کنید.
+در مسائل بی‌نظم علاوه بر میانگین، توزیع $\log\Delta_{\min}$ و نمونه‌های نادر اهمیت دارند.
+
+\section{کاهش زمان و بهای آن}
+\label{sec:gap-control}
+\begin{enumerate}
+	\item \textbf{زمان‌بندی و هموارکردن ابتدا/انتها.}
+	سرعت را با گاف و عناصر گذار تنظیم کنید؛ هزینه برآورد مسیر جدا حساب شود.
+	\item \textbf{تغییر مسیر.}
+	جمله قابل‌کنترل $f(s)H_{\mathrm{cat}}$ با $f(0)=f(1)=0$ اضافه کنید.
+	کل مسیر جدید باید بررسی شود؛ بزرگ‌شدن گاف در یک نقطه کافی نیست.
+	افزایش دامنه یا غیرمحلی‌شدن جمله‌ها منابع اضافی‌اند.
+	\item \textbf{رانش جبران‌کننده گذار.}
+	در قرارداد
+	\begin{equation}
+		H_{\mathrm{tot}}=H+\dot s\,{\cal A}_s,\qquad
+		\langle m|{\cal A}_s|n\rangle
+		=i\hbar\frac{\langle m|H'|n\rangle}{E_n-E_m}\quad(m\ne n),
+	\end{equation}
+	جمله اضافی گذار ناشی از حرکت پایه را جبران می‌کند. نزدیک گاف کوچک می‌تواند بزرگ یا غیرمحلی شود.
+	روش وردشی \lr{Sels--Polkovnikov} با محدودکردن $\mathcal{A}_s$ به عملگرهای قابل‌اجرا، تقریب عملی‌تری می‌سازد؛ بهبود وابسته به مدل و منابع کنترل است~\cite{GapSels2017}.
+	\item \textbf{مسیر غیرآدیاباتیک و وردشی.}
+	\lr{QAOA} یا کنترل بهینه می‌تواند عمداً در میانه حالت برانگیخته را اشغال کند.
+	معیار، موفقیت در هزینه کل برابر است؛ چنین پروتکلی صرفاً آزمون قضیه آدیاباتیک نیست.
+\end{enumerate}
+در سامانه باز، اجرای طولانی‌تر ممکن است ناهمدوسی را بیشتر کند.
+مقایسه $k_BT_{\mathrm{bath}}$ با گاف مفید است، اما نرخ گذار و عملگر جفت‌شدگی محیط هم مهم‌اند.
+گاف لیوویلی معادله مادر با گاف انرژی هامیلتونی یکسان نیست.
+
+\section{مرور هدفمند منابع و روش‌های جاری}
+\label{sec:gap-papers}
+این مرور گزینشی بر منابع بررسی‌شده تا ۱۴ سپتامبر ۲۰۲۶ تکیه دارد؛ مرور نظام‌مند همه مقالات نیست.
+برای پوشش نظریه، محاسبه و آزمایش، چند مسیر مکمل انتخاب شده‌اند.
+وضعیت پیش‌چاپ از مقاله منتشرشده جدا شده است.
+
+\paragraph{پایه نظری و محاسبات کلاسیک.}
+\lr{Jansen--Ruskai--Seiler (2007)} برای فرض‌ها و کران آدیاباتیک،
+\lr{Roland--Cerf (2002)} برای زمان‌بندی محلی،
+و مرور \lr{Schollwock (2011)} برای \lr{MPS/DMRG} مراجع آغاز مناسب‌اند.
+مرور \lr{Albash--Lidar (2018)} پیوند این مباحث با محاسبه آدیاباتیک را توضیح می‌دهد~\cite{GapJansen2007,GapRoland2002,GapSchollwock2011,AlbashLidar2018}.
+
+\paragraph{برآورد ترکیبی گاف با پردازش سیگنال؛ مقاله ۲۰۲۵.}
+\lr{Lee, Myers, Scarola} در \lr{Physical Review A 111, 022421}
+تحول کوانتومی، بهینه‌سازی حالت آزمایشی و پردازش کلاسیک سیگنال را ترکیب می‌کنند.
+تحلیل مقاومت به نویز برای مدل‌های مشخص انجام شده؛ این به معنای حذف همه نویزها نیست.
+کاربرد برای پروژه ما: بررسی قابل‌دیدن بودن قله گاف و هزینه شات/عمق در امتداد مسیر، همراه آزمون حساسیت به مدل نویز~\cite{GapLee2025}.
+
+\paragraph{آماده‌سازی آدیاباتیک و برازش نوسان؛ پیش‌چاپ دسامبر ۲۰۲۵.}
+\lr{Cugini et al.} در
+\lr{Spectral Gap Estimation via Adiabatic Preparation}
+از برهم‌نهی دو حالت و نوسان مشاهده‌پذیر استفاده می‌کنند؛ نتایجی برای آیزینگ و مدل‌های مولکولی و اجرای آیزینگ تا ۲۰ کیوبیت گزارش شده است.
+برای انتقال ایده به پروژه، باید نشان داد دو شاخه مطلوب آماده شده‌اند، مشاهده‌پذیر وزن گذار دارد و برازش چندقله‌ای لازم نیست.
+هزینه آماده‌سازی را نمی‌توان هنگام ادعای کاهش هزینه اندازه‌گیری گاف حذف کرد~\cite{GapCugini2025}.
+
+\paragraph{شمارش طیفی؛ مقاله منتشرشده ۲۰۲۶.}
+\lr{Carrera Vazquez--Sobczyk} در \lr{Quantum 10, 2067}
+گاف مرتب‌شده ماتریس هرمیتی و نقطه میانی آن را با پرسمان شمارش بررسی می‌کنند.
+در مدل دسترسی \lr{QRAM}، هزینه شامل عامل
+$D^2/(\epsilon^2\Delta_k^2)$ و عوامل چندلگاریتمی است؛ $\epsilon$ دقت نسبی گاف در قرارداد نرمال‌سازی مقاله است.
+با $D=2^n$ این عامل هنوز نمایی در تعداد کیوبیت سامانه است؛ تعداد کیوبیت لگاریتمی را نباید با زمان چندجمله‌ای در $n$ یکی گرفت.
+سهم پژوهشی آن الگوریتم و تحلیل در مدل دسترسی مشخص است~\cite{GapCarrera2026}.
+
+\paragraph{زیرفضای نمونه‌برداری‌شده؛ مسیر مرتبط، نه تضمین آماده گاف.}
+\lr{Yu et al. (2025)} در \lr{SKQD} نمونه‌برداری کوانتومی از حالت‌های کریلوف را با قطری‌سازی کلاسیک ترکیب می‌کنند.
+تضمین همگرایی پایه فرض‌هایی از جمله ساختار حالت و پراکندگی آن در پایه نمونه‌برداری دارد.
+تعمیم به گاف مستلزم حضور و کنترل خطای حالت برانگیخته نیز هست؛ این یک فرصت پژوهشی است، نه نتیجه خودکارِ روش پایه~\cite{GapYu2025}.
+\lr{VQD} مرجع دیگری برای هدف‌گیری ترازهای برانگیخته است~\cite{GapHiggott2019}.
+
+\section{جریان کاری و مسیرهای پیشنهادی پژوهش}
+\label{sec:gap-projects}
+\begin{figure}[htbp]
+	\centering\input{figures/gap_workflow.tex}
+	\caption{گاف، عدم‌قطعیت و هزینه یافتن آن، همگی ورودی طراحی زمان‌بندی‌اند؛ حلقه با آزمون دینامیکی بسته می‌شود.}
+	\label{fig:gap-workflow}
+\end{figure}
+برای هر نتیجه ثبت کنید: مدل و واحد انرژی، اندازه و مرزها، تعریف گاف و بخش تقارنی، روش، خطای ترازها، دقت شبکه $s$، محل کمینه، عناصر گذار، زمان کل، احتمال موفقیت و منابع کلاسیک/کوانتومی.
+
+سه موضوع قابل‌آغاز با فرضیه قابل‌آزمون:
+\begin{enumerate}
+	\item \textbf{زمان‌بندی مقاوم به خطای گاف در زنجیره آیزینگ.}
+	مرجع دقیق برای اندازه‌های کوچک؛ سپس برآورد نویزی و مقایسه جاروب خطی، محلی و محافظه‌کارانه در زمان برابر.
+	معیار: احتمال موفقیت، بدترین افت تحت خطای گاف و هزینه نمونه‌برداری.
+	نوآوری باید در تحمل عدم‌قطعیت یا کاهش هزینه باشد، نه صرف بازتولید زمان‌بندی محلی.
+	\item \textbf{طیف‌سنجی با انتخاب مشاهده‌پذیر بر اساس تقارن.}
+	چند عملگر با قواعد انتخاب متفاوت را مقایسه کنید و بسنجید چه وقت اولین قله، گاف هدف را پنهان می‌کند.
+	مرجع قطری‌سازی، برازش چندفرکانسی و نویز خوانش لازم‌اند؛ مقالات \lr{Lee} و \lr{Cugini} نقطه شروع‌اند.
+	\item \textbf{زیرفضای مشترک پایه و برانگیخته.}
+	در \lr{VQD/Krylov} خطای دو تراز و اندازه زیرفضا را کنترل و با مرجع مقایسه کنید.
+	سؤال: آیا در هزینه یکسان، هدف‌گیری هم‌زمان دو حالت از تفاضل دو بهینه‌سازی مستقل قابل‌اعتمادتر است؟
+\end{enumerate}
+این‌ها پیشنهاد مسئله‌اند، نه ادعای نوآوری اثبات‌شده. انتخاب نهایی پس از تعیین مدل، سکو، دامنه اندازه‌ها و بررسی دقیق‌تر پیشینه انجام می‌شود. چارچوب گسترده‌تر برآورد و مهندسی گاف، با سه طرح مقاله، در فصل~\ref{chap:gap-energy} آمده است.
+فایل \lr{figures/gap\_research\_compute.py} محاسبات و نمودارهای این بخش را بازتولید می‌کند؛ داده‌ها و آزمون همگرایی کنار شکل‌ها ذخیره می‌شوند.
+دو اسپین برای فهم و راستی‌آزمایی است و به‌تنهایی شاهد مزیت کوانتومی نیست.
+\endgroup
+% END GAP RESEARCH EXPANSION
+
+
+\section{ارتباط}
+
+دو پرسش در فصل~\ref{chap:dyn-spec}، ابزار دیجیتال در فصل~\ref{chap:digital-tools}، \lr{QPE} از تحول تغذیه می‌کند و \lr{VQE} رهیافت سومی است (وردشی) در فصل~\ref{chap:spectral-tools}، و آنالوگ در فصل~\ref{chap:hardware} آمده است. مدل‌های اسپینی در فصل~\ref{chap:models} آمده‌اند. پیاده‌سازی \lr{Qiskit}یِ مثال دوکیوبیتی در بخش~\ref{sec:adi-ising-qiskit} است. مقیاس‌بندی $n\to\Delta_{\min}(n)\to T(n)$ در بخش~\ref{sec:complexity-scaling} و جزئیات \lr{TFIM}/\lr{QMA} در بخش~\ref{sec:gap-scaling} است. برآورد گاف، مهندسی مسیر، و طرح مقاله در فصل~\ref{chap:gap-energy} است.
+
+\section{چه وقت استفاده می‌شود}
+
+تحول: دینامیک، پاسخ زمانی، quench، و هر الگوریتمی که $f(H)$ یا $U(t)$ می‌خواهد (بخش‌های~\ref{sec:time-evolution} و~\ref{sec:evo-example}). آدیاباتیک: آماده‌سازی حالت پایه وقتی گاف مسیر کنترل‌پذیر به نظر می‌رسد، وقتی مسئله به \lr{Ising}/بهینه‌سازی نگاشته می‌شود، یا وقتی سخت‌افزار به‌طور طبیعی یک $H(s)$ می‌دهد. اگر $\Delta_{\min}$ مسیر را نمی‌شناسید، اول همان را بسنجید؛ وگرنه $T$ حدسِ کور است. برای تمرین عددی روی همین مثال دوکیوبیتی، بخش~\ref{sec:adi-ising-qiskit} را با محیط \lr{qcomputing} اجرا کنید.
+
+\begin{remark}[جای توسعه]
+	برای تحول: $H(t)$ با انتگرال زمانی مرتب‌شده؛ توابع همبستگی چندزمانی. برای آدیاباتیک: زمان‌بندی تطبیقی با عدم‌قطعیت گاف؛ آزمون‌های نویزی و تعمیم به سامانه باز؛ عبور از نقطه بحرانی در حد ترمودینامیکی؛ تروترِ مرتبهٔ بالاتر و مقایسهٔ خطای مدار با مرجع شرودینگر در بخش~\ref{sec:adi-ising-qiskit}. برای مقیاس‌بندی: برازش $\Delta_{\min}(n)$ روی اندازه‌های بزرگ‌تر از چند نقطه و جدا کردن گاف حجمی از شکافت لبه‌ای. برای گسسته‌سازی وردشیِ مسیر آدیاباتیک: بخش~\ref{sec:qaoa} (\lr{QAOA}). برای تمرکز پژوهشی روی برآورد و مهندسی گاف در کل شبیه‌سازی کوانتومی: فصل~\ref{chap:gap-energy}.
+\end{remark}

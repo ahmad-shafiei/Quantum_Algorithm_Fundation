@@ -1,43 +1,218 @@
-\contentsline {chapter}{این سند چگونه خوانده شود}{10}{chapter*.2}%
-\contentsline {part}{بخش 1\hskip 1em\relax نقشه مفهومی}{11}{part.1}%
-\contentsline {chapter}{\numberline {1}نقشه زنده}{12}{chapter.1.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{12}{section.1.1.1}%
-\contentsline {section}{\numberline {1.2}ایده شهودی}{12}{section.1.1.2}%
-\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{13}{section.1.1.3}%
-\contentsline {section}{\numberline {1.4}گسترش نقشه: گرمایی، سامانه باز، ترابرد}{14}{section.1.1.4}%
-\contentsline {paragraph}{مسائل گرمایی.}{14}{section*.5}%
-\contentsline {paragraph}{سامانه کوانتومی باز.}{15}{section*.6}%
-\contentsline {paragraph}{ترابرد.}{15}{section*.7}%
-\contentsline {paragraph}{دو بستر آدیاباتیک در خودِ نمودار.}{15}{section*.8}%
-\contentsline {part}{بخش 2\hskip 1em\relax پایه‌های محاسباتی}{16}{part.2}%
-\contentsline {chapter}{\numberline {1}الگوریتم چیست؟}{17}{chapter.2.1}%
-\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{17}{section.2.1.1}%
-\contentsline {section}{\numberline {1.2}ایده شهودی}{17}{section.2.1.2}%
-\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{17}{section.2.1.3}%
-\contentsline {section}{\numberline {1.4}چه وقت استفاده می‌شود}{18}{section.2.1.4}%
-\contentsline {chapter}{\numberline {2}خانواده‌های کلاسیکِ مرتبط}{19}{chapter.2.2}%
-\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{19}{section.2.2.1}%
-\contentsline {section}{\numberline {2.2}ایده شهودی}{19}{section.2.2.2}%
-\contentsline {paragraph}{جستجو و بهینه‌سازی.}{19}{section*.9}%
-\contentsline {paragraph}{تبدیل فوریه.}{19}{section*.10}%
-\contentsline {paragraph}{دستگاه خطی و زیرفضای \lr {Krylov}.}{20}{section*.11}%
-\contentsline {paragraph}{نمونه‌برداری و مونت‌کارلو.}{20}{section*.12}%
-\contentsline {paragraph}{شبیه‌سازی کلاسیک سامانه‌های کوانتومی.}{20}{section*.13}%
-\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{20}{section.2.2.3}%
-\contentsline {section}{\numberline {2.4}چه وقت استفاده می‌شود}{20}{section.2.2.4}%
-\contentsline {chapter}{\numberline {3}مدل محاسباتی کوانتومی}{21}{chapter.2.3}%
-\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{21}{section.2.3.1}%
-\contentsline {section}{\numberline {3.2}ایده شهودی}{21}{section.2.3.2}%
-\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{22}{section.2.3.3}%
-\contentsline {section}{\numberline {3.4}ارتباط}{22}{section.2.3.4}%
-\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{22}{section.2.3.5}%
-\contentsline {chapter}{\numberline {4}سه لایه: الگوریتم، شبیه‌سازی، ابزار}{23}{chapter.2.4}%
-\contentsline {section}{\numberline {4.1}جایگاه در نقشه}{23}{section.2.4.1}%
-\contentsline {section}{\numberline {4.2}ایده شهودی}{23}{section.2.4.2}%
-\contentsline {paragraph}{لایه ۱ --- الگوریتم کوانتومی.}{23}{section*.15}%
-\contentsline {paragraph}{لایه ۲ --- شبیه‌سازی کوانتومی.}{24}{section*.16}%
-\contentsline {paragraph}{لایه ۳ --- روش‌های پیاده‌سازی.}{24}{section*.17}%
-\contentsline {section}{\numberline {4.3}حداقل فرمالیسم}{24}{section.2.4.3}%
-\contentsline {section}{\numberline {4.4}ارتباط}{24}{section.2.4.4}%
-\contentsline {section}{\numberline {4.5}چه وقت استفاده می‌شود}{25}{section.2.4.5}%
-\contentsline {chapter}{مراجع}{26}{section*.19}%
+\contentsline {chapter}{این سند چگونه خوانده شود}{8}{chapter*.2}%
+\contentsline {part}{بخش 1\hskip 1em\relax نقشه مفهومی}{9}{part.1}%
+\contentsline {chapter}{\numberline {1}نقشه زنده}{10}{chapter.1.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{10}{section.1.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{10}{section.1.1.2}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{11}{section.1.1.3}%
+\contentsline {section}{\numberline {1.4}گسترش نقشه: گرمایی، سامانه باز، ترابرد}{12}{section.1.1.4}%
+\contentsline {paragraph}{مسائل گرمایی.}{12}{section*.5}%
+\contentsline {paragraph}{سامانه کوانتومی باز.}{13}{section*.6}%
+\contentsline {paragraph}{ترابرد.}{13}{section*.7}%
+\contentsline {paragraph}{دو بستر آدیاباتیک در خودِ نمودار.}{13}{section*.8}%
+\contentsline {part}{بخش 2\hskip 1em\relax پایه‌های محاسباتی}{14}{part.2}%
+\contentsline {chapter}{\numberline {1}الگوریتم چیست؟}{15}{chapter.2.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{15}{section.2.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{15}{section.2.1.2}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{15}{section.2.1.3}%
+\contentsline {section}{\numberline {1.4}چه وقت استفاده می‌شود}{16}{section.2.1.4}%
+\contentsline {chapter}{\numberline {2}خانواده‌های کلاسیکِ مرتبط}{17}{chapter.2.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{17}{section.2.2.1}%
+\contentsline {section}{\numberline {2.2}ایده شهودی}{17}{section.2.2.2}%
+\contentsline {paragraph}{جستجو و بهینه‌سازی.}{17}{section*.9}%
+\contentsline {paragraph}{تبدیل فوریه.}{17}{section*.10}%
+\contentsline {paragraph}{دستگاه خطی و زیرفضای \lr {Krylov}.}{18}{section*.11}%
+\contentsline {paragraph}{نمونه‌برداری و مونت‌کارلو.}{18}{section*.12}%
+\contentsline {paragraph}{شبیه‌سازی کلاسیک سامانه‌های کوانتومی.}{18}{section*.13}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{18}{section.2.2.3}%
+\contentsline {section}{\numberline {2.4}چه وقت استفاده می‌شود}{18}{section.2.2.4}%
+\contentsline {chapter}{\numberline {3}مدل محاسباتی کوانتومی}{19}{chapter.2.3}%
+\contentsline {section}{\numberline {3.1}جایگاه در نقشه}{19}{section.2.3.1}%
+\contentsline {section}{\numberline {3.2}ایده شهودی}{19}{section.2.3.2}%
+\contentsline {section}{\numberline {3.3}حداقل فرمالیسم}{20}{section.2.3.3}%
+\contentsline {section}{\numberline {3.4}ارتباط}{20}{section.2.3.4}%
+\contentsline {section}{\numberline {3.5}چه وقت استفاده می‌شود}{20}{section.2.3.5}%
+\contentsline {chapter}{\numberline {4}سه لایه: الگوریتم، شبیه‌سازی، ابزار}{21}{chapter.2.4}%
+\contentsline {section}{\numberline {4.1}جایگاه در نقشه}{21}{section.2.4.1}%
+\contentsline {section}{\numberline {4.2}ایده شهودی}{21}{section.2.4.2}%
+\contentsline {paragraph}{لایه ۱ --- الگوریتم کوانتومی.}{21}{section*.15}%
+\contentsline {paragraph}{لایه ۲ --- شبیه‌سازی کوانتومی.}{22}{section*.16}%
+\contentsline {paragraph}{لایه ۳ --- روش‌های پیاده‌سازی.}{22}{section*.17}%
+\contentsline {section}{\numberline {4.3}حداقل فرمالیسم}{22}{section.2.4.3}%
+\contentsline {section}{\numberline {4.4}ارتباط}{22}{section.2.4.4}%
+\contentsline {section}{\numberline {4.5}چه وقت استفاده می‌شود}{23}{section.2.4.5}%
+\contentsline {part}{بخش 3\hskip 1em\relax از مسئله فیزیکی تا جریان کاری}{24}{part.3}%
+\contentsline {chapter}{\numberline {1}از مسئله فیزیکی تا هامیلتونی}{25}{chapter.3.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{25}{section.3.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{25}{section.3.1.2}%
+\contentsline {section}{\numberline {1.3}از مسئله فیزیکی تا مدل ریاضی}{26}{section.3.1.3}%
+\contentsline {paragraph}{قاعده عملی.}{26}{section*.20}%
+\contentsline {paragraph}{چند مسئله واقعی و مدل نماینده.}{26}{section*.21}%
+\contentsline {section}{\numberline {1.4}هامیلتونی کلاسیک: از کجا می‌آید و چرا مهم است؟}{27}{section.3.1.4}%
+\contentsline {paragraph}{کمینه‌سازی چه معنایی دارد؟}{27}{section*.23}%
+\contentsline {paragraph}{مثال کوچک کلاسیک: نوسانگر یک‌بعدی.}{27}{section*.24}%
+\contentsline {section}{\numberline {1.5}هامیلتونی کوانتومی}{28}{section.3.1.5}%
+\contentsline {paragraph}{چرا در شبیه‌سازی کوانتومی مرکز صحنه است؟}{28}{section*.25}%
+\contentsline {section}{\numberline {1.6}نوسانگر هماهنگ و عملگرهای خلق و فنا}{28}{section.3.1.6}%
+\contentsline {paragraph}{هامیلتونی و طیف.}{28}{section*.26}%
+\contentsline {paragraph}{نوسانگر واداشته.}{29}{section*.28}%
+\contentsline {paragraph}{نقش در نظریه‌های مرتبط.}{29}{section*.29}%
+\contentsline {paragraph}{نوشتن $H$ سیستم‌های بس‌مدی با خلق و فنا.}{30}{section*.30}%
+\contentsline {section}{\numberline {1.7}مثال کاری: مدار \lr {LC} از کلاسیک تا کوانتوم}{30}{section.3.1.7}%
+\contentsline {paragraph}{گام ۱ --- انرژی کلاسیک.}{30}{section*.32}%
+\contentsline {paragraph}{گام ۲ --- کوانتش.}{31}{section*.33}%
+\contentsline {paragraph}{گام ۳ --- پیام برای ادامه سند.}{31}{section*.34}%
+\contentsline {section}{\numberline {1.8}خانواده‌های مدل در شبیه‌سازی کوانتومی}{32}{section.3.1.8}%
+\contentsline {paragraph}{اسپین: \lr {Ising} و \lr {Heisenberg}.}{32}{section*.35}%
+\contentsline {paragraph}{هابارد (فرمی و بوز).}{32}{section*.36}%
+\contentsline {paragraph}{ساختار الکترونی مولکولی.}{32}{section*.37}%
+\contentsline {paragraph}{میدان روی شبکه و نظریه پیمانه‌ای شبکه‌ای.}{32}{section*.38}%
+\contentsline {section}{\numberline {1.9}مدل \lr {Ising}: از فیزیک تا کیوبیت}{32}{section.3.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}ایده فیزیکی}{33}{subsection.3.1.9.1}%
+\contentsline {subsection}{\numberline {1.9.2}هامیلتونی کلاسیک}{33}{subsection.3.1.9.2}%
+\contentsline {paragraph}{معنی علامت‌ها.}{34}{section*.40}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{34}{section*.41}%
+\contentsline {subsection}{\numberline {1.9.3}مثال کامل: دو اسپین فرومغناطیس}{34}{subsection.3.1.9.3}%
+\contentsline {subsection}{\numberline {1.9.4}\lr {Ising} کوانتومی و میدان عرضی}{35}{subsection.3.1.9.4}%
+\contentsline {subsection}{\numberline {1.9.5}چرا در الگوریتم‌های کوانتومی این‌قدر دیده می‌شود؟}{35}{subsection.3.1.9.5}%
+\contentsline {subsection}{\numberline {1.9.6}تمایزهای مهم}{36}{subsection.3.1.9.6}%
+\contentsline {section}{\numberline {1.10}حداقل فرمالیسم}{36}{section.3.1.10}%
+\contentsline {section}{\numberline {1.11}ارتباط}{37}{section.3.1.11}%
+\contentsline {section}{\numberline {1.12}چه وقت استفاده می‌شود}{37}{section.3.1.12}%
+\contentsline {chapter}{\numberline {2}جریان کاری کامل}{38}{chapter.3.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{38}{section.3.2.1}%
+\contentsline {section}{\numberline {2.2}ایده شهودی}{38}{section.3.2.2}%
+\contentsline {section}{\numberline {2.3}حداقل فرمالیسم}{38}{section.3.2.3}%
+\contentsline {paragraph}{مثال پیمایش: مدل هابارد.}{38}{section*.43}%
+\contentsline {section}{\numberline {2.4}ارتباط}{40}{section.3.2.4}%
+\contentsline {section}{\numberline {2.5}چه وقت استفاده می‌شود}{40}{section.3.2.5}%
+\contentsline {part}{بخش 4\hskip 1em\relax دو پرسش و دو رهیافت}{41}{part.4}%
+\contentsline {chapter}{\numberline {1}دو پرسش از یک هامیلتونی: دینامیک و طیف}{42}{chapter.4.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{42}{section.4.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{42}{section.4.1.2}%
+\contentsline {paragraph}{پرسش دینامیکی - تحول زمانی.}{43}{section*.45}%
+\contentsline {paragraph}{پرسش ایستا / طیفی.}{43}{section*.46}%
+\contentsline {paragraph}{پل: پاسخ خطی.}{43}{section*.47}%
+\contentsline {section}{\numberline {1.3}حداقل فرمالیسم}{43}{section.4.1.3}%
+\contentsline {section}{\numberline {1.4}ارتباط}{43}{section.4.1.4}%
+\contentsline {section}{\numberline {1.5}چه وقت استفاده می‌شود}{44}{section.4.1.5}%
+\contentsline {chapter}{\numberline {2}دو رهیافت: تحول زمانی و محاسبه آدیاباتیک}{45}{chapter.4.2}%
+\contentsline {section}{\numberline {2.1}جایگاه در نقشه}{45}{section.4.2.1}%
+\contentsline {section}{\numberline {2.2}ایده شهودی}{45}{section.4.2.2}%
+\contentsline {paragraph}{الف) رهیافت تحول زمانی / شرودینگر.}{45}{section*.49}%
+\contentsline {paragraph}{ب) رهیافت محاسبه آدیاباتیک.}{45}{section*.50}%
+\contentsline {paragraph}{اتصال دو رهیافت.}{46}{section*.51}%
+\contentsline {section}{\numberline {2.3}رهیافت تحول زمانی: فرمول و پارامترها}{47}{section.4.2.3}%
+\contentsline {paragraph}{دو مسیر تحقق $U(t)$.}{47}{section*.53}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{48}{section*.54}%
+\contentsline {paragraph}{هزینه شهودی.}{48}{section*.55}%
+\contentsline {section}{\numberline {2.4}رده مسائل مناسب تحول زمانی}{48}{section.4.2.4}%
+\contentsline {section}{\numberline {2.5}مثال کاری: یک اسپین در میدان عرضی}{49}{section.4.2.5}%
+\contentsline {paragraph}{گام ۱ --- هامیلتونی و حالت اولیه.}{49}{section*.56}%
+\contentsline {paragraph}{گام ۲ --- عملگر تحول دقیق.}{49}{section*.57}%
+\contentsline {paragraph}{گام ۳ --- مشاهده‌پذیر.}{49}{section*.58}%
+\contentsline {paragraph}{گام ۴ --- تفسیر در نقشه سند.}{50}{section*.59}%
+\contentsline {paragraph}{گام ۵ --- یک پله به‌سوی مدل واقعی‌تر.}{50}{section*.60}%
+\contentsline {section}{\numberline {2.6}قضیه آدیاباتیک: فرمول و پارامترها}{50}{section.4.2.6}%
+\contentsline {paragraph}{بیان کاری قضیه.}{51}{section*.62}%
+\contentsline {paragraph}{پارامترها، یک‌جا.}{52}{section*.63}%
+\contentsline {paragraph}{هزینه در رهیافت تحول (برای مقایسه).}{52}{section*.64}%
+\contentsline {section}{\numberline {2.7}رده مسائل مناسب آدیاباتیک}{52}{section.4.2.7}%
+\contentsline {section}{\numberline {2.8}مثال کاری: از میدان عرضی به \lr {Ising}}{53}{section.4.2.8}%
+\contentsline {paragraph}{گام ۱ - هامیلتونی آغازین: یک میدان عرضی ساده.}{54}{section*.65}%
+\contentsline {paragraph}{گام ۲ - هامیلتونی مسئله: مدل \lr {Ising}.}{56}{section*.66}%
+\contentsline {paragraph}{گام ۳ --- ساخت مسیر آدیاباتیک.}{57}{section*.67}%
+\contentsline {paragraph}{گام ۴ --- چرا گاف مهم است؟}{60}{section*.68}%
+\contentsline {paragraph}{گام ۵ --- ماتریس صریح $H(s)$ و منشأ نزدیک‌شدن ترازها.}{61}{section*.69}%
+\contentsline {paragraph}{گام ۶ --- استفاده از تقارن برای ساده‌تر کردن مسئله.}{62}{section*.70}%
+\contentsline {paragraph}{گام ۷ --- مشاهده کمینه گاف.}{64}{section*.71}%
+\contentsline {paragraph}{گام ۸ --- ارتباط گاف با زمان اجرا.}{65}{section*.72}%
+\contentsline {paragraph}{گام ۹ --- نقش میدان طولی $h_z$.}{67}{section*.73}%
+\contentsline {paragraph}{گام ۱۰ --- اجرا و خوانش.}{67}{section*.74}%
+\contentsline {paragraph}{گام ۱۱ --- تفسیر الگوریتمی و تمایز میان مسئله، هامیلتونی و الگوریتم.}{68}{section*.75}%
+\contentsline {paragraph}{چگونه به سیستم پیچیده‌تر تعمیم می‌یابد.}{69}{section*.76}%
+\contentsline {section}{\numberline {2.9}پیاده‌سازی با \lr {Qiskit}: همان مثال، گام‌به‌گام}{71}{section.4.2.9}%
+\contentsline {paragraph}{گام الف --- هامیلتونی‌ها در زبان پائولی.}{71}{section*.77}%
+\contentsline {paragraph}{گام ب --- پیمایش $s$ و کمینهٔ گاف.}{72}{section*.78}%
+\contentsline {paragraph}{گام ج - برآورد زمان مؤثر $T$.}{73}{section*.80}%
+\contentsline {paragraph}{گام د --- از $H(s)$ تا گیت‌ها (یک لایهٔ تروتر).}{74}{section*.82}%
+\contentsline {paragraph}{گام ه - مدار کامل و خوانش.}{75}{section*.84}%
+\contentsline {paragraph}{جمع‌بندی عملی.}{76}{section*.85}%
+\contentsline {section}{\numberline {2.10}گاف انرژی: تعریف دقیق و نقش تقارن}{76}{section.4.2.10}%
+\contentsline {subsection}{\numberline {2.10.1}گاف کل، گاف بخش تقارنی و گاف زیر‌فضای هدف}{77}{subsection.4.2.10.1}%
+\contentsline {subsubsection}{نقش تقارن در تعریف گاف مرتبط}{79}{section*.86}%
+\contentsline {subsubsection}{تفاوت گاف‌های فیزیکی مختلف}{82}{section*.87}%
+\contentsline {subsection}{\numberline {2.10.2}چرا کوچک‌ترین فاصله به‌تنهایی کافی نیست؟}{82}{subsection.4.2.10.2}%
+\contentsline {section}{\numberline {2.11}از گاف تا زمان: شرط محلی، کران و آزمون دینامیکی}{85}{section.4.2.11}%
+\contentsline {subsection}{\numberline {2.11.1}سه معنای متفاوت برای زمان لازم}{85}{subsection.4.2.11.1}%
+\contentsline {subsection}{\numberline {2.11.2}از شرط محلی تا کران ادیاباتیک}{86}{subsection.4.2.11.2}%
+\contentsline {subsection}{\numberline {2.11.3}کران‌های سراسری برای خطای ادیاباتیک}{88}{subsection.4.2.11.3}%
+\contentsline {subsection}{\numberline {2.11.4}زمان‌بندی محلی: کجا باید آهسته‌تر رفت؟}{89}{subsection.4.2.11.4}%
+\contentsline {subsection}{\numberline {2.11.5}تفاوت مسیر هامیلتونی و زمان‌بندی}{91}{subsection.4.2.11.5}%
+\contentsline {subsection}{\numberline {2.11.6}تقاطع اجتنابی و تقریب دو‌ترازی}{92}{subsection.4.2.11.6}%
+\contentsline {subsection}{\numberline {2.11.7}از کران نظری تا آزمون دینامیکی}{95}{subsection.4.2.11.7}%
+\contentsline {section}{\numberline {2.12}مقیاس‌پذیری با اندازهٔ سیستم}{96}{section.4.2.12}%
+\contentsline {subsection}{\numberline {2.12.1}چرا تعداد کیوبیت به‌تنهایی معیار دشواری نیست؟}{97}{subsection.4.2.12.1}%
+\contentsline {paragraph}{سه خانواده مرتبط با مثال‌های همین فصل.}{98}{section*.88}%
+\contentsline {subsection}{\numberline {2.12.2}بسته‌شدن چندجمله‌ای گاف}{98}{subsection.4.2.12.2}%
+\contentsline {subsection}{\numberline {2.12.3}بسته‌شدن نمایی گاف}{100}{subsection.4.2.12.3}%
+\contentsline {subsection}{\numberline {2.12.4}چگونه بسته‌شدن گاف به زمان اجرا منتقل می‌شود؟}{101}{subsection.4.2.12.4}%
+\contentsline {subsection}{\numberline {2.12.5}ضرایب و معنای آنها}{102}{subsection.4.2.12.5}%
+\contentsline {subsection}{\numberline {2.12.6}تعداد کیوبیت و دشواری مسئله}{103}{subsection.4.2.12.6}%
+\contentsline {subsection}{\numberline {2.12.7}یک نکته مهم درباره مقیاس انرژی}{105}{subsection.4.2.12.7}%
+\contentsline {subsection}{\numberline {2.12.8}مثال دوکیوبیتی و معنای واقعی مقیاس‌بندی}{105}{subsection.4.2.12.8}%
+\contentsline {section}{\numberline {2.13}محاسبه قابل‌بازتولید گاف در مثال دو اسپین}{107}{section.4.2.13}%
+\contentsline {subsection}{\numberline {2.13.1}کاهش ماتریس با تقارن}{107}{subsection.4.2.13.1}%
+\contentsline {subsection}{\numberline {2.13.2}کمینه‌سازی روی مسیر و خطای شبکه}{108}{subsection.4.2.13.2}%
+\contentsline {subsection}{\numberline {2.13.3}آزمون مستقیم زمان‌بندی}{109}{subsection.4.2.13.3}%
+\contentsline {subsection}{\numberline {2.13.4}گاف صفر، ولی گذار ممنوع}{109}{subsection.4.2.13.4}%
+\contentsline {section}{\numberline {2.14}روش‌های محاسبه گاف: انتخاب بر اساس ساختار}{110}{section.4.2.14}%
+\contentsline {subsection}{\numberline {2.14.1}قطری‌سازی، لانچوس و شبکه تانسوری}{110}{subsection.4.2.14.1}%
+\contentsline {subsection}{\numberline {2.14.2}گاف از همبستگی: کدام تراز دیده می‌شود؟}{111}{subsection.4.2.14.2}%
+\contentsline {subsection}{\numberline {2.14.3}\lr {QPE}، \lr {VQD} و قطری‌سازی زیرفضای کوانتومی}{111}{subsection.4.2.14.3}%
+\contentsline {subsection}{\numberline {2.14.4}برآورد مستقیم از نوسان دو حالت}{112}{subsection.4.2.14.4}%
+\contentsline {section}{\numberline {2.15}افزایش اندازه، بحرانی‌شدن و پیچیدگی}{112}{section.4.2.15}%
+\contentsline {subsection}{\numberline {2.15.1}تعداد کیوبیت و واحد انرژی}{112}{subsection.4.2.15.1}%
+\contentsline {subsection}{\numberline {2.15.2}سه رفتار و یک مثال حل‌پذیر}{113}{subsection.4.2.15.2}%
+\contentsline {subsection}{\numberline {2.15.3}هزینه یافتن گاف در برابر هزینه اجرا}{114}{subsection.4.2.15.3}%
+\contentsline {section}{\numberline {2.16}کاهش زمان و بهای آن}{114}{section.4.2.16}%
+\contentsline {section}{\numberline {2.17}مرور هدفمند منابع و روش‌های جاری}{115}{section.4.2.17}%
+\contentsline {paragraph}{پایه نظری و محاسبات کلاسیک.}{115}{section*.96}%
+\contentsline {paragraph}{برآورد ترکیبی گاف با پردازش سیگنال؛ مقاله ۲۰۲۵.}{115}{section*.97}%
+\contentsline {paragraph}{آماده‌سازی آدیاباتیک و برازش نوسان؛ پیش‌چاپ دسامبر ۲۰۲۵.}{116}{section*.98}%
+\contentsline {paragraph}{شمارش طیفی؛ مقاله منتشرشده ۲۰۲۶.}{116}{section*.99}%
+\contentsline {paragraph}{زیرفضای نمونه‌برداری‌شده؛ مسیر مرتبط، نه تضمین آماده گاف.}{116}{section*.100}%
+\contentsline {section}{\numberline {2.18}جریان کاری و مسیرهای پیشنهادی پژوهش}{116}{section.4.2.18}%
+\contentsline {section}{\numberline {2.19}ارتباط}{118}{section.4.2.19}%
+\contentsline {section}{\numberline {2.20}چه وقت استفاده می‌شود}{118}{section.4.2.20}%
+\contentsline {part}{بخش 5\hskip 1em\relax گاف انرژی: برآورد، مهندسی، پژوهش}{119}{part.5}%
+\contentsline {chapter}{\numberline {1}گاف انرژی در شبیه‌سازی کوانتومی}{120}{chapter.5.1}%
+\contentsline {section}{\numberline {1.1}جایگاه در نقشه}{120}{section.5.1.1}%
+\contentsline {section}{\numberline {1.2}ایده شهودی}{121}{section.5.1.2}%
+\contentsline {section}{\numberline {1.3}چرا گاف در این حوزه مهم است؟}{122}{section.5.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}چند معنای فیزیکی که نباید قاطی شوند}{122}{subsection.5.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}از گاف یک هامیلتونی تا گاف یک مسیر}{124}{subsection.5.1.3.2}%
+\contentsline {subsection}{\numberline {1.3.3}نقش گاف در محاسبه آدیاباتیک}{124}{subsection.5.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}نقش گاف در شبیه‌سازی دینامیکی و مواد}{125}{subsection.5.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}نقش گاف در کیوبیت و سخت‌افزار}{127}{subsection.5.1.3.5}%
+\contentsline {section}{\numberline {1.4}رهیافت‌های اساسی برای یافتن گاف}{127}{section.5.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}طیف کلاسیک: مرجع، نه رقیب همیشه مغلوب}{128}{subsection.5.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}طیف‌سنجی دینامیکی: گاف به‌عنوان فرکانس}{128}{subsection.5.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}وردشی و زیرفضا: دو انرژی، یک تفاضل خطرناک}{129}{subsection.5.1.4.3}%
+\contentsline {subsection}{\numberline {1.4.4}برآورد فاز و الگوریتم‌های تحمل‌پذیر}{130}{subsection.5.1.4.4}%
+\contentsline {section}{\numberline {1.5}مهندسی گاف و مهندسی دینامیک}{131}{section.5.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}زمان‌بندی: گاف را عوض نمی‌کند}{131}{subsection.5.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}تغییر مسیر و هامیلتونی کاتالیزگر}{131}{subsection.5.1.5.2}%
+\contentsline {subsection}{\numberline {1.5.3}رانش جبران‌کننده: میان‌بر، نه لزوماً گاف بزرگ‌تر}{132}{subsection.5.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}رمزگذاری و تقارن}{133}{subsection.5.1.5.4}%
+\contentsline {section}{\numberline {1.6}کاربرد در سامانه‌های کیوبیتی و شبیه‌سازی}{133}{section.5.1.6}%
+\contentsline {paragraph}{آماده‌سازی حالت پایه در شبیه‌ساز دیجیتال.}{133}{section*.104}%
+\contentsline {paragraph}{طیف‌سنجی مدل اسپینی روی کیوبیت‌های ابررسانا یا اتم خنثی.}{133}{section*.105}%
+\contentsline {paragraph}{شیمی و مواد در فضای فعال کوچک.}{133}{section*.106}%
+\contentsline {paragraph}{حفاظت گاف در حافظه و گیت آدیاباتیک.}{134}{section*.107}%
+\contentsline {section}{\numberline {1.7}سختی مسئله و آنچه نباید ادعا کرد}{134}{section.5.1.7}%
+\contentsline {section}{\numberline {1.8}مرور هدفمند منابع برای شروع پژوهش}{135}{section.5.1.8}%
+\contentsline {section}{\numberline {1.9}مسئله‌های باز و طرح مقاله}{135}{section.5.1.9}%
+\contentsline {subsection}{\numberline {1.9.1}چک‌لیست قبل از شروع محاسبه}{136}{subsection.5.1.9.1}%
+\contentsline {section}{\numberline {1.10}ارتباط}{137}{section.5.1.10}%
+\contentsline {section}{\numberline {1.11}چه وقت استفاده می‌شود}{137}{section.5.1.11}%
+\contentsline {chapter}{مراجع}{139}{section*.108}%

@@ -1,4 +1,4 @@
-This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  11 OCT 2026 12:22
+This is XeTeX, Version 3.141592653-2.6-0.999997 (TeX Live 2025) (preloaded format=xelatex 2025.12.28)  12 OCT 2026 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1705,8 +1705,8 @@ ass for XeTeX engine
 File: float-xetex-bidi.def 2013/04/04 v0.2 bidi adaptations for float package f
 or XeTeX engine
 )
-(./QS&QA_Fundation_Main.aux (./part1.aux) (./part2.aux) (./QS&QA_Fundation.aux)
-)
+(./QS&QA_Fundation_Main.aux (./part1.aux) (./part2.aux) (./part3.aux)
+(./part4.aux) (./gap_energy_chapter.aux))
 \openout1 = `QS&QA_Fundation_Main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
@@ -1730,7 +1730,8 @@ LaTeX Font Info:    ... okay on input line 5.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
 Package hyperref Info: Link coloring ON on input line 5.
- (./QS&QA_Fundation_Main.out) (./QS&QA_Fundation_Main.out)
+ (./QS&QA_Fundation_Main.out)
+(./QS&QA_Fundation_Main.out)
 \@outlinefile=\write7
 \openout7 = `QS&QA_Fundation_Main.out'.
 
@@ -1833,501 +1834,252 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [3]
 
 [4]
-Overfull \hbox (0.80212pt too wide) detected at line 156
+Overfull \hbox (0.80212pt too wide) detected at line 158
  [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۰[][][]
  []
 
 
-Overfull \hbox (0.80212pt too wide) detected at line 157
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 158
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۳[][][]
- []
-
-
 Overfull \hbox (0.80212pt too wide) detected at line 159
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 160
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۵[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 161
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 162
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 163
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۹[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 164
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۹[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 165
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 166
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۸[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 167
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۸[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 168
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۹[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 169
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۰۹[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 170
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 171
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 172
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 173
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 174
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 175
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۵[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 176
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۳[][][]
  []
 
 
 
 [5]
 Overfull \hbox (0.80212pt too wide) detected at line 177
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 178
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 184
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۸[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۵[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 185
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 186
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 189
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۱۹[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 190
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 191
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 192
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 193
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 194
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 195
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 196
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 197
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 198
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 199
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۷[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 200
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۸[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 201
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۲۹[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 202
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 203
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 204
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۰[][][]
  []
 
 
 
 [6]
 Overfull \hbox (0.80212pt too wide) detected at line 205
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۴[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۱[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 206
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۵[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 207
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۵[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۲[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 212
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۶[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۳[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 213
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 214
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۴[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 215
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۸[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۵[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 216
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۹[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۶[][][]
  []
 
 
 Overfull \hbox (0.80212pt too wide) detected at line 217
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 220
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 221
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 222
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 225
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 231
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۷[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 233
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۸[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 238
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۴۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 241
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۰[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 246
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 247
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 248
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۲[][][]
- []
-
-
-
-[7]
-Overfull \hbox (0.80212pt too wide) detected at line 250
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 251
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 254
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۴[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 258
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 259
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۶[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 264
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۷[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 267
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۸[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 268
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۵۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 274
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۰[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 277
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 279
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 280
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 281
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 288
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۴[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 289
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 292
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۷[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 293
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۷[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 297
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۸[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 298
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۸[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 299
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۸[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 300
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۹[][][]
- []
-
-
-
-[8]
-Overfull \hbox (0.80212pt too wide) detected at line 301
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 302
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۶۹[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 309
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۱[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 310
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 311
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۲[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 313
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 314
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۳[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 318
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۴[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 319
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۴[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 320
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۴[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 322
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 323
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۵[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 324
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۶[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 325
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۶[][][]
- []
-
-
-Overfull \hbox (0.80212pt too wide) detected at line 326
- [][][]\TU/XBNiloofar(0)/m/n/12 ۱۷۷[][][]
+ [][][]\TU/XBNiloofar(0)/m/n/12 ۱۳۶[][][]
  []
 
 )
@@ -2336,12 +2088,22 @@ Overfull \hbox (0.80212pt too wide) detected at line 326
 
 
 
-[9]
+[7]
 \openout2 = `part1.aux'.
 
  (./part1.tex
 
-[10
+LaTeX Warning: Reference `chap:compass' on page 8 undefined on input line 17.
+
+
+LaTeX Warning: Reference `tab:glossary' on page 8 undefined on input line 19.
+
+
+LaTeX Warning: Reference `chap:glossary' on page 8 undefined on input line 19.
+
+
+
+[8
 
 
 
@@ -2353,7 +2115,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[11
+[9
 
 ]
 فصل 1.
@@ -2377,14 +2139,19 @@ Missing character: There is no ) ("29) in font nullfont!
 Missing character: There is no ) ("29) in font nullfont!
 )
 
-[12
+[10
 
 ]
 LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/it' will be
 (Font)              scaled to size 13.07996pt on input line 65.
 
 
-[13]
+[11]
+
+LaTeX Warning: Reference `chap:hardware' on page 12 undefined on input line 67.
+
+
+
 Underfull \hbox (badness 10000) in alignment at lines 150--150
 [][][][] 
  []
@@ -2396,9 +2163,20 @@ Overfull \hbox (2.66112pt too wide) in paragraph at lines 150--151
 
 
 
-[14])
+[12]
 
-[15]
+LaTeX Warning: Reference `chap:digital-tools' on page 13 undefined on input lin
+e 165.
+
+
+LaTeX Warning: Reference `sec:analog' on page 13 undefined on input line 170.
+
+
+LaTeX Warning: Reference `sec:qaoa' on page 13 undefined on input line 171.
+
+)
+
+[13]
 \openout2 = `part2.aux'.
 
  (./part2.tex
@@ -2409,7 +2187,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[16
+[14
 
 
 
@@ -2418,31 +2196,36 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 فصل 1.
 
 
+[15
+
+]
+
+[16]
+فصل 2.
+
+
 [17
 
 ]
 
 [18]
-فصل 2.
+فصل 3.
 
 
 [19
 
 ]
 
+LaTeX Warning: Reference `chap:hardware' on page 20 undefined on input line 105
+.
+
+
+
 [20]
-فصل 3.
-
-
-[21
-
-]
-
-[22]
 فصل 4.
 (./figures/fig_three_layers.tex (./figures/qaf_style.tex))
 
-[23
+[21
 
 ]
 Underfull \hbox (badness 10000) in alignment at lines 183--183
@@ -2455,8 +2238,16 @@ Overfull \hbox (2.66112pt too wide) in paragraph at lines 183--184
  []
 
 
+LaTeX Warning: Reference `chap:digital-tools' on page 22 undefined on input lin
+e 190.
 
-[24]
+
+LaTeX Warning: Reference `chap:spectral-tools' on page 22 undefined on input li
+ne 190.
+
+
+
+[22]
 Overfull \hbox (11.90054pt too wide) in paragraph at lines 197--198
 [][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۴.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
 ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 تمایز شبیه‌سازی آنا
@@ -2465,55 +2256,607 @@ Overfull \hbox (11.90054pt too wide) in paragraph at lines 197--198
 
 )
 
-[25] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl
+[23]
+\openout2 = `part3.aux'.
 
-[26
+ (./part3.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 13.07996pt
+(hyperref)                replaced by space on input line 2.
+
+
+
+[24
+
+
+
+
+]
+فصل 1.
+(./figures/fig_phys_to_H.tex (./figures/qaf_style.tex))
+
+[25
+
+]
+Underfull \hbox (badness 10000) in alignment at lines 88--88
+[][][][] 
+ []
+
+
+Overfull \hbox (2.66112pt too wide) in paragraph at lines 88--89
+ [][][][] 
+ []
+
+
+
+[26]
+Overfull \hbox (13.58447pt too wide) in paragraph at lines 114--115
+[][]\TU/XBNiloofar(0)/m/n/12 در بهینه‌سازی ترکیبیاتیِ نگاشته‌شده به []\TU/lmrom
+an10-regular(0)/m/n/12 Ising[]\TU/XBNiloofar(0)/m/n/12 ، «جواب» همان آرگ‌مینِ ی
+ک تابع انرژی روی پیکربندی‌های[]
+ []
+
+
+
+[27]
+
+[28] (./figures/fig_harmonic_osc.tex (./figures/qaf_style.tex))
+
+[29] (./figures/fig_lc_circuit.tex (./figures/qaf_style.tex))
+
+[30]
+
+LaTeX Warning: Reference `chap:hardware' on page 31 undefined on input line 262
+.
+
+
+
+[31]
+
+[32]
+Overfull \hbox (13.45695pt too wide) in paragraph at lines 293--295
+[]\TU/XBNiloofar(0)/m/n/12 اسپین‌های همسایه می‌توانند بخواهند هم‌جهت بمانند (فر
+ومغناطیس) یا مخالف هم بایستند (پادفرومغناطیس).[]
+ []
+
+(./figures/fig_ising_lattice.tex (./figures/qaf_style.tex))
+
+[33]
+
+[34]
+
+LaTeX Warning: Reference `sec:qaoa-example' on page 35 undefined on input line 
+367.
+
+
+
+[35]
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 6.53998pt on input line 422.
+
+
+LaTeX Warning: Reference `sec:qaoa-example' on page 36 undefined on input line 
+427.
+
+
+LaTeX Warning: Reference `chap:hardware' on page 36 undefined on input line 427
+.
+
+
+
+[36]
+Overfull \hbox (6.52931pt too wide) in paragraph at lines 434--435
+[][][][][]\TU/XBNiloofar(0)/b/n/12 نکته ۱.‏۱ \TU/XBNiloofar(0)/m/n/12 (جای توسع
+ه)\TU/XBNiloofar(0)/b/n/12 . [][][]\TU/XBNiloofar(0)/m/n/12 غیرخطی‌سازی مدار با
+ پیوند جوزفسون و ساخت کیوبیت از نوسانگر غیرهارمونیک؛[]
+ []
+
+
+
+[37]
+فصل 2.
+(./figures/fig_pipeline.tex (./figures/qaf_style.tex))
+
+[38
+
+]
+
+[39]
+Overfull \hbox (1.13657pt too wide) in paragraph at lines 469--470
+[][]\TU/XBNiloofar(0)/b/n/12 برآورد منابع: \TU/XBNiloofar(0)/m/n/12 تعداد کیوبی
+ت پس از کدگذاری فرمیونی، عمق مدار، گام‌های تروتر یا درجه چندجمله‌ای[]
+ []
+
+
+LaTeX Warning: Reference `chap:closing' on page 40 undefined on input line 475.
+
+
+)
+
+[40]
+\openout2 = `part4.aux'.
+
+ (./part4.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 13.07996pt
+(hyperref)                replaced by space on input line 2.
+
+
+
+[41
+
+
+
+
+]
+فصل 1.
+(./figures/fig_two_questions.tex (./figures/qaf_style.tex))
+
+[42
+
+]
+
+LaTeX Warning: Reference `chap:digital-tools' on page 43 undefined on input lin
+e 49.
+
+
+LaTeX Warning: Reference `chap:spectral-tools' on page 43 undefined on input li
+ne 49.
+
+
+
+[43]
+
+[44]
+فصل 2.
+(./figures/fig_two_paradigms.tex (./figures/qaf_style.tex))
+
+LaTeX Warning: Reference `chap:digital-tools' on page 45 undefined on input lin
+e 83.
+
+
+LaTeX Warning: Reference `chap:hardware' on page 45 undefined on input line 83.
+
+
+
+
+[45
+
+]
+Overfull \hbox (1.51657pt too wide) in paragraph at lines 101--102
+[] []\TU/XBNiloofar(0)/b/n/12 اتصال دو رهیافت.[] \TU/XBNiloofar(0)/m/n/12 مسیر 
+آدیاباتیک را می‌توان با فرمول حاصل‌ضربی دیجیتال کرد ([]\TU/lmroman10-regular(0)
+/m/n/12 digital adiabatic[]\TU/XBNiloofar(0)/m/n/12 ):[]
+ []
+
+
+Overfull \hbox (32.30624pt too wide) in paragraph at lines 106--107
+[]\TU/XBNiloofar(0)/m/n/12 در این رهیافت، هامیلتونی (ثابت یا با زمان معلوم) داد
+ه شده است و هدف، دنبال کردن حالت یا مشاهده‌پذیرهاست،[]
+ []
+
+
+
+[46] (./figures/fig_time_evolution.tex (./figures/qaf_style.tex))
+
+LaTeX Warning: Reference `chap:digital-tools' on page 47 undefined on input lin
+e 147.
+
+
+LaTeX Warning: Reference `sec:analog' on page 47 undefined on input line 148.
+
+
+
+[47]
+
+LaTeX Warning: Reference `sec:trotter' on page 48 undefined on input line 163.
+
+
+
+[48]
+
+[49]
+
+LaTeX Warning: Reference `chap:digital-tools' on page 50 undefined on input lin
+e 228.
+
+
+LaTeX Warning: Reference `sec:trotter-example' on page 50 undefined on input li
+ne 228.
+
+
+LaTeX Warning: Reference `sec:trotter-example' on page 50 undefined on input li
+ne 236.
+
+(./figures/fig_adiabatic_gap.tex (./figures/qaf_style.tex))
+
+[50]
+
+[51]
+
+LaTeX Warning: Reference `sec:trotter' on page 52 undefined on input line 297.
+
+
+
+[52]
+Overfull \hbox (12.40312pt too wide) in paragraph at lines 311--312
+[]\TU/XBNiloofar(0)/m/n/12 اگر پرسش شما تحول زمانیِ دقیق $\OML/cmm/m/it/12 e[]$
+ \TU/XBNiloofar(0)/m/n/12 یا یک $\OML/cmm/m/it/12 f\OT1/cmr/m/n/12 (\OML/cmm/m/
+it/12 H\OT1/cmr/m/n/12 )$ \TU/XBNiloofar(0)/m/n/12 عمومی است، رهیافت تحول (با [
+]\TU/lmroman10-regular(0)/m/n/12 Trotter[]\TU/XBNiloofar(0)/m/n/12 /[]\TU/lmrom
+an10-regular(0)/m/n/12 LCU[]\TU/XBNiloofar(0)/m/n/12 /[]\TU/lmroman10-regular(0
+)/m/n/12 QSP[]\TU/XBNiloofar(0)/m/n/12 )[]
+ []
+
+
+
+[53]
+
+[54]
+
+[55]
+
+[56]
+
+[57]
+
+[58]
+
+[59]
+
+[60]
+Overfull \hbox (4.68156pt too wide) in paragraph at lines 681--682
+[] []\TU/XBNiloofar(0)/b/n/12 گام ۵ — ماتریس صریح $\OML/cmm/m/it/12 H\OT1/cmr/m
+/n/12 (\OML/cmm/m/it/12 s\OT1/cmr/m/n/12 )$ \TU/XBNiloofar(0)/b/n/12 و منشأ نزد
+یک‌شدن ترازها.[] \TU/XBNiloofar(0)/m/n/12 برای مشاهده این موضوع، ابتدا هامیلتون
+ی‌های[]
+ []
+
+
+
+[61]
+
+[62]
+
+[63]
+
+[64]
+
+[65]
+
+[66]
+
+[67]
+
+[68]
+Overfull \hbox (1.06013pt too wide) detected at line 1069
+[][][][]
+ []
+
+
+
+[69]
+
+[70]
+
+[71]
+\pydata@fh@_2A3295FF97FD2A69D89865AE1BE6A276.data.minted=\write9
+\openout9 = `_2A3295FF97FD2A69D89865AE1BE6A276.data.minted'.
+
+runsystem(latexminted config  --timestamp 20261012120001 2A3295FF97FD2A69D89865
+AE1BE6A276)...executed safely (allowed).
+
+
+
+! Package minted Error: minted v3+ executable is not installed, is not added to
+ PATH, or is not permitted with restricted shell escape; or MiKTeX is being use
+d with -aux-directory or -output-directory without setting a TEXMF_OUTPUT_DIREC
+TORY environment variable.
+
+See the minted package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.1201 ...ng_01_hamiltonians.py}{code:adi-ising-H}
+                                                  
+This error message was generated by an \errmessage
+command, so I can't give any explicit help.
+Pretend that you're Hercule Poirot: Examine all clues,
+and deduce the truth by order and method.
+
+(./_minted/default.style.minted)
+(./_minted/0D906C1C8E0EDB1A23F4EADE1D84C2DA.highlight.minted
+LaTeX Font Info:    Font shape `TU/lmtt/bx/n' in size <10> not available
+(Font)              Font shape `TU/lmtt/b/n' tried instead on input line 3.
+)
+(./_minted/23652587AD642250D64E540151B567C5.highlight.minted
+
+[72])
+File: figures/adi_ising_qiskit_gap.pdf Graphic file (type pdf)
+<use figures/adi_ising_qiskit_gap.pdf>
+ (./_minted/3F33A25744E6CF59DBD88E34C514B95E.highlight.minted
+
+[73]) (./_minted/74BA7B3E0D4395755851926E5C9331CF.highlight.minted
+
+[74]) (./figures/fig_adi_ising_trotter.tex (./figures/qaf_style.tex))
+(./_minted/C0CEAFDE76CF331370CF7673F83C5B2E.highlight.minted
+
+[75])
+
+[76]
+
+[77]
+
+[78]
+
+[79]
+
+[80]
+
+[81]
+
+[82]
+
+[83]
+
+[84]
+
+[85]
+
+[86]
+
+[87]
+
+[88]
+
+[89]
+
+[90]
+
+[91]
+
+[92]
+
+[93]
+
+[94]
+
+[95]
+
+[96]
+
+[97]
+
+[98]
+
+[99]
+
+[100]
+
+[101]
+
+[102]
+LaTeX Font Info:    Font shape `TU/XBNiloofar(0)/m/n' will be
+(Font)              scaled to size 11.93546pt on input line 2639.
+
+Underfull \hbox (badness 10000) in alignment at lines 2666--2666
+[][][] 
+ []
+
+
+Overfull \hbox (2.91393pt too wide) in paragraph at lines 2666--2667
+ [][][][] 
+ []
+
+(./figures/fig_complexity_scaling.tex (./figures/qaf_style.tex))
+
+[103]
+
+[104]
+
+[105]
+
+[106] (./figures/gap_spectrum.tex)
+
+[107]
+
+[108] (./figures/gap_schedule.tex)
+
+[109]
+
+[110]
+
+[111]
+
+[112] (./figures/gap_scaling.tex)
+
+[113]
+
+[114]
+
+[115] (./figures/gap_workflow.tex)
+
+[116]
+
+LaTeX Warning: Reference `chap:digital-tools' on page 117 undefined on input li
+ne 3106.
+
+
+LaTeX Warning: Reference `chap:spectral-tools' on page 117 undefined on input l
+ine 3106.
+
+
+LaTeX Warning: Reference `chap:hardware' on page 117 undefined on input line 31
+06.
+
+
+
+[117]
+
+LaTeX Warning: Reference `sec:qaoa' on page 118 undefined on input line 3113.
+
+)
+
+[118]
+\openout2 = `gap_energy_chapter.aux'.
+
+ (./gap_energy_chapter.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                \hskip 13.07996pt
+(hyperref)                replaced by space on input line 2.
+
+
+
+[119
+
+
+
+
+]
+فصل 1.
+
+
+[120
+
+]
+Overfull \hbox (15.7089pt too wide) in paragraph at lines 53--54
+[][]\TU/XBNiloofar(0)/m/n/12 در محاسبه آدیاباتیک، گاف کمینه مسیر یکی از عوامل ا
+صلی تعیین‌کننده زمان تحول است (بخش [][][][][][]۲.‏۱۱[][][][][][]). []
+ []
+
+
+
+[121] (./figures/fig_gap_methods_map.tex (./figures/qaf_style.tex))
+
+[122]
+
+[123]
+
+[124]
+
+[125]
+
+[126]
+
+[127]
+Underfull \hbox (badness 10000) in alignment at lines 314--314
+[][][] 
+ []
+
+
+Overfull \hbox (2.91393pt too wide) in paragraph at lines 314--315
+ [][][][] 
+ []
+
+
+
+[128]
+
+[129]
+
+[130]
+Overfull \hbox (3.10202pt too wide) in paragraph at lines 430--432
+[]\TU/XBNiloofar(0)/m/n/12 می‌توان نزدیک نواحی با گاف کوچک آهسته‌تر حرکت کرد و 
+در نواحی کم‌حساسیت سریع‌تر پیش رفت [[]]. []
+ []
+
+
+
+[131]
+Overfull \hbox (8.03694pt too wide) in paragraph at lines 465--468
+[][]\TU/XBNiloofar(0)/m/n/12 جمله دقیق رانش جبران‌کننده معمولاً غیرمحلی است و ب
+ه اطلاعاتی از ساختار ویژه‌مقدارها و ویژه‌بردارهای[]
+ []
+
+
+
+[132]
+Overfull \hbox (4.392pt too wide) in paragraph at lines 491--494
+[] []\TU/XBNiloofar(0)/b/n/12 آماده‌سازی حالت پایه در شبیه‌ساز دیجیتال.[] \TU/X
+BNiloofar(0)/m/n/12 مسیر $\OML/cmm/m/it/12 H\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 s
+\OT1/cmr/m/n/12 )$ \TU/XBNiloofar(0)/m/n/12 را می‌توان به گام‌های زمانی تقسیم و
+ با روش‌هایی[]
+ []
+
+
+
+[133]
+
+[134]
+Overfull \hbox (5.37793pt too wide) detected at line 573
+[][][][]
+ []
+
+
+
+[135]
+
+[136]
+
+LaTeX Warning: Reference `chap:digital-tools' on page 137 undefined on input li
+ne 631.
+
+
+LaTeX Warning: Reference `chap:spectral-tools' on page 137 undefined on input l
+ine 631.
+
+
+LaTeX Warning: Reference `chap:hardware' on page 137 undefined on input line 63
+1.
+
+
+
+[137])
+
+[138] (./bibs/bibs.tex (./QS&QA_Fundation_Main.bbl
+
+[139
 
 
 
 
 ]
 
-[27]
-
-[28]
-
-[29]
-Underfull \hbox (badness 1067) in paragraph at lines 274--280
+[140]
+Underfull \hbox (badness 1067) in paragraph at lines 155--161
 [][]\TU/lmroman10-regular(0)/m/n/12 N. Maskara, S. Ostermann, J. Shee, M. Kalin
 owski, A. McClain Gomez,[]
  []
 
 
 
-[30]))
+[141]
 
-[31]
-runsystem(latexminted cleantemp  --timestamp 20261011122216 2A3295FF97FD2A69D89
-865AE1BE6A276)...executed safely (allowed).
+[142]
 
- (./QS&QA_Fundation_Main.aux (./part1.aux) (./part2.aux))
+[143]))
+
+[144] (./QS&QA_Fundation_Main.aux (./part1.aux) (./part2.aux) (./part3.aux)
+(./part4.aux) (./gap_energy_chapter.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 2
 L3 programming layer <2025-01-18>
  ***********
 
 
-Package rerunfilecheck Warning: File `QS&QA_Fundation_Main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
+LaTeX Warning: There were undefined references.
 
-Package rerunfilecheck Info: Checksums for `QS&QA_Fundation_Main.out':
-(rerunfilecheck)             Before: E46F28EF786C1B2D3BC4E33584FE71E1;48646
-(rerunfilecheck)             After:  39EFC392FA790135581A4E8948A9880D;5694.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package rerunfilecheck Info: File `QS&QA_Fundation_Main.out' has not changed.
+(rerunfilecheck)             Checksum: 3B1B1A07AAEA6FF38BD2BEF10370E0A5;36423.
  ) 
 Here is how much of TeX's memory you used:
- 48495 strings out of 473831
- 1117563 string characters out of 5733136
- 1735432 words of memory out of 5000000
- 70712 multiletter control sequences out of 15000+600000
- 565861 words of font info for 103 fonts, out of 8000000 for 9000
+ 49578 strings out of 473831
+ 1139517 string characters out of 5733136
+ 1725886 words of memory out of 5000000
+ 71649 multiletter control sequences out of 15000+600000
+ 572702 words of font info for 143 fonts, out of 8000000 for 9000
  1348 hyphenation exceptions out of 8191
- 91i,16n,96p,1640b,1198s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,16n,96p,3892b,1198s stack positions out of 10000i,1000n,20000p,200000b,200000s
 
-Output written on QS&QA_Fundation_Main.pdf (31 pages).
+Output written on QS&QA_Fundation_Main.pdf (144 pages).
