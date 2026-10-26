@@ -1,0 +1,32 @@
+{
+  "renderer": "TikZ + XeLaTeX; Poppler PDF-to-SVG and transparent PNG",
+  "python": "C:\\Users\\Ahmad\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "dpi": 400,
+  "pixels": [
+    1548,
+    1327
+  ],
+  "outputs": {
+    "png": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\lc_oscillator\\lc_circuit_v1.png",
+    "svg": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\lc_oscillator\\lc_circuit_v1.svg",
+    "white_preview": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\lc_oscillator\\lc_circuit_v1_white_preview.png",
+    "pdf": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\lc_oscillator\\build_v1\\lc_circuit_v1.pdf",
+    "tex": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\lc_oscillator\\build_v1\\lc_circuit_v1.tex"
+  },
+  "palette": {
+    "wires": "#303238",
+    "components": "#780404",
+    "annotations": "#E37D00"
+  },
+  "physics": {
+    "topology": "Ideal parallel LC; common bottom reference ground; no source or loss.",
+    "coordinates": "Phi is upper-node flux relative to ground; V=dPhi/dt.",
+    "charge": "Upper capacitor plate +Q; lower capacitor plate -Q; Q=C*V.",
+    "current": "I_L reference direction downward; V=L*dI_L/dt.",
+    "flux_reference": "Phi=L*I_L when their integration constants are matched to zero."
+  },
+  "qa": {
+    "png_transparent": true,
+    "svg_embedded_rasters": false
+  }
+}

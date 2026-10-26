@@ -1,0 +1,20 @@
+Harmonic oscillator slide assets
+
+mass_spring.png is an original illustration generated with the built-in image_gen tool in transparent-background mode. It has not been cropped, retouched, or otherwise edited after generation. The original generated file was copied into this project. Its measured resolution is 1902 x 827 pixels and its PNG includes an alpha channel.
+
+Exact generation prompt:
+
+Use case: scientific-educational. Create a finished slide-ready scientific illustration of a horizontal mass-spring simple harmonic oscillator, isolated on a genuinely transparent background. Wide landscape composition approximately 2.3:1, generous clear margin, all elements visible. Clean professional textbook illustration with restrained very subtle solid-shape shading, crisp dark outlines, polished and precise, not a photo and not a playful cartoon. A fixed vertical wall at the left with a few diagonal hatch marks. A continuous metallic helical spring attached firmly to the wall at its left end and to the center of the left face of a rectangular burgundy mass block at its right end. The mass sits on a thin horizontal frictionless support line. Use dark charcoal for the spring and outlines, burgundy close to #780404 for the mass, and muted orange close to #E37D00 for annotations. The mass is displaced to the RIGHT of its equilibrium position. A light gray vertical dashed reference below the oscillator marks the equilibrium location of the MASS CENTER; a second guide below the actual mass center marks its current location. Beneath the support, a thin orange displacement arrow runs RIGHT from the equilibrium guide to the current mass center guide, labeled x above the arrow. The equilibrium guide is labeled x = 0 beneath it. Above the mass, a clear horizontal restoring-force arrow points LEFT and is labeled F = -kx. Label the block m in a large crisp serif letter and label the spring k. Only include the exact short labels: m, k, x, x = 0, F = -kx. No title, no paragraph, no numbers, no extra labels, no watermarks, no frame, no checkerboard pixels, no opaque backdrop, no gradients. Correct physics: positive displacement to the right, restoring force to the left. The spring must be connected at both ends. The displacement measurement must compare equilibrium mass center with present mass center, not compare spring endpoints.
+
+Scientific plotting specification:
+
+The energy plots and ladder are computed scientific graphics, not image-generated data. For a time-independent ideal harmonic oscillator with the potential minimum chosen as zero:
+
+V(x) = m omega^2 x^2 / 2
+E_n = hbar omega (n + 1/2), n = 0, 1, 2, ...
+E_0 = hbar omega / 2
+Delta = E_1 - E_0 = hbar omega
+
+Where shared dimensionless coordinates are used, the reference length is ell = sqrt(hbar / (m omega)) and the energy reference is hbar omega. Thus V / (hbar omega) = (x / ell)^2 / 2. Applying a common reference scale to the classical panel does not impose quantization on the classical model. Classical energy is continuous; any displayed classical energy is only an example.
+
+Horizontal energy-level lines are not wavefunctions. No wavefunction localization or vanishing quantum probability outside classical turning points is implied by their extent.

@@ -1,0 +1,27 @@
+{
+  "renderer": "PGFPlots + XeLaTeX; SVG and transparent PNG exported with Poppler",
+  "python": "C:\\Users\\Ahmad\\.cache\\codex-runtimes\\codex-primary-runtime\\dependencies\\python\\python.exe",
+  "note": "Matplotlib was unavailable; no packages installed and no network used.",
+  "physics": {
+    "dimensionless_position": "q=x/ell, ell=sqrt(hbar/(m*omega))",
+    "dimensionless_energy": "epsilon=E/(hbar*omega)",
+    "potential": "epsilon_V=q^2/2",
+    "classical": "continuous E>=0; orange sample at E/(hbar*omega)=2.75",
+    "quantum": "n=0..4, epsilon_n=n+0.5; E0=hbar*omega/2, gap=hbar*omega"
+  },
+  "figures": [
+    {
+      "name": "energy_levels",
+      "png": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\harmonic_oscillator\\energy_levels_v3.png",
+      "svg": "D:\\SharifUniversity\\Quantum_Algorithm_Fundation\\Presentation\\Images\\harmonic_oscillator\\energy_levels_v3.svg",
+      "pixels": [
+        854,
+        1592
+      ],
+      "alpha": [
+        0,
+        255
+      ]
+    }
+  ]
+}

@@ -1,0 +1,38 @@
+Create ONE polished scientific presentation slide as a high-resolution landscape 16:9 image, white background, black Persian typography, dark blue mathematical formulas, restrained orange accents. All Persian must be accurately right-to-left and readable, all math correctly left-to-right with professional LaTeX-style typesetting. Audience university academics not all quantum specialists. No decorative imagery, no logos, no fake citations, no dense panels. Large title, 3 numbered explanatory stages arranged vertically with ample spacing. A small conceptual energy-level avoided-crossing diagram may appear on right only if it does not crowd formulas; otherwise omit diagram. PRIORITIZE exact legible mathematical content. This is a single screenshot-ready slide in an existing minimalist academic deck.
+
+Exact title:
+«چرا تغییر آهسته، حالت پایه را حفظ می‌کند؟»
+
+Stage 1 heading:
+«۱. حالت واقعی را در پایهٔ ویژه‌حالت‌های لحظه‌ای می‌نویسیم»
+equations:
+H(s)|n(s)⟩ = E_n(s)|n(s)⟩
+|ψ(t)⟩ = Σ_n c_n(t) exp[−(i/ℏ) ∫₀ᵗ E_n(s(t′)) dt′] |n(s(t))⟩
+short Persian explanation:
+«|c_n(t)|² احتمال حضور در حالت ویژهٔ n است؛ در آغاز c₀(0)=1 و cₘ(0)=0 برای m>0.»
+
+Stage 2 heading:
+«۲. تغییر پایه می‌تواند گذار به حالت‌های برانگیخته ایجاد کند»
+equation (exact):
+⟨m(s)|∂ₛ0(s)⟩ = ⟨m(s)|∂ₛH(s)|0(s)⟩ / [E₀(s) − Eₘ(s)] ,  m>0
+short explanation:
+«برای گذارهای مجاز، تغییر آهسته نسبت به فاصلهٔ انرژی، نشت از حالت پایه را سرکوب می‌کند.»
+second formula:
+ηₘ(t) = ℏ |ṡ(t)| |⟨m(s)|∂ₛH(s)|0(s)⟩| / [Eₘ(s) − E₀(s)]² ≪ 1
+small but legible qualifier directly below:
+«این یک شاخص محلی است؛ به‌تنهایی تضمین عمومیِ خطا نیست.»
+
+Stage 3 heading:
+«۳. با کوچک‌ماندن جمعیت حالت‌های برانگیخته، به پایهٔ هدف نزدیک می‌شویم»
+equations:
+Σ_{m>0}|c_m(T)|² ≪ 1   ⇒   |ψ(T)⟩ ≈ e^{iθ}|0(1)⟩
+H(1)=H_P ,    P_succ = |⟨0(1)|ψ(T)⟩|² ≈ 1
+short explanation:
+«θ فاز کلی است و احتمال اندازه‌گیری را تغییر نمی‌دهد.»
+
+Footer one line, legible:
+«فرض‌ها: سامانهٔ بسته، شروع در حالت پایه، مسیر هموار و حالت پایهٔ یکتا با گاف مثبت در تمام مسیر.»
+Optional tiny second footer clarifying not all preparation must be adiabatic:
+«بی‌دررو بودن شرطِ روش دنبال‌کردن حالت پایه است؛ روش‌های غیرآدیاباتیک نیز ممکن‌اند.»
+
+Do not render raw LaTeX command strings. Accurately typeset all bras/kets, sums, integrals, dots and subscripts. Use n for all basis states, m>0 for excited states, state |0(s)> denotes instantaneous ground state not computational bit zero. Ensure no wrong factors, no claims local indicator alone guarantees result. Give largest area to equations with readable Persian captions.

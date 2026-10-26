@@ -3,11 +3,14 @@ Capacity: max_strings=200000, hash_size=200000, hash_prime=170003
 The top-level auxiliary file: QS&QA_Fundation_Main.aux
 A level-1 auxiliary file: part1.aux
 A level-1 auxiliary file: part2.aux
+A level-1 auxiliary file: part3.aux
+A level-1 auxiliary file: part4.aux
+A level-1 auxiliary file: gap_energy_chapter.aux
 The style file: ./styles/packages/unsrtabbrv.bst
 Database file #1: bibs/quantum_sim.bib
 You've used 66 entries,
             1791 wiz_defined-function locations,
-            878 strings with 16484 characters,
+            881 strings with 16524 characters,
 and the built_in function-call counts, 16336 in all, are:
 = -- 1293
 > -- 1067
